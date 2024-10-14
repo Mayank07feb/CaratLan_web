@@ -103,91 +103,22 @@
 
     <!-- Header -->
     <header class="relative bg-white shadow-sm">
-        <!-- Promo Banner -->
-        <div class="bg-[#601042] text-white text-sm hidden lg:flex">
-            <div class="container mx-auto flex justify-between items-center">
-                <div class="flex items-center space-x-4">
-                    <a href="#"
-                        class="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-300">
-                        <i class="fab fa-whatsapp text-xl"></i>
-                        <span class="hidden sm:inline">WhatsApp</span>
-                    </a>
-                    <div class="border-l border-gray-400 h-4 mx-2"></div>
-                    <a href="{{ route('storelocator') }}"
-                        class="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-300">
-                        <i class="fas fa-store text-xl"></i>
-                        <span class="hidden sm:inline">Store Locator</span>
-                    </a>
-                    <div class="border-l border-gray-400 h-4 mx-2"></div>
-                    <a href="{{ route('franchise') }}"
-                        class="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-300">
-                        <i class="fas fa-heart text-xl"></i>
-                        <span class="hidden sm:inline">Giritra Franchise</span>
-                    </a>
-                </div>
-                <div class="flex items-center space-x-4 p-2">
-                    <!-- Link with icon -->
-                    <div class="relative group">
-                        <a href="#"
-                            class="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-300">
-                            <i class="fas fa-balance-scale text-xl text-white"></i>
-                            <span class="hidden sm:inline text-white">Metal Rates</span>
-                        </a>
-
-                        <!-- Dropdown Container -->
-                        <div
-                            class="dropdown-content absolute right-0 w-72 mt-2 bg-white border border-gray-300 rounded-lg shadow-lg transition-all duration-300 ease-in-out z-50 hidden group-hover:block">
-                            <h1 class="text-3xl font-light text-gray-900 text-center my-4">Today's Gold Rates</h1>
-                            <!-- Horizontal Line with Logo -->
-                            <div class="flex items-center justify-center w-full mx-auto">
-                                <div class="flex-grow h-px bg-[#9d6e2a]"></div>
-                                <div class="mx-4">
-                                    <img src="{{ asset('asset/img/logo.png') }}" alt="Site Logo" class="h-10 w-10">
-                                </div>
-                                <div class="flex-grow h-px bg-[#9d6e2a]"></div>
-                            </div>
-
-                            <!-- Grid for Silver and Rates -->
-                            <div class="grid grid-cols-2 gap-4">
-                                <!-- Silver side -->
-                                <div class="flex flex-col space-y-2">
-                                    <div class="text-center font-medium text-gray-800">Silver</div>
-                                    <div class="text-center font-medium text-gray-800">14KT</div>
-                                    <div class="text-center font-medium text-gray-800">24KT</div>
-                                    <div class="text-center font-medium text-gray-800">22KT</div>
-                                    <div class="text-center font-medium text-gray-800">18KT</div>
-                                    <div class="text-center font-medium text-gray-800">22KT</div>
-                                    <div class="text-center font-medium text-gray-800">18KT</div>
-                                </div>
-                                <!-- Rates side -->
-                                <div class="flex flex-col space-y-2">
-                                    <div class="text-center font-medium text-gray-800">85</div>
-                                    <div class="text-center font-medium text-gray-800">4,462</div>
-                                    <div class="text-center font-medium text-gray-800">17,212</div>
-                                    <div class="text-center font-medium text-gray-800">76,676</div>
-                                    <div class="text-center font-medium text-gray-800">15,645</div>
-                                    <div class="text-center font-medium text-gray-800">16,676</div>
-                                    <div class="text-center font-medium text-gray-800">15,645</div>
-                                </div>
-                            </div>
-                            <div class="hidden lg:block ">
-                                <p class="text-gray-800 pt-2 pb-1 text-center text-md font-light">Applicable for online
-                                    purchase only</p>
-                            </div>
-                            {{--  --}}
-                            <div class="bg-[#9d6e2a] my-2 w-full h-px"></div>
-
-                            <!-- Update Information -->
-                            <div class="px-4 py-2 text-start text-gray-600">
-                                <label class="font-light text-md">Updated on:</label>
-                                <div class="font-medium">12/09/2024 10:33 am</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+      <!-- Promo Banner -->
+<div class="bg-[#4F3267] text-white text-sm hidden lg:flex">
+    <div class="container mx-auto flex justify-center items-center py-2">
+        <div class="flex items-center space-x-4 text-center">
+            <span class="text-sm font-semibold">CaratLane - A Tanishq Partnership</span>
+            <div class="border-l border-gray-400 h-4"></div>
+            <span class="text-sm">Introducing CaratLane PoP! 9=10 | Plan your purchase 
+                <span class="text-pink-500">
+                    <a href="https://www.caratlane.com/plan-of-purchase" class="underline hover:text-pink-700">here</a>
+                </span>
+            </span>
         </div>
+    </div>
+</div>
+
+
 
         <!-- Navigation -->
         <nav aria-label="Top" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
