@@ -103,20 +103,21 @@
 
     <!-- Header -->
     <header class="relative bg-white shadow-sm">
-      <!-- Promo Banner -->
-<div class="bg-[#4F3267] text-white text-sm hidden lg:flex">
-    <div class="container mx-auto flex justify-center items-center py-2">
-        <div class="flex items-center space-x-4 text-center">
-            <span class="text-sm font-semibold">CaratLane - A Tanishq Partnership</span>
-            <div class="border-l border-gray-400 h-4"></div>
-            <span class="text-sm">Introducing CaratLane PoP! 9=10 | Plan your purchase 
-                <span class="text-pink-500">
-                    <a href="https://www.caratlane.com/plan-of-purchase" class="underline hover:text-pink-700">here</a>
-                </span>
-            </span>
+        <!-- Promo Banner -->
+        <div class="bg-[#4F3267] text-white text-sm hidden lg:flex">
+            <div class="container mx-auto flex justify-center items-center py-2">
+                <div class="flex items-center space-x-4 text-center">
+                    <span class="text-sm font-semibold">CaratLane - A Tanishq Partnership</span>
+                    <div class="border-l border-gray-400 h-4"></div>
+                    <span class="text-sm">Introducing CaratLane PoP! 9=10 | Plan your purchase
+                        <span class="text-pink-500">
+                            <a href="https://www.caratlane.com/plan-of-purchase"
+                                class="underline hover:text-pink-700">here</a>
+                        </span>
+                    </span>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
 
 
@@ -128,8 +129,8 @@
                     <button id="open-mobile-menu" type="button"
                         class="relative rounded-md p-2 text-gray-400 lg:hidden">
                         <span class="sr-only">Open menu</span>
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" aria-hidden="true">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
@@ -327,7 +328,7 @@
                                             role="menuitem">
                                             <img src="{{ asset('asset/img/logo.png') }}" alt="Necklaces"
                                                 class="h-8 w-8 mr-2">
-                                           Gold Necklaces
+                                            Gold Necklaces
                                         </a>
                                         <a href="#"
                                             class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -341,14 +342,14 @@
                                             role="menuitem">
                                             <img src="{{ asset('asset/img/logo.png') }}" alt="Bracelets"
                                                 class="h-8 w-8 mr-2">
-                                           Gold Bracelets
+                                            Gold Bracelets
                                         </a>
                                         <a href="#"
                                             class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                             role="menuitem">
                                             <img src="{{ asset('asset/img/logo.png') }}" alt="Earrings"
                                                 class="h-8 w-8 mr-2">
-                                           Gold Earrings
+                                            Gold Earrings
                                         </a>
                                         <!-- Additional items -->
                                         <a href="#"
@@ -356,21 +357,21 @@
                                             role="menuitem">
                                             <img src="{{ asset('asset/img/logo.png') }}" alt="Pendants"
                                                 class="h-8 w-8 mr-2">
-                                           Gold Pendants
+                                            Gold Pendants
                                         </a>
                                         <a href="#"
                                             class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                             role="menuitem">
                                             <img src="{{ asset('asset/img/logo.png') }}" alt="Ear Cuffs"
                                                 class="h-8 w-8 mr-2">
-                                           Gold Ear Cuffs
+                                            Gold Ear Cuffs
                                         </a>
                                         <a href="#"
                                             class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                             role="menuitem">
                                             <img src="{{ asset('asset/img/logo.png') }}" alt="Gold Sets"
                                                 class="h-8 w-8 mr-2">
-                                           Gold Sets
+                                            Gold Sets
                                         </a>
                                     </div>
                                 </div>
