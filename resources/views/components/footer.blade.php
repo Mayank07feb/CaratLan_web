@@ -486,7 +486,9 @@
         <div class="mb-8 pb-4 border-b border-gray-300">
             <h2 class="text-sm text-[#8863FB] font-semibold mb-2">Gold Rate in Major Cities</h2>
             <p class="text-gray-600 text-xs leading-tight">
-                Gold rate today in Chennai | Gold rate today in Hyderabad | Gold rate today in Bangalore | Gold rate today in Mumbai | Gold rate today in Delhi | Gold rate today in Kerala | Gold rate today in Pune | Gold rate today in Vijayawada | Gold rate today in Kolkata | Gold rate today in Ahmedabad
+                Gold rate today in Chennai | Gold rate today in Hyderabad | Gold rate today in Bangalore | Gold rate
+                today in Mumbai | Gold rate today in Delhi | Gold rate today in Kerala | Gold rate today in Pune | Gold
+                rate today in Vijayawada | Gold rate today in Kolkata | Gold rate today in Ahmedabad
             </p>
         </div>
 
@@ -500,9 +502,3 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
