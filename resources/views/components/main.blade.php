@@ -85,7 +85,7 @@
 
 
     <!-- Hamburger Menu -->
-    <div id="hamburger-menu"
+    {{-- <div id="hamburger-menu"
         class="fixed bottom-0 right-0 w-full sm:w-80 bg-gradient-to-b from-gray-50 to-gray-100 shadow-xl rounded-t-2xl transform translate-y-full transition-transform duration-300 ease-in-out z-50 overflow-hidden">
         <div class="flex flex-col h-auto max-h-[80vh]">
             <div class="p-6 relative">
@@ -151,7 +151,7 @@
                 </nav>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <!-- Hamburger Menu Script -->
     <script>
