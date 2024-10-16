@@ -120,7 +120,7 @@
                 <span class="text-sm font-medium">Chat on Whatsapp</span>
             </button>
         </div>
-    </div> --}}
+    </div> 
 
     <!-- Overlay background -->
     <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
