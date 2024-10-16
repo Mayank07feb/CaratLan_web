@@ -190,7 +190,7 @@
 
 
     {{-- LOCATION --}}
-    <div class="container mx-auto px-0 py-6 bg-gray-50">
+    {{-- <div class="container mx-auto px-0 py-6 bg-gray-50">
         <div class="  flex flex-col md:flex-row gap-40 justify-center">
             <!-- Left Section -->
             <div class="w-1/3 relative">
@@ -227,7 +227,43 @@
                 </div>
             </div>
         </div>
+    </div> --}}
+    <div class="container mx-auto px-4 py-6 bg-gray-50">
+        <div class="flex flex-col md:flex-row gap-8 md:gap-40 justify-center">
+            <!-- Left Section -->
+            <div class="w-full md:w-1/3 relative">
+                <div
+                    class="absolute inset-0 flex flex-col justify-center items-center text-center text-black rounded-lg p-4 transform translate-x-1/2">
+                    <h2 class="text-lg md:text-xl font-bold mb-2">Unsure Which Design To Pick?</h2>
+                    <p class="text-sm md:text-base mb-2">Book A FREE Home Trial!</p>
+                    <button
+                        class="bg-gradient-to-r from-pink-500 to-purple-600 text-black px-4 py-2 rounded text-sm md:text-base transition duration-300 hover:from-pink-600 hover:to-purple-700">
+                        Schedule Appointment
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <img src="{{ asset('asset/img/T@H.webp') }}" alt="Customers discussing designs"
+                        class="w-full rounded object-cover">
+                </div>
+            </div>
+    
+            <!-- Right Section -->
+            <div class="w-full md:w-1/3 relative">
+                <div
+                    class="absolute inset-0 flex flex-col justify-center items-center text-center text-black rounded-lg p-4 transform translate-x-1/2">
+                    <h2 class="text-lg md:text-xl font-bold mb-2">Come visit us at any of our stores!</h2>
+                    <div class="mb-4">
+                        <input type="text" placeholder="Enter Pincode or City"
+                            class="w-full p-2 border border-pink-500 rounded text-sm md:text-base">
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <img src="{{ asset('asset/img/store.webp') }}" alt="Store interior" class="w-full rounded object-cover">
+                </div>
+            </div>
+        </div>
     </div>
+    
 
     {{-- GOLD DIV --}}
     <div class="container mx-auto px-4 py-6 my-12">
@@ -258,22 +294,22 @@
 
     {{-- SECTION --}}
     <div class="flex items-center justify-center py-8 bg-[#1d012d]">
-        <div class=" rounded-lg shadow-lg text-center">
-            <h1 class="text-3xl font-bold text-yellow-600 mb-4">
-                The trust of TaniSHQ,
-            </h1>
-            <h1 class="text-3xl font-bold text-white mb-4">
-                The spirit of CARATLANE
-
-            </h1>
-            <p class="text-md text-gray-50 mb-6 text-nowrap">
-                The highest quality of craftsmanship and innovation, that brings you modern, everyday designs.
-            </p>
-            <button class="from-pink-600 to-purple-700 text-white px-6 py-2 rounded transition duration-300">
-                Know More
-            </button>
+        <div class="max-w-xl w-full px-4 md:px-0 rounded-lg shadow-lg text-center">
+          <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-yellow-600 mb-4">
+            The trust of TaniSHQ,
+          </h1>
+          <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
+            The spirit of CARATLANE
+          </h1>
+          <p class="text-sm md:text-md lg:text-lg text-gray-50 mb-6">
+            The highest quality of craftsmanship and innovation, that brings you modern, everyday designs.
+          </p>
+          <button class="bg-gradient-to-r from-pink-600 to-purple-700 hover:from-pink-500 hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 text-white px-6 py-2 rounded transition duration-300">
+            Know More
+          </button>
         </div>
-    </div>
+      </div>
+      
     {{-- SLIDER - - CARDS --}}
 
     <div class="container mx-auto px-4 py-8">
