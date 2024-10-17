@@ -123,32 +123,36 @@
             </div>
 
             <!-- Image Cards Section -->
-<div class="grid grid-cols-2 gap-4 mb-6 mt-4">
-    <div class="relative rounded-lg overflow-hidden">
-        <img src="{{ asset('asset/img/best10.webp') }}" alt="Fast Delivery" class="w-full h-auto" />
-        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white p-4">
-            <p class="text-sm font-semibold">Fast Delivery</p>
-        </div>
-    </div>
-    <div class="relative rounded-lg overflow-hidden">
-        <img src="{{ asset('asset/img/best1.webp') }}" alt="New In" class="w-full h-auto" />
-        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white p-4">
-            <p class="text-sm font-semibold">New In</p>
-        </div>
-    </div>
-    <div class="relative rounded-lg overflow-hidden">
-        <img src="{{ asset('asset/img/best3.webp') }}" alt="Necklaces" class="w-full h-auto" />
-        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white p-4">
-            <p class="text-sm font-semibold">Necklaces</p>
-        </div>
-    </div>
-    <div class="relative rounded-lg overflow-hidden">
-        <img src="{{ asset('asset/img/best2.webp') }}" alt="For Kids" class="w-full h-auto" />
-        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white p-4">
-            <p class="text-sm font-semibold">For Kids</p>
-        </div>
-    </div>
-</div>
+            <div class="grid grid-cols-2 gap-4 mb-6 mt-4">
+                <div class="relative rounded-lg overflow-hidden">
+                    <img src="{{ asset('asset/img/best10.webp') }}" alt="Fast Delivery" class="w-full h-auto" />
+                    <div
+                        class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white p-4">
+                        <p class="text-sm font-semibold">Fast Delivery</p>
+                    </div>
+                </div>
+                <div class="relative rounded-lg overflow-hidden">
+                    <img src="{{ asset('asset/img/best1.webp') }}" alt="New In" class="w-full h-auto" />
+                    <div
+                        class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white p-4">
+                        <p class="text-sm font-semibold">New In</p>
+                    </div>
+                </div>
+                <div class="relative rounded-lg overflow-hidden">
+                    <img src="{{ asset('asset/img/best3.webp') }}" alt="Necklaces" class="w-full h-auto" />
+                    <div
+                        class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white p-4">
+                        <p class="text-sm font-semibold">Necklaces</p>
+                    </div>
+                </div>
+                <div class="relative rounded-lg overflow-hidden">
+                    <img src="{{ asset('asset/img/best2.webp') }}" alt="For Kids" class="w-full h-auto" />
+                    <div
+                        class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white p-4">
+                        <p class="text-sm font-semibold">For Kids</p>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>
@@ -156,7 +160,7 @@
 
 
     <!-- Top Banner -->
-    <div class="relative bg-[#4F3267] text-white text-sm py-4">
+    <div class="relative bg-primary text-white text-sm py-4">
         <div id="first-text" class="mt-1 absolute inset-0 text-center transition-opacity duration-500">
             CaratLane - A Tanishq Partnership
         </div>
@@ -164,6 +168,7 @@
             Introducing CardzLane: UP TO 70% OFF | Plan your purchase here
         </div>
     </div>
+
 
 
 
@@ -296,7 +301,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#"
+                <a href="{{route('gold')}}"
                     class="relative text-gray-600 hover:text-purple-600 text-sm font-semibold py-2 px-2 inline-flex items-center group">
                     <span>Earrings</span>
                     <span
@@ -338,11 +343,12 @@
             <div class="hidden lg:flex items-center space-x-4">
                 <div class="flex items-center">
                     <input type="text" placeholder="Search Relationship"
-                        class="border border-pink-600 rounded-l-[10px] h-12 px-4 focus:outline-none focus:ring-2 focus:ring-purple-600">
-                    <button
-                        class="bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-r-[10px] h-12 px-4 flex items-center justify-center hover:from-pink-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600">
+                        class="border border-[#de57e5] rounded-l-[10px] h-12 px-4 focus:outline-none focus:ring-2 focus:ring-[#de57e5]">
+                        <button
+                        class="bg-gradient-to-r from-[#de57e5] to-[#8863fb] text-white rounded-r-[10px] h-12 px-4 flex items-center justify-center hover:from-pink-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600">
                         <span class="material-icons">search</span>
-                    </button>
+                      </button>
+                      
 
                 </div>
                 <div class="flex flex-col">
