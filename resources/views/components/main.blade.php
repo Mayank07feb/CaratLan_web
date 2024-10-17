@@ -26,6 +26,7 @@
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
     <!-- Glide.js JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
 
@@ -77,14 +78,14 @@
             <span id="icon" class="material-icons">phone</span>
             <!-- Close button -->
             <span id="x-icon"
-                class="material-icons hidden bg-white text-black w-12 h-12 rounded-full shadow-lg hover:bg-gray-200 transition-all flex items-center justify-center border border-gray-300">
+                class="material-icons bg-white text-black w-12 h-12 rounded-full shadow-lg hover:bg-gray-200 transition-all flex items-center justify-center border border-gray-300">
                 close
             </span>
         </button>
 
         <!-- Menu -->
         <div id="menu"
-            class="hidden flex flex-col space-y-4 mt-4 mb-16 w-[200px] transform translate-x-full transition-transform duration-500 ease-in-out origin-bottom-right absolute bottom-0 right-0">
+            class=" flex-col space-y-4 mt-4 mb-16 w-[200px] transform translate-x-full transition-transform duration-500 ease-in-out origin-bottom-right absolute bottom-0 right-0">
             <!-- Talk to our Experts Button -->
             <button
                 class="flex items-center justify-center space-x-2 px-4 py-3 rounded-lg bg-white text-pink-500 border border-gray-200 shadow-md transition-shadow hover:bg-gray-50 hover:shadow-lg w-full">

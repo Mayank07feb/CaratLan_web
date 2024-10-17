@@ -24,6 +24,7 @@
                 <div class="slider-slide w-full h-full flex-shrink-0 relative">
                     <img src="https://cdn.caratlane.com/media/static/images/V4/2024/CL/09_Sep/Banners/DT/Offer/02/Desktop1920x694_R1.webp"
                         alt="Banner Image" class="w-full h-full object-cover rounded shadow-lg">
+
                 </div>
 
                 <!-- Slide 2 -->
@@ -101,26 +102,24 @@
         <!-- Video Section -->
         <div class="relative col-span-2 pt-[56.25%]" dir="ltr">
             <iframe class="absolute top-0 left-0 w-full h-full rounded-t-xl md:rounded-s-3xl"
-                src="https://www.youtube.com/embed/kYOP52BUZTI?si=V0wW0Zp2QNuG2wlp" title="YouTube video player"
-                frameborder="0"
+                src="https://www.youtube.com/embed/kYOP52BUZTI?autoplay=1&mute=1&loop=1&playlist=kYOP52BUZTI"
+                title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-
+    
         <!-- Overlay and Text Section -->
-        <div class="flex items-center justify-center bg-[#381a40] p-6 rounded-b-xl md:rounded-s-3xl col-span-1"
-            dir="rtl">
+        <div class="flex items-center justify-center bg-purple-900 p-6 rounded-b-xl md:rounded-s-3xl col-span-1" dir="rtl">
             <div class="text-right max-w-md">
                 <h2 class="text-6xl md:text-5xl text-pretty text-white mb-2 drop-shadow-lg">
                     <span class="cursive font-light text-balance">𝗟𝗮𝘁𝗲𝘀𝘁</span><br>𝒟𝑒𝓈𝒾𝑔𝓃
                 </h2>
-                <p class="text-lg md:text-xl text-white font-light drop-shadow">Perfectly festive,<br>effortlessly stunning
-                </p>
+                <p class="text-lg md:text-xl text-white font-light drop-shadow">Perfectly festive,<br>effortlessly stunning</p>
                 <i class="ri-arrow-right-line bg-white rounded-full text-3xl mt-6"></i>
             </div>
         </div>
-
     </div>
+    
 
 
     {{-- COLLECTIONS --}}
@@ -159,34 +158,38 @@
         <div><img src="{{ asset('asset/img/cart5.webp') }}" alt=""></div>
         <div><img src="{{ asset('asset/img/cart6.jpg') }}" alt=""></div>
         <div><img src="{{ asset('asset/img/cart7.webp') }}" alt=""></div>
+        <div><img src="{{asset('asset/img/2x (1).webp')}}" alt=""></div>
     </div>
 
     {{-- VIDEO HD SECOND --}}
-    <div class="relative w-full h-auto mx-auto overflow-hidden py-4 grid grid-cols-1 md:grid-cols-3 px-4 md:px-8">
+    <div class="relative w-full h-auto mx-auto overflow-hidden py-4 grid grid-cols-1 lg:grid-cols-3 px-4 md:px-8">
         <!-- Video Section -->
         <div class="relative col-span-2 pt-[56.25%]" dir="ltr">
-            <iframe class="absolute top-0 left-0 w-full h-full rounded-t-xl md:rounded-s-3xl"
-                src="https://www.youtube.com/embed/xuuNZQwhEn4?si=wAVU0dgJMPh7Ijs1" title="Latest Design Video"
+            <iframe 
+                class="absolute top-0 left-0 w-full h-full rounded-t-xl md:rounded-s-3xl"
+                src="https://www.youtube.com/embed/xuuNZQwhEn4?si=wAVU0dgJMPh7Ijs1&autoplay=1&mute=1&controls=0&loop=1&playlist=xuuNZQwhEn4" 
+                title="Latest Design Video"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
             </iframe>
         </div>
-
+    
         <!-- Overlay and Text Section -->
-        <aside class="flex items-center justify-center bg-[#160618] p-6 rounded-b-xl md:rounded-s-3xl col-span-1"
-            dir="rtl">
+        <aside class="flex items-center justify-center bg-purple-900 p-6 rounded-b-xl md:rounded-s-3xl col-span-1" dir="rtl">
             <div class="text-right max-w-md">
                 <h2 class="text-6xl md:text-5xl text-pretty text-white mb-2 drop-shadow-lg">
-                    <span class="cursive font-light text-balance">𝗟𝗮𝘁𝗲𝘀𝘁</span><br>𝒟𝑒𝓈𝒾𝑔𝓃
+                    <span class="cursive font-light text-balance">Get</span><br>100%
                 </h2>
                 <p class="text-lg md:text-xl text-white font-light drop-shadow">
-                    Perfectly festive,<br>effortlessly stunning
+                    of Your Gold Exachange Value
                 </p>
                 <i class="ri-arrow-right-line bg-white rounded-full text-3xl mt-6"></i>
             </div>
         </aside>
     </div>
+    
 
 
     {{-- LOCATION --}}
@@ -228,33 +231,29 @@
             </div>
         </div>
     </div> --}}
-    <div class="container mx-auto px-4 py-6 bg-gray-50">
-        <div class="flex flex-col md:flex-row gap-8 md:gap-40 justify-center">
+    {{-- FOR DESKTOP --}}
+    <div class="container mx-auto  py-6 bg-gray-50 lg:block hidden">
+        <div class="flex flex-col md:flex-row gap-2 md:gap-40 justify-center">
             <!-- Left Section -->
-            <div class="w-full md:w-1/3 relative">
-                <div
-                    class="absolute inset-0 flex flex-col justify-center items-center text-center text-black rounded-lg p-4 transform translate-x-1/2">
-                    <h2 class="text-lg md:text-xl font-bold mb-2">Unsure Which Design To Pick?</h2>
-                    <p class="text-sm md:text-base mb-2">Book A FREE Home Trial!</p>
-                    <button
-                        class="bg-gradient-to-r from-pink-500 to-purple-600 text-black px-4 py-2 rounded text-sm md:text-base transition duration-300 hover:from-pink-600 hover:to-purple-700">
+            <div class="w-1/3 md:w-1/3 relative mb-6 md:mb-0">
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-black rounded-lg p-4 transform translate-x-1/2">
+                    <h2 class="text-sm md:text-md font-bold mb-2 text-nowrap px-6">Unsure Which Design To Pick?</h2>
+                    <p class="text-sm md:text-base mb-2 text-nowrap">Book A FREE Home Trial!</p>
+                    <button class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded text-sm md:text-base transition duration-300 hover:from-pink-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-50">
                         Schedule Appointment
                     </button>
                 </div>
                 <div class="mt-4">
-                    <img src="{{ asset('asset/img/T@H.webp') }}" alt="Customers discussing designs"
-                        class="w-full rounded object-cover">
+                    <img src="{{ asset('asset/img/T@H.webp') }}" alt="Customers discussing designs" class="w-full rounded object-cover">
                 </div>
             </div>
     
             <!-- Right Section -->
-            <div class="w-full md:w-1/3 relative">
-                <div
-                    class="absolute inset-0 flex flex-col justify-center items-center text-center text-black rounded-lg p-4 transform translate-x-1/2">
-                    <h2 class="text-lg md:text-xl font-bold mb-2">Come visit us at any of our stores!</h2>
-                    <div class="mb-4">
-                        <input type="text" placeholder="Enter Pincode or City"
-                            class="w-full p-2 border border-pink-500 rounded text-sm md:text-base">
+            <div class="w-1/2 md:w-1/3 relative mb-6 md:mb-0">
+                <div class="absolute  inset-0 flex flex-col justify-center items-center text-center text-black rounded-lg p-4 transform translate-x-1/2">
+                    <h2 class="text-sm md:text-md font-bold mb-2 text-nowrap px-4">Come Visit Us At Any of Our Stores!</h2>
+                    <div class="mb-4 w-1/2">
+                        <input type="text" placeholder="Enter Pincode or City" class="w-full p-2 border border-pink-500 rounded text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-50">
                     </div>
                 </div>
                 <div class="mt-4">
@@ -264,25 +263,55 @@
         </div>
     </div>
     
+{{-- FOR MOBILE --}}
+
+<div class="container mx-auto px-4 py-6 bg-gray-50 lg:hidden block">
+    <div class="flex flex-col md:flex-row gap-8 md:gap-40 justify-center">
+        <!-- Left Section -->
+        <div class="w-full">
+            <div class="mt-4">
+                <img src="{{ asset('asset/img/T@H.webp') }}" alt="Customers discussing designs" class="w-full rounded object-cover">
+            </div>
+            <div class=" justify-center items-center text-center text-black my-2">
+                <h2 class="text-lg md:text-xl font-bold mb-2">Unsure Which Design To Pick?</h2>
+                <p class="text-sm md:text-base mb-2">Book A FREE Home Trial!</p>
+                <button class="bg-gradient-to-r from-pink-500 to-purple-600 text-black px-4 py-2 rounded text-sm md:text-base transition duration-300 hover:from-pink-600 hover:to-purple-700">
+                    Schedule Appointment
+                </button>
+            </div>
+           
+        </div>
+
+        <!-- Right Section -->
+        <div class="w-full relative">
+            <div class="mt-4">
+                <img src="{{ asset('asset/img/store.webp') }}" alt="Store interior" class="w-full rounded object-cover">
+            </div>
+            <div class="justify-center items-center text-center text-black my-2">
+                <h2 class="text-lg md:text-xl font-bold mb-2">Come visit us at any of our stores!</h2>
+                <div class="mb-4">
+                    <input type="text" placeholder="Enter Pincode or City" class="w-full p-2 border border-pink-500 rounded text-sm md:text-base">
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+
 
     {{-- GOLD DIV --}}
-    <div class="container mx-auto px-4 py-6 my-12">
-        <div class="bg-gray-50 grid grid-cols-2 p-6 py-8 gap-4">
+    <div class="container mx-auto px-4 py-6 my-2">
+        <div class="bg-gray-50 p-2 grid grid-cols-1 md:grid-cols-2 gap-4">
             <!-- Section Title -->
-            <div class="text-center pt-8">
-                <h1 class="text-8xl font-light bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
-                    GOLD</h1>
-                <p class="text-3xl bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">EXCHANGE
-                    PROGRAM</p>
+            <div class="flex flex-col items-center justify-center">
+                <img src="{{asset('asset/img/OLD-GOLD_.png')}}" alt="">
             </div>
-
-
+    
             <!-- Description Section -->
-            <div class="mt-8">
-                <h2 class="text-3xl font-semibold text-gray-800">A Stylish Upgrade</h2>
-                <p class="mt-2 text-gray-600">
-                    - Enjoy 0% Deduction on your gold exchange value. Please note: The old gold doesn't have to be from only
-                    CaratLane; it can be any gold jewellery you have.
+            <div class="lg:mt-8 flex flex-col justify-center">
+                <h2 class="lg:text-3xl text-lg text-center font-semibold text-gray-800">A Stylish Upgrade</h2>
+                <p class="mt-2 text-gray-600 text-center text-sm lg:text-lg">
+                    - Enjoy 0% Deduction on your gold exchange value. Please note: The old gold doesn't have to be from only CaratLane; it can be any gold jewellery you have.
                 </p>
                 <button
                     class="mt-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-2 rounded transition duration-300 hover:from-pink-600 hover:to-purple-600">
@@ -291,32 +320,33 @@
             </div>
         </div>
     </div>
+    
 
     {{-- SECTION --}}
-    <div class="flex items-center justify-center py-8 bg-[#1d012d]">
-        <div class="max-w-xl w-full px-4 md:px-0 rounded-lg shadow-lg text-center">
-          <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-yellow-600 mb-4">
-            The trust of TaniSHQ,
-          </h1>
-          <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
-            The spirit of CARATLANE
-          </h1>
-          <p class="text-sm md:text-md lg:text-lg text-gray-50 mb-6">
-            The highest quality of craftsmanship and innovation, that brings you modern, everyday designs.
-          </p>
-          <button class="bg-gradient-to-r from-pink-600 to-purple-700 hover:from-pink-500 hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 text-white px-6 py-2 rounded transition duration-300">
-            Know More
-          </button>
+    <div class="flex items-center justify-center py-8 bg-purple-900">
+        <div class="max-w-xl w-full px-4 md:px-0 text-center">
+            <h1 class="text-2xl md:text-2xl lg:text-2xl font-bold text-yellow-600 mb-4">
+                The trust of TaniSHQ,
+            </h1>
+            <h1 class="text-2xl md:text-3xl lg:text-3xl font-bold text-white mb-4">
+                The spirit of CARATLANE
+            </h1>
+            <p class="text-sm md:text-md lg:text-md text-purple-300 mb-6">
+                The highest quality of craftsmanship and innovation, that brings you modern, everyday designs.
+            </p>
+            <button
+                class="bg-gradient-to-r from-pink-600 to-purple-700 hover:from-pink-500 hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 text-white px-6 py-2 rounded transition duration-300">
+                Know More
+            </button>
         </div>
-      </div>
-      
-    {{-- SLIDER - - CARDS --}}
+    </div>
 
+    {{-- SLIDER - - CARDS --}}
     <div class="container mx-auto px-4 py-8">
         <!-- Header with Tabs -->
-        <div class="flex justify-between items-center mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800">Best of CaratLane</h2>
-            <div class="inline-flex rounded-md shadow-sm" role="group">
+        <div class="grid grid-cols-1 lg:grid-cols-2 justify-between items-center mb-6">
+            <h2 class="text-2xl font-semibold text-gray-800 text-center">Best of CaratLane</h2>
+            <div class="inline-flex rounded-md shadow-sm justify-center mt-2" role="group">
                 <button id="women-tab" type="button"
                     class="tab-btn px-4 py-2 text-sm font-medium text-white bg-purple-500 rounded-l-lg hover:bg-purple-600 focus:ring-2 focus:ring-purple-500"
                     data-tab="slider1">
@@ -329,12 +359,12 @@
                 </button>
             </div>
         </div>
-
+    
         <!-- Slider 1 (WOMEN) -->
         <div id="slider1" class="tab-content">
             <div class="glide" id="glide1">
                 <div class="glide__track" data-glide-el="track">
-                    <ul class="glide__slides flex space-x-6">
+                    <ul class="glide__slides flex space-x-4">
                         <!-- Product 1 -->
                         <li class="glide__slide w-48 flex-shrink-0">
                             <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
@@ -354,134 +384,158 @@
                         <!-- Additional Products... -->
                     </ul>
                 </div>
-                <div class="glide__arrows" data-glide-el="controls">
-                    <button
-                        class="glide__arrow glide__arrow--left absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
-                        data-glide-dir="<">
+                <div class="glide__arrows flex justify-between mt-4" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left bg-white p-2 rounded-full shadow-md"
+                        data-glide-dir="<" aria-label="Previous Slide">
                         <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
-                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                         </svg>
                     </button>
-                    <button
-                        class="glide__arrow glide__arrow--right absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
-                        data-glide-dir=">">
+                    <button class="glide__arrow glide__arrow--right bg-white p-2 rounded-full shadow-md"
+                        data-glide-dir=">" aria-label="Next Slide">
                         <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
                     </button>
                 </div>
             </div>
         </div>
-
+    
         <!-- Slider 2 (MEN) -->
-        <div id="slider2" class="tab-content hidden">
+        <div id="slider2" class="tab-content hidden mx-auto">
             <div class="glide" id="glide2">
                 <div class="glide__track" data-glide-el="track">
-                    <ul class="glide__slides">
-                        <!-- Product 1 -->
-                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-2">
+                    <ul class="glide__slides flex space-x-4">
+                        <!-- Example Product Card -->
+                        <li class="glide__slide w-48 flex-shrink-0">
                             <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
                                 <div class="relative">
-                                    <img src="{{ asset('asset/img/j5.jpg') }}" alt="Best Seller 1"
-                                        class="w-full h-48 object-cover" loading="lazy"></a>
+                                    <a href="{{ route('productdetail') }}">
+                                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
+                                            class="w-full h-48 object-cover" loading="lazy">
+                                    </a>
                                 </div>
                                 <div class="p-4">
                                     <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
                                     <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Product 1 -->
-                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-2">
-                            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-                                <div class="relative">
-                                    <img src="{{ asset('asset/img/j5.jpg') }}" alt="Best Seller 1"
-                                        class="w-full h-48 object-cover" loading="lazy"></a>
-                                </div>
-                                <div class="p-4">
-                                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
-                                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product 1 -->
-                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-2">
-                            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-                                <div class="relative">
-                                    <img src="{{ asset('asset/img/j5.jpg') }}" alt="Best Seller 1"
-                                        class="w-full h-48 object-cover" loading="lazy"></a>
-                                </div>
-                                <div class="p-4">
-                                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
-                                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product 1 -->
-                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-2">
-                            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-                                <div class="relative">
-                                    <img src="{{ asset('asset/img/j5.jpg') }}" alt="Best Seller 1"
-                                        class="w-full h-48 object-cover" loading="lazy"></a>
-                                </div>
-                                <div class="p-4">
-                                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
-                                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Additional Products... -->
+                        </li>
+                        <!-- Additional Product Cards... -->
                     </ul>
                 </div>
-                <div class="glide__arrows flex justify-center my-4 gap-2" data-glide-el="controls">
-                    <button class="glide__arrow glide__arrow--left border-black border" data-glide-dir="<"><i
-                            class="ri-arrow-left-s-line text-3xl"></i></button>
-                    <button class="glide__arrow glide__arrow--right border-black border" data-glide-dir=">"><i
-                            class="ri-arrow-right-s-line text-3xl"></i></button>
+                <div class="glide__arrows flex justify-between mt-4" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left bg-white p-2 rounded-full shadow-md"
+                        data-glide-dir="<" aria-label="Previous Slide">
+                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    <button class="glide__arrow glide__arrow--right bg-white p-2 rounded-full shadow-md"
+                        data-glide-dir=">" aria-label="Next Slide">
+                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
     </div>
+     
+    
+    <!-- Initialize Glide.js -->
+    <script>
+
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var glide1 = new Glide('#glide1', {
+                type: 'carousel',
+                perView: 3,
+                gap: 20,
+                breakpoints: {
+                    640: {
+                        perView: 1
+                    },
+                    768: {
+                        perView: 2
+                    }
+                }
+            }).mount();
+    
+            var glide2 = new Glide('#glide2', {
+                type: 'carousel',
+                perView: 3,
+                gap: 20,
+                breakpoints: {
+                    640: {
+                        perView: 1
+                    },
+                    768: {
+                        perView: 2
+                    }
+                }
+            }).mount();
+    
+            // Tab functionality
+            const tabs = document.querySelectorAll('.tab-btn');
+            const contents = document.querySelectorAll('.tab-content');
+    
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const target = tab.dataset.tab;
+    
+                    tabs.forEach(t => {
+                        t.classList.toggle('bg-purple-500', t === tab);
+                        t.classList.toggle('text-white', t === tab);
+                        t.classList.toggle('text-gray-700', t !== tab);
+                        t.classList.toggle('bg-white', t !== tab);
+                    });
+    
+                    contents.forEach(content => {
+                        content.classList.toggle('hidden', content.id !== target);
+                    });
+                });
+            });
+        });
+    </script>
+    
 
     {{-- services features --}}
-    <div class="bg-gray-900 text-white py-12 px-12">
+    <div class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 items-center ">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 items-center">
                 <!-- 100% Certified & Free Shipping -->
-                <div class="flex items-start space-x-4 pl-8">
-                    <img src="{{ asset('asset/img/download.jpeg') }}" alt="" class="h-20">
-                    <div class="px-8 w-1/2">
+                <div class="flex items-start space-x-4">
+                    <img src="{{ asset('asset/img/download.jpeg') }}" alt="Certified & Free Shipping" class="h-20">
+                    <div class="w-full">
                         <h3 class="text-sm font-semibold mb-2">100% Certified & Free Shipping</h3>
-                        <p class="text-sm text-purple-300">Our jewellery always comes with a certificate of authentication.
-                        </p>
+                        <p class="text-sm text-purple-300">Our jewellery always comes with a certificate of authentication.</p>
                     </div>
                 </div>
-
+    
                 <!-- 15 Day Money-Back -->
                 <div class="flex items-start space-x-4">
-                    <img src="{{ asset('asset/img/download.jpeg') }}" alt="" class="h-20">
-                    <div class="px-8 w-1/2">
+                    <img src="{{ asset('asset/img/download.jpeg') }}" alt="15 Day Money-Back" class="h-20">
+                    <div class="w-full">
                         <h3 class="text-sm font-semibold mb-2">15 Day Money-Back</h3>
                         <p class="text-sm text-purple-300">Get 100% refund if you don't like your jewellery.</p>
                     </div>
                 </div>
-
+    
                 <!-- Lifetime Exchange -->
-                <div class="flex items-start space-x-4 pl-8">
-                    <img src="{{ asset('asset/img/download.jpeg') }}" alt="" class="h-20">
-                    <div class="px-8 w-1/2">
+                <div class="flex items-start space-x-4">
+                    <img src="{{ asset('asset/img/download.jpeg') }}" alt="Lifetime Exchange" class="h-20">
+                    <div class="w-full">
                         <h3 class="text-sm font-semibold mb-2">Lifetime Exchange</h3>
                         <p class="text-sm text-purple-300">Exchange your old designs anytime you want an upgrade.</p>
                     </div>
                 </div>
-
+    
                 <!-- One Year Warranty* -->
                 <div class="flex items-start space-x-4">
-                    <img src="{{ asset('asset/img/download.jpeg') }}" alt="" class="h-20">
-                    <div class="px-8 w-1/2">
+                    <img src="{{ asset('asset/img/download.jpeg') }}" alt="One Year Warranty" class="h-20">
+                    <div class="w-full">
                         <h3 class="text-sm font-semibold mb-2">One Year Warranty*</h3>
                         <p class="text-sm text-purple-300">If your jewellery has a defect, we will fix it.</p>
                     </div>
@@ -489,125 +543,272 @@
             </div>
         </div>
     </div>
+    
 
 
-    {{-- REVIEWS --}}
-    <!-- Include Swiper CSS -->
-    {{-- <link
-  rel="stylesheet"
-  href="https://unpkg.com/swiper/swiper-bundle.min.css"
-/> --}}
-    <!-- Include Swiper JS -->
-    {{-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    {{-- ***************** REVIEWS ************* --}}
 
-<div class="w-full">
-  <!-- Swiper Container -->
-  <div class="swiper-container w-full">
-    <!-- Swiper Wrapper -->
-    <div class="swiper-wrapper">
-      <!-- Testimonial Slide 1 -->
-      <div class="swiper-slide">
-        <div class="flex flex-col items-center bg-white ">
-          <div class="flex-shrink-0">
-            <div class="bg-purple-100 p-4 rounded-full">
-              <svg
-                class="w-8 h-8 text-purple-600"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.75 2C4.548 2 2 4.548 2 7.75v8.5C2 19.452 4.548 22 7.75 22h8.5C19.452 22 22 19.452 22 16.25v-8.5C22 4.548 19.452 2 16.25 2h-8.5zM4.5 7.75c0-1.794 1.456-3.25 3.25-3.25h8.5c1.794 0 3.25 1.456 3.25 3.25v8.5c0 1.794-1.456 3.25-3.25 3.25h-8.5c-1.794 0-3.25-1.456-3.25-3.25v-8.5zm13 0a.75.75 0 1 1 1.5 0v1.75a.75.75 0 1 1-1.5 0V7.75zM12 8.25a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm0 1.5a2.25 2.25 0 1 1 0 4.5 2.25 2.25 0 0 1 0-4.5z"
-                ></path>
-              </svg>
+  
+        <div class="relative w-full mx-auto overflow-hidden my-8 mb-4">
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide px-4">
+                        <div class="w-full p-6 rounded-lg shadow-md">
+                            <div class="flex justify-center mb-4">
+                                <!-- Testimonial Image -->
+                                <img src="{{ asset('asset/img/insta-icon.png') }}" alt="Instagram Icon"
+                                    class="w-24 h-24 object-center">
+                            </div>
+                            <!-- Testimonial Text -->
+                            <p class="italic text-gray-700 text-center">
+                                "I received this Mangalsutra bracelet as my first Karva Chauth gift! It's simple and sweet, just
+                                like my husband."
+                            </p>
+                            <p class="font-semibold mt-2 text-sm text-gray-500 text-center">
+                                - Akanksha Joshi via Instagram
+                            </p>
+                            <!-- Read More Button -->
+                            <div class="flex justify-center mt-4 mb-4">
+                                <button
+                                    class="border border-purple-500 text-purple-500 px-4 py-2 rounded-md transition duration-300 hover:from-pink-600 hover:to-purple-600">
+                                    Read More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide px-4">
+                        <div class="w-full p-6 rounded-lg shadow-md">
+                            <div class="flex justify-center mb-4">
+                                <!-- Testimonial Image -->
+                                <img src="{{ asset('asset/img/insta-icon.png') }}" alt="Instagram Icon"
+                                    class="w-24 h-24 object-center">
+                            </div>
+                            <!-- Testimonial Text -->
+                            <p class="italic text-gray-700 text-center">
+                                "I received this Mangalsutra bracelet as my first Karva Chauth gift! It's simple and sweet, just
+                                like my husband."
+                            </p>
+                            <p class="font-semibold mt-2 text-sm text-gray-500 text-center">
+                                - Akanksha Joshi via Instagram
+                            </p>
+                            <!-- Read More Button -->
+                            <div class="flex justify-center mt-4 mb-4">
+                                <button
+                                    class="border border-purple-500 text-purple-500 px-4 py-2 rounded-md transition duration-300 hover:from-pink-600 hover:to-purple-600">
+                                    Read More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide px-4">
+                        <div class="w-full  p-6 rounded-lg shadow-md">
+                            <div class="flex justify-center mb-4">
+                                <!-- Testimonial Image -->
+                                <img src="{{ asset('asset/img/insta-icon.png') }}" alt="Instagram Icon"
+                                    class="w-24 h-24 object-center">
+                            </div>
+                            <!-- Testimonial Text -->
+                            <p class="italic text-gray-700 text-center">
+                                "I received this Mangalsutra bracelet as my first Karva Chauth gift! It's simple and sweet, just
+                                like my husband."
+                            </p>
+                            <p class="font-semibold mt-2 text-sm text-gray-500 text-center">
+                                - Akanksha Joshi via Instagram
+                            </p>
+                            <!-- Read More Button -->
+                            <div class="flex justify-center mt-4 mb-4">
+                                <button
+                                    class="border border-purple-500 text-purple-500 px-4 py-2 rounded-md transition duration-300 hover:from-pink-600 hover:to-purple-600">
+                                    Read More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+    
+            
             </div>
-          </div>
-
-          <!-- Testimonial Text -->
-          <div>
-            <p class="text-lg font-medium text-gray-700">
-              "I received this Mangalsutra bracelet as my first Karva Chauth
-              gift! It's simple and sweet, just like my husband."
-            </p>
-            <h5 class="text-sm font-semibold text-gray-500 mt-4">
-              - Akanksha Joshi via Instagram
-            </h5>
-            <div class="flex justify-center">
-              <button
-                class="mt-6 bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg transition duration-300"
-              >
-                Read More
-              </button>
-            </div>
-          </div>
         </div>
-      </div>
+    
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper('.swiper-container', {
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+              
+            });
+        </script>
 
-      <!-- Add more slides here -->
-      <div class="swiper-slide"> <!-- Slide 2, Slide 3 etc. --> </div>
-    </div>
+    
 
-    <!-- Swiper Pagination -->
-    <div class="swiper-pagination"></div>
 
-    <!-- Swiper Navigation -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-</div> --}}
 
-    <!-- Swiper JS Initialization -->
-    {{-- <script>
-  var swiper = new Swiper(".swiper-container", {
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    autoplay: {
-      delay: 5000,
-    },
-  });
-</script> --}}
 
-    <div class="main py-8">
+
+
+
+
+    {{-- **************** shop by instagram*********** --}}
+
+    <div class="main py-12 px-6 md:px-12">
         <!-- Header Section -->
-        <div class="flex flex-col md:flex-row justify-between items-center mb-8">
-            <h1 class="text-lg md:text-xl font-semibold">Shop Our Instagram</h1>
-            <h2 class="text-lg md:text-xl text-purple-600">#MyCaratLaneStory</h2>
+        <div class="flex flex-col md:flex-row justify-between items-center mb-10">
+            <h1 class="text-xl md:text-2xl font-semibold">Shop Our Instagram</h1>
+            <h2 class="text-xl md:text-2xl text-black mt-4 md:mt-0">#MyCaratLaneStory</h2>
         </div>
 
         <!-- Image Grid Section -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2">
             <!-- Large Image -->
-            <div class="w-full">
-                <img src="{{ asset('asset/img/j6.jpg') }}" alt="Instagram Image"
-                    class="w-full h-auto object-cover rounded-lg shadow-lg">
+            <div class="w-full overflow-hidden">
+                <img src="https://cdn.caratlane.com/media/catalog/product/U/T/UT01166-1Y0000_3_lar.jpg"
+                    alt="Product Image"
+                    class="h-[400px] object-cover transition-transform scale-95 hover:scale-100 ease-in-out duration-300">
             </div>
 
             <!-- Smaller Image Grid -->
-            <div class="grid grid-cols-3 gap-4">
-                <div><img src="{{ asset('asset/img/j4.jpg') }}" alt="Instagram Image"
-                        class="w-full h-auto object-cover rounded-lg shadow-lg"></div>
-                <div><img src="{{ asset('asset/img/j4.jpg') }}" alt="Instagram Image"
-                        class="w-full h-auto object-cover rounded-lg shadow-lg"></div>
-                <div><img src="{{ asset('asset/img/j4.jpg') }}" alt="Instagram Image"
-                        class="w-full h-auto object-cover rounded-lg shadow-lg"></div>
-                <div><img src="{{ asset('asset/img/j4.jpg') }}" alt="Instagram Image"
-                        class="w-full h-auto object-cover rounded-lg shadow-lg"></div>
-                <div><img src="{{ asset('asset/img/j4.jpg') }}" alt="Instagram Image"
-                        class="w-full h-auto object-cover rounded-lg shadow-lg"></div>
-                <div><img src="{{ asset('asset/img/j4.jpg') }}" alt="Instagram Image"
-                        class="w-full h-auto object-cover rounded-lg shadow-lg"></div>
+            <div class="grid grid-cols-2 lg:grid-cols-3">
+                <div class="overflow-hidden">
+                    <img src="{{ asset('asset/img/insta1.jpg') }}" alt="Instagram Image"
+                        class="w-full h-full object-cover transition-transform scale-95 hover:scale-100 ease-in-out duration-300">
+                </div>
+                <div class="overflow-hidden">
+                    <img src="{{ asset('asset/img/insta2.jpg') }}" alt="Instagram Image"
+                        class="w-full h-full object-cover transition-transform scale-95 hover:scale-100 ease-in-out duration-300">
+                </div>
+                <div class="overflow-hidden">
+                    <img src="{{ asset('asset/img/insta3.jpg') }}" alt="Instagram Image"
+                        class="w-full h-full object-cover transition-transform scale-95 hover:scale-100 ease-in-out duration-300">
+                </div>
+                <div class="overflow-hidden">
+                    <img src="{{ asset('asset/img/insta4.jpg') }}" alt="Instagram Image"
+                        class="w-full h-full object-cover transition-transform scale-95 hover:scale-100 ease-in-out duration-300">
+                </div>
+                <div class="overflow-hidden">
+                    <img src="{{ asset('asset/img/insta5.jpg') }}" alt="Instagram Image"
+                        class="w-full h-full object-cover transition-transform scale-95 hover:scale-100 ease-in-out duration-300">
+                </div>
+                <div class="overflow-hidden">
+                    <img src="{{ asset('asset/img/insta6.jpg') }}" alt="Instagram Image"
+                        class="w-full h-full object-cover transition-transform scale-95 hover:scale-100 ease-in-out duration-300">
+                </div>
             </div>
         </div>
+
+
     </div>
 
 
+
+    {{-- contact --}}
+    {{-- <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-6 bg-gradient-to-b from-purple-900 to-purple-400 rounded-lg shadow-md items-center justify-center mx-4 md:mx-12">
+        <!-- Left Section -->
+        <div class="flex items-center justify-center space-x-4 px-4 md:px-8">
+            <div>
+                <img src="{{ asset('asset/img/purple-gift-icon.png') }}" alt="Gift Icon" class="w-24 h-24">
+            </div>
+            <div>
+                <h1 class="text-xl font-semibold text-white">Join CaratLane Insider</h1>
+                <p class="text-gray-200">Discover enticing deals, latest arrivals, & more.</p>
+            </div>
+        </div>
+    
+        <!-- Right Section -->
+        <div class="flex flex-col space-y-4">
+            <!-- Email Input -->
+            <div class="mb-4">
+                <input type="text" placeholder="Enter your email"
+                    class="w-full md:w-1/2 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-300">
+            </div>
+    
+            <div>
+                <button
+                    class="w-full md:w-1/2 px-6 py-2 bg-purple-500 text-white rounded-md hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-300">Submit</button>
+            </div>
+    
+            <!-- Gender Selection -->
+            <div class="flex flex-col space-y-2">
+                <label class="inline-flex items-center">
+                    <input type="radio" name="gender" class="form-radio text-purple-500" aria-label="Female">
+                    <span class="ml-2 text-white">Female</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="gender" class="form-radio text-purple-500" aria-label="Male">
+                    <span class="ml-2 text-white">Male</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="gender" class="form-radio text-purple-500" aria-label="Others">
+                    <span class="ml-2 text-white">Others</span>
+                </label>
+            </div>
+        </div>
+    </div>
+     --}}
+
+
+    <div
+        class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:p-6 p-2 bg-gradient-to-b from-purple-900 to-purple-400 rounded-lg shadow-md items-center justify-center lg:mx-12 mx-4">
+        <!-- Left Section -->
+        <div class="lg:flex items-center justify-center space-x-4 lg:px-8">
+            <div class="flex justify-center">
+                <img src="{{ asset('asset/img/purple-gift-icon.png') }}" alt="Gift Icon" class="w-24 h-24 object-center">
+            </div>
+            <div>
+                <h1 class="lg:text-xl font-semibold text-white text-center">Join CaratLane Insider</h1>
+                <p class="text-gray-200 text-center">Discover enticing deals, latest arrivals, & more.</p>
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class=" flex flex-col items-center justify-center space-y-4 lg:space-y-0 lg:grid">
+            <!-- Email Input -->
+           <div class="grid grid-cols-2 lg:grid-cols-1 px-8 lg:px-0">
+            <div class="space-y-2 mb-4 w-full">
+                <input type="text" placeholder="Enter your email"
+                    class="lg:w-full w-full px-2 lg:px-6 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-300">
+            
+                </div>
+
+            <div class="space-y-2 mb-4 w-full">
+                <button
+                    class="lg:px-6 py-2 px-2 bg-purple-500 text-white rounded-md hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-300">Submit</button>
+            </div>
+           </div>
+
+            <!-- Gender Selection -->
+            <div class="space-y-2">
+                <label class="inline-flex items-center">
+                    <input type="radio" name="gender" class="form-radio text-purple-500" aria-label="Female">
+                    <span class="lg:ml-2 text-white">Female</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="gender" class="form-radio text-purple-500" aria-label="Male">
+                    <span class="lg:ml-2 text-white">Male</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="gender" class="form-radio text-purple-500" aria-label="Others">
+                    <span class="lg:ml-2 text-white">Others</span>
+                </label>
+            </div>
+        </div>
+    </div>
 
 
 
