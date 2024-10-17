@@ -30,6 +30,8 @@
     <!-- Glide.js JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
     <!-- Glide.js CSS -->
     <link href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css" rel="stylesheet">
     {{-- icon  --}}
@@ -47,7 +49,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.6/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class=" text-gray-900">
+<body style="font-family: InterMedium, 'Helvetica Neue', Helvetica, Arial, sans-serif;">
 
     <!-- Preloader -->
     <div id="preloader" class="fixed inset-0 flex items-center justify-center bg-white bg-opacity-70 z-50">
@@ -121,7 +123,7 @@
                 <span class="text-sm font-medium">Chat on Whatsapp</span>
             </button>
         </div>
-    </div> 
+    </div>
 
     <!-- Overlay background -->
     <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
