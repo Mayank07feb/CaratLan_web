@@ -131,7 +131,7 @@
 
     {{-- HD VIDEO SECTION --}}
 
-    <div class="relative w-full h-auto mx-0 overflow-hidden shadow-2xl grid grid-cols-1 md:grid-cols-3">
+    {{-- <div class="relative w-full h-auto mx-0 overflow-hidden shadow-2xl grid grid-cols-1 md:grid-cols-3">
         <!-- Video Section -->
         <div class="relative col-span-2 pt-[56.25%]" dir="ltr">
             <iframe class="absolute top-0 left-0 w-full h-full rounded-t-xl md:rounded-s-3xl"
@@ -151,12 +151,33 @@
                 <i class="ri-arrow-right-line bg-white rounded-full text-3xl mt-6"></i>
             </div>
         </div>
+    </div> --}}
+    <div class="relative w-full h-full mx-0 overflow-hidden shadow-2xl grid grid-cols-1 md:grid-cols-3">
+        <!-- Video Section -->
+        <div class="relative col-span-2 aspect-video" dir="ltr">
+            <iframe class="absolute top-0 left-0 w-full h-full rounded-l-lg"
+                src="https://www.youtube.com/embed/kYOP52BUZTI?autoplay=1&mute=1&loop=1&playlist=kYOP52BUZTI"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    
+        <!-- Overlay and Text Section -->
+        <div class="flex items-center justify-center bg-purple-900 p-6 rounded-r-lg col-span-1" dir="rtl">
+            <div class="text-right max-w-md">
+                <h2 class="text-6xl md:text-5xl text-pretty text-white mb-2 drop-shadow-lg">
+                    <span class="cursive font-light text-balance">𝗟𝗮𝘁𝗲𝘀𝘁</span><br>𝒟𝑒𝓈𝒾𝑔𝓃
+                </h2>
+                <p class="text-lg md:text-xl text-white font-light drop-shadow">Perfectly festive,<br>effortlessly stunning</p>
+                <i class="ri-arrow-right-line bg-white rounded-full text-3xl mt-6"></i>
+            </div>
+        </div>
     </div>
     
 
 
     {{-- COLLECTIONS --}}
-    <div class="container mx-auto p-4 py-24">
+    {{-- <div class="container mx-auto p-4 py-24">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <!-- Image 1 -->
             <div class="relative group overflow-hidden">
@@ -180,9 +201,35 @@
                     class="w-full h-auto rounded-lg shadow-md transition-transform duration-300 transform group-hover:scale-105">
             </div>
         </div>
+    </div> --}}
+    <div class="container mx-auto p-4 py-24">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- Image 1 -->
+            <div class="relative group overflow-hidden">
+                <img src="{{ asset('asset/img/Collection_disney_11.jpg') }}" alt="Disney Collection"
+                    class="w-full h-auto rounded-lg shadow-md transition-transform duration-300 transform group-hover:scale-105">
+            </div>
+    
+            <!-- Image 2 (Centered and Adjusted) -->
+            <div class="relative group overflow-hidden flex items-center justify-center">
+                <img src="{{ asset('asset/img/Utsav.jpg') }}" alt="Utsav Collection"
+                    class="w-full h-auto rounded-lg shadow-md transition-transform duration-300 transform group-hover:scale-105">
+                <button
+                    class="absolute bottom-4 text-black bg-white py-2 px-4 rounded-lg opacity-90 hover:opacity-100 transition duration-300">
+                    View All Collections
+                </button>
+            </div>
+    
+            <!-- Image 3 -->
+            <div class="relative group overflow-hidden">
+                <img src="{{ asset('asset/img/Collection_Harry_potter.jpg') }}" alt="Harry Potter Collection"
+                    class="w-full h-auto rounded-lg shadow-md transition-transform duration-300 transform group-hover:scale-105">
+            </div>
+        </div>
     </div>
+    
 
-
+{{-- card images --}}
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 m-4 p-2">
         <div><img src="{{ asset('asset/img/cart1.webp') }}" alt=""></div>
         <div><img src="{{ asset('asset/img/cart2.webp') }}" alt=""></div>
@@ -195,7 +242,7 @@
     </div>
 
     {{-- VIDEO HD SECOND --}}
-    <div class="relative w-full h-auto mx-auto overflow-hidden py-4 grid grid-cols-1 lg:grid-cols-3 px-4 md:px-4">
+    {{-- <div class="relative w-full h-auto mx-auto overflow-hidden py-4 grid grid-cols-1 lg:grid-cols-3 px-4 md:px-4">
         <!-- Video Section -->
         <div class="relative col-span-2 pt-[56.25%]" dir="ltr">
             <iframe 
@@ -221,7 +268,35 @@
                 <i class="ri-arrow-right-line bg-white rounded-full text-3xl mt-6"></i>
             </div>
         </aside>
+    </div> --}}
+    <div class="relative w-full h-full mx-auto overflow-hidden py-4 grid grid-cols-1 lg:grid-cols-3">
+        <!-- Video Section -->
+        <div class="relative col-span-2 aspect-video" dir="ltr">
+            <iframe 
+                class="absolute top-0 left-0 w-full h-full rounded-l-lg"
+                src="https://www.youtube.com/embed/xuuNZQwhEn4?si=wAVU0dgJMPh7Ijs1&autoplay=1&mute=1&controls=0&loop=1&playlist=xuuNZQwhEn4" 
+                title="Latest Design Video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    
+        <!-- Overlay and Text Section -->
+        <aside class="flex items-center justify-center bg-purple-900 p-6 rounded-r-lg col-span-1" dir="rtl">
+            <div class="text-right max-w-md">
+                <h2 class="text-6xl md:text-5xl text-pretty text-white mb-2 drop-shadow-lg">
+                    <span class="cursive font-light text-balance">Get</span><br>100%
+                </h2>
+                <p class="text-lg md:text-xl text-white font-light drop-shadow">
+                    of Your Gold Exchange Value
+                </p>
+                <i class="ri-arrow-right-line bg-white rounded-full text-3xl mt-6"></i>
+            </div>
+        </aside>
     </div>
+    
     
 
 
@@ -265,7 +340,7 @@
         </div>
     </div> --}}
     {{-- FOR DESKTOP --}}
-    <div class="container mx-auto  py-6 bg-gray-50 lg:block hidden">
+    {{-- <div class="container mx-auto  py-6 bg-gray-50 lg:block hidden">
         <div class="flex flex-col md:flex-row gap-2 md:gap-40 justify-center">
             <!-- Left Section -->
             <div class="w-1/3 md:w-1/3 relative mb-6 md:mb-0">
@@ -294,7 +369,40 @@
                 </div>
             </div>
         </div>
+    </div> --}}
+    <div class="container mx-auto py-6 bg-gray-50 lg:block md:hidden hidden">
+        <div class="relative flex flex-col md:flex-row gap-2 md:gap-0 justify-center">
+            <!-- Left Section -->
+            <div class="w-full md:w-1/3 relative mb-6 md:mb-0 left-0">
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-black rounded-lg p-0 transform translate-x-1/2">
+                    <h2 class="text-sm md:text-md font-bold mb-2 text-nowrap px-4">Unsure Which Design To Pick?</h2>
+                    <p class="text-sm md:text-base mb-2 text-nowrap">Book A FREE Home Trial!</p>
+                    <button class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded text-sm md:text-base transition duration-300 hover:from-pink-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-50">
+                        Schedule Appointment
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <img src="{{ asset('asset/img/T@H.webp') }}" alt="Customers discussing designs" class="w-full rounded object-cover">
+                </div>
+            </div>
+    
+            <!-- Right Section -->
+            <div class="w-full md:w-1/3 relative mb-6 md:mb-0 left-2"style="margin-left: 200px;"
+            >
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-black rounded-lg p-0 transform translate-x-1/3">
+                    <h2 class="text-sm md:text-md font-bold mb-2 text-nowrap px-4">Come Visit Us At Any of Our Stores!</h2>
+                    <div class="mb-4 w-1/2">
+                        <input type="text" placeholder="Enter Pincode or City" class="w-full p-2 border border-pink-500 rounded text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-50">
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <img src="{{ asset('asset/img/store.webp') }}" alt="Store interior" class="w-full rounded object-cover">
+                </div>
+            </div>
+        </div>
     </div>
+    
+    
     
 {{-- FOR MOBILE --}}
 
@@ -375,7 +483,7 @@
     </div>
 
     {{-- SLIDER - - CARDS --}}
-    <div class="container mx-auto px-4 py-8">
+    {{-- <div class="container mx-auto px-4 py-8">
         <!-- Header with Tabs -->
         <div class="grid grid-cols-1 lg:grid-cols-2 justify-between items-center mb-6">
             <h2 class="text-2xl font-semibold text-gray-800 text-center">Best of CaratLane</h2>
@@ -473,7 +581,115 @@
                 </div>
             </div>
         </div>
+    </div> --}}
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header with Tabs -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 justify-between items-center mb-6">
+            <h2 class="text-2xl font-semibold text-gray-800 text-center">Best of CaratLane</h2>
+            <div class="inline-flex rounded-md shadow-sm justify-center mt-2" role="group">
+                <button id="women-tab" type="button"
+                    class="tab-btn px-4 py-2 text-sm font-medium text-white bg-purple-500 rounded-l-lg hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    data-tab="slider1" aria-controls="slider1" aria-selected="true">
+                    WOMEN
+                </button>
+                <button id="men-tab" type="button"
+                    class="tab-btn px-4 py-2 text-sm font-medium text-gray-700 bg-white rounded-r-lg border border-gray-200 hover:bg-gray-100 hover:text-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    data-tab="slider2" aria-controls="slider2" aria-selected="false">
+                    MEN
+                </button>
+            </div>
+        </div>
+    
+        <!-- Slider 1 (WOMEN) -->
+        <div id="slider1" class="tab-content">
+            <div class="glide" id="glide1">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides flex space-x-4">
+                        <!-- Product 1 -->
+                        <li class="glide__slide w-48 flex-shrink-0">
+                            <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
+                                class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
+                            <p class="font-semibold text-lg">₹25,699</p>
+                            <p class="text-sm text-gray-500 line-through">₹28,555</p>
+                            <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
+                        </li>
+                        <!-- Additional Products... -->
+                    </ul>
+                </div>
+                <div class="glide__arrows flex justify-between mt-4" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left bg-white p-2 rounded-full shadow-md"
+                        data-glide-dir="<" aria-label="Previous Slide">
+                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    <button class="glide__arrow glide__arrow--right bg-white p-2 rounded-full shadow-md"
+                        data-glide-dir=">" aria-label="Next Slide">
+                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Slider 2 (MEN) -->
+        <div id="slider2" class="tab-content hidden w-full">
+            <div class="glide" id="glide2">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides flex space-x-4">
+                        <!-- Product 1 -->
+                        <li class="glide__slide w-48 flex-shrink-0">
+                            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+                                <div class="relative">
+                                    <a href="{{ route('productdetail') }}">
+                                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
+                                            class="w-full h-48 object-cover" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
+                                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Additional Products... -->
+                    </ul>
+                </div>
+                <div class="glide__arrows flex justify-between mt-4" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left bg-white p-2 rounded-full shadow-md"
+                        data-glide-dir="<" aria-label="Previous Slide">
+                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    <button class="glide__arrow glide__arrow--right bg-white p-2 rounded-full shadow-md"
+                        data-glide-dir=">" aria-label="Next Slide">
+                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
+<script>
+document.querySelectorAll('.tab-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const tabID = button.getAttribute('data-tab');
+        document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
+        document.getElementById(tabID).classList.remove('hidden');
+        
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.classList.remove('bg-purple-500', 'text-white');
+            btn.classList.add('bg-white', 'text-gray-700');
+        });
+        button.classList.add('bg-purple-500', 'text-white');
+    });
+});
+    
+</script>    
+    
      
     
     <!-- Initialize Glide.js -->
