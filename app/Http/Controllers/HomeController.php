@@ -41,7 +41,7 @@ class HomeController extends Controller
         return view('frontend.bullions');
     }
 
-    public function showBlogs()
+    public function Blogs()
     {
         return view('frontend.blogs');
     }
