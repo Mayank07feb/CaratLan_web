@@ -602,11 +602,43 @@
     
         <!-- Slider 1 (WOMEN) -->
         <div id="slider1" class="tab-content">
-            <div class="glide" id="glide1">
-                <div class="glide__track" data-glide-el="track">
-                    <ul class="glide__slides flex space-x-4">
+            <div class="relative">
+                <div class="slider-wrapper overflow-hidden">
+                    <ul class="slider flex transition-transform duration-300">
                         <!-- Product 1 -->
-                        <li class="glide__slide w-48 flex-shrink-0">
+                        <li class="slide w-48 flex-shrink-0">
+                            <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
+                                class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
+                            <p class="font-semibold text-lg">₹25,699</p>
+                            <p class="text-sm text-gray-500 line-through">₹28,555</p>
+                            <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
+                        </li>
+                           <!-- Product 1 -->
+                           <li class="slide w-48 flex-shrink-0">
+                            <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
+                                class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
+                            <p class="font-semibold text-lg">₹25,699</p>
+                            <p class="text-sm text-gray-500 line-through">₹28,555</p>
+                            <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
+                        </li>
+                           <!-- Product 1 -->
+                           <li class="slide w-48 flex-shrink-0">
+                            <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
+                                class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
+                            <p class="font-semibold text-lg">₹25,699</p>
+                            <p class="text-sm text-gray-500 line-through">₹28,555</p>
+                            <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
+                        </li>
+                           <!-- Product 1 -->
+                           <li class="slide w-48 flex-shrink-0">
+                            <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
+                                class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
+                            <p class="font-semibold text-lg">₹25,699</p>
+                            <p class="text-sm text-gray-500 line-through">₹28,555</p>
+                            <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
+                        </li>
+                           <!-- Product 1 -->
+                           <li class="slide w-48 flex-shrink-0">
                             <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
                                 class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
                             <p class="font-semibold text-lg">₹25,699</p>
@@ -616,15 +648,13 @@
                         <!-- Additional Products... -->
                     </ul>
                 </div>
-                <div class="glide__arrows flex justify-between mt-4" data-glide-el="controls">
-                    <button class="glide__arrow glide__arrow--left bg-white p-2 rounded-full shadow-md"
-                        data-glide-dir="<" aria-label="Previous Slide">
+                <div class="slider-arrows flex justify-between mt-4">
+                    <button class="slider-arrow bg-white p-2 rounded-full shadow-md" id="prev1" aria-label="Previous Slide">
                         <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                         </svg>
                     </button>
-                    <button class="glide__arrow glide__arrow--right bg-white p-2 rounded-full shadow-md"
-                        data-glide-dir=">" aria-label="Next Slide">
+                    <button class="slider-arrow bg-white p-2 rounded-full shadow-md" id="next1" aria-label="Next Slide">
                         <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
@@ -634,12 +664,12 @@
         </div>
     
         <!-- Slider 2 (MEN) -->
-        <div id="slider2" class="tab-content hidden w-full">
-            <div class="glide" id="glide2">
-                <div class="glide__track" data-glide-el="track">
-                    <ul class="glide__slides flex space-x-4">
+        <div id="slider2" class="tab-content hidden">
+            <div class="relative">
+                <div class="slider-wrapper overflow-hidden">
+                    <ul class="slider flex transition-transform duration-300">
                         <!-- Product 1 -->
-                        <li class="glide__slide w-48 flex-shrink-0">
+                        <li class="slide w-48 flex-shrink-0">
                             <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
                                 <div class="relative">
                                     <a href="{{ route('productdetail') }}">
@@ -653,18 +683,93 @@
                                 </div>
                             </div>
                         </li>
+                        <!-- Product 1 -->
+                        <li class="slide w-48 flex-shrink-0">
+                            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+                                <div class="relative">
+                                    <a href="{{ route('productdetail') }}">
+                                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
+                                            class="w-full h-48 object-cover" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
+                                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Product 1 -->
+                        <li class="slide w-48 flex-shrink-0">
+                            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+                                <div class="relative">
+                                    <a href="{{ route('productdetail') }}">
+                                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
+                                            class="w-full h-48 object-cover" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
+                                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Product 1 -->
+                        <li class="slide w-48 flex-shrink-0">
+                            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+                                <div class="relative">
+                                    <a href="{{ route('productdetail') }}">
+                                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
+                                            class="w-full h-48 object-cover" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
+                                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Product 1 -->
+                        <li class="slide w-48 flex-shrink-0">
+                            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+                                <div class="relative">
+                                    <a href="{{ route('productdetail') }}">
+                                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
+                                            class="w-full h-48 object-cover" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
+                                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Product 1 -->
+                        <li class="slide w-48 flex-shrink-0">
+                            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+                                <div class="relative">
+                                    <a href="{{ route('productdetail') }}">
+                                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
+                                            class="w-full h-48 object-cover" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
+                                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
+                                </div>
+                            </div>
+                        </li>
+                        
+
                         <!-- Additional Products... -->
                     </ul>
                 </div>
-                <div class="glide__arrows flex justify-between mt-4" data-glide-el="controls">
-                    <button class="glide__arrow glide__arrow--left bg-white p-2 rounded-full shadow-md"
-                        data-glide-dir="<" aria-label="Previous Slide">
+                <div class="slider-arrows flex justify-between mt-4">
+                    <button class="slider-arrow bg-white p-2 rounded-full shadow-md" id="prev2" aria-label="Previous Slide">
                         <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                         </svg>
                     </button>
-                    <button class="glide__arrow glide__arrow--right bg-white p-2 rounded-full shadow-md"
-                        data-glide-dir=">" aria-label="Next Slide">
+                    <button class="slider-arrow bg-white p-2 rounded-full shadow-md" id="next2" aria-label="Next Slide">
                         <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
@@ -673,22 +778,65 @@
             </div>
         </div>
     </div>
-<script>
-document.querySelectorAll('.tab-btn').forEach(button => {
-    button.addEventListener('click', () => {
-        const tabID = button.getAttribute('data-tab');
-        document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
-        document.getElementById(tabID).classList.remove('hidden');
-        
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.classList.remove('bg-purple-500', 'text-white');
-            btn.classList.add('bg-white', 'text-gray-700');
-        });
-        button.classList.add('bg-purple-500', 'text-white');
-    });
-});
     
-</script>    
+    <script>
+    document.querySelectorAll('.tab-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const tabID = button.getAttribute('data-tab');
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
+            document.getElementById(tabID).classList.remove('hidden');
+            
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-purple-500', 'text-white');
+                btn.classList.add('bg-white', 'text-gray-700');
+            });
+            button.classList.add('bg-purple-500', 'text-white');
+        });
+    });
+    
+    // Slider functionality
+    const slides = document.querySelectorAll('.slider');
+    let currentSlideIndex = 0;
+    
+    function updateSlider(slider, index) {
+        const slideWidth = slider.clientWidth; // width of the slider container
+        const offset = -index * slideWidth; // calculate offset
+        slider.style.transform = `translateX(${offset}px)`; // move the slides
+    }
+    
+    // Next and Previous button functionality
+    document.getElementById('next1').addEventListener('click', () => {
+        const slider = document.querySelector('#slider1 .slider');
+        const totalSlides = slider.children.length;
+        currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+        updateSlider(slider, currentSlideIndex);
+    });
+    
+    document.getElementById('prev1').addEventListener('click', () => {
+        const slider = document.querySelector('#slider1 .slider');
+        const totalSlides = slider.children.length;
+        currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+        updateSlider(slider, currentSlideIndex);
+    });
+    
+    // Add similar event listeners for slider2
+    let currentSlideIndex2 = 0;
+    
+    document.getElementById('next2').addEventListener('click', () => {
+        const slider = document.querySelector('#slider2 .slider');
+        const totalSlides = slider.children.length;
+        currentSlideIndex2 = (currentSlideIndex2 + 1) % totalSlides;
+        updateSlider(slider, currentSlideIndex2);
+    });
+    
+    document.getElementById('prev2').addEventListener('click', () => {
+        const slider = document.querySelector('#slider2 .slider');
+        const totalSlides = slider.children.length;
+        currentSlideIndex2 = (currentSlideIndex2 - 1 + totalSlides) % totalSlides;
+        updateSlider(slider, currentSlideIndex2);
+    });
+    </script>
+     
     
      
     
