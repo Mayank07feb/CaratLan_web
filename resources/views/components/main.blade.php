@@ -82,14 +82,14 @@
             <span id="icon" class="material-icons">phone</span>
             <!-- Close button -->
             <span id="x-icon"
-                class="material-icons bg-white text-black w-12 h-12 rounded-full shadow-lg hover:bg-gray-200 transition-all flex items-center justify-center border border-gray-300">
+                class="material-icons bg-white text-black w-12 h-12 rounded-full shadow-lg hover:bg-gray-200 transition-all flex items-center justify-center border border-gray-300 hidden">
                 close
             </span>
         </button>
 
         <!-- Menu -->
         <div id="menu"
-            class=" flex-col space-y-4 mt-4 mb-16 w-[200px] transform translate-x-full transition-transform duration-500 ease-in-out origin-bottom-right absolute bottom-0 right-0">
+            class="hidden flex-col space-y-4 mt-4 mb-16 w-[200px] transform translate-x-full transition-transform duration-500 ease-in-out origin-bottom-right absolute bottom-0 right-0">
             <!-- Talk to our Experts Button -->
             <button
                 class="flex items-center justify-center space-x-2 px-4 py-3 rounded-lg bg-white text-pink-500 border border-gray-200 shadow-md transition-shadow hover:bg-gray-50 hover:shadow-lg w-full">
@@ -131,11 +131,21 @@
     <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
 
     <script>
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             const preloader = document.getElementById('preloader');
             preloader.style.display = 'none';
-        });
 
+            // Ensure menu is hidden on load
+            const menu = document.getElementById('menu');
+            const icon = document.getElementById('icon');
+            const xIcon = document.getElementById('x-icon');
+            const toggleButton = document.getElementById('menu-toggle');
+
+            menu.classList.add('hidden', 'translate-x-full'); // Make sure it's hidden initially
+            icon.classList.remove('hidden');
+            xIcon.classList.add('hidden');
+            toggleButton.setAttribute('aria-expanded', 'false'); // Set correct initial aria state
+        });
 
         const toggleButton = document.getElementById('menu-toggle');
         const menu = document.getElementById('menu');
@@ -173,12 +183,6 @@
     <script src="https://cdn.jsdelivr.net/npm/drift-zoom@1.0.0/dist/drift.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Additional JS Files -->
-    <script src="{{ asset('asset/js/script.js') }}"></script>
-    {{-- apine js --}}
-
-
 </body>
 
 </html>
