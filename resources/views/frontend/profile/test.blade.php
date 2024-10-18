@@ -740,3 +740,206 @@
         dropdown.classList.add('hidden');
     });
 </script> --}}
+
+
+{{-- Side Bar --}}
+
+{{-- @extends('components.main')
+
+@section('content')
+    <style>
+        /* Custom Scrollbar Styles */
+        .scrollbar-custom {
+            scrollbar-width: thin;
+            scrollbar-color: #a0aec0 transparent; /* For Firefox */
+        }
+
+        .scrollbar-custom::-webkit-scrollbar {
+            width: 8px;
+            background: transparent; /* Background of the scrollbar */
+        }
+
+        .scrollbar-custom::-webkit-scrollbar-thumb {
+            background-color: #a0aec0; /* Color of the scrollbar */
+            border-radius: 10px;
+        }
+
+        /* Improved hover effects */
+        .filter-option:hover {
+            background-color: #e2e8f0; /* Light gray on hover */
+        }
+
+        /* Button focus styles */
+        button:focus {
+            outline: 2px solid #cbd5e0; /* Focus outline */
+            outline-offset: 2px;
+        }
+    </style>
+
+    <div class="bg-gray-100 p-6 pl-24">
+        <!-- Breadcrumb and Title Section -->
+        <div class="flex items-center justify-between mb-2">
+            <h1 class="text-lg font-semibold text-gray-800">
+                Jewellery
+                <span class="text-xs font-normal text-gray-600">3855 Designs</span>
+            </h1>
+        </div>
+
+        <!-- Breadcrumb Navigation -->
+        <nav class="text-xs text-gray-500">
+            <a href="#" class="hover:underline">Home</a> &gt;
+            <a href="#" class="hover:underline">Jewellery</a>
+        </nav>
+    </div>
+
+    <!-- Page Header Section -->
+    <section class="bg-white py-4 px-12 mb-0">
+        <div class="container mx-auto">
+            <!-- Filter Buttons -->
+            <div class="mt-4 flex space-x-4">
+                <button class="bg-purple-500 text-white px-4 py-2 rounded-[12px]">
+                    All
+                </button>
+                <button class="bg-purple-100 px-4 py-2 rounded-[12px] hover:bg-purple-500 hover:text-white">
+                    Try at Home
+                </button>
+                <button class="bg-purple-100 px-4 py-2 rounded-[12px] hover:bg-purple-500 hover:text-white">
+                    Designs in Store
+                </button>
+                <button class="bg-purple-100 px-4 py-2 rounded-[12px] hover:bg-purple-500 hover:text-white">
+                    Faster Delivery
+                </button>
+                <button class="bg-purple-100 px-4 py-2 rounded-[12px] hover:bg-purple-500 hover:text-white">
+                    New In
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div class="flex bg-white flex-col md:flex-row">
+        <!-- Sidebar -->
+        <aside class="w-full md:w-1/4 p-4 bg-white h-screen sticky top-0 overflow-y-auto scrollbar-custom shadow-lg">
+            <!-- Filters Heading -->
+            <div class="flex justify-between items-center mb-4 border-b border-gray-300 pb-2 pt-4 sticky top-0 bg-white z-10">
+                <h2 class="text-base font-semibold text-gray-800">FILTERS</h2>
+                <a href="#" class="text-purple-600 text-sm font-medium hover:underline">CLEAR ALL</a>
+            </div>
+
+            <!-- Filter Section Template -->
+            @foreach (['Ring Size', 'Price', 'Material', 'Occasion', 'Gender'] as $filter)
+                <div x-data="{ open: true }" class="mb-6">
+                    <h3 @click="open = !open" class="text-base font-medium text-gray-700 cursor-pointer">{{ $filter }}</h3>
+                    <div x-show="open" class="mt-2 transition-all duration-300">
+                        @foreach (['Option 1', 'Option 2', 'Option 3'] as $option) <!-- Replace with actual options -->
+                            <div class="flex items-center filter-option">
+                                <input type="checkbox"
+                                       class="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded">
+                                <label class="ml-2 text-base text-gray-700 hover:text-purple-600">{{ $option }} (N)</label>
+                            </div>
+                        @endforeach
+                        <a href="#" class="text-purple-600 text-sm mt-2 block hover:underline">Show More</a>
+                    </div>
+                </div>
+            @endforeach
+
+            <!-- Apply Filters Button -->
+            <button class="bg-purple-600 text-white text-sm font-medium px-4 py-2 rounded mt-4 w-full hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50">
+                Apply Filters
+            </button>
+        </aside>
+
+        <!-- Product Grid -->
+        <div class="w-full md:w-3/4 p-4">
+            <!-- Top Bar -->
+            <div class="flex justify-between items-center mb-6">
+                <div class="border border-gray-300 text-xs text-gray-700 rounded-[20px] px-3 py-1 flex items-center justify-between mb-4">
+                    <span class="text-sm">Flat 100% off on Making Charges</span>
+                    <button class="ml-2 text-gray-500 hover:text-gray-700 focus:outline-none">
+                        <span class="material-icons">close</span>
+                    </button>
+                </div>
+
+                <select class="border border-gray-300 text-sm text-gray-700 rounded px-3 py-2">
+                    <option>Sort By: Featured</option>
+                    <!-- Add more options here -->
+                </select>
+            </div>
+
+            <!-- Product List -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Product Card -->
+                @for ($i = 0; $i < 4; $i++) <!-- Sample Loop for Cards -->
+                    <div class="group rounded-lg relative w-full max-w-sm overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg hover:h-96">
+                        <div class="p-1">
+                            <span class="absolute top-2 z-10 left-2 bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
+                            <div class="absolute top-2 right-2 z-10 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
+                                <button class="bg-white p-1 rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="relative">
+                                <img id="productImage" src="{{ asset('asset/img/best10.webp') }}" alt="Product" class="w-full h-56 object-cover border border-gray-300 shadow rounded-lg transition-opacity duration-300 ease-in-out">
+                            </div>
+                            <div class="p-2">
+                                <div class="flex items-center">
+                                    <div class="text-base font-semibold">₹24,733</div>
+                                    <div class="text-sm ml-2 line-through text-gray-500">₹32,282</div>
+                                </div>
+                                <p class="text-pink-600 font-semibold text-sm mt-1">Check delivery date</p>
+                                <p class="text-xs text-gray-600 mt-1">Sameera Diamond Drop Earrings</p>
+                            </div>
+
+                            <!-- Hover Buttons -->
+                            <div class="absolute bottom-4 left-2 right-2 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 flex justify-between">
+                                <button class="bg-purple-500 text-white px-4 py-1 rounded">Add to Cart</button>
+                                <button class="bg-white border border-gray-300 px-4 py-1 rounded">View</button>
+                            </div>
+                        </div>
+                    </div>
+                @endfor
+            </div>
+        </div>
+    </div>
+@endsection --}}
+
+{{-- PopUp --}}
+
+ {{-- <div class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
+    <div class="bg-white rounded-lg shadow-xl w-96 h-auto p-8 relative flex flex-col items-center">
+      <!-- Close button -->
+      <button class="absolute top-3 right-3 text-gray-400 hover:text-gray-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      
+      <!-- Header text -->
+      <h2 class="text-xl font-semibold text-gray-800 text-center">Your PIN Code unlocks</h2>
+      <p class="text-center text-sm text-gray-500 mt-1">
+        Fastest delivery date, Try-at-Home availability, Nearest store and In-store design!
+      </p>
+      
+      <!-- Delivery Icon -->
+      <div class="flex justify-center my-8">
+        <div class="bg-pink-100 p-4 rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v1a3 3 0 106 0v-1M6 13h12l1.5-6h-15l1.5 6zM9 4h6v2H9V4z" />
+          </svg>
+        </div>
+      </div>
+      
+      <!-- Fastest delivery date text -->
+      <p class="text-center text-pink-500 font-semibold mb-4">Fastest Delivery Date</p>
+      
+      <!-- Pincode input -->
+      <div class="flex justify-center w-full">
+        <div class="relative flex items-center w-full">
+          <input type="text" placeholder="Enter Pincode" class="w-full max-w-xs px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-gray-700">
+        </div>
+        <button class="ml-4 text-purple-500 font-semibold hover:text-purple-600">LOCATE ME</button>
+      </div>
+    </div>
+  </div> --}}

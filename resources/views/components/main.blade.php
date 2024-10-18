@@ -26,7 +26,7 @@
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    
+
     <!-- Glide.js JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
 
@@ -164,6 +164,8 @@
         toggleButton.addEventListener('click', toggleMenu);
         overlay.addEventListener('click', toggleMenu);
     </script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <!-- Drift JS -->
     <script src="https://cdn.jsdelivr.net/npm/drift-zoom@1.0.0/dist/drift.min.js"></script>
