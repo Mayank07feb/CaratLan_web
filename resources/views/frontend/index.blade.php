@@ -1,53 +1,86 @@
 @extends('components.main')
 
 @section('content')
-    <style>
-        .clip-path {
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 53% 100%, 50% 97%, 46% 100%, 0 100%);
+<style>
+    .clip-path {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 53% 100%, 50% 97%, 46% 100%, 0 100%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .slider-wrapper {
+        display: flex;
+        transition: transform 0.7s ease-in-out;
+    }
+    .slider-slide {
+        min-width: 100%; /* Ensures only one slide is visible at a time */
+        height: 100%;
+        position: relative;
+    }
+</style>
 
-            width: 100%;
-            /* Ensure it covers full width */
-            height: 100%;
-            /* Ensure it covers full height */
-            object-fit: cover;
-            /* Maintain aspect ratio */
-        }
-    </style>
-    {{-- HOME BANNER SLIDER --}}
-    <!-- Slider Container -->
-    <div class="relative w-full lg:h-full md:h-100 overflow-hidden">
-        <!-- Slider Wrapper -->
-        <div class="relative w-full h-full flex items-center justify-center overflow-hidden">
-            <!-- Slides Wrapper -->
-            <div id="sliderWrapper" class="slider-wrapper flex transition-transform duration-700 ease-in-out">
-                <!-- Slide 1 -->
-                <div class="slider-slide w-full h-full flex-shrink-0 relative">
-                    <img src="https://cdn.caratlane.com/media/static/images/V4/2024/CL/09_Sep/Banners/DT/Offer/02/Desktop1920x694_R1.webp"
-                        alt="Banner Image" class="w-full h-full object-cover rounded shadow-lg">
-
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="slider-slide w-full h-full flex-shrink-0 relative">
-                    <img src="https://cdn.caratlane.com/media/static/images/V4/2024/CL/10_OCT/Banner/Egold/1/Desktop_1920x694.jpg"
-                        alt="E-Gold Banner" class="w-full h-full object-cover rounded shadow-lg">
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="slider-slide w-full h-full flex-shrink-0 relative">
-                    <img src="https://cdn.caratlane.com/media/static/images/V4/2024/CL/07_JULY/Banner/SolitaireBlog/Desktop.webp"
-                        alt="Solitaire Blog Banner" class="w-full h-full object-cover rounded shadow-lg">
-                </div>
+{{-- HOME BANNER SLIDER --}}
+<!-- Slider Container -->
+<div class="relative w-full  md:h-100 overflow-hidden">
+    <!-- Slider Wrapper -->
+    <div class="relative w-full h-full flex items-center justify-center overflow-hidden">
+        <!-- Slides Wrapper -->
+        <div id="sliderWrapper" class="slider-wrapper">
+            <!-- Slide 1 -->
+            <div class="slider-slide">
+                <img src="https://cdn.caratlane.com/media/static/images/V4/2024/CL/09_Sep/Banners/DT/Offer/02/Desktop1920x694_R1.webp"
+                    alt="Banner Image" class="w-full h-full object-cover clip-path rounded shadow-lg">
             </div>
 
-            <!-- Pagination -->
-            <div class="slider-pagination absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                <button class="pagination-dot bg-white rounded-full w-3 h-3" data-index="0"></button>
-                <button class="pagination-dot bg-white rounded-full w-3 h-3" data-index="1"></button>
-                <button class="pagination-dot bg-white rounded-full w-3 h-3" data-index="2"></button>
+            <!-- Slide 2 -->
+            <div class="slider-slide">
+                <img src="https://cdn.caratlane.com/media/static/images/V4/2024/CL/10_OCT/Banner/Egold/1/Desktop_1920x694.jpg"
+                    alt="E-Gold Banner" class="w-full h-full object-cover clip-path rounded shadow-lg">
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slider-slide">
+                <img src="https://cdn.caratlane.com/media/static/images/V4/2024/CL/07_JULY/Banner/SolitaireBlog/Desktop.webp"
+                    alt="Solitaire Blog Banner" class="w-full h-full object-cover clip-path rounded shadow-lg">
             </div>
         </div>
+
+        <!-- Pagination -->
+        <div class="slider-pagination absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <button class="pagination-dot bg-white rounded-full w-3 h-3 focus:outline-none" data-index="0"></button>
+            <button class="pagination-dot bg-white rounded-full w-3 h-3 focus:outline-none" data-index="1"></button>
+            <button class="pagination-dot bg-white rounded-full w-3 h-3 focus:outline-none" data-index="2"></button>
+        </div>
     </div>
+</div>
+
+<script>
+    const slides = document.querySelectorAll('.slider-slide');
+    const paginationDots = document.querySelectorAll('.pagination-dot');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        const sliderWrapper = document.getElementById('sliderWrapper');
+        sliderWrapper.style.transform = `translateX(-${index * 100}%)`;
+        paginationDots.forEach((dot, i) => {
+            dot.classList.toggle('bg-gray-400', i !== index);
+            dot.classList.toggle('bg-white', i === index);
+        });
+    }
+
+    paginationDots.forEach(dot => {
+        dot.addEventListener('click', (e) => {
+            currentIndex = parseInt(e.target.dataset.index);
+            showSlide(currentIndex);
+        });
+    });
+
+    // Auto slide functionality (optional)
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    }, 5000); // Change slide every 5 seconds
+</script>
 
 
     {{-- div containers --}}
@@ -71,34 +104,34 @@
     <section class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 m-4 lg:py-8 lg:px-4">
         <div>
             <img src="https://cdn.caratlane.com/media/static/images/V4/2024/CL/10_OCT/Banner/6tile/01/Desktop_1.jpg"
-                alt="Banner Image" class="w-full h-auto rounded shadow-lg">
+                alt="Banner Image" class="w-full h-auto rounded ">
         </div>
         <div>
             <img src="https://cdn.caratlane.com/media/static/images/V4/2024/CL/10_OCT/Banner/6tile/01/Desktop_2.jpg"
-                alt="Banner Image" class="w-full h-auto rounded shadow-lg">
+                alt="Banner Image" class="w-full h-auto rounded ">
         </div>
         <div>
             <img src="https://cdn.caratlane.com/media/static/images/V4/2024/CL/10_OCT/Banner/6tile/01/Desktop_4.jpg"
-                alt="Banner Image" class="w-full h-auto rounded shadow-lg">
+                alt="Banner Image" class="w-full h-auto rounded ">
         </div>
         <div>
             <img src="https://cdn.caratlane.com/media/static/images/V4/2024/CL/10_OCT/Banner/6tile/01/Desktop_3.jpg"
-                alt="Banner Image" class="w-full h-auto rounded shadow-lg">
+                alt="Banner Image" class="w-full h-auto rounded ">
         </div>
         <div>
             <img src="https://cdn.caratlane.com/media/static/images/V4/2024/CL/10_OCT/Banner/6tile/01/Desktop_5.jpg"
-                alt="Banner Image" class="w-full h-auto rounded shadow-lg">
+                alt="Banner Image" class="w-full h-auto rounded ">
         </div>
         <div>
             <img src="https://cdn.caratlane.com/media/static/images/V4/2024/CL/10_OCT/Banner/6tile/01/Desktop_6.jpg"
-                alt="Banner Image" class="w-full h-auto rounded shadow-lg">
+                alt="Banner Image" class="w-full h-auto rounded ">
         </div>
     </section>
 
 
     {{-- HD VIDEO SECTION --}}
 
-    <div class="relative w-full h-auto mx-auto overflow-hidden shadow-2xl grid grid-cols-1 md:grid-cols-3 px-4 md:px-8">
+    <div class="relative w-full h-auto mx-0 overflow-hidden shadow-2xl grid grid-cols-1 md:grid-cols-3">
         <!-- Video Section -->
         <div class="relative col-span-2 pt-[56.25%]" dir="ltr">
             <iframe class="absolute top-0 left-0 w-full h-full rounded-t-xl md:rounded-s-3xl"
@@ -162,7 +195,7 @@
     </div>
 
     {{-- VIDEO HD SECOND --}}
-    <div class="relative w-full h-auto mx-auto overflow-hidden py-4 grid grid-cols-1 lg:grid-cols-3 px-4 md:px-8">
+    <div class="relative w-full h-auto mx-auto overflow-hidden py-4 grid grid-cols-1 lg:grid-cols-3 px-4 md:px-4">
         <!-- Video Section -->
         <div class="relative col-span-2 pt-[56.25%]" dir="ltr">
             <iframe 
