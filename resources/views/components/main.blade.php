@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Giritra Jewellers</title>
+    <title>Jewellers</title>
     {{-- icons Arrow --}}
     <link rel="stylesheet" href="path/to/vamtam-icons.css">
 
@@ -74,10 +74,10 @@
     <!-- Include JS files -->
     <script src="{{ asset('js/app.js') }}"></script>
 
-    <div class="fixed bottom-5 right-5 flex flex-col items-center z-50">
+    <div class="fixed bottom-20 right-5 flex flex-col items-center z-50">
         <!-- Hamburger button -->
         <button id="menu-toggle"
-            class="bg-purple-500 text-white w-12 h-12 rounded-full shadow-lg hover:bg-purple-600 transition-all flex items-center justify-center relative"
+            class="bg-[#4F3267] text-white w-12 h-12 rounded-full shadow-lg hover:bg-[#4F3267] transition-all flex items-center justify-center relative"
             aria-expanded="false" aria-label="Open menu">
             <span id="icon" class="material-icons">phone</span>
             <!-- Close button -->
