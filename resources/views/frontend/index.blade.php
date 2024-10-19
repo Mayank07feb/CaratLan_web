@@ -152,14 +152,10 @@
             </div>
         </div>
     </div> --}}
-    <div class="relative w-full h-full mx-0 overflow-hidden shadow-2xl grid grid-cols-1 md:grid-cols-3">
+    <div class="relative w-full h-full mx-0 overflow-hidden shadow-2xl grid grid-cols-1 md:grid-cols-3 px-8">
         <!-- Video Section -->
-        <div class="relative col-span-2 aspect-video" dir="ltr">
-            <iframe class="absolute top-0 left-0 w-full h-full rounded-l-lg"
-                src="https://www.youtube.com/embed/kYOP52BUZTI?autoplay=1&mute=1&loop=1&playlist=kYOP52BUZTI"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="relative col-span-2 aspect-video rounded-l-lg" dir="ltr">
+            <iframe width="960" height="475" src="https://www.youtube.com/embed/Vz0l_OYJofo?si=tYVrySeJr6cU62c6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     
         <!-- Overlay and Text Section -->
@@ -177,7 +173,7 @@
 
 
     {{-- COLLECTIONS --}}
-    {{-- <div class="container mx-auto p-4 py-24">
+    <div class="container mx-auto p-4 py-24">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <!-- Image 1 -->
             <div class="relative group overflow-hidden">
@@ -201,8 +197,8 @@
                     class="w-full h-auto rounded-lg shadow-md transition-transform duration-300 transform group-hover:scale-105">
             </div>
         </div>
-    </div> --}}
-    <div class="container mx-auto p-4 py-24">
+    </div>
+    {{-- <div class="container mx-auto p-4 py-24">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <!-- Image 1 -->
             <div class="relative group overflow-hidden">
@@ -226,7 +222,7 @@
                     class="w-full h-auto rounded-lg shadow-md transition-transform duration-300 transform group-hover:scale-105">
             </div>
         </div>
-    </div>
+    </div> --}}
     
 
 {{-- card images --}}
@@ -269,18 +265,10 @@
             </div>
         </aside>
     </div> --}}
-    <div class="relative w-full h-full mx-auto overflow-hidden py-4 grid grid-cols-1 lg:grid-cols-3">
+    <div class="relative w-full h-full mx-auto overflow-hidden py-4 grid grid-cols-1 lg:grid-cols-3 px-8">
         <!-- Video Section -->
-        <div class="relative col-span-2 aspect-video" dir="ltr">
-            <iframe 
-                class="absolute top-0 left-0 w-full h-full rounded-l-lg"
-                src="https://www.youtube.com/embed/xuuNZQwhEn4?si=wAVU0dgJMPh7Ijs1&autoplay=1&mute=1&controls=0&loop=1&playlist=xuuNZQwhEn4" 
-                title="Latest Design Video"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
-            </iframe>
+        <div class="relative col-span-2 aspect-video rounded-l-lg" dir="ltr">
+            <iframe width="960" height="475" src="https://www.youtube.com/embed/KhrPUQsYcNo?si=yrOniYEbEwi8kLbl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     
         <!-- Overlay and Text Section -->
@@ -464,15 +452,11 @@
     
 
     {{-- SECTION --}}
-    <div class="flex items-center justify-center py-8 bg-purple-900">
-        <div class="max-w-xl w-full px-4 md:px-0 text-center">
-            <h1 class="text-2xl md:text-2xl lg:text-2xl font-bold text-yellow-600 mb-4">
-                The trust of TaniSHQ,
-            </h1>
-            <h1 class="text-2xl md:text-3xl lg:text-3xl font-bold text-white mb-4">
-                The spirit of CARATLANE
-            </h1>
-            <p class="text-sm md:text-md lg:text-md text-purple-300 mb-6">
+    <div class="flex items-center justify-center py-8 bg-[#231535]">
+        <div class="max-w-xl w-full md:px-0 text-center">
+            
+            <img src="{{asset('asset/img/section-img.png')}}" alt="" class="object-center pl-20">
+            <p class="text-sm md:text-md lg:text-md text-purple-300 mb-2 px-14 -mt-2">
                 The highest quality of craftsmanship and innovation, that brings you modern, everyday designs.
             </p>
             <button
@@ -582,13 +566,13 @@
             </div>
         </div>
     </div> --}}
-    <div class="container mx-auto px-4 py-8">
+    {{-- <div class="container mx-auto px-4 py-8">
         <!-- Header with Tabs -->
         <div class="grid grid-cols-1 lg:grid-cols-2 justify-between items-center mb-6">
             <h2 class="text-2xl font-semibold text-gray-800 text-center">Best of CaratLane</h2>
             <div class="inline-flex rounded-md shadow-sm justify-center mt-2" role="group">
                 <button id="women-tab" type="button"
-                    class="tab-btn px-4 py-2 text-sm font-medium text-white bg-purple-500 rounded-l-lg hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    class="tab-btn px-4 py-2 text-sm font-medium text-black bg-purple-500 rounded-l-lg hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
                     data-tab="slider1" aria-controls="slider1" aria-selected="true">
                     WOMEN
                 </button>
@@ -604,48 +588,65 @@
         <div id="slider1" class="tab-content">
             <div class="relative">
                 <div class="slider-wrapper overflow-hidden">
-                    <ul class="slider flex transition-transform duration-300">
+                    <ul class="slider flex transition-transform duration-300 gap-4">
                         <!-- Product 1 -->
-                        <li class="slide w-48 flex-shrink-0">
+                        <li class="slide w-68 flex-shrink-0">
                             <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
                                 class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
                             <p class="font-semibold text-lg">₹25,699</p>
                             <p class="text-sm text-gray-500 line-through">₹28,555</p>
                             <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
                         </li>
-                           <!-- Product 1 -->
-                           <li class="slide w-48 flex-shrink-0">
+                          <!-- Product 1 -->
+                          <li class="slide w-68 flex-shrink-0">
                             <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
                                 class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
                             <p class="font-semibold text-lg">₹25,699</p>
                             <p class="text-sm text-gray-500 line-through">₹28,555</p>
                             <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
                         </li>
-                           <!-- Product 1 -->
-                           <li class="slide w-48 flex-shrink-0">
+                          <!-- Product 1 -->
+                          <li class="slide w-68 flex-shrink-0">
                             <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
                                 class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
                             <p class="font-semibold text-lg">₹25,699</p>
                             <p class="text-sm text-gray-500 line-through">₹28,555</p>
                             <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
                         </li>
-                           <!-- Product 1 -->
-                           <li class="slide w-48 flex-shrink-0">
+                          <!-- Product 1 -->
+                          <li class="slide w-68 flex-shrink-0">
                             <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
                                 class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
                             <p class="font-semibold text-lg">₹25,699</p>
                             <p class="text-sm text-gray-500 line-through">₹28,555</p>
                             <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
                         </li>
-                           <!-- Product 1 -->
-                           <li class="slide w-48 flex-shrink-0">
+                          <!-- Product 1 -->
+                          <li class="slide w-68 flex-shrink-0">
                             <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
                                 class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
                             <p class="font-semibold text-lg">₹25,699</p>
                             <p class="text-sm text-gray-500 line-through">₹28,555</p>
                             <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
                         </li>
-                        <!-- Additional Products... -->
+                          <!-- Product 1 -->
+                          <li class="slide w-68 flex-shrink-0">
+                            <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
+                                class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
+                            <p class="font-semibold text-lg">₹25,699</p>
+                            <p class="text-sm text-gray-500 line-through">₹28,555</p>
+                            <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
+                        </li>
+                          <!-- Product 1 -->
+                          <li class="slide w-68 flex-shrink-0">
+                            <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
+                                class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
+                            <p class="font-semibold text-lg">₹25,699</p>
+                            <p class="text-sm text-gray-500 line-through">₹28,555</p>
+                            <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
+                        </li>
+
+                        <!-- Additional Products... Repeat for more products -->
                     </ul>
                 </div>
                 <div class="slider-arrows flex justify-between mt-4">
@@ -667,9 +668,9 @@
         <div id="slider2" class="tab-content hidden">
             <div class="relative">
                 <div class="slider-wrapper overflow-hidden">
-                    <ul class="slider flex transition-transform duration-300">
+                    <ul class="slider flex transition-transform duration-300 gap-4">
                         <!-- Product 1 -->
-                        <li class="slide w-48 flex-shrink-0">
+                        <li class="slide w-68 flex-shrink-0">
                             <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
                                 <div class="relative">
                                     <a href="{{ route('productdetail') }}">
@@ -683,8 +684,8 @@
                                 </div>
                             </div>
                         </li>
-                        <!-- Product 1 -->
-                        <li class="slide w-48 flex-shrink-0">
+                          <!-- Product 1 -->
+                          <li class="slide w-68 flex-shrink-0">
                             <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
                                 <div class="relative">
                                     <a href="{{ route('productdetail') }}">
@@ -698,8 +699,8 @@
                                 </div>
                             </div>
                         </li>
-                        <!-- Product 1 -->
-                        <li class="slide w-48 flex-shrink-0">
+                          <!-- Product 1 -->
+                          <li class="slide w-68 flex-shrink-0">
                             <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
                                 <div class="relative">
                                     <a href="{{ route('productdetail') }}">
@@ -713,8 +714,8 @@
                                 </div>
                             </div>
                         </li>
-                        <!-- Product 1 -->
-                        <li class="slide w-48 flex-shrink-0">
+                          <!-- Product 1 -->
+                          <li class="slide w-68 flex-shrink-0">
                             <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
                                 <div class="relative">
                                     <a href="{{ route('productdetail') }}">
@@ -728,8 +729,8 @@
                                 </div>
                             </div>
                         </li>
-                        <!-- Product 1 -->
-                        <li class="slide w-48 flex-shrink-0">
+                          <!-- Product 1 -->
+                          <li class="slide w-68 flex-shrink-0">
                             <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
                                 <div class="relative">
                                     <a href="{{ route('productdetail') }}">
@@ -743,8 +744,8 @@
                                 </div>
                             </div>
                         </li>
-                        <!-- Product 1 -->
-                        <li class="slide w-48 flex-shrink-0">
+                          <!-- Product 1 -->
+                          <li class="slide w-68 flex-shrink-0">
                             <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
                                 <div class="relative">
                                     <a href="{{ route('productdetail') }}">
@@ -758,9 +759,23 @@
                                 </div>
                             </div>
                         </li>
-                        
+                          <!-- Product 1 -->
+                          <li class="slide w-68 flex-shrink-0">
+                            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+                                <div class="relative">
+                                    <a href="{{ route('productdetail') }}">
+                                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
+                                            class="w-full h-48 object-cover" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
+                                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
+                                </div>
+                            </div>
+                        </li>
 
-                        <!-- Additional Products... -->
+                        <!-- Additional Products... Repeat for more products -->
                     </ul>
                 </div>
                 <div class="slider-arrows flex justify-between mt-4">
@@ -779,7 +794,7 @@
         </div>
     </div>
     
-    <script>
+<script>
     document.querySelectorAll('.tab-btn').forEach(button => {
         button.addEventListener('click', () => {
             const tabID = button.getAttribute('data-tab');
@@ -787,116 +802,303 @@
             document.getElementById(tabID).classList.remove('hidden');
             
             document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('bg-purple-500', 'text-white');
+                btn.classList.remove('bg-purple-500', 'text-purple-500');
                 btn.classList.add('bg-white', 'text-gray-700');
             });
-            button.classList.add('bg-purple-500', 'text-white');
+            button.classList.add('bg-purple-500', 'text-purple-500');
         });
     });
     
     // Slider functionality
-    const slides = document.querySelectorAll('.slider');
-    let currentSlideIndex = 0;
+    const slideWidths = 68; // width of each slide in tailwind (w-48)
+    const visibleSlides = 4; // number of slides to show at once
     
     function updateSlider(slider, index) {
-        const slideWidth = slider.clientWidth; // width of the slider container
-        const offset = -index * slideWidth; // calculate offset
+        const offset = -index * slideWidths; // calculate offset
         slider.style.transform = `translateX(${offset}px)`; // move the slides
     }
     
     // Next and Previous button functionality
+    let currentSlideIndex1 = 0;
+    let currentSlideIndex2 = 0;
+    
     document.getElementById('next1').addEventListener('click', () => {
         const slider = document.querySelector('#slider1 .slider');
         const totalSlides = slider.children.length;
-        currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
-        updateSlider(slider, currentSlideIndex);
+        currentSlideIndex1 = (currentSlideIndex1 + 1) % (totalSlides - visibleSlides + 1);
+        updateSlider(slider, currentSlideIndex1);
     });
     
     document.getElementById('prev1').addEventListener('click', () => {
         const slider = document.querySelector('#slider1 .slider');
         const totalSlides = slider.children.length;
-        currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
-        updateSlider(slider, currentSlideIndex);
+        currentSlideIndex1 = (currentSlideIndex1 - 1 + (totalSlides - visibleSlides + 1)) % (totalSlides - visibleSlides + 1);
+        updateSlider(slider, currentSlideIndex1);
     });
     
     // Add similar event listeners for slider2
-    let currentSlideIndex2 = 0;
-    
     document.getElementById('next2').addEventListener('click', () => {
         const slider = document.querySelector('#slider2 .slider');
         const totalSlides = slider.children.length;
-        currentSlideIndex2 = (currentSlideIndex2 + 1) % totalSlides;
+        currentSlideIndex2 = (currentSlideIndex2 + 1) % (totalSlides - visibleSlides + 1);
         updateSlider(slider, currentSlideIndex2);
     });
     
     document.getElementById('prev2').addEventListener('click', () => {
         const slider = document.querySelector('#slider2 .slider');
         const totalSlides = slider.children.length;
-        currentSlideIndex2 = (currentSlideIndex2 - 1 + totalSlides) % totalSlides;
+        currentSlideIndex2 = (currentSlideIndex2 - 1 + (totalSlides - visibleSlides + 1)) % (totalSlides - visibleSlides + 1);
         updateSlider(slider, currentSlideIndex2);
     });
-    </script>
-     
+</script> --}}
     
-     
-    
-    <!-- Initialize Glide.js -->
-    <script>
+<div class="container mx-auto px-4 py-8">
+    <!-- Header with Tabs -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 justify-between items-center mb-6">
+        <h2 class="text-2xl font-semibold text-gray-800 text-center">Best of CaratLane</h2>
+        <div class="inline-flex rounded-md shadow-sm justify-center mt-2" role="group">
+            <button id="women-tab" type="button"
+                class="tab-btn px-4 py-2 text-sm font-medium text-black bg-purple-500 rounded-l-lg hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                data-tab="slider1" aria-controls="slider1" aria-selected="true">
+                WOMEN
+            </button>
+            <button id="men-tab" type="button"
+                class="tab-btn px-4 py-2 text-sm font-medium text-gray-700 bg-white rounded-r-lg border border-gray-200 hover:bg-gray-100 hover:text-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                data-tab="slider2" aria-controls="slider2" aria-selected="false">
+                MEN
+            </button>
+        </div>
+    </div>
 
+    <!-- Slider 1 (WOMEN) -->
+    <div id="slider1" class="tab-content">
+        <div class="relative">
+            <div class="slider-wrapper overflow-hidden">
+                <ul class="slider flex transition-transform duration-300 gap-4">
+                    <!-- Product 1 -->
+                    <li class="slide w-1/4 flex-shrink-0">
+                        <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
+                            class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
+                        <p class="font-semibold text-lg">₹25,699</p>
+                        <p class="text-sm text-gray-500 line-through">₹28,555</p>
+                        <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
+                    </li>
+                      <!-- Product 1 -->
+                      <li class="slide w-1/4 flex-shrink-0">
+                        <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
+                            class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
+                        <p class="font-semibold text-lg">₹25,699</p>
+                        <p class="text-sm text-gray-500 line-through">₹28,555</p>
+                        <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
+                    </li>
+                      <!-- Product 1 -->
+                      <li class="slide w-1/4 flex-shrink-0">
+                        <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
+                            class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
+                        <p class="font-semibold text-lg">₹25,699</p>
+                        <p class="text-sm text-gray-500 line-through">₹28,555</p>
+                        <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
+                    </li>
+                      <!-- Product 1 -->
+                      <li class="slide w-1/4 flex-shrink-0">
+                        <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
+                            class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
+                        <p class="font-semibold text-lg">₹25,699</p>
+                        <p class="text-sm text-gray-500 line-through">₹28,555</p>
+                        <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
+                    </li>
+                      <!-- Product 1 -->
+                      <li class="slide w-1/4 flex-shrink-0">
+                        <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
+                            class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
+                        <p class="font-semibold text-lg">₹25,699</p>
+                        <p class="text-sm text-gray-500 line-through">₹28,555</p>
+                        <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
+                    </li>
+                      <!-- Product 1 -->
+                      <li class="slide w-1/4 flex-shrink-0">
+                        <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
+                            class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
+                        <p class="font-semibold text-lg">₹25,699</p>
+                        <p class="text-sm text-gray-500 line-through">₹28,555</p>
+                        <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
+                    </li>
+                      <!-- Product 1 -->
+                      <li class="slide w-1/4 flex-shrink-0">
+                        <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
+                            class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
+                        <p class="font-semibold text-lg">₹25,699</p>
+                        <p class="text-sm text-gray-500 line-through">₹28,555</p>
+                        <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
+                    </li>
+                      <!-- Product 1 -->
+                      <li class="slide w-1/4 flex-shrink-0">
+                        <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
+                            class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
+                        <p class="font-semibold text-lg">₹25,699</p>
+                        <p class="text-sm text-gray-500 line-through">₹28,555</p>
+                        <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
+                    </li>
+                    <!-- Repeat other slides similarly -->
+                </ul>
+            </div>
+            <div class="slider-arrows flex justify-between mt-4">
+                <button class="slider-arrow bg-white p-2 rounded-full shadow-md" id="prev1" aria-label="Previous Slide">
+                    <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <button class="slider-arrow bg-white p-2 rounded-full shadow-md" id="next1" aria-label="Next Slide">
+                    <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
 
+    <!-- Slider 2 (MEN) -->
+    <div id="slider2" class="tab-content hidden">
+        <div class="relative">
+            <div class="slider-wrapper overflow-hidden">
+                <ul class="slider flex transition-transform duration-300 gap-4">
+                    <!-- Product 1 -->
+                    <li class="slide w-1/4 flex-shrink-0">
+                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
+                            class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
+                        <p class="font-semibold text-lg">₹20,664</p>
+                        <p class="text-sm text-gray-500 line-through">₹22,999</p>
+                        <p class="text-sm text-gray-700">Best Seller Gold Nath</p>
+                    </li>
+                     <!-- Product 1 -->
+                     <li class="slide w-1/4 flex-shrink-0">
+                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
+                            class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
+                        <p class="font-semibold text-lg">₹20,664</p>
+                        <p class="text-sm text-gray-500 line-through">₹22,999</p>
+                        <p class="text-sm text-gray-700">Best Seller Gold Nath</p>
+                    </li>
+                     <!-- Product 1 -->
+                     <li class="slide w-1/4 flex-shrink-0">
+                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
+                            class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
+                        <p class="font-semibold text-lg">₹20,664</p>
+                        <p class="text-sm text-gray-500 line-through">₹22,999</p>
+                        <p class="text-sm text-gray-700">Best Seller Gold Nath</p>
+                    </li>
+                     <!-- Product 1 -->
+                     <li class="slide w-1/4 flex-shrink-0">
+                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
+                            class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
+                        <p class="font-semibold text-lg">₹20,664</p>
+                        <p class="text-sm text-gray-500 line-through">₹22,999</p>
+                        <p class="text-sm text-gray-700">Best Seller Gold Nath</p>
+                    </li>
+                     <!-- Product 1 -->
+                     <li class="slide w-1/4 flex-shrink-0">
+                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
+                            class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
+                        <p class="font-semibold text-lg">₹20,664</p>
+                        <p class="text-sm text-gray-500 line-through">₹22,999</p>
+                        <p class="text-sm text-gray-700">Best Seller Gold Nath</p>
+                    </li>
+                     <!-- Product 1 -->
+                     <li class="slide w-1/4 flex-shrink-0">
+                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
+                            class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
+                        <p class="font-semibold text-lg">₹20,664</p>
+                        <p class="text-sm text-gray-500 line-through">₹22,999</p>
+                        <p class="text-sm text-gray-700">Best Seller Gold Nath</p>
+                    </li>
+                     <!-- Product 1 -->
+                     <li class="slide w-1/4 flex-shrink-0">
+                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
+                            class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
+                        <p class="font-semibold text-lg">₹20,664</p>
+                        <p class="text-sm text-gray-500 line-through">₹22,999</p>
+                        <p class="text-sm text-gray-700">Best Seller Gold Nath</p>
+                    </li>
+                     <!-- Product 1 -->
+                     <li class="slide w-1/4 flex-shrink-0">
+                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
+                            class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
+                        <p class="font-semibold text-lg">₹20,664</p>
+                        <p class="text-sm text-gray-500 line-through">₹22,999</p>
+                        <p class="text-sm text-gray-700">Best Seller Gold Nath</p>
+                    </li>
 
-        document.addEventListener('DOMContentLoaded', function () {
-            var glide1 = new Glide('#glide1', {
-                type: 'carousel',
-                perView: 3,
-                gap: 20,
-                breakpoints: {
-                    640: {
-                        perView: 1
-                    },
-                    768: {
-                        perView: 2
-                    }
-                }
-            }).mount();
-    
-            var glide2 = new Glide('#glide2', {
-                type: 'carousel',
-                perView: 3,
-                gap: 20,
-                breakpoints: {
-                    640: {
-                        perView: 1
-                    },
-                    768: {
-                        perView: 2
-                    }
-                }
-            }).mount();
-    
-            // Tab functionality
-            const tabs = document.querySelectorAll('.tab-btn');
-            const contents = document.querySelectorAll('.tab-content');
-    
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    const target = tab.dataset.tab;
-    
-                    tabs.forEach(t => {
-                        t.classList.toggle('bg-purple-500', t === tab);
-                        t.classList.toggle('text-white', t === tab);
-                        t.classList.toggle('text-gray-700', t !== tab);
-                        t.classList.toggle('bg-white', t !== tab);
-                    });
-    
-                    contents.forEach(content => {
-                        content.classList.toggle('hidden', content.id !== target);
-                    });
-                });
+                    <!-- Repeat other slides similarly -->
+                </ul>
+            </div>
+            <div class="slider-arrows flex justify-between mt-4">
+                <button class="slider-arrow bg-white p-2 rounded-full shadow-md" id="prev2" aria-label="Previous Slide">
+                    <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <button class="slider-arrow bg-white p-2 rounded-full shadow-md" id="next2" aria-label="Next Slide">
+                    <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.tab-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const tabID = button.getAttribute('data-tab');
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
+            document.getElementById(tabID).classList.remove('hidden');
+            
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-purple-500', 'text-purple-500');
+                btn.classList.add('bg-white', 'text-gray-700');
             });
+            button.classList.add('bg-purple-500', 'text-purple-500');
         });
-    </script>
+    });
+
+    const visibleSlides = 4;
+    const sliderWidth = document.querySelector('.slider-wrapper').clientWidth / visibleSlides;
     
+    function updateSlider(slider, index) {
+        const offset = -index * sliderWidth;
+        slider.style.transform = `translateX(${offset}px)`;
+    }
+
+    let currentSlideIndex1 = 0;
+    let currentSlideIndex2 = 0;
+
+    document.getElementById('next1').addEventListener('click', () => {
+        const slider = document.querySelector('#slider1 .slider');
+        const totalSlides = slider.children.length;
+        currentSlideIndex1 = (currentSlideIndex1 + 1) % (totalSlides - visibleSlides + 1);
+        updateSlider(slider, currentSlideIndex1);
+    });
+
+    document.getElementById('prev1').addEventListener('click', () => {
+        const slider = document.querySelector('#slider1 .slider');
+        currentSlideIndex1 = (currentSlideIndex1 - 1 + (slider.children.length - visibleSlides + 1)) % (slider.children.length - visibleSlides + 1);
+        updateSlider(slider, currentSlideIndex1);
+    });
+
+    document.getElementById('next2').addEventListener('click', () => {
+        const slider = document.querySelector('#slider2 .slider');
+        const totalSlides = slider.children.length;
+        currentSlideIndex2 = (currentSlideIndex2 + 1) % (totalSlides - visibleSlides + 1);
+        updateSlider(slider, currentSlideIndex2);
+    });
+
+    document.getElementById('prev2').addEventListener('click', () => {
+        const slider = document.querySelector('#slider2 .slider');
+        currentSlideIndex2 = (currentSlideIndex2 - 1 + (slider.children.length - visibleSlides + 1)) % (slider.children.length - visibleSlides + 1);
+        updateSlider(slider, currentSlideIndex2);
+    });
+</script>
+
 
     {{-- services features --}}
     <div class="bg-gray-900 text-white py-12">
@@ -921,7 +1123,7 @@
                 </div>
     
                 <!-- Lifetime Exchange -->
-                <div class="flex items-start space-x-4">
+                <div class="flex items-start space-x-4 pl-24">
                     <img src="{{ asset('asset/img/download.jpeg') }}" alt="Lifetime Exchange" class="h-20">
                     <div class="w-full">
                         <h3 class="text-sm font-semibold mb-2">Lifetime Exchange</h3>
@@ -930,7 +1132,7 @@
                 </div>
     
                 <!-- One Year Warranty* -->
-                <div class="flex items-start space-x-4">
+                <div class="flex items-start space-x-4 pl-24">
                     <img src="{{ asset('asset/img/download.jpeg') }}" alt="One Year Warranty" class="h-20">
                     <div class="w-full">
                         <h3 class="text-sm font-semibold mb-2">One Year Warranty*</h3>
@@ -952,14 +1154,14 @@
                 <div class="swiper-wrapper">
                     <!-- Slide 1 -->
                     <div class="swiper-slide px-4">
-                        <div class="w-full p-6 rounded-lg shadow-md">
+                        <div class="w-full p-6 ">
                             <div class="flex justify-center mb-4">
                                 <!-- Testimonial Image -->
-                                <img src="{{ asset('asset/img/insta-icon.png') }}" alt="Instagram Icon"
-                                    class="w-24 h-24 object-center">
+                                <i class="ri-instagram-line text-5xl bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent"></i>
+
                             </div>
                             <!-- Testimonial Text -->
-                            <p class="italic text-gray-700 text-center">
+                            <p class="italic text-gray-700 text-center text-3xl px-12">
                                 "I received this Mangalsutra bracelet as my first Karva Chauth gift! It's simple and sweet, just
                                 like my husband."
                             </p>
@@ -978,14 +1180,14 @@
     
                     <!-- Slide 2 -->
                     <div class="swiper-slide px-4">
-                        <div class="w-full p-6 rounded-lg shadow-md">
+                        <div class="w-full p-6 ">
                             <div class="flex justify-center mb-4">
                                 <!-- Testimonial Image -->
-                                <img src="{{ asset('asset/img/insta-icon.png') }}" alt="Instagram Icon"
-                                    class="w-24 h-24 object-center">
+                                <i class="ri-instagram-line text-5xl bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent"></i>
+
                             </div>
                             <!-- Testimonial Text -->
-                            <p class="italic text-gray-700 text-center">
+                            <p class="italic text-gray-700 text-center text-3xl px-12">
                                 "I received this Mangalsutra bracelet as my first Karva Chauth gift! It's simple and sweet, just
                                 like my husband."
                             </p>
@@ -1004,14 +1206,14 @@
     
                     <!-- Slide 3 -->
                     <div class="swiper-slide px-4">
-                        <div class="w-full  p-6 rounded-lg shadow-md">
+                        <div class="w-full  p-6 ">
                             <div class="flex justify-center mb-4">
                                 <!-- Testimonial Image -->
-                                <img src="{{ asset('asset/img/insta-icon.png') }}" alt="Instagram Icon"
-                                    class="w-24 h-24 object-center">
+                                <i class="ri-instagram-line text-5xl bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent"></i>
+
                             </div>
                             <!-- Testimonial Text -->
-                            <p class="italic text-gray-700 text-center">
+                            <p class="italic text-gray-700 text-center text-3xl px-12">
                                 "I received this Mangalsutra bracelet as my first Karva Chauth gift! It's simple and sweet, just
                                 like my husband."
                             </p>
@@ -1063,10 +1265,10 @@
 
 
     {{-- **************** shop by instagram*********** --}}
-
-    <div class="main py-12 px-6 md:px-12">
+{{-- 
+    <div class="main px-6 overflow-hidden my-6">
         <!-- Header Section -->
-        <div class="flex flex-col md:flex-row justify-between items-center mb-10">
+        <div class="flex flex-col md:flex-row justify-between items-center">
             <h1 class="text-xl md:text-2xl font-semibold">Shop Our Instagram</h1>
             <h2 class="text-xl md:text-2xl text-black mt-4 md:mt-0">#MyCaratLaneStory</h2>
         </div>
@@ -1077,7 +1279,7 @@
             <div class="w-full overflow-hidden">
                 <img src="https://cdn.caratlane.com/media/catalog/product/U/T/UT01166-1Y0000_3_lar.jpg"
                     alt="Product Image"
-                    class="h-[400px] object-cover transition-transform scale-95 hover:scale-100 ease-in-out duration-300">
+                    class="h-[420px] w-full object-cover transition-transform scale-95 hover:scale-100 ease-in-out duration-300 ">
             </div>
 
             <!-- Smaller Image Grid -->
@@ -1110,8 +1312,53 @@
         </div>
 
 
+    </div> --}}
+    <div class="main overflow-hidden my-6">
+        <!-- Header Section -->
+        <div class="flex flex-col md:flex-row justify-between items-center mx-12 my-4">
+            <h1 class="text-xl md:text-2xl font-semibold">Shop Our Instagram</h1>
+            <h2 class="text-xl md:text-2xl text-black mt-4 md:mt-0">#MyCaratLaneStory</h2>
+        </div>
+    
+        <!-- Image Grid Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 bg-red-800 mx-12">
+            <!-- Large Image -->
+            <div class="w-full h-full overflow-hidden bg-yellow-400">
+                <img src="https://cdn.caratlane.com/media/catalog/product/U/T/UT01166-1Y0000_3_lar.jpg"
+                    alt="Product Image"
+                    class="h-hull w-full object-cover">
+            </div>
+    
+            <!-- Smaller Image Grid -->
+            <div class="grid grid-cols-2 lg:grid-cols-3 bg-blue-400">
+                <div class="overflow-hidden w-full h-full">
+                    <img src="{{ asset('asset/img/insta1.jpg') }}" alt="Instagram Image"
+                        class="w-full h-full object-cover ">
+                </div>
+                <div class="overflow-hidden w-full h-full">
+                    <img src="{{ asset('asset/img/insta2.jpg') }}" alt="Instagram Image"
+                        class="w-full h-full object-cover  ">
+                </div>
+                <div class="overflow-hidden w-full h-full">
+                    <img src="{{ asset('asset/img/insta3.jpg') }}" alt="Instagram Image"
+                        class="w-full h-full object-cover  ">
+                </div>
+                <div class="overflow-hidden w-full h-full">
+                    <img src="{{ asset('asset/img/insta4.jpg') }}" alt="Instagram Image"
+                        class="w-full h-full object-cover  ">
+                </div>
+                <div class="overflow-hidden w-full h-full">
+                    <img src="{{ asset('asset/img/insta5.jpg') }}" alt="Instagram Image"
+                        class="w-full h-full object-cover  ">
+                </div>
+                <div class="overflow-hidden w-full h-full">
+                    <img src="{{ asset('asset/img/insta6.jpg') }}" alt="Instagram Image"
+                        class="w-full h-full object-cover  ">
+                </div>
+            </div>
+        </div>
     </div>
-
+    
 
 
     {{-- contact --}}
@@ -1161,15 +1408,15 @@
 
 
     <div
-        class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:p-6 p-2 bg-gradient-to-b from-purple-900 to-purple-400 rounded-lg shadow-md items-center justify-center lg:mx-12 mx-4">
+        class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:p-6 p-2 bg-gradient-to-b from-[#10091B] to-[#6F40B8] rounded-lg shadow-md items-center justify-center lg:mx-12 mx-4 py-8">
         <!-- Left Section -->
         <div class="lg:flex items-center justify-center space-x-4 lg:px-8">
             <div class="flex justify-center">
                 <img src="{{ asset('asset/img/purple-gift-icon.png') }}" alt="Gift Icon" class="w-24 h-24 object-center">
             </div>
             <div>
-                <h1 class="lg:text-xl font-semibold text-white text-center">Join CaratLane Insider</h1>
-                <p class="text-gray-200 text-center">Discover enticing deals, latest arrivals, & more.</p>
+                <h1 class="lg:text-xl font-semibold text-white text-start">Join CaratLane Insider</h1>
+                <p class="text-gray-200 text-start">Discover enticing deals, latest arrivals, & more.</p>
             </div>
         </div>
 
@@ -1190,7 +1437,7 @@
            </div>
 
             <!-- Gender Selection -->
-            <div class="space-y-2">
+            <div class="space-y-2 space-x-4">
                 <label class="inline-flex items-center">
                     <input type="radio" name="gender" class="form-radio text-purple-500" aria-label="Female">
                     <span class="lg:ml-2 text-white">Female</span>
