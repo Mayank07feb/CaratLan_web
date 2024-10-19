@@ -23,8 +23,8 @@
     }
 
     .menu-item img {
-        width: 40px;
-        height: 40px;
+        width: 100px;
+        height: 100px;
         margin-right: 10px;
     }
 
@@ -79,46 +79,58 @@
                 </button>
             </div>
 
-            <!-- Recently Viewed Section -->
-            <div class="mb-4">
-                <h3 class="font-bold mb-2">Your Recently Viewed</h3>
-                <div class="bg-gray-100 p-2 rounded">
-                    <p class="text-sm text-gray-600">Check out your recently viewed section</p>
-                </div>
-            </div>
-
             <!-- Menu Items Section -->
             <div class="space-y-2">
                 <div class="menu-item flex items-center space-x-4">
-                    <img src="{{ asset('asset/img/best2.webp') }}" alt="Earrings"
-                        class="rounded-full w-[100px] h-[100px]" />
+                    <img src="{{ asset('asset/img/best2.webp') }}" class="rounded-[30px] object-cover" />
+                    <div
+                        class="bg-white text-black border border-gray-300 rounded-[12px] px-4 py-6 w-full shadow-lg block text-left">
+                        <span>Your Recently Viewed</span>
+                        <p>Have a look at your Recently viewed section</p>
+                    </div>
+                </div>
+
+                <div class="menu-item flex items-center space-x-4">
+                    <img src="{{ asset('asset/img/best2.webp') }}" alt="Earrings" class="rounded-[30px] object-cover" />
                     <span
                         class="bg-white text-black border border-gray-300 rounded-[12px] px-4 py-6 w-full shadow-lg block text-left">Earrings</span>
                 </div>
                 <div class="menu-item flex items-center space-x-4">
-                    <img src="/api/placeholder/40/40" alt="Rings" class="rounded-full w-[40px] h-[40px]" />
-                    <span>Rings</span>
+                    <img src="{{ asset('asset/img/best2.webp') }}" alt="Rings" class="rounded-[30px] object-cover" />
+                    <span
+                        class="bg-white text-black border border-gray-300 rounded-[12px] px-4 py-6 w-full shadow-lg block text-left">Rings</span>
                 </div>
                 <div class="menu-item flex items-center space-x-4">
-                    <img src="/api/placeholder/40/40" alt="Bracelets & Bangles"
-                        class="rounded-full w-[40px] h-[40px]" />
-                    <span>Bracelets & Bangles</span>
+                    <img src="{{ asset('asset/img/best2.webp') }}" alt="Bracelets & Bangles"
+                        class="rounded-[30px] object-cover" />
+                    <span
+                        class="bg-white text-black border border-gray-300 rounded-[12px] px-4 py-6 w-full shadow-lg block text-left">Bracelets
+                        & Bangles</span>
                 </div>
                 <div class="menu-item flex items-center space-x-4">
-                    <img src="/api/placeholder/40/40" alt="Solitaires" class="rounded-full w-[40px] h-[40px]" />
-                    <span>Solitaires</span>
+                    <img src="{{ asset('asset/img/best2.webp') }}" alt="Solitaires"
+                        class="rounded-[30px] object-cover" />
+                    <span
+                        class="bg-white text-black border border-gray-300 rounded-[12px] px-4 py-6 w-full shadow-lg block text-left">Solitaires</span>
                 </div>
                 <div class="menu-item flex items-center space-x-4">
-                    <img src="/api/placeholder/40/40" alt="Mangalsutras" class="rounded-full w-[40px] h-[40px]" />
-                    <span>Mangalsutras</span>
+                    <img src="{{ asset('asset/img/best2.webp') }}" alt="Mangalsutras"
+                        class="rounded-[30px] object-cover" />
+                    <span
+                        class="bg-white text-black border border-gray-300 rounded-[12px] px-4 py-6 w-full shadow-lg block text-left">Mangalsutras</span>
                 </div>
                 <div class="menu-item flex items-center space-x-4">
-                    <img src="/api/placeholder/40/40" alt="Necklaces" class="rounded-full w-[40px] h-[40px]" />
-                    <span>Necklaces</span>
+                    <img src="{{ asset('asset/img/best2.webp') }}" alt="Necklaces"
+                        class="rounded-[30px] object-cover" />
+                    <span
+                        class="bg-white text-black border border-gray-300 rounded-[12px] px-4 py-6 w-full shadow-lg block text-left">Necklaces</span>
                 </div>
                 <div class="menu-item flex items-center space-x-4">
-                    <img src="/api/placeholder/40/40" alt="Men's Jewellery" class="rounded-full w-[40px] h-[40px]" />
-                    <span>Men's Jewellery</span>
+                    <img src="{{ asset('asset/img/best2.webp') }}" alt="Men's Jewellery"
+                        class="rounded-[30px] object-cover" />
+                    <span
+                        class="bg-white text-black border border-gray-300 rounded-[12px] px-4 py-6 w-full shadow-lg block text-left">Men's
+                        Jewellery</span>
                 </div>
             </div>
 
@@ -154,13 +166,44 @@
                 </div>
             </div>
 
+            <div class="bg-[#f8f2f7] py-10 px-6">
+                <!-- Links Section -->
+                <div class="flex flex-col items-start space-y-2 text-xs text-gray-700 mb-6">
+                    <a href="#" class="hover:underline">OUR STORY</a>
+                    <a href="#" class="hover:underline">TRACK YOUR ORDER</a>
+                </div>
+            
+                <!-- Sign Up and Log In Buttons -->
+                <div class="flex justify-center space-x-4 mb-8">
+                    <div class="flex-1">
+                        <button class="w-full border border-pink-500 text-pink-500 text-sm px-8 py-2 rounded-[12px] hover:bg-pink-100 transition">
+                            Sign Up
+                        </button>
+                    </div>
+                    <div class="flex-1">
+                        <button class="w-full border border-pink-500 text-pink-500 text-sm px-8 py-2 rounded-[12px] hover:bg-pink-100 transition">
+                            Log In
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Find a Store Button -->
+                <div class="flex justify-center">
+                    <button class="w-full bg-gradient-to-r from-pink-500 to-purple-500 text-white text-sm px-20 py-3 rounded-[14px] shadow-lg hover:opacity-90 transition">
+                        Find a Store
+                    </button>
+                </div>
+                
+            </div>
+            
+
         </div>
     </div>
 
 
 
     <!-- Top Banner -->
-    <div class="relative bg-primary text-white text-sm py-4">
+    <div class="relative bg-primary text-white text-sm py-4 hidden md:block">
         <div id="first-text" class="mt-1 absolute inset-0 text-center transition-opacity duration-500">
             CaratLane - A Tanishq Partnership
         </div>
@@ -301,7 +344,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="{{route('gold')}}"
+                <a href="{{ route('gold') }}"
                     class="relative text-gray-600 hover:text-purple-600 text-sm font-semibold py-2 px-2 inline-flex items-center group">
                     <span>Earrings</span>
                     <span
@@ -344,11 +387,11 @@
                 <div class="flex items-center">
                     <input type="text" placeholder="Search Relationship"
                         class="border border-[#de57e5] rounded-l-[10px] h-12 px-4 focus:outline-none focus:ring-2 focus:ring-[#de57e5]">
-                        <button
+                    <button
                         class="bg-gradient-to-r from-[#de57e5] to-[#8863fb] text-white rounded-r-[10px] h-12 px-4 flex items-center justify-center hover:from-pink-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600">
                         <span class="material-icons">search</span>
-                      </button>
-                      
+                    </button>
+
 
                 </div>
                 <div class="flex flex-col">
