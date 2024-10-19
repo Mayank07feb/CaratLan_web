@@ -44,11 +44,7 @@
 <div class="font-sans bg-gray-50">
     <!-- Mobile menu overlay -->
     <div id="mobile-menu"
-        class="fixed inset-0 z-40 bg-gray-50 transform translate-x-full transition-transform duration-300 ease-in-out">
-        <div class="flex justify-between items-center bg-purple-800 p-4">
-            <button id="close-menu" class="text-white text-2xl">&times;</button>
-        </div>
-
+        class="mt-24 fixed inset-0 z-40 bg-gray-50 transform -translate-x-full transition-transform duration-700 ease-custom">
         <!-- Scrollable Content Area -->
         <div class="p-4 pb-20 h-screen overflow-y-auto scrollbar-hide">
             <!-- Slider with Hidden Scrollbar but Working -->
@@ -136,33 +132,49 @@
 
             <!-- Image Cards Section -->
             <div class="grid grid-cols-2 gap-4 mb-6 mt-4">
-                <div class="relative rounded-lg overflow-hidden">
+                <div class="relative rounded-[14px] overflow-hidden">
                     <img src="{{ asset('asset/img/best10.webp') }}" alt="Fast Delivery" class="w-full h-auto" />
-                    <div
-                        class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white p-4">
-                        <p class="text-sm font-semibold">Fast Delivery</p>
+                    <div class="absolute inset-0 flex items-end justify-start bg-black bg-opacity-50 text-white p-4">
+                        <p class="text-2xl font-semibold">Fast Delivery</p>
                     </div>
                 </div>
-                <div class="relative rounded-lg overflow-hidden">
+                <div class="relative rounded-[14px] overflow-hidden">
                     <img src="{{ asset('asset/img/best1.webp') }}" alt="New In" class="w-full h-auto" />
-                    <div
-                        class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white p-4">
-                        <p class="text-sm font-semibold">New In</p>
+                    <div class="absolute inset-0 flex items-end justify-start bg-black bg-opacity-50 text-white p-4">
+                        <p class="text-2xl font-semibold">New In</p>
                     </div>
                 </div>
-                <div class="relative rounded-lg overflow-hidden">
+                <div class="relative rounded-[14px] overflow-hidden">
                     <img src="{{ asset('asset/img/best3.webp') }}" alt="Necklaces" class="w-full h-auto" />
-                    <div
-                        class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white p-4">
-                        <p class="text-sm font-semibold">Necklaces</p>
+                    <div class="absolute inset-0 flex items-end justify-start bg-black bg-opacity-50 text-white p-4">
+                        <p class="text-2xl font-semibold">Necklaces</p>
                     </div>
                 </div>
-                <div class="relative rounded-lg overflow-hidden">
+                <div class="relative rounded-[14px] overflow-hidden">
                     <img src="{{ asset('asset/img/best2.webp') }}" alt="For Kids" class="w-full h-auto" />
-                    <div
-                        class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white p-4">
-                        <p class="text-sm font-semibold">For Kids</p>
+                    <div class="absolute inset-0 flex items-end justify-start bg-black bg-opacity-50 text-white p-4">
+                        <p class="text-2xl font-semibold">For Kids</p>
                     </div>
+                </div>
+            </div>
+
+            <div class="flex space-x-4 p-4">
+                <!-- First Box -->
+                <div class="border border-purple-300 rounded-lg p-4 w-1/2 hover:shadow-lg transition-shadow">
+                    <div class="text-pink-500 font-semibold">PEP!</div>
+                    <div class="mt-2 font-bold">
+                        Pay 9 instalments, and the 10th is on us!
+                    </div>
+                    <a href="#" class="mt-2 text-pink-500 underline">Know more</a>
+                </div>
+
+                <!-- Second Box -->
+                <div class="border border-purple-300 rounded-lg p-4 w-1/2 hover:shadow-lg transition-shadow">
+                    <div class="text-pink-500 font-semibold">Gold</div>
+                    <div class="mt-2 font-bold">
+                        Buy Digital Gold An easier way of investing in pure 24Kt gold
+                    </div>
+                    <a href="#" class="mt-2 text-pink-500 underline">Learn more</a>
                 </div>
             </div>
 
@@ -172,30 +184,33 @@
                     <a href="#" class="hover:underline">OUR STORY</a>
                     <a href="#" class="hover:underline">TRACK YOUR ORDER</a>
                 </div>
-            
+
                 <!-- Sign Up and Log In Buttons -->
                 <div class="flex justify-center space-x-4 mb-8">
                     <div class="flex-1">
-                        <button class="w-full border border-pink-500 text-pink-500 text-sm px-8 py-2 rounded-[12px] hover:bg-pink-100 transition">
+                        <button
+                            class="w-full border border-pink-500 text-pink-500 text-sm px-8 py-2 rounded-[12px] hover:bg-pink-100 transition">
                             Sign Up
                         </button>
                     </div>
                     <div class="flex-1">
-                        <button class="w-full border border-pink-500 text-pink-500 text-sm px-8 py-2 rounded-[12px] hover:bg-pink-100 transition">
+                        <button
+                            class="w-full border border-pink-500 text-pink-500 text-sm px-8 py-2 rounded-[12px] hover:bg-pink-100 transition">
                             Log In
                         </button>
                     </div>
                 </div>
-                
+
                 <!-- Find a Store Button -->
                 <div class="flex justify-center">
-                    <button class="w-full bg-gradient-to-r from-pink-500 to-purple-500 text-white text-sm px-20 py-3 rounded-[14px] shadow-lg hover:opacity-90 transition">
+                    <button
+                        class="w-full bg-gradient-to-r from-pink-500 to-purple-500 text-white text-sm px-20 py-3 rounded-[14px] shadow-lg hover:opacity-90 transition">
                         Find a Store
                     </button>
                 </div>
-                
+
             </div>
-            
+
 
         </div>
     </div>
@@ -203,7 +218,7 @@
 
 
     <!-- Top Banner -->
-    <div class="relative bg-primary text-white text-sm py-4 hidden md:block">
+    <div class="relative bg-primary text-white text-sm py-4">
         <div id="first-text" class="mt-1 absolute inset-0 text-center transition-opacity duration-500">
             CaratLane - A Tanishq Partnership
         </div>
@@ -220,13 +235,97 @@
 
         <div class="container mx-auto flex items-center justify-between py-4">
 
-            <!-- Mobile Toggle Button -->
-            <button id="open-menu" class="lg:hidden text-gray-600 hover:text-purple-600 focus:outline-none ml-5">
-                <span class="material-icons">menu</span>
-            </button>
+
+
+            <div class="flex flex-col w-full px-4 md:hidden"> <!-- Hide on medium and larger screens -->
+                <div class="flex items-center justify-between w-full">
+                    <div class="flex items-center">
+                        <!-- Mobile Toggle Button -->
+                        <button id="open-menu"
+                            class="lg:hidden text-gray-600 hover:text-purple-600 focus:outline-none">
+                            <span class="material-icons">menu</span>
+                        </button>
+
+                        <button id="close-menu" class="hidden text-gray-600 hover:text-purple-600 focus:outline-none">
+                            <span class="material-icons">close</span>
+                        </button>
+
+
+                        <!-- Company Logo -->
+                        <img src="{{ asset('asset/img/logo.png') }}" alt="Company Logo"
+                            class="h-8 ml-3 block lg:hidden" />
+
+                        <!-- Delivery & PinCode Section -->
+                        <div class="flex flex-col ml-4">
+                            <a href="#" class="text-gray-600 hover:text-purple-600 text-xs">Delivery &
+                                Stores</a>
+                            <a href="#" class="text-pink-600 hover:text-purple-600 text-xs">Enter PinCode</a>
+                        </div>
+                    </div>
+
+                    <!-- Right Icons -->
+                    <div class="flex items-center space-x-4">
+                        <span class="material-icons text-gray-600">store</span>
+                        <span class="material-icons text-gray-600">favorite</span>
+                        <div class="relative">
+                            <span class="material-icons text-gray-600">shopping_cart</span>
+                            <span
+                                class="absolute -top-2 -right-2 bg-purple-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="flex items-center mt-4 w-full">
+                    <input type="text" placeholder="Search Relationship"
+                        class="border border-[#de57e5] bg-[#faf6ff] text-gray-700 rounded-l-[10px] h-12 px-4 w-full focus:outline-none focus:ring-2 focus:ring-[#de57e5]">
+                    <button
+                        class="bg-gradient-to-r from-[#de57e5] to-[#8863fb] text-white rounded-r-[10px] h-12 px-4 flex items-center justify-center hover:from-pink-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600">
+                        <span class="material-icons">search</span>
+                    </button>
+                </div>
+
+
+                <div class="w-full max-w-3xl mx-auto mt-4">
+                    <div class="flex overflow-x-auto pb-2 space-x-4">
+                        <div class="flex flex-col items-center justify-center w-20 h-20 flex-shrink-0">
+                            <img src="{{ asset('asset/img/best2.webp') }}"
+                                class="rounded-full w-full h-full object-cover" />
+                        </div>
+                        <div class="flex flex-col items-center justify-center w-20 h-20 flex-shrink-0">
+                            <img src="{{ asset('asset/img/best2.webp') }}"
+                                class="rounded-full w-full h-full object-cover" />
+                        </div>
+                        <div class="flex flex-col items-center justify-center w-20 h-20 flex-shrink-0">
+                            <img src="{{ asset('asset/img/best2.webp') }}"
+                                class="rounded-full w-full h-full object-cover" />
+                        </div>
+                        <div class="flex flex-col items-center justify-center w-20 h-20 flex-shrink-0">
+                            <img src="{{ asset('asset/img/best2.webp') }}"
+                                class="rounded-full w-full h-full object-cover" />
+                        </div>
+                        <div class="flex flex-col items-center justify-center w-20 h-20 flex-shrink-0">
+                            <img src="{{ asset('asset/img/best2.webp') }}"
+                                class="rounded-full w-full h-full object-cover" />
+                        </div>
+                        <div class="flex flex-col items-center justify-center w-20 h-20 flex-shrink-0">
+                            <img src="{{ asset('asset/img/best2.webp') }}"
+                                class="rounded-full w-full h-full object-cover" />
+                        </div>
+                        <div class="flex flex-col items-center justify-center w-20 h-20 flex-shrink-0">
+                            <img src="{{ asset('asset/img/best2.webp') }}"
+                                class="rounded-full w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
 
             <!-- Logo -->
-            <div class="w-10">
+            <div class="w-10  hidden md:block">
                 <img src="{{ asset('asset/img/logo.png') }}" alt="Logo" class="w-full h-auto">
             </div>
 
@@ -391,8 +490,6 @@
                         class="bg-gradient-to-r from-[#de57e5] to-[#8863fb] text-white rounded-r-[10px] h-12 px-4 flex items-center justify-center hover:from-pink-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600">
                         <span class="material-icons">search</span>
                     </button>
-
-
                 </div>
                 <div class="flex flex-col">
                     <a href="#" class="text-gray-600 hover:text-purple-600 text-xs">Delivery & Stores</a>
@@ -402,7 +499,7 @@
 
 
             <!-- Right Icons -->
-            <div class="flex items-center space-x-4">
+            <div class="flex items-center space-x-4 mr-4 md:mr-0 hidden md:flex">
                 <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="Flag"
                     class="w-6 h-4 mr-2">
                 <span class="material-icons text-gray-600">person</span>
@@ -413,9 +510,50 @@
                         class="absolute -top-2 -right-2 bg-purple-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</span>
                 </div>
             </div>
+
+
+
         </div>
     </header>
 </div>
+
+
+{{-- <nav class="fixed bottom-0 left-0 right-0 bg-[#4F3267] text-white p-4 z-20 md:hidden">
+    <ul class="flex justify-between items-center">
+        <li class="flex-1 text-center">
+            <a href="#" class="flex flex-row items-center justify-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <span class="text-xs">CATEGORY</span>
+            </a>
+        </li>
+        <li class="flex-1 text-center">
+            <a href="#" class="flex flex-row items-center justify-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                </svg>
+                <span class="text-xs">NEW ARRIVALS</span>
+            </a>
+        </li>
+        <li class="flex-1 text-center">
+            <a href="#" class="flex flex-row items-center justify-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                </svg>
+                <span class="text-xs">BESTSELLERS</span>
+            </a>
+        </li>
+    </ul>
+</nav> --}}
+
+
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -438,11 +576,15 @@
     const closeMenuBtn = document.getElementById('close-menu');
 
     function openMenu() {
-        mobileMenu.classList.remove('translate-x-full');
+        mobileMenu.classList.remove('-translate-x-full'); // Show the menu from the left
+        openMenuBtn.classList.add('hidden'); // Hide the "menu" button
+        closeMenuBtn.classList.remove('hidden'); // Show the "close" button
     }
 
     function closeMenu() {
-        mobileMenu.classList.add('translate-x-full');
+        mobileMenu.classList.add('-translate-x-full'); // Hide the menu by moving it left
+        openMenuBtn.classList.remove('hidden'); // Show the "menu" button
+        closeMenuBtn.classList.add('hidden'); // Hide the "close" button
     }
 
     openMenuBtn.addEventListener('click', openMenu);
