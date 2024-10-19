@@ -518,7 +518,7 @@
 </div>
 
 
-<nav class="fixed bottom-0 left-0 right-0 bg-[#4F3267] text-white p-4 z-50 md:hidden">
+{{-- <nav class="fixed bottom-0 left-0 right-0 bg-[#4F3267] text-white p-4 z-20 md:hidden">
     <ul class="flex justify-between items-center">
         <li class="flex-1 text-center">
             <a href="#" class="flex flex-row items-center justify-center space-x-2">
@@ -551,7 +551,7 @@
             </a>
         </li>
     </ul>
-</nav>
+</nav> --}}
 
 
 
