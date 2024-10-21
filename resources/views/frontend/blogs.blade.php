@@ -372,7 +372,7 @@ setInterval(nextSlide, 3000);
 
 
 {{-- VIDEO MAIN SECTION --}}
-<section class="relative">
+{{-- <section class="relative">
 <div class="absolute top-1/2 left-4 transform -translate-y-1/2">
   <span class="vertical-text">VIDEO</span>
 </div>
@@ -389,4 +389,112 @@ setInterval(nextSlide, 3000);
   <div></div>
 </div>
 </div>
-</section>
+</section> --}}
+<div class="bg-black">
+  <div class="container mx-auto p-4 bg-black w-full">
+    <!-- Main Video Section -->
+    <div class="relative aspect-video mb-6 px-8 py-8">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Rmz8Lxq6brU?si=IW_rXosxvb6aCkIy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full h-full object-cover"></iframe>
+      <div class="absolute inset-0 flex items-center justify-center">
+        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10 0a10 10 0 100 20 10 10 0 000-20zm-2 14.5v-9l6 4.5-6 4.5z" />
+        </svg>
+      </div>
+    </div>
+  
+    <!-- Video Title -->
+    <h1 class="text-2xl md:text-3xl font-bold text-white mb-6 text-center">CaratLane's Festive Jewellery Collection</h1>
+  
+    <!-- Related Videos Section -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Video 1 -->
+      <div class="bg-black p-4 rounded-lg hover:scale-105 transition-transform flex flex-row">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/MR_R8wuM-ks?si=54a4pRVIgd1YNGsF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-1/2 h-32 object-cover rounded-lg mb-2"></iframe>
+        <div>
+          <div class="flex items-center mt-2 text-gray-400">
+            <svg class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0C.488 3.45.029 5.804 0 12c.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16V8l8 3.993L9 16z"/>
+            </svg>
+            
+          </div>
+          <p class="text-sm text-white ">Everyday 22KT For The Modern Woman | Stylish</p>
+        
+        </div>
+      </div>
+  
+      <!-- Video 2 -->
+      <div class="bg-black p-4 rounded-lg hover:scale-105 transition-transform flex flex-row">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/39cnR1IBsiw?si=L9xTxoiBzxhti7rP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-1/2 h-32 object-cover rounded-lg mb-2"></iframe>
+        <div>
+          <div class="flex items-center mt-0 text-gray-400">
+            <svg class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0C.488 3.45.029 5.804 0 12c.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16V8l8 3.993L9 16z"/>
+            </svg>
+            
+          </div>
+          <p class="text-sm text-white">Festive Jewellery: 100% Off on Diamond Making</p>
+        
+        </div>
+      </div>
+  
+      <!-- Call to Action -->
+      <div class="bg-black p-4 rounded-lg flex items-center justify-center hover:scale-105 transition-transform">
+        <p class="text-center text-white">Check out our YouTube channel</p>
+        <a href="https://www.youtube.com/@caratlane">
+          <svg class="w-4 h-4 ml-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg></a>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+{{-- NEWLETTER SECTION --}}
+
+  <!-- Newsletter Signup Section -->
+  <div class="bg-gradient-to-r from-[#E56EEB] to-[#8A63FA] p-8 rounded-lg mb-8 lg:px-32 py-8 mx-32 my-12">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4 text-start">Join our Free Newsletter and</h2>
+    <p class="text-base md:text-lg mb-6 text-start">Get insider info on new arrivals, early access, and everything fine.</p>
+    
+    <form class="flex flex-col md:flex-row">
+      <input type="email" placeholder="Email" class="flex-grow p-3 rounded-t-lg md:rounded-l-lg md:rounded-t-none focus:outline-none" required>
+      <button type="submit" class="bg-gray-800 text-white px-6 py-3 rounded-b-lg md:rounded-r-lg md:rounded-b-none hover:bg-gray-700 transition duration-300 mt-4 md:mt-0">SUBSCRIBE</button>
+    </form>
+  </div>
+  
+
+  <!-- Contact Information Section -->
+ <div class="flex flex-wrap justify-between items-center w-full px-4 md:px-8 py-4 lg:px-24">
+  <!-- Contact Info -->
+  <div class="w-full md:w-auto mb-6 md:mb-0">
+      <h2 class="text-xl md:text-2xl font-semibold mb-2 md:mb-4">Stay Connected with CaratLane</h2>
+      <h3 class="font-semibold mb-1 md:mb-2">CONTACT US</h3>
+      <p class="text-sm md:text-base mb-1">1800-102-0103 (TOLL FREE)</p>
+      <p class="text-sm md:text-base mb-1">+91-44-4299-5000</p>
+      <p class="text-sm md:text-base">CONTACTUS@CARATLANE.COM</p>
+  </div>
+
+  <!-- Social Media Links -->
+  <div class="flex items-center space-x-4">
+      <span class="font-semibold text-sm md:text-base">CARATLANE</span>
+      <a href="#" class="text-gray-600 hover:text-gray-800">
+          <svg class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+      </a>
+      <a href="#" class="text-gray-600 hover:text-gray-800">
+          <svg class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+          </svg>
+      </a>
+      <a href="#" class="text-gray-600 hover:text-gray-800">
+          <svg class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+          </svg>
+      </a>
+      
+      <a href="#" class="text-gray-600 hover:text-gray-800"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z" fill-rule="evenodd" clip-rule="evenodd"/></svg></a>
+
+  </div>
+</div>

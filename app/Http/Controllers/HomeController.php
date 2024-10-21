@@ -184,4 +184,8 @@ class HomeController extends Controller
     public function gemstone(){
         return view('frontend.gemstone');
     }
+    // more jewellery
+    public function morejewellery(){
+        return view('frontend.morejewellery');
+    }
 }
