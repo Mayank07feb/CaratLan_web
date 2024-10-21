@@ -473,7 +473,7 @@
                     <span
                         class="absolute bottom-[-20px] left-0 w-full h-[4px] bg-gradient-to-r from-pink-600 to-purple-600 transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
                 </a>
-                <a href="#"
+                <a href="{{route('morejewellery')}}"
                     class="relative text-gray-600 hover:text-purple-600 text-sm font-semibold py-2 inline-flex items-center group">
                     <span>More Jewellery</span>
                     <span

@@ -75,3 +75,4 @@ Route::get('/ourstory', [HomeController::class, 'ourstory'])->name('ourstory');
 Route::get('/jewellerycareguide', [HomeController::class, 'jewellerycareguide'])->name('jewellerycareguide');
 
 Route::get('/gemstone', [HomeController::class, 'gemstone'])->name('gemstone');
+Route::get('/morejewellery', [HomeController::class,'morejewellery'])->name('morejewellery');
