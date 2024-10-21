@@ -817,8 +817,6 @@
             </div>
         </div>
 
-
-
         <nav class="fixed bottom-0 left-0 right-0 bg-[#4F3267] text-white p-4 z-20 md:hidden">
             <ul class="flex justify-between items-center">
                 <!-- CATEGORY -->
