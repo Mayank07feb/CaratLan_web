@@ -188,4 +188,12 @@ class HomeController extends Controller
     public function morejewellery(){
         return view('frontend.morejewellery');
     }
+    // ALL COLLECTION
+    public function allcollection(){
+        return view('frontend.allcollection');
+    }
+    // Appointment
+    public function appointment(){
+        return view('frontend.appointment');
+    }
 }

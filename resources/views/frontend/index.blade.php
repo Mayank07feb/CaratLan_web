@@ -182,14 +182,20 @@
             </div>
 
             <!-- Image 2 (Centered and Adjusted) -->
-            <div class="relative group overflow-hidden flex items-center justify-center -mt-20 mb-4">
+            <div class="relative group overflow-hidden flex flex-col items-center justify-center -mt-8">
+                <!-- Image with hover effect -->
                 <img src="{{ asset('asset/img/Utsav.jpg') }}" alt="Utsav Collection"
-                    class="w-full h-auto rounded-lg shadow-md transition-transform duration-300 transform group-hover:scale-105 overflow-hidden">
-                <button
-                    class="absolute bottom-0 text-black py-0 px-4 rounded-lg opacity-90 hover:opacity-100 transition duration-300">
-                    View All Collections
-                </button>
+                    class="w-full h-auto rounded-lg shadow-md transition-transform duration-300 transform group-hover:scale-105">
+            
+                <!-- Button positioned below the image -->
+                <a href="{{route('allcollection')}}">
+                    <button
+                        class="mt-6 text-black py-2 px-6 bg-white  hover:bg-gray-100 hover:border-gray-400 transition duration-300">
+                        View All Collections
+                    </button>
+                </a>
             </div>
+            
 
             <!-- Image 3 -->
             <div class="relative group overflow-hidden">
@@ -366,7 +372,7 @@
                     <h2 class="text-sm md:text-md font-bold mb-2 text-nowrap px-4">Unsure Which Design To Pick?</h2>
                     <p class="text-sm md:text-base mb-2 text-nowrap">Book A FREE Home Trial!</p>
                     <button class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded text-sm md:text-base transition duration-300 hover:from-pink-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-50">
-                        Schedule Appointment
+                        <a href="{{route('appointment')}}">Schedule Appointment</a>
                     </button>
                 </div>
                 <div class="mt-4">

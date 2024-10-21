@@ -76,3 +76,6 @@ Route::get('/jewellerycareguide', [HomeController::class, 'jewellerycareguide'])
 
 Route::get('/gemstone', [HomeController::class, 'gemstone'])->name('gemstone');
 Route::get('/morejewellery', [HomeController::class,'morejewellery'])->name('morejewellery');
+// veiw collection
+Route::get('/allcollection',[HomeController::class,'allcollection'])->name('allcollection');
+Route::get('/appointment',[HomeController::class,'appointment'])->name('appointment');
