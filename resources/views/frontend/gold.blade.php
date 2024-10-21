@@ -2,6 +2,16 @@
 @section('content')
     <!-- CSS to hide the scrollbar -->
     <style>
+        #sortModal.fade-in {
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        #sortModal.fade-out {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
         .scrollbar-hidden {
             scrollbar-width: none;
             /* For Firefox */
@@ -817,6 +827,7 @@
             </div>
         </div>
 
+        <!-- SORT Button Navigation (your existing code) -->
         <nav class="fixed bottom-0 left-0 right-0 bg-[#4F3267] text-white p-4 z-20 md:hidden">
             <ul class="flex justify-between items-center">
                 <!-- CATEGORY -->
@@ -828,14 +839,14 @@
                 </li>
                 <!-- SORT -->
                 <li class="flex-1 text-center">
-                    <a href="#" class="flex flex-row items-center justify-center space-x-2">
+                    <a href="#" class="flex flex-row items-center justify-center space-x-2" id="sortButton">
                         <span class="material-icons">sort</span>
                         <span class="text-xs">SORT</span>
                     </a>
                 </li>
                 <!-- FILTER -->
                 <li class="flex-1 text-center">
-                    <a href="#" class="flex flex-row items-center justify-center space-x-2">
+                    <a href="#" class="flex flex-row items-center justify-center space-x-2" id="filterButton">
                         <span class="material-icons">filter_list</span>
                         <span class="text-xs">FILTER</span>
                     </a>
@@ -843,7 +854,270 @@
             </ul>
         </nav>
 
+
+
+        <!-- Sorting Modal (Hidden by default) -->
+        <div id="sortModal" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden flex items-end justify-center w-full">
+            <div
+                class="bg-white rounded-t-lg shadow-lg p-4 w-full md:w-1/2 transition-transform transform translate-y-full fade-out">
+                <div class="bg-gray-200 py-2 rounded-t-lg">
+                    <h2 class="text-center text-[#4F3267] text-xl font-semibold mb-4">Sort Designs By</h2>
+                </div>
+
+                <ul class="text-left text-gray-700 space-y-2">
+                    <li><a href="#" class="block hover:underline">Latest</a></li>
+                    <li><a href="#" class="block hover:underline">Discount</a></li>
+                    <li><a href="#" class="block hover:underline">Featured</a></li>
+                    <li><a href="#" class="block hover:underline">Price: Low to High</a></li>
+                    <li><a href="#" class="block hover:underline">Price: High to Low</a></li>
+                    <li><a href="#" class="block hover:underline">Customer Rating</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <!-- Filter Modal (Hidden by default) -->
+        <div id="filterModal" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden">
+            <div
+                class="fixed inset-x-0 bottom-0 bg-white rounded-t-3xl p-6 h-full overflow-y-scroll transition-transform transform translate-y-full">
+                <div class="flex items-center mb-4">
+                    <button id="closeFilterModal" class="mt-2 text-gray-500 hover:text-gray-700 focus:outline-none">
+                        <span class="material-icons">close</span>
+                    </button>
+                    <h2 class="text-xl font-semibold text-gray-800 leading-tight ml-2">Filters</h2>
+                </div>
+
+
+                <!-- Filter Options (Left Panel and Right Content) -->
+                <div class="flex h-full">
+                    <!-- Left Filter Categories -->
+                    <ul id="filterCategories"
+                        class="w-1/3 border-r bg-gray-200 border-gray-200 space-y-4 text-sm text-gray-700 p-4">
+                        <li class="leading-loose"><a href="#" class="text-blue-500 hover:underline"
+                                onclick="showFilter('price', this)">Price</a></li>
+                        <li class="leading-loose"><a href="#" class="hover:underline"
+                                onclick="showFilter('discounts', this)">Discounts</a></li>
+                        <li class="leading-loose"><a href="#" class="hover:underline"
+                                onclick="showFilter('discountRanges', this)">Discount Ranges</a></li>
+                        <li class="leading-loose"><a href="#" class="hover:underline"
+                                onclick="showFilter('productType', this)">Product Type</a></li>
+                        <li class="leading-loose"><a href="#" class="hover:underline"
+                                onclick="showFilter('weightRanges', this)">Weight Ranges</a></li>
+                        <li class="leading-loose"><a href="#" class="hover:underline"
+                                onclick="showFilter('material', this)">Material</a></li>
+                        <li class="leading-loose"><a href="#" class="hover:underline"
+                                onclick="showFilter('metal', this)">Metal</a></li>
+                        <li class="leading-loose"><a href="#" class="hover:underline"
+                                onclick="showFilter('occasion', this)">Occasion</a></li>
+                        <li class="leading-loose"><a href="#" class="hover:underline text-pink-500">Show More
+                                Filters</a></li>
+                    </ul>
+
+                    <!-- Right Filter Values (Dynamic Content Area) -->
+                    <div id="filterContent" class="w-2/3 p-4 space-y-4">
+                        <!-- This content will change dynamically based on the selected filter -->
+                    </div>
+                </div>
+
+                <!-- Clear and Apply Buttons -->
+                <div class="flex mt-4 space-x-2">
+                    <button
+                        class="w-full bg-gray-200 text-gray-600 py-2 rounded-lg shadow hover:bg-gray-300 transition duration-200 ease-in-out">Clear
+                        All</button>
+                    <button
+                        class="w-full bg-gradient-to-r from-pink-500 to-purple-700 text-white py-2 rounded-lg shadow hover:from-purple-600 hover:to-purple-800 transition duration-200 ease-in-out">APPLY
+                        FILTERS</button>
+                </div>
+
+            </div>
+        </div>
+
+
+
         <script>
+            const filterButton = document.getElementById('filterButton');
+            const filterModal = document.getElementById('filterModal');
+            const closeFilterModal = document.getElementById('closeFilterModal');
+            const filterContent = document.getElementById('filterContent');
+
+            // Filter Content Data
+            const filterData = {
+                price: `
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2 checked:bg-purple-600" checked>
+        <label class="ml-2 block text-gray-500 leading-5">₹10001 - ₹15000 (372)</label>
+      </div>
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2">
+        <label class="ml-2 block text-gray-500 leading-5">₹20001 - ₹30000 (395)</label>
+      </div>
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2">
+        <label class="ml-2 block text-gray-500 leading-5">Under ₹5000 (14)</label>
+      </div>
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2">
+        <label class="ml-2 block text-gray-500 leading-5">Above ₹50000 (100)</label>
+      </div>
+    `,
+                discounts: `
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2 checked:bg-purple-600" checked>
+        <label class="ml-2 block text-gray-500 leading-5">Flat 15% off on Diamond Prices (11)</label>
+      </div>
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2">
+        <label class="ml-2 block text-gray-500 leading-5">Flat 10% off on Diamond Prices (20)</label>
+      </div>
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2">
+        <label class="ml-2 block text-gray-500 leading-5">Flat 50% off on Making Charges (1)</label>
+      </div>
+    `,
+                discountRanges: `
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2">
+        <label class="ml-2 block text-gray-500 leading-5">Up to 10% off (5)</label>
+      </div>
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2">
+        <label class="ml-2 block text-gray-500 leading-5">Flat 20% off (8)</label>
+      </div>
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2">
+        <label class="ml-2 block text-gray-500 leading-5">Flat 30% off (3)</label>
+      </div>
+    `,
+                productType: `
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2 checked:bg-purple-600" checked>
+        <label class="ml-2 block text-gray-500 leading-5">Rings (200)</label>
+      </div>
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2">
+        <label class="ml-2 block text-gray-500 leading-5">Necklaces (150)</label>
+      </div>
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2">
+        <label class="ml-2 block text-gray-500 leading-5">Bracelets (80)</label>
+      </div>
+    `,
+                weightRanges: `
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2 checked:bg-purple-600" checked>
+        <label class="ml-2 block text-gray-500 leading-5">0-2 grams (100)</label>
+      </div>
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2">
+        <label class="ml-2 block text-gray-500 leading-5">2-5 grams (180)</label>
+      </div>
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2">
+        <label class="ml-2 block text-gray-500 leading-5">5-10 grams (120)</label>
+      </div>
+    `,
+                material: `
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2 checked:bg-purple-600" checked>
+        <label class="ml-2 block text-gray-500 leading-5">Gold (120)</label>
+      </div>
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2">
+        <label class="ml-2 block text-gray-500 leading-5">Silver (90)</label>
+      </div>
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2">
+        <label class="ml-2 block text-gray-500 leading-5">Platinum (50)</label>
+      </div>
+    `,
+                metal: `
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2 checked:bg-purple-600" checked>
+        <label class="ml-2 block text-gray-500 leading-5">Yellow Gold (150)</label>
+      </div>
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2">
+        <label class="ml-2 block text-gray-500 leading-5">White Gold (90)</label>
+      </div>
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2">
+        <label class="ml-2 block text-gray-500 leading-5">Rose Gold (70)</label>
+      </div>
+    `,
+                occasion: `
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2 checked:bg-purple-600" checked>
+        <label class="ml-2 block text-gray-500 leading-5">Wedding (200)</label>
+      </div>
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2">
+        <label class="ml-2 block text-gray-500 leading-5">Anniversary (150)</label>
+      </div>
+      <div class="flex items-center">
+        <input type="checkbox" class="form-checkbox ml-2">
+        <label class="ml-2 block text-gray-500 leading-5">Birthday (80)</label>
+      </div>
+    `
+            };
+
+            // Function to Show the Selected Filter Content and Highlight the Active Category
+            function showFilter(filterKey, element) {
+                filterContent.innerHTML = filterData[filterKey] || '<p>No filters available for this category.</p>';
+
+                // Remove active class from all category links
+                const categoryLinks = document.querySelectorAll('#filterCategories a');
+                categoryLinks.forEach(link => link.classList.remove('text-blue-500', 'font-semibold'));
+
+                // Add active class to the clicked category link
+                element.classList.add('text-blue-500', 'font-semibold');
+            }
+
+            // Event Listeners to Toggle the Modal
+            filterButton.addEventListener('click', () => {
+                filterModal.classList.remove('hidden');
+                setTimeout(() => {
+                    filterModal.querySelector('div').classList.remove('translate-y-full');
+                }, 50); // Delay to allow smooth transition
+            });
+
+            closeFilterModal.addEventListener('click', () => {
+                filterModal.querySelector('div').classList.add('translate-y-full');
+                setTimeout(() => {
+                    filterModal.classList.add('hidden');
+                }, 300); // Delay hiding until transition ends
+            });
+
+            // Close modal if clicked outside content
+            filterModal.addEventListener('click', (e) => {
+                if (e.target === filterModal) {
+                    closeFilterModal.click();
+                }
+            });
+
+            //Short Button
+
+            const sortButton = document.getElementById('sortButton');
+            const sortModal = document.getElementById('sortModal');
+            const modalContent = sortModal.querySelector('.bg-white');
+
+            sortButton.addEventListener('click', () => {
+                sortModal.classList.remove('hidden');
+                modalContent.classList.remove('translate-y-full', 'fade-out');
+                modalContent.classList.add('fade-in');
+            });
+
+            sortModal.addEventListener('click', (e) => {
+                if (e.target === sortModal) {
+                    modalContent.classList.add('fade-out');
+                    modalContent.classList.remove('fade-in');
+                    setTimeout(() => {
+                        sortModal.classList.add('hidden');
+                        modalContent.classList.add('translate-y-full');
+                    }, 300);
+                }
+            });
+
             const images = [
                 "{{ asset('asset/img/best10.webp') }}", // First Image
                 "{{ asset('asset/img/best4.webp') }}", // Second Image
