@@ -11,7 +11,7 @@ module.exports = {
         inter: ['InterMedium', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
       },
       gridTemplateRows: {
-        '[auto,auto,1fr]': 'auto auto 1fr', 
+        '[auto,auto,1fr]': 'auto auto 1fr',
       },
       colors: {
         primary: '#4F3267',  // Primary color
@@ -20,7 +20,15 @@ module.exports = {
         textSecondary: '#DE57E5', // Text secondary color
       },
       backgroundImage: {
-        'primary-gradient': 'linear-gradient(90deg, #4F3267 0%, #DE57E5 100%)', 
+        'primary-gradient': 'linear-gradient(90deg, #4F3267 0%, #DE57E5 100%)',
+      },
+      screens: {
+        'xs': '475px',   // Extra small screens (custom)
+        'sm': '640px',   // Small screens
+        'md': '768px',   // Medium screens
+        'lg': '1024px',  // Large screens
+        'xl': '1280px',  // Extra large screens
+        '2xl': '1536px', // Larger screens
       },
     },
   },

@@ -82,4 +82,4 @@ Route::get('/appointment',[HomeController::class,'appointment'])->name('appointm
 Route::get('/knowmore', [HomeController::class,'knowmore'])->name('knowmore');
 Route::get('/know',[HomeController::class,'know'])->name('know');
 Route::get('/policy',[HomeController::class,'policy'])->name('policy');
-Route::get('/daimondguide',[HomeController::class,'daimondguide'])->name('daimondguide');
+Route::get('/daimondguide',[HomeController::class,'daimondguide'])->name('daimondguide,');
