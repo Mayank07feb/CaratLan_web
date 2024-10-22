@@ -46,7 +46,7 @@
     <div id="mobile-menu"
         class="mt-24 fixed inset-0 z-40 bg-gray-50 transform -translate-x-full transition-transform duration-700 ease-custom">
         <!-- Scrollable Content Area -->
-        <div class="p-4 pb-20 h-screen overflow-y-auto scrollbar-hide">
+        <div class="p-4 pb-20 h-screen overflow-y-auto scrollbar-hide mt-5">
             <!-- Slider with Hidden Scrollbar but Working -->
             <div class="flex space-x-2 mb-4 overflow-x-auto py-6 scrollbar-hide">
                 <button class="bg-purple-100 text-purple-800 px-3 py-2 rounded whitespace-nowrap flex items-center">
@@ -78,57 +78,68 @@
             <!-- Menu Items Section -->
             <div class="space-y-2">
                 <div class="menu-item flex items-center space-x-4">
-                    <img src="{{ asset('asset/img/best2.webp') }}" class="rounded-[30px] object-cover" />
+                    <img src="{{ asset('asset/img/best2.webp') }}"
+                        class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
                     <div
-                        class="bg-white text-black border border-gray-300 rounded-[12px] px-4 py-6 w-full shadow-lg block text-left">
-                        <span>Your Recently Viewed</span>
-                        <p>Have a look at your Recently viewed section</p>
+                        class="bg-white leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">
+                        <span class="text-sm sm:text-xs xs:text-[8px] block">Your Recently Viewed</span>
+                        <p class="text-sm sm:text-xs xs:text-[4px]">Have a look at your Recently viewed section</p>
                     </div>
                 </div>
 
                 <div class="menu-item flex items-center space-x-4">
-                    <img src="{{ asset('asset/img/best2.webp') }}" alt="Earrings" class="rounded-[30px] object-cover" />
+                    <img src="{{ asset('asset/img/best2.webp') }}" alt="Earrings"
+                        class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
                     <span
-                        class="bg-white text-black border border-gray-300 rounded-[12px] px-4 py-6 w-full shadow-lg block text-left">Earrings</span>
+                        class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Earrings</span>
                 </div>
+
                 <div class="menu-item flex items-center space-x-4">
-                    <img src="{{ asset('asset/img/best2.webp') }}" alt="Rings" class="rounded-[30px] object-cover" />
+                    <img src="{{ asset('asset/img/best2.webp') }}" alt="Rings"
+                        class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
                     <span
-                        class="bg-white text-black border border-gray-300 rounded-[12px] px-4 py-6 w-full shadow-lg block text-left">Rings</span>
+                        class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Rings</span>
                 </div>
+
                 <div class="menu-item flex items-center space-x-4">
                     <img src="{{ asset('asset/img/best2.webp') }}" alt="Bracelets & Bangles"
-                        class="rounded-[30px] object-cover" />
+                        class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
                     <span
-                        class="bg-white text-black border border-gray-300 rounded-[12px] px-4 py-6 w-full shadow-lg block text-left">Bracelets
+                        class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Bracelets
                         & Bangles</span>
                 </div>
+
                 <div class="menu-item flex items-center space-x-4">
                     <img src="{{ asset('asset/img/best2.webp') }}" alt="Solitaires"
-                        class="rounded-[30px] object-cover" />
+                        class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
                     <span
-                        class="bg-white text-black border border-gray-300 rounded-[12px] px-4 py-6 w-full shadow-lg block text-left">Solitaires</span>
+                        class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Solitaires</span>
                 </div>
+
                 <div class="menu-item flex items-center space-x-4">
                     <img src="{{ asset('asset/img/best2.webp') }}" alt="Mangalsutras"
-                        class="rounded-[30px] object-cover" />
+                        class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
                     <span
-                        class="bg-white text-black border border-gray-300 rounded-[12px] px-4 py-6 w-full shadow-lg block text-left">Mangalsutras</span>
+                        class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Mangalsutras</span>
                 </div>
+
                 <div class="menu-item flex items-center space-x-4">
                     <img src="{{ asset('asset/img/best2.webp') }}" alt="Necklaces"
-                        class="rounded-[30px] object-cover" />
+                        class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
                     <span
-                        class="bg-white text-black border border-gray-300 rounded-[12px] px-4 py-6 w-full shadow-lg block text-left">Necklaces</span>
+                        class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Necklaces</span>
                 </div>
+
                 <div class="menu-item flex items-center space-x-4">
                     <img src="{{ asset('asset/img/best2.webp') }}" alt="Men's Jewellery"
-                        class="rounded-[30px] object-cover" />
+                        class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
                     <span
-                        class="bg-white text-black border border-gray-300 rounded-[12px] px-4 py-6 w-full shadow-lg block text-left">Men's
+                        class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Men's
                         Jewellery</span>
                 </div>
             </div>
+
+
 
             <!-- Image Cards Section -->
             <div class="grid grid-cols-2 gap-4 mb-6 mt-4">
@@ -231,7 +242,7 @@
 
 
     <!-- Main Header -->
-    <header class="bg-white shadow-md relative">
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
 
         <div class="container mx-auto flex items-center justify-between py-4">
 
@@ -266,7 +277,7 @@
                     <!-- Right Icons -->
                     <div class="flex items-center space-x-4">
                         <span class="material-icons text-gray-600">store</span>
-                        <span class="material-icons text-gray-600">favorite</span>
+                        <a href=""> <span class="material-icons text-gray-600">favorite</span></a>
                         <div class="relative">
                             <span class="material-icons text-gray-600">shopping_cart</span>
                             <span
@@ -286,7 +297,7 @@
                 </div>
 
 
-                <div class="w-full max-w-3xl mx-auto mt-4">
+                {{-- <div class="scroll-selection w-full max-w-3xl mx-auto mt-4">
                     <div class="flex overflow-x-auto pb-2 space-x-4">
                         <div class="flex flex-col items-center justify-center w-20 h-20 flex-shrink-0">
                             <img src="{{ asset('asset/img/best2.webp') }}"
@@ -317,7 +328,7 @@
                                 class="rounded-full w-full h-full object-cover" />
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
             </div>
 
@@ -325,10 +336,11 @@
 
 
             <!-- Logo -->
-            <div class="w-10  hidden md:block">
-                <img src="{{ asset('asset/img/logo.png') }}" alt="Logo" class="w-full h-auto">
-            </div>
-
+            <a href="{{ route('home') }}">
+                <div class="w-10  hidden md:block">
+                    <img src="{{ asset('asset/img/logo.png') }}" alt="Logo" class="w-full h-auto">
+                </div>
+            </a>
             <!-- Navigation -->
             <nav class="hidden lg:flex space-x-6">
                 <div class="hoverable relative">
@@ -473,7 +485,7 @@
                     <span
                         class="absolute bottom-[-20px] left-0 w-full h-[4px] bg-gradient-to-r from-pink-600 to-purple-600 transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
                 </a>
-                <a href="{{route('morejewellery')}}"
+                <a href="{{ route('morejewellery') }}"
                     class="relative text-gray-600 hover:text-purple-600 text-sm font-semibold py-2 inline-flex items-center group">
                     <span>More Jewellery</span>
                     <span
@@ -503,7 +515,7 @@
                 <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="Flag"
                     class="w-6 h-4 mr-2">
                 <span class="material-icons text-gray-600">person</span>
-                <span class="material-icons text-gray-600">favorite</span>
+               <a href="{{route('wishlist')}}"><span class="material-icons text-gray-600">favorite</span> </a> 
                 <div class="relative">
                     <span class="material-icons text-gray-600">shopping_cart</span>
                     <span

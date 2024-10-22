@@ -20,6 +20,9 @@
 
     <!-- Drift CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/drift-zoom@1.0.0/dist/drift-basic.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 
     <!-- If using Vite, include the Vite directive -->
     @vite('resources/css/app.css')
@@ -131,7 +134,7 @@
     <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
 
     <script>
-        window.addEventListener('load', function () {
+        window.addEventListener('load', function() {
             const preloader = document.getElementById('preloader');
             preloader.style.display = 'none';
 
@@ -176,7 +179,7 @@
         toggleButton.addEventListener('click', toggleMenu);
         overlay.addEventListener('click', toggleMenu);
     </script>
-    
+
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <!-- Drift JS -->
