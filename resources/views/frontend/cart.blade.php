@@ -133,7 +133,8 @@
                                 <!-- Apply Coupon Text -->
                                 <span>Apply Coupon</span>
                             </div>
-                            <button
+                            <!-- Button -->
+                            <button id="discount-btn"
                                 class="text-[#4F3267] hover:text-[#4F3267] bg-purple-100 rounded-full flex items-center justify-center w-10 h-10"
                                 style="box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.3);">
                                 <i class="material-symbols-outlined">arrow_forward</i>
@@ -191,6 +192,99 @@
     </main>
 
 
+
+    <!-- Coupon Popup Box -->
+    <div id="discount-popup"
+        class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded-lg shadow-lg z-50 max-w-md w-full">
+        <!-- Close Icon and Heading -->
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-lg font-semibold text-gray-800">Apply Coupon</h2>
+            <button id="close-popup" class="text-gray-500 hover:text-gray-700">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Coupon Input -->
+        <div class="mb-4 flex items-center border border-gray-500 bg-gray-200 rounded-lg">
+            <input type="text" class="bg-gray-200 w-full p-2 border-none rounded-l-lg focus:outline-none"
+                placeholder="Enter coupon code">
+            <button class="ml-2 bg-purple-100 text-[#4F3267] px-4 py-2 rounded-r-lg hover:bg-purple-200">APPLY</button>
+        </div>
+
+        <div class="bg-gray-100">
+            <!-- Offer List Heading -->
+            <h3 class="text-center text-sm font-semibold text-gray-700 mb-2">Other Offers at CaratLane</h3>
+
+            <!-- Offer Cards -->
+            <div class="space-y-2 h-48 overflow-y-scroll">
+                <!-- Offer Card -->
+                <div class="flex items-center justify-between bg-gray-50 p-3 rounded-md border border-gray-200">
+                    <div class="flex items-center">
+                        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded-l-md text-xs font-bold">10% OFF</span>
+                        <div class="ml-3">
+                            <p class="text-sm font-semibold">SHAYAFEST10</p>
+                            <p class="text-xs text-gray-500">Valid till November 05 2024</p>
+                            <p class="text-xs text-gray-500">Get Extra 10% OFF on Shaya - Silver Jewellery on and above
+                                5000
+                            </p>
+                        </div>
+                    </div>
+                    <span class="text-gray-400 text-sm">Not Applicable</span>
+                </div>
+
+                <!-- Another Offer Card -->
+                <div class="flex items-center justify-between bg-gray-50 p-3 rounded-md border border-gray-200">
+                    <div class="flex items-center">
+                        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded-l-md text-xs font-bold">20% OFF</span>
+                        <div class="ml-3">
+                            <p class="text-sm font-semibold">SHAYAFEST20</p>
+                            <p class="text-xs text-gray-500">Valid till November 05 2024</p>
+                            <p class="text-xs text-gray-500">Get Extra 20% OFF on Shaya - Silver Jewellery on and above
+                                10000
+                            </p>
+                        </div>
+                    </div>
+                    <span class="text-gray-400 text-sm">Not Applicable</span>
+                </div>
+
+                <div class="flex items-center justify-between bg-gray-50 p-3 rounded-md border border-gray-200">
+                    <div class="flex items-center">
+                        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded-l-md text-xs font-bold">20% OFF</span>
+                        <div class="ml-3">
+                            <p class="text-sm font-semibold">SHAYAFEST20</p>
+                            <p class="text-xs text-gray-500">Valid till November 05 2024</p>
+                            <p class="text-xs text-gray-500">Get Extra 20% OFF on Shaya - Silver Jewellery on and above
+                                10000
+                            </p>
+                        </div>
+                    </div>
+                    <span class="text-gray-400 text-sm">Not Applicable</span>
+                </div>
+
+                <div class="flex items-center justify-between bg-gray-50 p-3 rounded-md border border-gray-200">
+                    <div class="flex items-center">
+                        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded-l-md text-xs font-bold">20% OFF</span>
+                        <div class="ml-3">
+                            <p class="text-sm font-semibold">SHAYAFEST20</p>
+                            <p class="text-xs text-gray-500">Valid till November 05 2024</p>
+                            <p class="text-xs text-gray-500">Get Extra 20% OFF on Shaya - Silver Jewellery on and above
+                                10000
+                            </p>
+                        </div>
+                    </div>
+                    <span class="text-gray-400 text-sm">Not Applicable</span>
+                </div>
+
+                <!-- Add more offers similarly if needed -->
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- Popup (Initially hidden) -->
     <div id="popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
         <!-- Popup Container -->
@@ -240,6 +334,19 @@
     </div>
 
     <script>
+        const discountBtn = document.getElementById('discount-btn');
+        const discountPopup = document.getElementById('discount-popup');
+        const closePopup = document.getElementById('close-popup');
+
+        discountBtn.addEventListener('click', function() {
+            discountPopup.classList.toggle('opacity-0');
+            discountPopup.classList.toggle('pointer-events-none');
+        });
+
+        closePopup.addEventListener('click', function() {
+            discountPopup.classList.add('opacity-0');
+            discountPopup.classList.add('pointer-events-none');
+        });
         document.addEventListener('DOMContentLoaded', function() {
             const sidebar = document.getElementById('quantity-sidebar');
             const toggleButton = document.getElementById('quantity-toggle');
