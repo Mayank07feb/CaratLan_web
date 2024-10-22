@@ -20,6 +20,11 @@
 
     <!-- Drift CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/drift-zoom@1.0.0/dist/drift-basic.min.css">
+<!-- Flickity CSS -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2.2.1/dist/flickity.min.css">
+
+<!-- Flickity JS -->
+<script src="https://unpkg.com/flickity@2.2.1/dist/flickity.pkgd.min.js"></script>
 
     <!-- If using Vite, include the Vite directive -->
     @vite('resources/css/app.css')

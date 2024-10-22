@@ -196,4 +196,20 @@ class HomeController extends Controller
     public function appointment(){
         return view('frontend.appointment');
     }
+    // KNOW MORE
+    public function knowmore(){
+        return view('frontend.knowmore');
+    }
+    // know more2
+    public function know(){
+        return view('frontend.know');
+    }
+    // POLICY
+    public function policy(){
+        return view('frontend.policy');
+    }
+    // DAIMOND GUIDE
+    public function daimondguide(){
+        return view('frontend.daimondguide');
+    }
 }

@@ -8,7 +8,7 @@
                     <div class="w-full">
                         <h3 class="font-semibold mb-4">Know Your Jewellery</h3>
                         <ul class="space-y-2 text-sm">
-                            <li><a href="#" class="hover:text-caratlane-purple">Diamond guide</a></li>
+                            <li><a href="{{route('daimondguide')}}" class="hover:text-caratlane-purple">Diamond guide</a></li>
                             <li><a href="#" class="hover:text-caratlane-purple">Jewellery guide</a></li>
                             <li><a href="#" class="hover:text-caratlane-purple">Gemstones guide</a></li>
                             <li><a href="#" class="hover:text-caratlane-purple">Gold rate</a></li>
