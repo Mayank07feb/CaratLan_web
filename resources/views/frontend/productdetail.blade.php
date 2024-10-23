@@ -15,7 +15,7 @@
         }
     </style>
 
-    <main class="mt-12">
+    <main class="mt-14">
         <div class="bg-white">
             <!-- Breadcrumb Navigation -->
             <nav class="p-4 border-b">
@@ -38,7 +38,7 @@
                     <div class="space-y-4">
                         <!-- Main Product Image -->
                         <div class="product-image rounded-lg p-8 relative">
-                            <img src="/api/placeholder/600/600" alt="Mathew Gold Band Ring" class="w-full object-contain" />
+                            <img src="{{asset('asset/img/testing.png')}}" alt="Mathew Gold Band Ring" class="w-full object-contain" />
                             <button class="absolute top-4 right-4 bg-white p-2 rounded-lg shadow-md">
                                 <i class="fas fa-expand-arrows-alt text-gray-600"></i>
                             </button>
@@ -57,6 +57,43 @@
                             </div>
                             <div class="bg-[#f5f0fa] p-4 rounded-lg cursor-pointer hover:shadow-md transition">
                                 <img src="/api/placeholder/150/150" alt="Ring View 4" class="w-full" />
+                            </div>
+                        </div>
+
+
+                         <!-- Similar Products -->
+                         <div class="similar-products p-4 rounded-lg">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-white p-4 rounded-lg relative custom-shadow">
+                                    <span
+                                        class="absolute top-2 left-2 bg-purple-700 text-white text-xs px-2 py-1 rounded">32%
+                                        OFF</span>
+                                    <img src="/api/placeholder/200/200" alt="Similar Ring 1" class="w-full" />
+                                </div>
+                                <div class="bg-white p-4 rounded-lg relative custom-shadow">
+                                    <span
+                                        class="absolute top-2 left-2 bg-purple-700 text-white text-xs px-2 py-1 rounded">21%
+                                        OFF</span>
+                                    <img src="/api/placeholder/200/200" alt="Similar Ring 2" class="w-full" />
+                                </div>
+                                <div class="bg-white p-4 rounded-lg relative custom-shadow">
+                                    <span
+                                        class="absolute top-2 left-2 bg-purple-700 text-white text-xs px-2 py-1 rounded">20%
+                                        OFF</span>
+                                    <img src="/api/placeholder/200/200" alt="Similar Ring 3" class="w-full" />
+                                </div>
+                                <div class="bg-white p-4 rounded-lg flex items-center justify-center custom-shadow">
+                                    <div class="text-center">
+                                        <h3 class="text-xl font-bold text-purple-700">Up to</h3>
+                                        <h2 class="text-2xl font-bold text-purple-700">32% OFF</h2>
+                                        <p class="text-sm text-purple-700">On All Similar Designs</p>
+                                        <button
+                                            class="mt-2 text-purple-700 font-medium flex items-center gap-1 hover:text-purple-800 transition">
+                                            VIEW ALL
+                                            <i class="fas fa-arrow-right text-sm"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -201,41 +238,7 @@
                             </div>
                         </div>
 
-                        <!-- Similar Products -->
-                        <div class="similar-products p-4 rounded-lg">
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="bg-white p-4 rounded-lg relative custom-shadow">
-                                    <span
-                                        class="absolute top-2 left-2 bg-purple-700 text-white text-xs px-2 py-1 rounded">32%
-                                        OFF</span>
-                                    <img src="/api/placeholder/200/200" alt="Similar Ring 1" class="w-full" />
-                                </div>
-                                <div class="bg-white p-4 rounded-lg relative custom-shadow">
-                                    <span
-                                        class="absolute top-2 left-2 bg-purple-700 text-white text-xs px-2 py-1 rounded">21%
-                                        OFF</span>
-                                    <img src="/api/placeholder/200/200" alt="Similar Ring 2" class="w-full" />
-                                </div>
-                                <div class="bg-white p-4 rounded-lg relative custom-shadow">
-                                    <span
-                                        class="absolute top-2 left-2 bg-purple-700 text-white text-xs px-2 py-1 rounded">20%
-                                        OFF</span>
-                                    <img src="/api/placeholder/200/200" alt="Similar Ring 3" class="w-full" />
-                                </div>
-                                <div class="bg-white p-4 rounded-lg flex items-center justify-center custom-shadow">
-                                    <div class="text-center">
-                                        <h3 class="text-xl font-bold text-purple-700">Up to</h3>
-                                        <h2 class="text-2xl font-bold text-purple-700">32% OFF</h2>
-                                        <p class="text-sm text-purple-700">On All Similar Designs</p>
-                                        <button
-                                            class="mt-2 text-purple-700 font-medium flex items-center gap-1 hover:text-purple-800 transition">
-                                            VIEW ALL
-                                            <i class="fas fa-arrow-right text-sm"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                       
 
                         <!-- Delivery Section -->
                         <div class="space-y-4">
