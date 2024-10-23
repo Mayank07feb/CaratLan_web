@@ -131,44 +131,26 @@
 
     {{-- HD VIDEO SECTION --}}
 
-    {{-- <div class="relative w-full h-auto mx-0 overflow-hidden shadow-2xl grid grid-cols-1 md:grid-cols-3">
+    <div class="relative w-full h-full mx-0 overflow-hidden grid grid-cols-1 md:grid-cols-3 px-4 md:px-8 gap-0">
         <!-- Video Section -->
-        <div class="relative col-span-2 pt-[56.25%]" dir="ltr">
-            <iframe class="absolute top-0 left-0 w-full h-full rounded-t-xl md:rounded-s-3xl"
-                src="https://www.youtube.com/embed/kYOP52BUZTI?autoplay=1&mute=1&loop=1&playlist=kYOP52BUZTI"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="relative col-span-1 md:col-span-2 aspect-w-16 aspect-h-9 rounded-l-lg overflow-hidden">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/Vz0l_OYJofo?si=tYVrySeJr6cU62c6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     
         <!-- Overlay and Text Section -->
-        <div class="flex items-center justify-center bg-purple-900 p-6 rounded-b-xl md:rounded-s-3xl col-span-1" dir="rtl">
-            <div class="text-right max-w-md">
-                <h2 class="text-6xl md:text-5xl text-pretty text-white mb-2 drop-shadow-lg">
+        <div class="flex items-center justify-center bg-purple-900 p-6 md:p-12 rounded-r-lg col-span-1">
+            <div class="text-right max-w-md space-y-6">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl text-pretty text-white mb-4 drop-shadow-lg">
                     <span class="cursive font-light text-balance">𝗟𝗮𝘁𝗲𝘀𝘁</span><br>𝒟𝑒𝓈𝒾𝑔𝓃
                 </h2>
-                <p class="text-lg md:text-xl text-white font-light drop-shadow">Perfectly festive,<br>effortlessly stunning</p>
-                <i class="ri-arrow-right-line bg-white rounded-full text-3xl mt-6"></i>
-            </div>
-        </div>
-    </div> --}}
-    <div class="relative w-full h-full mx-0 overflow-hidden shadow-2xl grid grid-cols-1 md:grid-cols-3 px-8">
-        <!-- Video Section -->
-        <div class="relative col-span-2 aspect-video rounded-l-lg" dir="ltr">
-            <iframe width="960" height="475" src="https://www.youtube.com/embed/Vz0l_OYJofo?si=tYVrySeJr6cU62c6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    
-        <!-- Overlay and Text Section -->
-        <div class="flex items-center justify-center bg-purple-900 p-6 rounded-r-lg col-span-1" dir="rtl">
-            <div class="text-right max-w-md">
-                <h2 class="text-6xl md:text-5xl text-pretty text-white mb-2 drop-shadow-lg">
-                    <span class="cursive font-light text-balance">𝗟𝗮𝘁𝗲𝘀𝘁</span><br>𝒟𝑒𝓈𝒾𝑔𝓃
-                </h2>
-                <p class="text-lg md:text-xl text-white font-light drop-shadow">Perfectly festive,<br>effortlessly stunning</p>
-                <i class="ri-arrow-right-line bg-white rounded-full text-3xl mt-6"></i>
+                <p class="text-lg md:text-xl text-white font-light drop-shadow">
+                    Perfectly festive,<br>effortlessly stunning
+                </p>
+                <i class="ri-arrow-right-line bg-white rounded-full text-3xl p-2 inline-block mt-6"></i>
             </div>
         </div>
     </div>
+    
     
 
 
@@ -204,31 +186,7 @@
             </div>
         </div>
     </div>
-    {{-- <div class="container mx-auto p-4 py-24">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <!-- Image 1 -->
-            <div class="relative group overflow-hidden">
-                <img src="{{ asset('asset/img/Collection_disney_11.jpg') }}" alt="Disney Collection"
-                    class="w-full h-auto rounded-lg shadow-md transition-transform duration-300 transform group-hover:scale-105">
-            </div>
-    
-            <!-- Image 2 (Centered and Adjusted) -->
-            <div class="relative group overflow-hidden flex items-center justify-center">
-                <img src="{{ asset('asset/img/Utsav.jpg') }}" alt="Utsav Collection"
-                    class="w-full h-auto rounded-lg shadow-md transition-transform duration-300 transform group-hover:scale-105">
-                <button
-                    class="absolute bottom-4 text-black bg-white py-2 px-4 rounded-lg opacity-90 hover:opacity-100 transition duration-300">
-                    View All Collections
-                </button>
-            </div>
-    
-            <!-- Image 3 -->
-            <div class="relative group overflow-hidden">
-                <img src="{{ asset('asset/img/Collection_Harry_potter.jpg') }}" alt="Harry Potter Collection"
-                    class="w-full h-auto rounded-lg shadow-md transition-transform duration-300 transform group-hover:scale-105">
-            </div>
-        </div>
-    </div> --}}
+   
     
 
 {{-- card images --}}
@@ -244,126 +202,34 @@
     </div>
 
     {{-- VIDEO HD SECOND --}}
-    {{-- <div class="relative w-full h-auto mx-auto overflow-hidden py-4 grid grid-cols-1 lg:grid-cols-3 px-4 md:px-4">
+   
+    <div class="relative w-full h-full mx-auto overflow-hidden py-4 grid grid-cols-1 lg:grid-cols-3 px-4 md:px-8 gap-0">
         <!-- Video Section -->
-        <div class="relative col-span-2 pt-[56.25%]" dir="ltr">
-            <iframe 
-                class="absolute top-0 left-0 w-full h-full rounded-t-xl md:rounded-s-3xl"
-                src="https://www.youtube.com/embed/xuuNZQwhEn4?si=wAVU0dgJMPh7Ijs1&autoplay=1&mute=1&controls=0&loop=1&playlist=xuuNZQwhEn4" 
-                title="Latest Design Video"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
-            </iframe>
+        <div class="relative col-span-1 lg:col-span-2 aspect-w-16 aspect-h-9 rounded-l-lg overflow-hidden" dir="ltr">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/KhrPUQsYcNo?si=yrOniYEbEwi8kLbl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     
         <!-- Overlay and Text Section -->
-        <aside class="flex items-center justify-center bg-purple-900 p-6 rounded-b-xl md:rounded-s-3xl col-span-1" dir="rtl">
-            <div class="text-right max-w-md">
-                <h2 class="text-6xl md:text-5xl text-pretty text-white mb-2 drop-shadow-lg">
-                    <span class="cursive font-light text-balance">Get</span><br>100%
-                </h2>
-                <p class="text-lg md:text-xl text-white font-light drop-shadow">
-                    of Your Gold Exachange Value
-                </p>
-                <i class="ri-arrow-right-line bg-white rounded-full text-3xl mt-6"></i>
-            </div>
-        </aside>
-    </div> --}}
-    <div class="relative w-full h-full mx-auto overflow-hidden py-4 grid grid-cols-1 lg:grid-cols-3 px-8">
-        <!-- Video Section -->
-        <div class="relative col-span-2 aspect-video rounded-l-lg" dir="ltr">
-            <iframe width="960" height="475" src="https://www.youtube.com/embed/KhrPUQsYcNo?si=yrOniYEbEwi8kLbl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    
-        <!-- Overlay and Text Section -->
-        <aside class="flex items-center justify-center bg-purple-900 p-6 rounded-r-lg col-span-1" dir="rtl">
-            <div class="text-right max-w-md">
-                <h2 class="text-6xl md:text-5xl text-pretty text-white mb-2 drop-shadow-lg">
-                    <span class="cursive font-light text-balance">Get</span><br>100%
+        <aside class="flex items-center justify-center bg-purple-900 p-6 md:p-12 rounded-r-lg col-span-1" dir="rtl">
+            <div class="text-right max-w-md space-y-4">
+                <h2 class="text-5xl md:text-6xl text-pretty text-white mb-2 drop-shadow-lg">
+                    <span class="cursive font-light text-balance">Get</span><br>
+                    <span class="text-yellow-400">100%</span>
                 </h2>
                 <p class="text-lg md:text-xl text-white font-light drop-shadow">
                     of Your Gold Exchange Value
                 </p>
-                <i class="ri-arrow-right-line bg-white rounded-full text-3xl mt-6"></i>
+                <i class="ri-arrow-right-line bg-white rounded-full text-3xl p-2 inline-block mt-6"></i>
             </div>
         </aside>
     </div>
     
     
+    
 
 
     {{-- LOCATION --}}
-    {{-- <div class="container mx-auto px-0 py-6 bg-gray-50">
-        <div class="  flex flex-col md:flex-row gap-40 justify-center">
-            <!-- Left Section -->
-            <div class="w-1/3 relative">
-                <div
-                    class="absolute  inset-0 flex flex-col justify-center items-center text-center text-black rounded-lg p-4 transform translate-x-1/2">
-                    <h2 class="text-xl font-bold mb-2">Unsure Which Design To Pick?</h2>
-                    <p class="text-sm mb-2">Book A FREE Home Trial!</p>
-                    <button
-                        class="bg-gradient-to-r from-pink-500 to-purple-600 text-black px-4 py-2 rounded text-sm transition duration-300 hover:from-pink-600 hover:to-purple-700">
-                        Schedule Appointment
-                    </button>
-
-                </div>
-                <div class="mt-4">
-                    <img src="{{ asset('asset/img/T@H.webp') }}" alt="Customers discussing designs"
-                        class="w-full rounded object-cover ">
-                </div>
-            </div>
-
-            <!-- Right Section -->
-            <div class="w-1/3 relative">
-                <div
-                    class="absolute  inset-0 flex flex-col justify-center items-center text-center text-black rounded-lg p-4 transform translate-x-1/2">
-                    <h2 class="text-xl font-bold mb-2">Come visit us at any of our stores!</h2>
-                    <div class="mb-4">
-                        <input type="text" placeholder="Enter Pincode or City"
-                            class="w-full p-2 border border-pink-500 to-purple-500 rounded text-sm">
-                    </div>
-
-                </div>
-                <div class="mt-4">
-                    <img src="{{ asset('asset\img\store.webp') }}" alt="Store interior"
-                        class="w-full rounded object-cover">
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    {{-- FOR DESKTOP --}}
-    {{-- <div class="container mx-auto  py-6 bg-gray-50 lg:block hidden">
-        <div class="flex flex-col md:flex-row gap-2 md:gap-40 justify-center">
-            <!-- Left Section -->
-            <div class="w-1/3 md:w-1/3 relative mb-6 md:mb-0">
-                <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-black rounded-lg p-4 transform translate-x-1/2">
-                    <h2 class="text-sm md:text-md font-bold mb-2 text-nowrap px-6">Unsure Which Design To Pick?</h2>
-                    <p class="text-sm md:text-base mb-2 text-nowrap">Book A FREE Home Trial!</p>
-                    <button class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded text-sm md:text-base transition duration-300 hover:from-pink-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-50">
-                        Schedule Appointment
-                    </button>
-                </div>
-                <div class="mt-4">
-                    <img src="{{ asset('asset/img/T@H.webp') }}" alt="Customers discussing designs" class="w-full rounded object-cover">
-                </div>
-            </div>
     
-            <!-- Right Section -->
-            <div class="w-1/2 md:w-1/3 relative mb-6 md:mb-0">
-                <div class="absolute  inset-0 flex flex-col justify-center items-center text-center text-black rounded-lg p-4 transform translate-x-1/2">
-                    <h2 class="text-sm md:text-md font-bold mb-2 text-nowrap px-4">Come Visit Us At Any of Our Stores!</h2>
-                    <div class="mb-4 w-1/2">
-                        <input type="text" placeholder="Enter Pincode or City" class="w-full p-2 border border-pink-500 rounded text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-50">
-                    </div>
-                </div>
-                <div class="mt-4">
-                    <img src="{{ asset('asset/img/store.webp') }}" alt="Store interior" class="w-full rounded object-cover">
-                </div>
-            </div>
-        </div>
-    </div> --}}
     <div class="container mx-auto py-6 bg-gray-50 lg:block md:hidden hidden">
         <div class="relative flex flex-col md:flex-row gap-2 md:gap-0 justify-center">
             <!-- Left Section -->
@@ -444,14 +310,16 @@
     
             <!-- Description Section -->
             <div class="lg:mt-8 flex flex-col justify-center">
-                <h2 class="lg:text-3xl text-lg text-center font-semibold text-gray-800">A Stylish Upgrade</h2>
-                <p class="mt-2 text-gray-600 text-center text-sm lg:text-lg">
+                <h2 class="lg:text-3xl text-lg text-start font-semibold text-gray-800 py-2">A Stylish Upgrade</h2>
+                <div class="w-20 h-0.5 bg-gradient-to-r from-pink-500 to-purple-500"></div>
+
+                <p class="mt-2 text-gray-600 text-start text-sm lg:text-lg py-2">
                     - Enjoy 0% Deduction on your gold exchange value. Please note: The old gold doesn't have to be from only CaratLane; it can be any gold jewellery you have.
                 </p>
-                <button
-                    class="mt-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-2 rounded transition duration-300 hover:from-pink-600 hover:to-purple-600">
+                <a href="{{route('knowmore')}}"><button
+                    class="mt-4 w-1/3 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-2 rounded transition duration-300 hover:from-pink-600 hover:to-purple-600">
                     Know More
-                </button>
+                </button></a>
             </div>
         </div>
     </div>
@@ -459,412 +327,39 @@
 
     {{-- SECTION --}}
     <div class="flex items-center justify-center py-8 bg-[#231535]">
-        <div class="max-w-xl w-full md:px-0 text-center">
+        <div class="max-w-xl w-full px-4 md:px-0 text-center">
+            <!-- Image -->
+            <img src="{{asset('asset/img/section-img.png')}}" alt="" class="object-center mx-auto mb-4 md:pl-20 lg:pl-0">
             
-            <img src="{{asset('asset/img/section-img.png')}}" alt="" class="object-center pl-20">
-            <p class="text-sm md:text-md lg:text-md text-purple-300 mb-2 px-14 -mt-2">
+            <!-- Text -->
+            <p class="text-sm md:text-md lg:text-md text-purple-300 mb-8 px-4 md:px-12 lg:px-24 -mt-2 py-2">
                 The highest quality of craftsmanship and innovation, that brings you modern, everyday designs.
             </p>
-            <button
-                class="bg-gradient-to-r from-pink-600 to-purple-700 hover:from-pink-500 hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 text-white px-6 py-2 rounded transition duration-300">
-                Know More
-            </button>
+            
+            <!-- Button -->
+            <a href="{{route('know')}}"><button
+                class="border-gradient-to-r from-pink-600 to-purple-700 hover:from-pink-500 hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 text-white px-6 py-2 rounded transition duration-300">
+             Know More
+            </button></a>
         </div>
     </div>
+    
 
     {{-- SLIDER - - CARDS --}}
-    {{-- <div class="container mx-auto px-4 py-8">
-        <!-- Header with Tabs -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 justify-between items-center mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 text-center">Best of CaratLane</h2>
-            <div class="inline-flex rounded-md shadow-sm justify-center mt-2" role="group">
-                <button id="women-tab" type="button"
-                    class="tab-btn px-4 py-2 text-sm font-medium text-white bg-purple-500 rounded-l-lg hover:bg-purple-600 focus:ring-2 focus:ring-purple-500"
-                    data-tab="slider1">
-                    WOMEN
-                </button>
-                <button id="men-tab" type="button"
-                    class="tab-btn px-4 py-2 text-sm font-medium text-gray-700 bg-white rounded-r-lg border border-gray-200 hover:bg-gray-100 hover:text-purple-700 focus:ring-2 focus:ring-purple-500"
-                    data-tab="slider2">
-                    MEN
-                </button>
-            </div>
-        </div>
-    
-        <!-- Slider 1 (WOMEN) -->
-        <div id="slider1" class="tab-content">
-            <div class="glide" id="glide1">
-                <div class="glide__track" data-glide-el="track">
-                    <ul class="glide__slides flex space-x-4">
-                        <!-- Product 1 -->
-                        <li class="glide__slide w-48 flex-shrink-0">
-                            <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
-                                class="w-full h-48 object-cover rounded-lg mb-2">
-                            <p class="font-semibold text-lg">₹25,699</p>
-                            <p class="text-sm text-gray-500 line-through">₹28,555</p>
-                            <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
-                        </li>
-                        <!-- Product 2 -->
-                        <li class="glide__slide w-48 flex-shrink-0">
-                            <img src="{{ asset('asset/img/j2.jpg') }}" alt="Intertwined Slim Diamond Ring"
-                                class="w-full h-48 object-cover rounded-lg mb-2">
-                            <p class="font-semibold text-lg">₹21,358</p>
-                            <p class="text-sm text-gray-500 line-through">₹23,731</p>
-                            <p class="text-sm text-gray-700">Intertwined Slim Diamond Ring</p>
-                        </li>
-                        <!-- Additional Products... -->
-                    </ul>
-                </div>
-                <div class="glide__arrows flex justify-between mt-4" data-glide-el="controls">
-                    <button class="glide__arrow glide__arrow--left bg-white p-2 rounded-full shadow-md"
-                        data-glide-dir="<" aria-label="Previous Slide">
-                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                        </svg>
-                    </button>
-                    <button class="glide__arrow glide__arrow--right bg-white p-2 rounded-full shadow-md"
-                        data-glide-dir=">" aria-label="Next Slide">
-                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Slider 2 (MEN) -->
-        <div id="slider2" class="tab-content hidden mx-auto">
-            <div class="glide" id="glide2">
-                <div class="glide__track" data-glide-el="track">
-                    <ul class="glide__slides flex space-x-4">
-                        <!-- Example Product Card -->
-                        <li class="glide__slide w-48 flex-shrink-0">
-                            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-                                <div class="relative">
-                                    <a href="{{ route('productdetail') }}">
-                                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
-                                            class="w-full h-48 object-cover" loading="lazy">
-                                    </a>
-                                </div>
-                                <div class="p-4">
-                                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
-                                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- Additional Product Cards... -->
-                    </ul>
-                </div>
-                <div class="glide__arrows flex justify-between mt-4" data-glide-el="controls">
-                    <button class="glide__arrow glide__arrow--left bg-white p-2 rounded-full shadow-md"
-                        data-glide-dir="<" aria-label="Previous Slide">
-                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                        </svg>
-                    </button>
-                    <button class="glide__arrow glide__arrow--right bg-white p-2 rounded-full shadow-md"
-                        data-glide-dir=">" aria-label="Next Slide">
-                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    {{-- <div class="container mx-auto px-4 py-8">
-        <!-- Header with Tabs -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 justify-between items-center mb-6">
-            <h2 class="text-2xl font-semibold text-gray-800 text-center">Best of CaratLane</h2>
-            <div class="inline-flex rounded-md shadow-sm justify-center mt-2" role="group">
-                <button id="women-tab" type="button"
-                    class="tab-btn px-4 py-2 text-sm font-medium text-black bg-purple-500 rounded-l-lg hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                    data-tab="slider1" aria-controls="slider1" aria-selected="true">
-                    WOMEN
-                </button>
-                <button id="men-tab" type="button"
-                    class="tab-btn px-4 py-2 text-sm font-medium text-gray-700 bg-white rounded-r-lg border border-gray-200 hover:bg-gray-100 hover:text-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                    data-tab="slider2" aria-controls="slider2" aria-selected="false">
-                    MEN
-                </button>
-            </div>
-        </div>
-    
-        <!-- Slider 1 (WOMEN) -->
-        <div id="slider1" class="tab-content">
-            <div class="relative">
-                <div class="slider-wrapper overflow-hidden">
-                    <ul class="slider flex transition-transform duration-300 gap-4">
-                        <!-- Product 1 -->
-                        <li class="slide w-68 flex-shrink-0">
-                            <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
-                                class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
-                            <p class="font-semibold text-lg">₹25,699</p>
-                            <p class="text-sm text-gray-500 line-through">₹28,555</p>
-                            <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
-                        </li>
-                          <!-- Product 1 -->
-                          <li class="slide w-68 flex-shrink-0">
-                            <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
-                                class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
-                            <p class="font-semibold text-lg">₹25,699</p>
-                            <p class="text-sm text-gray-500 line-through">₹28,555</p>
-                            <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
-                        </li>
-                          <!-- Product 1 -->
-                          <li class="slide w-68 flex-shrink-0">
-                            <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
-                                class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
-                            <p class="font-semibold text-lg">₹25,699</p>
-                            <p class="text-sm text-gray-500 line-through">₹28,555</p>
-                            <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
-                        </li>
-                          <!-- Product 1 -->
-                          <li class="slide w-68 flex-shrink-0">
-                            <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
-                                class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
-                            <p class="font-semibold text-lg">₹25,699</p>
-                            <p class="text-sm text-gray-500 line-through">₹28,555</p>
-                            <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
-                        </li>
-                          <!-- Product 1 -->
-                          <li class="slide w-68 flex-shrink-0">
-                            <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
-                                class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
-                            <p class="font-semibold text-lg">₹25,699</p>
-                            <p class="text-sm text-gray-500 line-through">₹28,555</p>
-                            <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
-                        </li>
-                          <!-- Product 1 -->
-                          <li class="slide w-68 flex-shrink-0">
-                            <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
-                                class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
-                            <p class="font-semibold text-lg">₹25,699</p>
-                            <p class="text-sm text-gray-500 line-through">₹28,555</p>
-                            <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
-                        </li>
-                          <!-- Product 1 -->
-                          <li class="slide w-68 flex-shrink-0">
-                            <img src="{{ asset('asset/img/j1.jpg') }}" alt="Glitter Miracle Diamond Ring"
-                                class="w-full h-48 object-cover rounded-lg mb-2" loading="lazy">
-                            <p class="font-semibold text-lg">₹25,699</p>
-                            <p class="text-sm text-gray-500 line-through">₹28,555</p>
-                            <p class="text-sm text-gray-700">Glitter Miracle Diamond Ring</p>
-                        </li>
 
-                        <!-- Additional Products... Repeat for more products -->
-                    </ul>
-                </div>
-                <div class="slider-arrows flex justify-between mt-4">
-                    <button class="slider-arrow bg-white p-2 rounded-full shadow-md" id="prev1" aria-label="Previous Slide">
-                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                        </svg>
-                    </button>
-                    <button class="slider-arrow bg-white p-2 rounded-full shadow-md" id="next1" aria-label="Next Slide">
-                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Slider 2 (MEN) -->
-        <div id="slider2" class="tab-content hidden">
-            <div class="relative">
-                <div class="slider-wrapper overflow-hidden">
-                    <ul class="slider flex transition-transform duration-300 gap-4">
-                        <!-- Product 1 -->
-                        <li class="slide w-68 flex-shrink-0">
-                            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-                                <div class="relative">
-                                    <a href="{{ route('productdetail') }}">
-                                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
-                                            class="w-full h-48 object-cover" loading="lazy">
-                                    </a>
-                                </div>
-                                <div class="p-4">
-                                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
-                                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
-                                </div>
-                            </div>
-                        </li>
-                          <!-- Product 1 -->
-                          <li class="slide w-68 flex-shrink-0">
-                            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-                                <div class="relative">
-                                    <a href="{{ route('productdetail') }}">
-                                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
-                                            class="w-full h-48 object-cover" loading="lazy">
-                                    </a>
-                                </div>
-                                <div class="p-4">
-                                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
-                                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
-                                </div>
-                            </div>
-                        </li>
-                          <!-- Product 1 -->
-                          <li class="slide w-68 flex-shrink-0">
-                            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-                                <div class="relative">
-                                    <a href="{{ route('productdetail') }}">
-                                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
-                                            class="w-full h-48 object-cover" loading="lazy">
-                                    </a>
-                                </div>
-                                <div class="p-4">
-                                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
-                                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
-                                </div>
-                            </div>
-                        </li>
-                          <!-- Product 1 -->
-                          <li class="slide w-68 flex-shrink-0">
-                            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-                                <div class="relative">
-                                    <a href="{{ route('productdetail') }}">
-                                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
-                                            class="w-full h-48 object-cover" loading="lazy">
-                                    </a>
-                                </div>
-                                <div class="p-4">
-                                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
-                                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
-                                </div>
-                            </div>
-                        </li>
-                          <!-- Product 1 -->
-                          <li class="slide w-68 flex-shrink-0">
-                            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-                                <div class="relative">
-                                    <a href="{{ route('productdetail') }}">
-                                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
-                                            class="w-full h-48 object-cover" loading="lazy">
-                                    </a>
-                                </div>
-                                <div class="p-4">
-                                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
-                                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
-                                </div>
-                            </div>
-                        </li>
-                          <!-- Product 1 -->
-                          <li class="slide w-68 flex-shrink-0">
-                            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-                                <div class="relative">
-                                    <a href="{{ route('productdetail') }}">
-                                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
-                                            class="w-full h-48 object-cover" loading="lazy">
-                                    </a>
-                                </div>
-                                <div class="p-4">
-                                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
-                                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
-                                </div>
-                            </div>
-                        </li>
-                          <!-- Product 1 -->
-                          <li class="slide w-68 flex-shrink-0">
-                            <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
-                                <div class="relative">
-                                    <a href="{{ route('productdetail') }}">
-                                        <img src="{{ asset('asset/img/best1.webp') }}" alt="Best Seller Gold Nath"
-                                            class="w-full h-48 object-cover" loading="lazy">
-                                    </a>
-                                </div>
-                                <div class="p-4">
-                                    <h2 class="text-2xl font-bold text-gray-900 mb-2">₹20,664</h2>
-                                    <h3 class="text-lg font-semibold text-gray-800 mt-1">Best Seller Gold Nath</h3>
-                                </div>
-                            </div>
-                        </li>
-
-                        <!-- Additional Products... Repeat for more products -->
-                    </ul>
-                </div>
-                <div class="slider-arrows flex justify-between mt-4">
-                    <button class="slider-arrow bg-white p-2 rounded-full shadow-md" id="prev2" aria-label="Previous Slide">
-                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                        </svg>
-                    </button>
-                    <button class="slider-arrow bg-white p-2 rounded-full shadow-md" id="next2" aria-label="Next Slide">
-                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-<script>
-    document.querySelectorAll('.tab-btn').forEach(button => {
-        button.addEventListener('click', () => {
-            const tabID = button.getAttribute('data-tab');
-            document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
-            document.getElementById(tabID).classList.remove('hidden');
-            
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('bg-purple-500', 'text-purple-500');
-                btn.classList.add('bg-white', 'text-gray-700');
-            });
-            button.classList.add('bg-purple-500', 'text-purple-500');
-        });
-    });
-    
-    // Slider functionality
-    const slideWidths = 68; // width of each slide in tailwind (w-48)
-    const visibleSlides = 4; // number of slides to show at once
-    
-    function updateSlider(slider, index) {
-        const offset = -index * slideWidths; // calculate offset
-        slider.style.transform = `translateX(${offset}px)`; // move the slides
-    }
-    
-    // Next and Previous button functionality
-    let currentSlideIndex1 = 0;
-    let currentSlideIndex2 = 0;
-    
-    document.getElementById('next1').addEventListener('click', () => {
-        const slider = document.querySelector('#slider1 .slider');
-        const totalSlides = slider.children.length;
-        currentSlideIndex1 = (currentSlideIndex1 + 1) % (totalSlides - visibleSlides + 1);
-        updateSlider(slider, currentSlideIndex1);
-    });
-    
-    document.getElementById('prev1').addEventListener('click', () => {
-        const slider = document.querySelector('#slider1 .slider');
-        const totalSlides = slider.children.length;
-        currentSlideIndex1 = (currentSlideIndex1 - 1 + (totalSlides - visibleSlides + 1)) % (totalSlides - visibleSlides + 1);
-        updateSlider(slider, currentSlideIndex1);
-    });
-    
-    // Add similar event listeners for slider2
-    document.getElementById('next2').addEventListener('click', () => {
-        const slider = document.querySelector('#slider2 .slider');
-        const totalSlides = slider.children.length;
-        currentSlideIndex2 = (currentSlideIndex2 + 1) % (totalSlides - visibleSlides + 1);
-        updateSlider(slider, currentSlideIndex2);
-    });
-    
-    document.getElementById('prev2').addEventListener('click', () => {
-        const slider = document.querySelector('#slider2 .slider');
-        const totalSlides = slider.children.length;
-        currentSlideIndex2 = (currentSlideIndex2 - 1 + (totalSlides - visibleSlides + 1)) % (totalSlides - visibleSlides + 1);
-        updateSlider(slider, currentSlideIndex2);
-    });
-</script> --}}
     
 <div class="container mx-auto px-4 py-8">
     <!-- Header with Tabs -->
     <div class="grid grid-cols-1 lg:grid-cols-2 justify-between items-center mb-6">
-        <h2 class="text-2xl font-semibold text-gray-800 text-center">Best of CaratLane</h2>
-        <div class="inline-flex rounded-md shadow-sm justify-center mt-2" role="group">
+        <!-- Left Side: Best of CaratLane -->
+        <h2 class="text-2xl font-semibold text-gray-800 text-center lg:text-left mb-4 lg:mb-0 ">
+            Best of CaratLane
+        </h2>
+        
+        <!-- Right Side: Women and Men Buttons -->
+        <div class="inline-flex rounded-md shadow-sm justify-center lg:justify-end mt-2" role="group">
             <button id="women-tab" type="button"
-                class="tab-btn px-4 py-2 text-sm font-medium text-black bg-purple-500 rounded-l-lg hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                class="tab-btn px-4 py-2 text-sm font-medium text-black bg-purple-500 rounded-l-lg hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 active"
                 data-tab="slider1" aria-controls="slider1" aria-selected="true">
                 WOMEN
             </button>
@@ -875,6 +370,7 @@
             </button>
         </div>
     </div>
+    
 
     <!-- Slider 1 (WOMEN) -->
     <div id="slider1" class="tab-content">
@@ -1053,19 +549,6 @@
 </div>
 
 <script>
-    document.querySelectorAll('.tab-btn').forEach(button => {
-        button.addEventListener('click', () => {
-            const tabID = button.getAttribute('data-tab');
-            document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
-            document.getElementById(tabID).classList.remove('hidden');
-            
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('bg-purple-500', 'text-purple-500');
-                btn.classList.add('bg-white', 'text-gray-700');
-            });
-            button.classList.add('bg-purple-500', 'text-purple-500');
-        });
-    });
 
     const visibleSlides = 4;
     const sliderWidth = document.querySelector('.slider-wrapper').clientWidth / visibleSlides;
@@ -1103,51 +586,71 @@
         currentSlideIndex2 = (currentSlideIndex2 - 1 + (slider.children.length - visibleSlides + 1)) % (slider.children.length - visibleSlides + 1);
         updateSlider(slider, currentSlideIndex2);
     });
+
+
+    // JavaScript to handle button toggle effect
+document.querySelectorAll('.tab-btn').forEach(button => {
+    button.addEventListener('click', function () {
+        // Remove 'active' state from all buttons
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.classList.remove('bg-purple-500', 'text-black', 'hover:bg-purple-600');
+            btn.classList.add('bg-white', 'text-gray-700', 'hover:bg-gray-100', 'hover:text-purple-700');
+        });
+
+        // Add 'active' state to clicked button
+        this.classList.remove('bg-white', 'text-gray-700', 'hover:bg-gray-100', 'hover:text-purple-700');
+        this.classList.add('bg-purple-500', 'text-black', 'hover:bg-purple-600');
+    });
+});
+
 </script>
 
 
     {{-- services features --}}
-    <div class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 items-center">
+    <div class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+                
                 <!-- 100% Certified & Free Shipping -->
-                <div class="flex items-start space-x-4">
-                    <img src="{{ asset('asset/img/download.jpeg') }}" alt="Certified & Free Shipping" class="h-20">
-                    <div class="w-full">
-                        <h3 class="text-sm font-semibold mb-2">100% Certified & Free Shipping</h3>
+                <div class="flex flex-row items-center space-y-4">
+                    <img src="{{ asset('asset/img/download.jpeg') }}" alt="Certified & Free Shipping" class="h-44 w-44 object-cover"> 
+                    <a href="{{route('policy')}}"><div class="text-start">
+                        <h3 class="text-md font-semibold mb-2">100% Certified & Free Shipping</h3>
                         <p class="text-sm text-purple-300">Our jewellery always comes with a certificate of authentication.</p>
-                    </div>
+                    </div></a>
                 </div>
-    
+                
                 <!-- 15 Day Money-Back -->
-                <div class="flex items-start space-x-4">
-                    <img src="{{ asset('asset/img/download.jpeg') }}" alt="15 Day Money-Back" class="h-20">
-                    <div class="w-full">
-                        <h3 class="text-sm font-semibold mb-2">15 Day Money-Back</h3>
+                <div class="flex flex-row items-center space-y-4">
+                    <img src="{{ asset('asset/img/download.jpeg') }}" alt="15 Day Money-Back" class="h-44 w-44 object-cover">
+                    <a href="{{route('policy')}}"><div class="text-start">
+                        <h3 class="text-md font-semibold mb-2">15 Day Money-Back</h3>
                         <p class="text-sm text-purple-300">Get 100% refund if you don't like your jewellery.</p>
-                    </div>
+                    </div></a>
                 </div>
-    
+                
                 <!-- Lifetime Exchange -->
-                <div class="flex items-start space-x-4 pl-24">
-                    <img src="{{ asset('asset/img/download.jpeg') }}" alt="Lifetime Exchange" class="h-20">
-                    <div class="w-full">
-                        <h3 class="text-sm font-semibold mb-2">Lifetime Exchange</h3>
+                <div class="flex flex-row items-center space-y-4 lg:pl-24">
+                    <img src="{{ asset('asset/img/download.jpeg') }}" alt="Lifetime Exchange" class="h-44 w-44 object-cover">
+                    <a href="{{route('policy')}}"><div class="text-start">
+                        <h3 class="text-md font-semibold mb-2">Lifetime Exchange</h3>
                         <p class="text-sm text-purple-300">Exchange your old designs anytime you want an upgrade.</p>
-                    </div>
+                    </div></a>
+                </div>
+                
+                <!-- One Year Warranty* -->
+                <div class="flex flex-row items-center space-y-4 lg:pl-24">
+                    <img src="{{ asset('asset/img/download.jpeg') }}" alt="One Year Warranty" class="h-44 w-44 object-cover">
+                    <a href="{{route('policy')}}"><div class="text-start">
+                        <h3 class="text-md font-semibold mb-2">One Year Warranty*</h3>
+                        <p class="text-sm text-purple-300">If your jewellery has a defect, we will fix it.</p>
+                    </div></a>
                 </div>
     
-                <!-- One Year Warranty* -->
-                <div class="flex items-start space-x-4 pl-24">
-                    <img src="{{ asset('asset/img/download.jpeg') }}" alt="One Year Warranty" class="h-20">
-                    <div class="w-full">
-                        <h3 class="text-sm font-semibold mb-2">One Year Warranty*</h3>
-                        <p class="text-sm text-purple-300">If your jewellery has a defect, we will fix it.</p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
+    
     
 
 

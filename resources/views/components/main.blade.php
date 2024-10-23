@@ -23,6 +23,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons" />
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+<!-- Flickity CSS -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2.2.1/dist/flickity.min.css">
+
+<!-- Flickity JS -->
+<script src="https://unpkg.com/flickity@2.2.1/dist/flickity.pkgd.min.js"></script>
 
     <!-- If using Vite, include the Vite directive -->
     @vite('resources/css/app.css')

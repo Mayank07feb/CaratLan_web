@@ -79,3 +79,7 @@ Route::get('/morejewellery', [HomeController::class,'morejewellery'])->name('mor
 // veiw collection
 Route::get('/allcollection',[HomeController::class,'allcollection'])->name('allcollection');
 Route::get('/appointment',[HomeController::class,'appointment'])->name('appointment');
+Route::get('/knowmore', [HomeController::class,'knowmore'])->name('knowmore');
+Route::get('/know',[HomeController::class,'know'])->name('know');
+Route::get('/policy',[HomeController::class,'policy'])->name('policy');
+Route::get('/daimondguide',[HomeController::class,'daimondguide'])->name('daimondguide,');
