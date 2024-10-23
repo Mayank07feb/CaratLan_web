@@ -85,7 +85,7 @@
                 <ul class="space-y-2 text-sm">
                     <li><a href="#" class="hover:text-caratlane-purple">Our story</a></li>
                     <li><a href="#" class="hover:text-caratlane-purple">Press</a></li>
-                    <li><a href="{{route('blogs')}}" class="hover:text-caratlane-purple">Blog</a></li>
+                    <li><a href="{{ route('blogs') }}" class="hover:text-caratlane-purple">Blog</a></li>
                     <li><a href="#" class="hover:text-caratlane-purple">Careers</a></li>
                 </ul>
             </div>
@@ -247,7 +247,7 @@
                 <div id="about-us" class="hidden p-4 space-y-2 flex flex-col">
                     <a href="#" class="text-black hover:underline decoration-none">OUR STORY</a>
                     <a href="#" class="text-black hover:underline decoration-none">PRESS</a>
-                    <a href="{{route('blogs')}}" class="text-black hover:underline decoration-none">BLOG</a>
+                    <a href="{{ route('blogs') }}" class="text-black hover:underline decoration-none">BLOG</a>
                     <a href="#" class="text-black hover:underline decoration-none">CAREERS</a>
                 </div>
             </div>
