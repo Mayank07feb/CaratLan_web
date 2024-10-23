@@ -1,80 +1,63 @@
 @extends('components.main')
 
 @section('content')
-<div class="container mx-auto mt-8 p-6 lg:p-8 bg-white shadow-lg rounded-lg max-w-md">
-    <h2 class="text-2xl lg:text-3xl font-bold text-center text-[#9d6e2a] mb-6">Log in to Giritra Jewellers</h2>
-    <!-- Logo and Divider -->
-    <div class="flex items-center justify-center mb-6">
-        <div class="flex-grow h-px bg-[#9d6e2a]"></div>
-        <div class="mx-4">
-            <img src="{{ asset('asset/img/logo.png') }}" alt="Logo" class="h-12 w-auto">
-        </div>
-        <div class="flex-grow h-px bg-[#9d6e2a]"></div>
-    </div>
+    <main class="mt-12">
+        <div class="flex justify-center items-center min-h-screen bg-white p-4">
+            <div class="w-full max-w-xs space-y-6"> <!-- Adjusted spacing between sections -->
+                <!-- Fingerprint Icon -->
+                <div class="flex justify-center mb-6">
+                    <span class="material-icons text-purple-600" style="font-size: 40px;">fingerprint</span>
+                    <!-- Larger icon size -->
+                </div>
 
-    <!-- Tab buttons -->
-    <div class="flex flex-wrap justify-around mb-6">
-        <button id="passwordTab" class="tab-btn text-lg font-semibold text-gray-600 border-b-4 pb-2 focus:outline-none border-[#9d6e2a]">Login with Password</button>
-        <button id="otpTab" class="tab-btn text-lg font-semibold text-gray-600 border-b-4 pb-2 focus:outline-none">Login with OTP</button>
-    </div>
+                <!-- Title Section -->
+                <div class="text-center">
+                    <h1 class="text-lg font-bold">Login to CaratLane</h1> <!-- Increased title font size -->
+                    <p class="text-gray-500 text-xs mt-4">Login to unlock best prices and become an insider for our exclusive
+                        launches & offers.</p>
+                </div>
 
-    <!-- Login with Password Form -->
-    <form id="passwordForm" class="space-y-4">
-        <div>
-            <label class="block text-gray-700 text-sm lg:text-base">Email Address <span class="text-red-500">*</span></label>
-            <input type="email" placeholder="Enter Email Address" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9d6e2a]">
-        </div>
-        <div>
-            <label class="block text-gray-700 text-sm lg:text-base">Password <span class="text-red-500">*</span></label>
-            <input type="password" placeholder="Enter Password" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9d6e2a]">
-        </div>
-        <div class="flex justify-between items-center">
-            <a href="{{route('forgot.password')}}" class="text-sm text-[#9d6e2a] hover:underline">Forgot Password?</a>
-        </div>
-        <button type="submit" class="w-full bg-[#9d6e2a] text-white py-2 rounded-md hover:bg-[#7b4a1b] focus:outline-none">Log me in</button>
-    </form>
+                <!-- Form Section -->
+                <form class="space-y-6 mt-8"> <!-- More spacing between form elements -->
+                    <!-- Mobile Number or Email Input -->
+                    <input type="text" placeholder="Enter Mobile Number or Email"
+                        class="w-full bg-white border border-purple-500 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500" />
 
-    <!-- Login with OTP Form (Initially Hidden) -->
-    <form id="otpForm" class="space-y-4 hidden">
-        <div>
-            <label class="block text-gray-700 text-sm lg:text-base">Enter Mobile Number <span class="text-red-500">*</span></label>
-            <div class="flex">
-                <span class="bg-gray-200 border border-gray-300 p-2 rounded-l-md text-gray-600">+91</span>
-                <input type="tel" placeholder="Enter Mobile Number" class="w-full p-3 border border-gray-300 rounded-r-md focus:outline-none focus:ring-2 focus:ring-[#9d6e2a]">
+                    <!-- Submit Button -->
+                    <button type="submit"
+                        class="w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-[14px] py-4 font-medium text-sm hover:opacity-90">
+                        CONTINUE TO LOGIN
+                    </button>
+                    <!-- Social Login Buttons -->
+                    <div class="flex justify-center space-x-6 mt-6"> <!-- Increased gap between buttons -->
+                        <!-- Google Icon with Font Awesome -->
+                        <button
+                            class="flex items-center justify-center w-14 h-14 rounded-full border hover:bg-gray-100 transition duration-200 ease-in-out">
+                            <i class="fab fa-google text-[#4285F4] text-3xl"></i>
+                            <!-- Font Awesome Google Icon with specific blue color -->
+                        </button>
+
+                        <!-- Facebook Icon -->
+                        <button
+                            class="flex items-center justify-center w-14 h-14 rounded-full border hover:bg-gray-100 transition duration-200 ease-in-out">
+                            <span class="material-icons text-blue-600 text-3xl">facebook</span> <!-- Adjusted icon size -->
+                        </button>
+                    </div>
+
+                    <!-- New Account Link -->
+                    <div class="text-center mt-4">
+                        <span class="text-gray-500 text-sm">New to CaratLane?</span>
+                        <a href="#" class="text-purple-600 text-sm ">Create an Account</a>
+                    </div>
+
+                    <!-- Terms and Privacy -->
+                    <p class="text-center text-xs text-gray-500 mt-4">
+                        By continuing you agree to CaratLane's
+                        <a href="#" class="text-purple-600">terms and conditions</a> &
+                        <a href="#" class="text-purple-600">privacy policy</a>
+                    </p>
+                </form>
             </div>
         </div>
-        <button type="button" class="w-full bg-[#9d6e2a] text-white py-2 rounded-md hover:bg-[#7b4a1b] focus:outline-none">Send OTP</button>
-        <div>
-            <label class="block text-gray-700 text-sm lg:text-base">Enter OTP <span class="text-red-500">*</span></label>
-            <input type="text" placeholder="Enter OTP" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9d6e2a]">
-        </div>
-        <button type="submit" class="w-full bg-[#9d6e2a] text-white py-2 rounded-md hover:bg-[#7b4a1b] focus:outline-none">Verify & Log in</button>
-    </form>
-
-    <p class="text-center text-sm mt-6">
-        New to Giritra Jewellers? <a href="{{route('signup')}}" class="text-[#9d6e2a] hover:underline">Create Account</a>
-    </p>
-</div>
-
-<script>
-    // Tab switching logic
-    const passwordTab = document.getElementById('passwordTab');
-    const otpTab = document.getElementById('otpTab');
-    const passwordForm = document.getElementById('passwordForm');
-    const otpForm = document.getElementById('otpForm');
-
-    passwordTab.addEventListener('click', function() {
-        passwordForm.classList.remove('hidden');
-        otpForm.classList.add('hidden');
-        passwordTab.classList.add('border-[#9d6e2a]');
-        otpTab.classList.remove('border-[#9d6e2a]');
-    });
-
-    otpTab.addEventListener('click', function() {
-        otpForm.classList.remove('hidden');
-        passwordForm.classList.add('hidden');
-        otpTab.classList.add('border-[#9d6e2a]');
-        passwordTab.classList.remove('border-[#9d6e2a]');
-    });
-</script>
+    </main>
 @endsection
