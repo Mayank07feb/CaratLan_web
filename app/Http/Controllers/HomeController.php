@@ -212,4 +212,8 @@ class HomeController extends Controller
     public function daimondguide(){
         return view('frontend.daimondguide');
     }
+    // JEWELLERY GUIDE
+    public function jewelleryguide(){
+        return view('frontend.jewelleryguide');
+    }
 }
