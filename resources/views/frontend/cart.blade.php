@@ -1,8 +1,105 @@
 @extends('components.main')
 @section('content')
+    <style>
+        /* Custom scrollbar styles */
+        .overflow-y-auto::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .overflow-y-auto::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .overflow-y-auto::-webkit-scrollbar-thumb {
+            background: #E5E7EB;
+            border-radius: 20px;
+        }
+    </style>
+
+
+
+
     <main class="mt-12">
+
+
+        <div class="flex justify-center text-center py-6">
+            <!-- Center Cart Tabs -->
+            <div class="flex gap-2 border border-purple-300 rounded-[12px] bg-purple-50 p-1">
+                <button id="shopping_cart"
+                    class="px-6 py-2 custom-purple text-[#4F3267] rounded-[12px] text-sm font-bold hover:bg-white hover:shadow-md transition ease-in-out duration-300">
+                    Shopping Cart (1)
+                </button>
+                <button id="trial_cart"
+                    class="px-6 py-2 text-[#4F3267] rounded-[12px] text-sm font-bold hover:bg-white hover:shadow-md transition ease-in-out duration-300">
+                    Trial Cart (0)
+                </button>
+            </div>
+        </div>
+
+        <div id="trialCartContent" class="hidden flex flex-col items-center justify-center">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+                <!-- Left Section -->
+                <div class="flex flex-col items-center justify-center p-8 w-full md:w-3/5">
+                    <div class="max-w-lg">
+                        <!-- Image Section -->
+                        <img src="{{ asset('asset/img/undraw_test.svg') }}" alt="Empty Box" class="w-32 h-32 mb-4 mx-auto">
+
+                        <!-- Heading -->
+                        <h2 class="text-xl font-bold text-[#4F3267] text-center">Nothing to Try at Home?</h2>
+
+                        <!-- Subtitle -->
+                        <p class="text-gray-500 mb-4 text-center">Let's do some retail therapy.</p>
+
+                        <!-- Button -->
+                        <button
+                            class="w-full px-16 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-[14px] shadow-lg hover:from-purple-600 hover:to-pink-600 transition duration-300">
+                            FIND 5 DESIGNS TO TRY
+                        </button>
+                    </div>
+                </div>
+
+
+
+                <!-- Center Divider (visible only on md and larger screens) -->
+                <div class="hidden md:block w-px bg-gray-200 h-96 self-center"></div>
+
+                <!-- Right Section -->
+                <div class="w-full md:w-1/2 flex flex-col items-center justify-center p-8">
+                    <div class="max-w-md">
+                        <h1 class="text-center mb-4">How does try at home work?</h1>
+                        <div class="bg-gray-50 rounded-lg overflow-hidden mb-6">
+                            <video autoplay muted loop class="w-full h-auto">
+                                <source src="{{ asset('asset/videos/cart.mp4') }}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p class="text-sm text-gray-600 p-4 bg-purple-50">
+                                Pick your favorite designs to try out at the comfort of your home for free! If you don't
+                                like it, don't buy it. Zero compulsion.
+                            </p>
+                        </div>
+
+
+                        <div class="text-center">
+                            <div class="inline-block p-3">
+                                <span class="material-icons text-purple-500" style="font-size: 24px;">
+                                    verified
+                                </span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-[#4F3267]">Trusted professionals</h3>
+                            <p class="text-[#4F3267] font-medium">and expert jewellery consultants</p>
+                            <p class="text-purple-500 mt-2">170710 happy customers so far!</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
         <!-- Main Content Section -->
-        <div class="bg-white min-h-screen py-10">
+        <div id="shoppingCartContent" class="bg-white min-h-screen py-10">
             <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-8 relative">
 
                 <!-- Product Details Section -->
@@ -165,7 +262,8 @@
                             </div>
                             <div class="flex justify-between text-gray-700">
                                 <span>Coupon Discount</span>
-                                <a href="#" class="text-purple-600 text-sm hover:underline">Apply Coupon</a>
+                                <button id="discount-btn" class="text-[#DE57E5] text-xs hover:underline">Apply
+                                    Coupon</button>
                             </div>
                             <div class="flex justify-between text-gray-700">
                                 <span>Shipping (Standard)</span>
@@ -195,94 +293,116 @@
 
     <!-- Coupon Popup Box -->
     <div id="discount-popup"
-        class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded-lg shadow-lg z-50 max-w-md w-full">
-        <!-- Close Icon and Heading -->
-        <div class="flex justify-between items-center mb-4">
-            <h2 class="text-lg font-semibold text-gray-800">Apply Coupon</h2>
-            <button id="close-popup" class="text-gray-500 hover:text-gray-700">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
-        </div>
+        class="fixed inset-0 bg-black/30 flex items-center justify-center p-4 opacity-0 pointer-events-none">
+        <div class="bg-white rounded-3xl shadow-xl max-w-[400px] w-full">
+            <!-- Header -->
+            <div class="flex justify-between items-center px-6 pt-5 pb-4">
+                <h2 class="text-[14px] font-semibold text-[#4F3267]">Apply Coupon</h2>
+                <button id="close-popup" class="text-gray-500 hover:text-gray-600 p-1">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                        <path d="M6 18L18 6M6 6l12 12" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
 
-        <!-- Coupon Input -->
-        <div class="mb-4 flex items-center border border-gray-500 bg-gray-200 rounded-lg">
-            <input type="text" class="bg-gray-200 w-full p-2 border-none rounded-l-lg focus:outline-none"
-                placeholder="Enter coupon code">
-            <button class="ml-2 bg-purple-100 text-[#4F3267] px-4 py-2 rounded-r-lg hover:bg-purple-200">APPLY</button>
-        </div>
+            <!-- Coupon Input -->
+            <div class="px-6 mb-6">
+                <div class="bg-purple-50 rounded-[14px] flex items-center overflow-hidden h-11">
+                    <input type="text" placeholder="Enter coupon code"
+                        class="flex-1 bg-transparent px-5 py-3 text-[14px] text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-0 focus:border-none border-none">
+                    <button class="px-5 py-3 text-[13px] font-medium text-[#DE57E5] hover:text-[#DE57E5]">
+                        APPLY
+                    </button>
+                </div>
+            </div>
 
-        <div class="bg-gray-100">
-            <!-- Offer List Heading -->
-            <h3 class="text-center text-sm font-semibold text-gray-700 mb-2">Other Offers at CaratLane</h3>
 
-            <!-- Offer Cards -->
-            <div class="space-y-2 h-48 overflow-y-scroll">
-                <!-- Offer Card -->
-                <div class="flex items-center justify-between bg-gray-50 p-3 rounded-md border border-gray-200">
-                    <div class="flex items-center">
-                        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded-l-md text-xs font-bold">10% OFF</span>
-                        <div class="ml-3">
-                            <p class="text-sm font-semibold">SHAYAFEST10</p>
-                            <p class="text-xs text-gray-500">Valid till November 05 2024</p>
-                            <p class="text-xs text-gray-500">Get Extra 10% OFF on Shaya - Silver Jewellery on and above
-                                5000
-                            </p>
+            <!-- Offers Section -->
+            <div class="px-6">
+                <h3 class="text-[13px] text-center text-[#4F3267] mb-4">Other Offers at CaratLane</h3>
+
+                <!-- Offers Container -->
+                <div class="space-y-3 max-h-[280px] overflow-y-auto pr-1">
+                    <!-- Offer Card -->
+                    <div class="bg-white border border-gray-100 rounded-xl flex overflow-hidden">
+                        <!-- Left Discount Tab -->
+                        <div class="w-16 bg-gray-100 flex items-center justify-center relative">
+                            <!-- Circular Notches -->
+                            <div class="absolute -right-1.5 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full"></div>
+                            <div class="absolute -left-1.5 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full"></div>
+                            <!-- Vertical Text -->
+                            <div class="transform rotate-180 text-gray-600 font-bold text-xs tracking-wide"
+                                style="writing-mode: vertical-rl;">
+                                10% OFF
+                            </div>
+                        </div>
+
+                        <!-- Content Area -->
+                        <div class="flex-1 p-4">
+                            <div class="flex justify-between items-start gap-4">
+                                <div class="min-w-0">
+                                    <p class="text-[14px] font-semibold text-[#4F3267]">SHAYAFEST10</p>
+                                    <p class="text-xs text-gray-400 mt-0.5">Valid till November 05 2024</p>
+                                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">
+                                        Get Extra 10% OFF on Shaya - Silver Jewellery on and above 5000
+                                    </p>
+                                </div>
+                                <span class="text-xs text-gray-400 whitespace-nowrap mt-1">Not Applicable</span>
+                            </div>
                         </div>
                     </div>
-                    <span class="text-gray-400 text-sm">Not Applicable</span>
-                </div>
 
-                <!-- Another Offer Card -->
-                <div class="flex items-center justify-between bg-gray-50 p-3 rounded-md border border-gray-200">
-                    <div class="flex items-center">
-                        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded-l-md text-xs font-bold">20% OFF</span>
-                        <div class="ml-3">
-                            <p class="text-sm font-semibold">SHAYAFEST20</p>
-                            <p class="text-xs text-gray-500">Valid till November 05 2024</p>
-                            <p class="text-xs text-gray-500">Get Extra 20% OFF on Shaya - Silver Jewellery on and above
-                                10000
-                            </p>
+                    <!-- Second Offer Card -->
+                    <div class="bg-white border border-gray-100 rounded-xl flex overflow-hidden">
+                        <div class="w-16 bg-gray-100 flex items-center justify-center relative">
+                            <div class="absolute -right-1.5 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full"></div>
+                            <div class="absolute -left-1.5 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full"></div>
+                            <div class="transform rotate-180 text-gray-600 font-bold text-xs tracking-wide"
+                                style="writing-mode: vertical-rl;">
+                                20% OFF
+                            </div>
+                        </div>
+                        <div class="flex-1 p-4">
+                            <div class="flex justify-between items-start gap-4">
+                                <div class="min-w-0">
+                                    <p class="text-[14px] font-semibold text-[#4F3267]">SHAYAFEST20</p>
+                                    <p class="text-xs text-gray-400 mt-0.5">Valid till November 05 2024</p>
+                                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">
+                                        Get Extra 20% OFF on Shaya - Silver Jewellery on and above 10000
+                                    </p>
+                                </div>
+                                <span class="text-xs text-gray-400 whitespace-nowrap mt-1">Not Applicable</span>
+                            </div>
                         </div>
                     </div>
-                    <span class="text-gray-400 text-sm">Not Applicable</span>
-                </div>
 
-                <div class="flex items-center justify-between bg-gray-50 p-3 rounded-md border border-gray-200">
-                    <div class="flex items-center">
-                        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded-l-md text-xs font-bold">20% OFF</span>
-                        <div class="ml-3">
-                            <p class="text-sm font-semibold">SHAYAFEST20</p>
-                            <p class="text-xs text-gray-500">Valid till November 05 2024</p>
-                            <p class="text-xs text-gray-500">Get Extra 20% OFF on Shaya - Silver Jewellery on and above
-                                10000
-                            </p>
+                    <!-- Third Offer Card -->
+                    <div class="bg-white border border-gray-100 rounded-xl flex overflow-hidden">
+                        <div class="w-16 bg-gray-100 flex items-center justify-center relative">
+                            <div class="absolute -right-1.5 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full"></div>
+                            <div class="absolute -left-1.5 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full"></div>
+                            <div class="transform rotate-180 text-gray-600 font-bold text-xs tracking-wide"
+                                style="writing-mode: vertical-rl;">
+                                PERFECT3
+                            </div>
+                        </div>
+                        <div class="flex-1 p-4">
+                            <div class="flex justify-between items-start gap-4">
+                                <div class="min-w-0">
+                                    <p class="text-[14px] font-semibold text-[#4F3267]">PERFECT3</p>
+                                    <p class="text-xs text-gray-400 mt-0.5">Valid till November 05 2024</p>
+                                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">
+                                        Get Extra 30% OFF on all items above 15000
+                                    </p>
+                                </div>
+                                <span class="text-xs text-gray-400 whitespace-nowrap mt-1">Not Applicable</span>
+                            </div>
                         </div>
                     </div>
-                    <span class="text-gray-400 text-sm">Not Applicable</span>
                 </div>
-
-                <div class="flex items-center justify-between bg-gray-50 p-3 rounded-md border border-gray-200">
-                    <div class="flex items-center">
-                        <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded-l-md text-xs font-bold">20% OFF</span>
-                        <div class="ml-3">
-                            <p class="text-sm font-semibold">SHAYAFEST20</p>
-                            <p class="text-xs text-gray-500">Valid till November 05 2024</p>
-                            <p class="text-xs text-gray-500">Get Extra 20% OFF on Shaya - Silver Jewellery on and above
-                                10000
-                            </p>
-                        </div>
-                    </div>
-                    <span class="text-gray-400 text-sm">Not Applicable</span>
-                </div>
-
-                <!-- Add more offers similarly if needed -->
             </div>
         </div>
     </div>
-
 
 
     <!-- Popup (Initially hidden) -->
@@ -334,18 +454,22 @@
     </div>
 
     <script>
-        const discountBtn = document.getElementById('discount-btn');
-        const discountPopup = document.getElementById('discount-popup');
-        const closePopup = document.getElementById('close-popup');
+        document.addEventListener('DOMContentLoaded', function() {
+            const discountBtn = document.getElementById('discount-btn');
+            const discountPopup = document.getElementById('discount-popup');
+            const closePopup = document.getElementById('close-popup');
 
-        discountBtn.addEventListener('click', function() {
-            discountPopup.classList.toggle('opacity-0');
-            discountPopup.classList.toggle('pointer-events-none');
-        });
+            // Toggle popup visibility on click
+            discountBtn.addEventListener('click', function() {
+                discountPopup.classList.toggle('opacity-0');
+                discountPopup.classList.toggle('pointer-events-none');
+            });
 
-        closePopup.addEventListener('click', function() {
-            discountPopup.classList.add('opacity-0');
-            discountPopup.classList.add('pointer-events-none');
+            // Close popup when the close button is clicked
+            closePopup.addEventListener('click', function() {
+                discountPopup.classList.add('opacity-0');
+                discountPopup.classList.add('pointer-events-none');
+            });
         });
         document.addEventListener('DOMContentLoaded', function() {
             const sidebar = document.getElementById('quantity-sidebar');
@@ -400,6 +524,31 @@
         enterPincodeLink.addEventListener('click', (event) => {
             event.preventDefault(); // Prevent the default anchor behavior
             popup.classList.remove('hidden'); // Show the popup
+        });
+    </script>
+
+    <script>
+        // Get the buttons and content divs
+        const shoppingCartButton = document.getElementById('shopping_cart');
+        const trialCartButton = document.getElementById('trial_cart');
+        const shoppingCartContent = document.getElementById('shoppingCartContent');
+        const trialCartContent = document.getElementById('trialCartContent');
+
+        // Add event listeners to the buttons
+        shoppingCartButton.addEventListener('click', () => {
+            shoppingCartContent.classList.remove('hidden'); // Show shopping cart
+            trialCartContent.classList.add('hidden'); // Hide trial cart
+            // Optional: Highlight active tab
+            shoppingCartButton.classList.add('bg-white', 'shadow-md');
+            trialCartButton.classList.remove('bg-white', 'shadow-md');
+        });
+
+        trialCartButton.addEventListener('click', () => {
+            trialCartContent.classList.remove('hidden'); // Show trial cart
+            shoppingCartContent.classList.add('hidden'); // Hide shopping cart
+            // Optional: Highlight active tab
+            trialCartButton.classList.add('bg-white', 'shadow-md');
+            shoppingCartButton.classList.remove('bg-white', 'shadow-md');
         });
     </script>
 @endsection
