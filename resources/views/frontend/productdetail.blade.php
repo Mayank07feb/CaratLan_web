@@ -118,12 +118,12 @@
         </div>
     </div> --}}
 
-    <main class="mt-14">
+    <main class="mt-14 md:mt-14 sm:mt-14">
         <div class="bg-white">
             <!-- Breadcrumb Navigation -->
             <nav class="p-4 border-b">
-                <div class="container mx-auto">
-                    <div class="flex items-center gap-2 text-sm text-gray-500">
+                <div class="container mx-auto px-4 md:px-0">
+                    <div class="flex flex-wrap items-center gap-1 md:gap-2 text-xs md:text-sm text-gray-500">
                         <a href="#" class="hover:text-gray-700">HOME</a>
                         <span>></span>
                         <a href="#" class="hover:text-gray-700">RINGS</a>
@@ -134,6 +134,7 @@
                     </div>
                 </div>
             </nav>
+
 
             <section class="container mx-auto py-6">
                 <div class="grid md:grid-cols-10 gap-8">
@@ -285,22 +286,22 @@
                         <!-- Product Options -->
                         <div class="flex border border-yellow-400 rounded-xl overflow-hidden">
                             <!-- Size Option -->
-                            <div class="flex-1 border-r border-yellow-400 text-center p-3">
+                            <button onclick="toggleModal()" class="flex-1 border-r border-yellow-400 text-center p-3">
                                 <p class="text-[10px] text-gray-500">Size</p>
                                 <p class="font-semibold text-purple-900 text-xs">12 (51.8 mm)</p>
-                            </div>
+                            </button>
                             <!-- Metal Option -->
-                            <div class="flex-1 border-r border-yellow-400 text-center p-3">
+                            <button onclick="toggleModal()" class="flex-1 border-r border-yellow-400 text-center p-3">
                                 <p class="text-[10px] text-gray-500">Metal</p>
                                 <p class="font-semibold text-purple-900 text-xs">14 KT_Yellow</p>
-                            </div>
+                            </button>
                             <!-- Diamond Option -->
-                            <div class="flex-1 border-r border-yellow-400 text-center p-3">
+                            <button onclick="toggleModal()" class="flex-1 border-r border-yellow-400 text-center p-3">
                                 <p class="text-[10px] text-gray-500">Diamond</p>
                                 <p class="font-semibold text-purple-900 text-xs">IJ-SI</p>
-                            </div>
+                            </button>
                             <!-- Customise Button -->
-                            <button
+                            <button onclick="toggleModal()"
                                 class="bg-yellow-400 text-white font-semibold py-2 px-4 text-xs transition hover:bg-yellow-500">
                                 CUSTOMISE
                             </button>
@@ -632,13 +633,14 @@
 
                 <!-- Carousel with images -->
                 <div class="p-4">
-                    <div class="flex gap-6">
+                    <div class="flex flex-col md:flex-row gap-6">
                         <!-- Card 1: 18K Rings -->
                         <div class="p-4">
                             <h2 class="text-center text-purple-800 font-semibold mb-2">More 18K Rings</h2>
-                            <div class="w-64 p-4 rounded-lg bg-blue-50 flex items-center gap-2">
+                            <div
+                                class="w-full max-w-xs md:w-64 p-4 rounded-lg bg-blue-50 flex items-center gap-2 overflow-hidden">
                                 <!-- Carousel with images -->
-                                <div class="flex overflow-x-scroll space-x-2">
+                                <div class="flex overflow-x-auto space-x-2">
                                     <div class="w-16 h-16 rounded-lg flex items-center justify-center bg-white">
                                         <img src="path/to/ring1.jpg" alt="Ring 1" class="w-12 h-12" />
                                     </div>
@@ -659,9 +661,10 @@
                         <!-- Card 2: Yellow Gold Rings -->
                         <div class="p-4">
                             <h2 class="text-center text-purple-800 font-semibold mb-2">More Yellow Gold Rings</h2>
-                            <div class="w-64 p-4 rounded-lg bg-blue-50 flex items-center gap-2">
+                            <div
+                                class="w-full max-w-xs md:w-64 p-4 rounded-lg bg-blue-50 flex items-center gap-2 overflow-hidden">
                                 <!-- Carousel with images -->
-                                <div class="flex overflow-x-scroll space-x-2">
+                                <div class="flex overflow-x-auto space-x-2">
                                     <div class="w-16 h-16 rounded-lg flex items-center justify-center bg-white">
                                         <img src="path/to/ring4.jpg" alt="Ring 4" class="w-12 h-12" />
                                     </div>
@@ -680,6 +683,7 @@
                         </div>
                     </div>
                 </div>
+
 
                 <!-- You may also Like -->
                 <div class="bg-secondary container mx-auto px-4 py-8">
@@ -1251,6 +1255,134 @@
 
     </main>
 
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+
+    <!-- Customization Panel (Modal) -->
+    <div id="customizationModal"
+        class="fixed inset-y-0 right-0 bg-white w-full md:w-[550px] p-6 overflow-y-auto transform translate-x-full transition-transform ease-in-out duration-300 z-50 rounded-l-[30px] shadow-lg"
+        style="display: none;">
+
+        <!-- Header -->
+        <div class="bg-secondary p-4 rounded-t-[30px] relative">
+            <button onclick="toggleModal()"
+                class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+            <h2 class="text-lg font-medium mb-4 text-gray-500">Estimated price</h2>
+            <p class="text-lg font-bold text-purple-700">₹26,366 <span
+                    class="text-sm line-through text-gray-400">₹31,129</span></p>
+        </div>
+
+        <!-- Choice of Metal -->
+        <div class="my-6">
+            <p class="font-semibold text-primary mb-2">Choice of Metal</p>
+            <div class="p-4 w-full sm:w-[150px] bg-secondary text-center rounded-xl shadow-sm">
+                <p class="text-sm font-semibold text-primary">14 KT<br>Yellow Gold</p>
+                <div class="mt-2 mx-auto px-3 py-1 bg-white text-xs text-gray-500 rounded-md inline-block">in Stock!</div>
+            </div>
+        </div>
+
+        <!-- Diamond Quality -->
+        <div class="my-6">
+            <p class="font-semibold text-primary mb-2">Diamond Quality</p>
+            <div class="p-4 w-full sm:w-[150px] bg-secondary text-center rounded-xl shadow-sm">
+                <p class="text-sm font-semibold text-primary">IJ-SI</p>
+                <div class="mt-2 mx-auto px-3 py-1 bg-white text-xs text-gray-500 rounded-md inline-block">in Stock!</div>
+            </div>
+        </div>
+
+        <!-- Select Size -->
+        <div class="my-4">
+            <p class="font-semibold text-primary text-sm mb-1">Select Size</p>
+            <div class="grid grid-cols-5 gap-2">
+                <!-- Size Options -->
+                <div class="p-2 bg-secondary text-center rounded-lg shadow-md">
+                    <p class="text-xs font-semibold text-primary">5</p>
+                    <p class="text-[10px] text-gray-500">44.8 mm</p>
+                    <div class="mt-1 px-2 py-0.5 bg-white text-[8px] text-gray-500 rounded-md inline-block">in Stock!</div>
+                </div>
+                <div class="p-2 bg-secondary text-center rounded-lg shadow-md">
+                    <p class="text-xs font-semibold text-primary">6</p>
+                    <p class="text-[10px] text-gray-500">45.9 mm</p>
+                    <div class="mt-1 px-2 py-0.5 bg-white text-[8px] text-gray-500 rounded-md inline-block">in Stock!</div>
+                </div>
+                <div class="p-2 bg-secondary text-center rounded-lg shadow-md">
+                    <p class="text-xs font-semibold text-primary">7</p>
+                    <p class="text-[10px] text-gray-500">47.1 mm</p>
+                    <div class="mt-1 px-2 py-0.5 bg-white text-[8px] text-gray-500 rounded-md inline-block">in Stock!</div>
+                </div>
+                <div class="p-2 bg-secondary text-center rounded-lg shadow-md">
+                    <p class="text-xs font-semibold text-primary">8</p>
+                    <p class="text-[10px] text-gray-500">48.1 mm</p>
+                    <div class="mt-1 px-2 py-0.5 bg-white text-[8px] text-gray-500 rounded-md inline-block">in Stock!</div>
+                </div>
+                <div class="p-2 bg-secondary text-center rounded-lg shadow-md">
+                    <p class="text-xs font-semibold text-primary">9</p>
+                    <p class="text-[10px] text-gray-500">49.0 mm</p>
+                    <div class="mt-1 px-2 py-0.5 bg-white text-[8px] text-gray-500 rounded-md inline-block">in Stock!</div>
+                </div>
+            </div>
+            <div class="grid grid-cols-5 gap-2 mt-2">
+                <!-- Additional Size Options -->
+                <div class="p-2 bg-secondary text-center rounded-lg shadow-md">
+                    <p class="text-xs font-semibold text-primary">5</p>
+                    <p class="text-[10px] text-gray-500">44.8 mm</p>
+                    <div class="mt-1 px-2 py-0.5 bg-white text-[8px] text-gray-500 rounded-md inline-block">in Stock!</div>
+                </div>
+                <div class="p-2 bg-secondary text-center rounded-lg shadow-md">
+                    <p class="text-xs font-semibold text-primary">6</p>
+                    <p class="text-[10px] text-gray-500">45.9 mm</p>
+                    <div class="mt-1 px-2 py-0.5 bg-white text-[8px] text-gray-500 rounded-md inline-block">in Stock!</div>
+                </div>
+                <div class="p-2 bg-secondary text-center rounded-lg shadow-md">
+                    <p class="text-xs font-semibold text-primary">7</p>
+                    <p class="text-[10px] text-gray-500">47.1 mm</p>
+                    <div class="mt-1 px-2 py-0.5 bg-white text-[8px] text-gray-500 rounded-md inline-block">in Stock!</div>
+                </div>
+                <div class="p-2 bg-secondary text-center rounded-lg shadow-md">
+                    <p class="text-xs font-semibold text-primary">8</p>
+                    <p class="text-[10px] text-gray-500">48.1 mm</p>
+                    <div class="mt-1 px-2 py-0.5 bg-white text-[8px] text-gray-500 rounded-md inline-block">in Stock!</div>
+                </div>
+                <div class="p-2 bg-secondary text-center rounded-lg shadow-md">
+                    <p class="text-xs font-semibold text-primary">9</p>
+                    <p class="text-[10px] text-gray-500">49.0 mm</p>
+                    <div class="mt-1 px-2 py-0.5 bg-white text-[8px] text-gray-500 rounded-md inline-block">in Stock!</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Confirm Button -->
+        <button
+            class="w-full bg-primary text-white font-bold py-4 mt-4 rounded-b-[30px] shadow-md transition hover:bg-primary-dark">CONFIRM
+            CUSTOMISATION</button>
+    </div>
+
+
+
+
+    <script>
+        function toggleModal() {
+            const modal = document.getElementById("customizationModal");
+            const overlay = document.getElementById("overlay");
+
+            if (modal.style.display === "none") {
+                // Show modal and overlay
+                modal.style.display = "block";
+                overlay.style.display = "block";
+                setTimeout(() => modal.classList.remove("translate-x-full"), 10);
+            } else {
+                // Hide modal and overlay
+                modal.classList.add("translate-x-full");
+                overlay.style.display = "none";
+                modal.addEventListener("transitionend", () => {
+                    modal.style.display = "none";
+                }, {
+                    once: true
+                });
+            }
+        }
+    </script>
 
     <script>
         const swiper = new Swiper('.mySwiper', {
