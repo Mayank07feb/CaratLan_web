@@ -8,8 +8,10 @@
                     <div class="w-full">
                         <h3 class="font-semibold mb-4">Know Your Jewellery</h3>
                         <ul class="space-y-2 text-sm">
-                            <li><a href="{{route('daimondguide,')}}" class="hover:text-caratlane-purple">Diamond guide</a></li>
-                            <li><a href="{{route('jewelleryguide')}}" class="hover:text-caratlane-purple">Jewellery guide</a></li>
+                            <li><a href="{{ route('daimondguide,') }}" class="hover:text-caratlane-purple">Diamond
+                                    guide</a></li>
+                            <li><a href="{{ route('jewelleryguide') }}" class="hover:text-caratlane-purple">Jewellery
+                                    guide</a></li>
                             <li><a href="#" class="hover:text-caratlane-purple">Gemstones guide</a></li>
                             <li><a href="#" class="hover:text-caratlane-purple">Gold rate</a></li>
                             <li><a href="#" class="hover:text-caratlane-purple">Egold</a></li>
@@ -45,32 +47,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="left mt-10">
-                    <h3 class="font-semibold mb-2 text-left">Find Us On</h3>
-                    <div class="flex space-x-4">
-                        <a href="#"
-                            class="bg-[#2e0a46] rounded-full p-2 hover:bg-[#de57e5] flex items-center justify-center w-10 h-10">
-                            <i class="fab fa-instagram text-white text-lg"></i>
-                        </a>
-                        <a href="#"
-                            class="bg-[#2e0a46] rounded-full p-2 hover:bg-[#de57e5] flex items-center justify-center w-10 h-10">
-                            <i class="fab fa-facebook-f text-white text-lg"></i>
-                        </a>
-                        <a href="#"
-                            class="bg-[#2e0a46] rounded-full p-2 hover:bg-[#de57e5] flex items-center justify-center w-10 h-10">
-                            <i class="fab fa-linkedin-in text-white text-lg"></i>
-                        </a>
-                        <a href="#"
-                            class="bg-[#2e0a46] rounded-full p-2 hover:bg-[#de57e5] flex items-center justify-center w-10 h-10">
-                            <i class="fas fa-map-marker-alt text-white text-lg"></i>
-                        </a>
-                        <a href="#"
-                            class="bg-[#2e0a46] rounded-full p-2 hover:bg-[#de57e5] flex items-center justify-center w-10 h-10">
-                            <i class="fab fa-twitter text-white text-lg"></i>
-                        </a>
-                    </div>
-                </div>
-
 
             </div>
             <div>
@@ -137,51 +113,70 @@
                         </a>
                     </div>
                 </div>
-                <div class="right">
-                    <div class="max-w-lg mt-4">
-                        <div class="flex justify-between items-center space-x-1">
-                            <div class="flex flex-col items-center">
-                                <span class="material-icons text-gray-700 text-2xl">
-                                    credit_card
-                                </span>
-                                <span class="text-xs mt-0.5">Visa</span>
-                            </div>
-                            <div class="flex flex-col items-center">
-                                <span class="material-icons text-gray-700 text-2xl">
-                                    payment
-                                </span>
-                                <span class="text-xs mt-0.5">MasterCard</span>
-                            </div>
-                            <div class="flex flex-col items-center">
-                                <span class="material-icons text-gray-700 text-2xl">
-                                    account_balance_wallet
-                                </span>
-                                <span class="text-xs mt-0.5">PayPal</span>
-                            </div>
-                            <div class="flex flex-col items-center">
-                                <span class="material-icons text-gray-700 text-2xl">
-                                    card_membership
-                                </span>
-                                <span class="text-xs mt-0.5">AmEx</span>
-                            </div>
-                            <div class="flex flex-col items-center">
-                                <span class="material-icons text-gray-700 text-2xl">
-                                    shopping_cart
-                                </span>
-                                <span class="text-xs mt-0.5">Amazon</span>
-                            </div>
-                            <div class="flex flex-col items-center">
-                                <span class="material-icons text-gray-700 text-2xl">
-                                    star_rate
-                                </span>
-                                <span class="text-xs mt-0.5">Bizrate</span>
-                            </div>
-                        </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-between pt-2 px-4">
+        <div class="left w-1/2">
+            <h3 class="font-semibold mb-4 text-left">Find Us On</h3>
+            <div class="flex space-x-3">
+                <a href="#"
+                    class="bg-[#2e0a46] rounded-full p-1 hover:bg-[#de57e5] flex items-center justify-center w-10 h-10 transition duration-200 ease-in-out">
+                    <!-- Reduced width and height -->
+                    <i class="fab fa-instagram text-white text-lg"></i>
+                </a>
+                <a href="#"
+                    class="bg-[#2e0a46] rounded-full p-1 hover:bg-[#de57e5] flex items-center justify-center w-10 h-10 transition duration-200 ease-in-out">
+                    <i class="fab fa-facebook-f text-white text-lg"></i>
+                </a>
+                <a href="#"
+                    class="bg-[#2e0a46] rounded-full p-1 hover:bg-[#de57e5] flex items-center justify-center w-10 h-10 transition duration-200 ease-in-out">
+                    <i class="fab fa-linkedin-in text-white text-lg"></i>
+                </a>
+                <a href="#"
+                    class="bg-[#2e0a46] rounded-full p-1 hover:bg-[#de57e5] flex items-center justify-center w-10 h-10 transition duration-200 ease-in-out">
+                    <i class="fas fa-map-marker-alt text-white text-lg"></i>
+                </a>
+                <a href="#"
+                    class="bg-[#2e0a46] rounded-full p-1 hover:bg-[#de57e5] flex items-center justify-center w-10 h-10 transition duration-200 ease-in-out">
+                    <i class="fab fa-twitter text-white text-lg"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="right">
+            <div class="max-w-lg mt-4">
+                <div class="flex justify-between items-center space-x-8">
+                    <div class="flex flex-col items-center">
+                        <span class="material-icons text-gray-700 text-3xl">credit_card</span>
+                        <span class="text-xs mt-1">Visa</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="material-icons text-gray-700 text-3xl">payment</span>
+                        <span class="text-xs mt-1">MasterCard</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="material-icons text-gray-700 text-3xl">account_balance_wallet</span>
+                        <span class="text-xs mt-1">PayPal</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="material-icons text-gray-700 text-3xl">card_membership</span>
+                        <span class="text-xs mt-1">AmEx</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="material-icons text-gray-700 text-3xl">shopping_cart</span>
+                        <span class="text-xs mt-1">Amazon</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="material-icons text-gray-700 text-3xl">star_rate</span>
+                        <span class="text-xs mt-1">Bizrate</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 </footer>
 
 
