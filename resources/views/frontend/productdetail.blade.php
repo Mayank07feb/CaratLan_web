@@ -48,6 +48,76 @@
         }
     </style>
 
+    {{-- Header --}}
+    {{-- <div class="flex items-center justify-between fixed top-0 left-0 right-0 bg-white shadow-md z-50 p-4 border-b">
+        <!-- Left Section: Product Info -->
+        <div class="flex items-center gap-4">
+            <!-- Product Image -->
+            <div class="w-12 h-12 flex items-center justify-center">
+                <img src="{{ asset('asset/img/logo.png') }}" alt="Product" class="w-10 h-10" />
+            </div>
+
+            <!-- Product Title and Price -->
+            <div>
+                <div class="flex items-center gap-2">
+                    <h1 class="text-lg font-medium text-gray-800">Scattered Miracle Plate ...</h1>
+                    <button class="mt-2 text-secondary text-[10px] hover:underline">VIEW <br> SIMILAR</button>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-lg font-semibold">₹26,366</span>
+                    <span class="text-gray-500 line-through text-sm">₹31,129</span>
+                    <span class="text-red-500 text-sm">(15% off)</span>
+                </div>
+            </div>
+            <div class="border-l border-gray-300 h-10"></div>
+            <!-- Size Selector -->
+            <div class="relative">
+                <p class="text-center text-sm text-gray-600">Size</p>
+                <select class="appearance-none bg-white border-0 rounded px-4 py-2 pr-8 cursor-pointer">
+                    <option>12</option>
+                </select>
+            </div>
+
+            <div class="border-l border-gray-300 h-10"></div>
+            <!-- Pincode Input -->
+            <div class="relative">
+                <input type="text" placeholder="Enter Pincode" class="border-0 rounded px-4 py-2 w-36" />               
+            </div>
+
+        </div>
+
+        <!-- Right Section: Actions -->
+        <div class="flex items-center gap-4">
+
+            <!-- Video Call Button -->
+            <button class="p-2 bg-green-100 rounded-lg">
+                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+            </button>
+
+            <!-- Try At Home Button -->
+            <button class="px-4 py-2 bg-purple-100 text-purple-700 rounded-lg hover:bg-purple-200">
+                TRY AT HOME
+            </button>
+
+            <!-- Find In Store Button -->
+            <button class="px-4 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500">
+                FIND IN STORE
+            </button>
+
+            <!-- Add to Cart Button -->
+            <button class="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 flex items-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                ADD TO CART
+            </button>
+        </div>
+    </div> --}}
+
     <main class="mt-14">
         <div class="bg-white">
             <!-- Breadcrumb Navigation -->
@@ -560,6 +630,57 @@
                     </div>
                 </div>
 
+                <!-- Carousel with images -->
+                <div class="p-4">
+                    <div class="flex gap-6">
+                        <!-- Card 1: 18K Rings -->
+                        <div class="p-4">
+                            <h2 class="text-center text-purple-800 font-semibold mb-2">More 18K Rings</h2>
+                            <div class="w-64 p-4 rounded-lg bg-blue-50 flex items-center gap-2">
+                                <!-- Carousel with images -->
+                                <div class="flex overflow-x-scroll space-x-2">
+                                    <div class="w-16 h-16 rounded-lg flex items-center justify-center bg-white">
+                                        <img src="path/to/ring1.jpg" alt="Ring 1" class="w-12 h-12" />
+                                    </div>
+                                    <div class="w-16 h-16 rounded-lg flex items-center justify-center bg-white">
+                                        <img src="path/to/ring2.jpg" alt="Ring 2" class="w-12 h-12" />
+                                    </div>
+                                    <div class="w-16 h-16 rounded-lg flex items-center justify-center bg-white">
+                                        <img src="path/to/ring3.jpg" alt="Ring 3" class="w-12 h-12" />
+                                    </div>
+                                </div>
+                                <!-- Arrow icon -->
+                                <div class="flex items-center justify-center w-8 h-8 rounded-full bg-white">
+                                    <span class="text-xl text-gray-500">&#8250;</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Yellow Gold Rings -->
+                        <div class="p-4">
+                            <h2 class="text-center text-purple-800 font-semibold mb-2">More Yellow Gold Rings</h2>
+                            <div class="w-64 p-4 rounded-lg bg-blue-50 flex items-center gap-2">
+                                <!-- Carousel with images -->
+                                <div class="flex overflow-x-scroll space-x-2">
+                                    <div class="w-16 h-16 rounded-lg flex items-center justify-center bg-white">
+                                        <img src="path/to/ring4.jpg" alt="Ring 4" class="w-12 h-12" />
+                                    </div>
+                                    <div class="w-16 h-16 rounded-lg flex items-center justify-center bg-white">
+                                        <img src="path/to/ring5.jpg" alt="Ring 5" class="w-12 h-12" />
+                                    </div>
+                                    <div class="w-16 h-16 rounded-lg flex items-center justify-center bg-white">
+                                        <img src="path/to/ring6.jpg" alt="Ring 6" class="w-12 h-12" />
+                                    </div>
+                                </div>
+                                <!-- Arrow icon -->
+                                <div class="flex items-center justify-center w-8 h-8 rounded-full bg-white">
+                                    <span class="text-xl text-gray-500">&#8250;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- You may also Like -->
                 <div class="bg-secondary container mx-auto px-4 py-8">
                     <h2 class="text-2xl font-medium text-center text-primary mb-6">You may also Like</h2>
@@ -655,7 +776,12 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 <!-- Map Section -->
                 <div class="relative bg-gray-100 rounded-lg overflow-hidden h-[520px]">
-                    <img src="/api/placeholder/600/520" alt="Store Location Map" class="w-full h-full object-cover" />
+                    <!-- Embedded Map -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.88485785327!2d-74.080833!3d40.712776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c250b0899b6f2f%3A0x3d2f4ef8d8e2b089!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1667632277813!5m2!1sen!2sus"
+                        class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
 
                     <!-- Store Location Markers -->
                     <div class="absolute top-1/4 left-1/4">
@@ -680,6 +806,7 @@
                         <p class="text-sm font-normal text-gray-800">Now buy online & pickup from store anytime</p>
                     </div>
                 </div>
+
 
                 <!-- Search Section -->
                 <div class="flex flex-col items-center space-y-6 px-24 mt-28 pt-4">
@@ -835,7 +962,132 @@
             </div>
         </div>
 
+        <!-- Customer Reviews -->
+        <div class="bg-secondary p-6 space-y-8">
+            <!-- Header Section -->
+            <div class="flex flex-wrap md:flex-nowrap justify-between items-start gap-8">
 
+                <!-- Left Side - Rating Summary -->
+                <div class="w-full md:w-auto">
+                    <h2 class="text-xl font-semibold text-primary">Customer Reviews</h2>
+                    <div class="flex items-center mt-2">
+                        <div class="flex text-yellow-400 text-2xl">
+                            ★★★★★
+                        </div>
+                        <span class="ml-2 text-lg font-medium">5/5</span>
+                    </div>
+                    <p class="text-gray-600 mt-1">Based on 536 Ratings & Reviews</p>
+                    <button
+                        class="w-full mt-4 bg-secondary-gradient text-white py-2 px-4 rounded-lg hover:bg-purple-600 transition duration-150">
+                        WRITE A REVIEW
+                    </button>
+                </div>
+
+                <!-- Middle Section - What Customers Liked -->
+                <div class="flex-1 md:w-1/3 max-w-xs">
+                    <h3 class="text-primary font-semibold mb-4">What Customers Liked</h3>
+                    <p class="text-sm text-gray-500 mb-2">Review Highlights</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white px-4 py-2 rounded-full text-sm text-gray-700">Design (412)</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm text-gray-700">Size/fit (267)</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm text-gray-700">Quality (312)</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm text-gray-700">Delivery (158)</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm text-gray-700">Packaging (212)</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm text-gray-700">Customer service (324)</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm text-gray-700">Overall experience (307)</span>
+                        <span class="bg-white px-4 py-2 rounded-full text-sm text-gray-700">Others (51)</span>
+                    </div>
+                </div>
+
+                <!-- Right Side - Customer Images -->
+                <div class="w-full md:w-auto">
+                    <h3 class="text-primary text-center font-semibold mb-4">Images by Customers(10)</h3>
+                    <div class="grid grid-cols-3 gap-2">
+                        <img src="{{ asset('asset/img/testing.png') }}" alt="Customer review image"
+                            class="rounded-lg object-cover w-32 h-32" />
+                        <img src="{{ asset('asset/img/testing.png') }}" alt="Customer review image"
+                            class="rounded-lg object-cover w-32 h-32" />
+                        <img src="{{ asset('asset/img/testing.png') }}" alt="Customer review image"
+                            class="rounded-lg object-cover w-32 h-32" />
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Reviews List Section -->
+            <div>
+                <h3 class="text-purple-900 font-semibold mb-4">Customer Reviews : Showing 1 - 4 out of 536</h3>
+
+                <!-- Single Review -->
+                <div class="border-b pb-6 space-y-3">
+                    <!-- Reviewer Information -->
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                            <!-- Profile Image -->
+                            <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
+                                <span class="text-gray-600">CJ</span>
+                            </div>
+                            <div>
+                                <!-- Name and Rating -->
+                                <div class="flex items-center space-x-2">
+                                    <h4 class="font-medium">Chayanika Jain</h4>
+                                    <span class="text-purple-500 text-sm">(Verified Purchase)</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                                    <span class="ml-2 text-gray-600 text-sm">5/5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="text-gray-500 text-sm">22nd October 2023</span>
+                    </div>
+
+                    <!-- Positives Section -->
+                    <div class="flex items-center space-x-2 text-green-500 text-sm mt-2">
+                        <span class="material-icons">thumb_up</span> <!-- Adjust icon if not using Material Icons -->
+                        <span>Positives</span>
+                    </div>
+
+                    <!-- Highlighted Tags -->
+                    <div class="flex flex-wrap gap-2 mt-2">
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs">DESIGN</span>
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs">SIZE/FIT</span>
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs">QUALITY</span>
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs">DELIVERY</span>
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs">PACKAGING</span>
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs">CUSTOMER SERVICE</span>
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs">OVERALL
+                            EXPERIENCE</span>
+                    </div>
+
+                    <!-- Review Text -->
+                    <p class="text-gray-700 mt-2 text-sm">
+                        OMG!!! It's a damn amazing ring. I gifted it to my mom and she is very happy to have it 🥰. And once
+                        again thanks to CaratLane Gandhinagar staff Vishal and...
+                        <span class="text-purple-500 cursor-pointer">Read More</span>
+                    </p>
+
+                    <!-- Review Image -->
+                    <div class="mt-2">
+                        <img src="{{ asset('asset/img/testing.png') }}" alt="Review image"
+                            class="w-20 h-20 rounded-lg object-cover" />
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="flex justify-center items-center space-x-2 mt-6">
+                    <button class="text-purple-500 border border-purple-500 px-3 py-1 rounded-lg text-sm">FIRST</button>
+                    <button class="text-purple-500 border border-purple-500 px-3 py-1 rounded-lg text-sm">‹</button>
+                    <button class="bg-purple-500 text-white px-3 py-1 rounded-lg text-sm">1</button>
+                    <button class="text-purple-500 border border-purple-500 px-3 py-1 rounded-lg text-sm">2</button>
+                    <button class="text-purple-500 border border-purple-500 px-3 py-1 rounded-lg text-sm">3</button>
+                    <button class="text-purple-500 border border-purple-500 px-3 py-1 rounded-lg text-sm">›</button>
+                    <button class="text-purple-500 border border-purple-500 px-3 py-1 rounded-lg text-sm">LAST</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Join CaratLane Insider-->
         <div class="purple-gradient py-16 px-4">
             <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
                 <!-- Left Section -->
@@ -892,6 +1144,110 @@
             </div>
         </div>
 
+        <!-- Related Categories Section -->
+        <div class="bg-blue-50/50 p-8">
+            <h2 class="text-xl font-semibold text-purple-900 text-center mb-6">Related Categories</h2>
+
+            <div class="flex flex-wrap justify-center gap-3 max-w-6xl mx-auto">
+                <span
+                    class="bg-white px-4 py-2 rounded-full text-sm text-gray-700 hover:bg-gray-50 cursor-pointer whitespace-nowrap">engagement
+                    rings for couples</span>
+                <span
+                    class="bg-white px-4 py-2 rounded-full text-sm text-gray-700 hover:bg-gray-50 cursor-pointer whitespace-nowrap">mens
+                    rings</span>
+                <span
+                    class="bg-white px-4 py-2 rounded-full text-sm text-gray-700 hover:bg-gray-50 cursor-pointer whitespace-nowrap">boys
+                    ring design gold</span>
+                <span
+                    class="bg-white px-4 py-2 rounded-full text-sm text-gray-700 hover:bg-gray-50 cursor-pointer whitespace-nowrap">engagement
+                    rings for girls</span>
+                <span
+                    class="bg-white px-4 py-2 rounded-full text-sm text-gray-700 hover:bg-gray-50 cursor-pointer whitespace-nowrap">cocktail
+                    ring design</span>
+                <span
+                    class="bg-white px-4 py-2 rounded-full text-sm text-gray-700 hover:bg-gray-50 cursor-pointer whitespace-nowrap">couple
+                    rings set</span>
+                <span
+                    class="bg-white px-4 py-2 rounded-full text-sm text-gray-700 hover:bg-gray-50 cursor-pointer whitespace-nowrap">mens
+                    engagement rings</span>
+                <span
+                    class="bg-white px-4 py-2 rounded-full text-sm text-gray-700 hover:bg-gray-50 cursor-pointer whitespace-nowrap">wedding
+                    rings for women</span>
+                <span
+                    class="bg-white px-4 py-2 rounded-full text-sm text-gray-700 hover:bg-gray-50 cursor-pointer whitespace-nowrap">stone
+                    rings for women</span>
+                <span
+                    class="bg-white px-4 py-2 rounded-full text-sm text-gray-700 hover:bg-gray-50 cursor-pointer whitespace-nowrap">topaz
+                    ring</span>
+                <span
+                    class="bg-white px-4 py-2 rounded-full text-sm text-gray-700 hover:bg-gray-50 cursor-pointer whitespace-nowrap">gents
+                    ring</span>
+                <span
+                    class="bg-white px-4 py-2 rounded-full text-sm text-gray-700 hover:bg-gray-50 cursor-pointer whitespace-nowrap">engagement
+                    ring models</span>
+                <span
+                    class="bg-white px-4 py-2 rounded-full text-sm text-gray-700 hover:bg-gray-50 cursor-pointer whitespace-nowrap">gold
+                    wedding rings</span>
+                <span
+                    class="bg-white px-4 py-2 rounded-full text-sm text-gray-700 hover:bg-gray-50 cursor-pointer whitespace-nowrap">boys
+                    ring</span>
+                <span
+                    class="bg-white px-4 py-2 rounded-full text-sm text-gray-700 hover:bg-gray-50 cursor-pointer whitespace-nowrap">3
+                    stone ring</span>
+            </div>
+        </div>
+
+        <!-- Shop by Products Section -->
+        <div class="bg-pink-50/50 p-8 my-8">
+            <h2 class="text-xl font-semibold text-primary text-center mb-8">Shop by Products</h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-6xl mx-auto">
+                <!-- Product 1 -->
+                <div class="relative group">
+                    <img src="{{ asset('asset/img/testing.png') }}" alt="Ring"
+                        class="w-full aspect-square object-cover rounded-lg" />
+                    <div class="text-center mt-2">
+                        <p class="text-sm text-gray-700">All rings</p>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="relative group">
+                    <img src="{{ asset('asset/img/testing.png') }}" alt="Earrings"
+                        class="w-full aspect-square object-cover rounded-lg" />
+                    <div class="text-center mt-2">
+                        <p class="text-sm text-gray-700">All Earrings</p>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="relative group">
+                    <img src="{{ asset('asset/img/testing.png') }}" alt="Bracelet"
+                        class="w-full aspect-square object-cover rounded-lg" />
+                    <div class="text-center mt-2">
+                        <p class="text-sm text-gray-700">All bracelets</p>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="relative group">
+                    <img src="{{ asset('asset/img/testing.png') }}" alt="Pendant"
+                        class="w-full aspect-square object-cover rounded-lg" />
+                    <div class="text-center mt-2">
+                        <p class="text-sm text-gray-700">All pendants</p>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="relative group">
+                    <img src="{{ asset('asset/img/testing.png') }}" alt="Necklace"
+                        class="w-full aspect-square object-cover rounded-lg" />
+                    <div class="text-center mt-2">
+                        <p class="text-sm text-gray-700">All necklaces</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </main>
 
