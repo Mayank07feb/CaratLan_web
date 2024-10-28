@@ -1,262 +1,429 @@
 @extends('components.main')
 @section('content')
-<div class="w-full lg:max-w-none mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-gray-50">
-    <!-- Breadcrumb with Background and Border -->
-    <nav class="flex bg-white border border-gray-200 p-4 rounded-md shadow-sm mb-6" aria-label="Breadcrumb">
-        <ol class="inline-flex items-center space-x-1 md:space-x-3">
-            <li class="inline-flex items-center">
-                <a href="/" class="text-gray-600 hover:text-[#601042] inline-flex items-center">
-                    <svg class="w-5 h-5 mr-2.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
-                        </path>
-                    </svg>
-                    Home
-                </a>
-            </li>
-            <li aria-current="page">
-                <div class="flex items-center">
-                    <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                    <span class="text-gray-500 ml-1 md:ml-2 font-medium">Our Story</span>
-                </div>
-            </li>
-        </ol>
-    </nav>
-
-
-{{-- our story --}}
-<div class="max-w-full mx-auto lg:p-6 p-2">
-    <h1 class="text-3xl font-light text-center text-gray-800">Our Story</h1>
-    <div class="max-w-4xl mx-auto lg:p-6">
-        <img src="{{asset('asset/img/ourstory banner.jpg')}}" alt="">
-    </div>
-    <div class="max-w-full mx-auto lg:p-6">
-        <p class="text-gray-700 mt-4">
-            From a single store in a small town to a chain of stores with a global footprint, the journey of PNG Jewellers is truly fascinating. It all started way back in the 18th century; the group got its name from the late Purshottam Narayan Gadgil, a doyen of the family and the chief architect who captured the hearts and imagination of the people with his ethics and his jewellery.
-        </p>
-        <p class="text-gray-700 mt-4">
-            The past two centuries have taught us that specific values like trust, commitment, and purity are far more precious than any jewel known to humankind. At PNG Jewellers, we constantly strive to honor these values by integrating them into our lives and creating a tradition remembered for ages to come.
-        </p>
-    </div>
-</div>
-
-
-  {{-- Horizontal Line --}}
-  <div class="flex items-center justify-center w-full mx-auto p-4">
-    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
-    <div class="mx-4">
-        <img src="{{ asset('asset\img\logo.png') }}" alt="Site Logo" class="h-12 w-auto">
-    </div>
-    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
-</div>
-
-{{-- cards --}}
-<div class="max-full mx-auto lg:p-6 p-2">
-    <h1 class="text-3xl font-light text-center text-gray-800 mb-6">Our Core Values</h1>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {{-- card 1 --}}
-        <div class="p-4 shadow-lg rounded-md">
-            <img src="{{asset('asset/img/value_1.webp')}}" alt="Core Values" class="w-full">
-            <div>
-                <h2 class="text-xl font-semibold text-gray-700 my-4">Values</h2>
-                <p id="core-values-text" class="text-gray-600 mb-6">
-                    Our story unfolds over eighteen decades – inspired by the values of trust, purity, and transparency. Generations of the Gadgil family have employed their experience and expertise to abide by being a global hallmark of traditional designs while bringing a fresh twist to contemporary designs. A journey adorned with the values of goodness, creativity, and evolution!
-                </p>
-                <div id="toggle-buttons" class="flex gap-4 shadow-inner shadow-[#6b4e6a] w-full max-w-[300px] rounded-lg p-2 justify-center">
-                    <i id="show-more-icon" class="ri-add-circle-line text-xl text-[#603858] cursor-pointer"></i>
-                    <a id="read-more" href="#" class="custom-button">Read More</a>
-                    <i id="show-less-icon" class="ri-indeterminate-circle-line text-xl text-[#603858] cursor-pointer hidden"></i>
-                    <a id="read-less" href="#" class="custom-button hidden">Read Less</a>
-                </div>
-            </div>
-        </div>
-        {{-- card 2 --}}
-        <div class="p-4 shadow-lg rounded-md">
-            <img src="{{asset('asset/img/Value_2.webp')}}" alt="Core Values" class="w-full">
-            <div>
-                <h2 class="text-xl font-semibold text-gray-700 my-4">Values</h2>
-                <p id="core-values-text-vission" class="text-gray-600 mb-6">
-                    Our story unfolds over eighteen decades – inspired by the values of trust, purity, and transparency. Generations of the Gadgil family have employed their experience and expertise to abide by being a global hallmark of traditional designs while bringing a fresh twist to contemporary designs. A journey adorned with the values of goodness, creativity, and evolution!
-                </p>
-                <div id="toggle-buttons-vission" class="flex gap-4 shadow-inner shadow-[#6b4e6a] w-full max-w-[300px] rounded-lg p-2 justify-center">
-                    <i id="show-more-icon-vission" class="ri-add-circle-line text-xl text-[#603858] cursor-pointer"></i>
-                    <a id="read-more-vission" href="#" class="custom-button">Read More</a>
-                    <i id="show-less-icon-vission" class="ri-indeterminate-circle-line text-xl text-[#603858] cursor-pointer hidden"></i>
-                    <a id="read-less-vission" href="#" class="custom-button hidden">Read Less</a>
-                </div>
-            </div>
-        </div>
-        {{-- card 3 --}}
-        <div class="p-4 shadow-lg rounded-md">
-            <img src="{{asset('asset/img/mission.webp')}}" alt="Core Values" class="w-full">
-            <div>
-                <h2 class="text-xl font-semibold text-gray-700 my-4">Values</h2>
-                <p id="core-values-text-Mission" class="text-gray-600 mb-6">
-                    Our story unfolds over eighteen decades – inspired by the values of trust, purity, and transparency. Generations of the Gadgil family have employed their experience and expertise to abide by being a global hallmark of traditional designs while bringing a fresh twist to contemporary designs. A journey adorned with the values of goodness, creativity, and evolution!
-                </p>
-                <div id="toggle-buttons-Mission" class="flex gap-4 shadow-inner shadow-[#6b4e6a] w-full max-w-[300px] rounded-lg p-2 justify-center">
-                    <i id="show-more-icon-Mission" class="ri-add-circle-line text-xl text-[#603858] cursor-pointer"></i>
-                    <a id="read-more-Mission" href="#" class="custom-button">Read More</a>
-                    <i id="show-less-icon-Mission" class="ri-indeterminate-circle-line text-xl text-[#603858] cursor-pointer hidden"></i>
-                    <a id="read-less-Mission" href="#" class="custom-button hidden">Read Less</a>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="max-w-6xl mx-auto mt-24 py-8">
+    <!-- Diamond Grid Container -->
+    <div class="grid grid-cols-1 gap-4 items-center justify-center">
+        <!-- Jewelry Images -->
     
-</div>
-</div>
-
-
-  {{-- Horizontal Line --}}
-  <div class="flex items-center justify-center w-full mx-auto p-4">
-    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
-    <div class="mx-4">
-        <img src="{{ asset('asset\img\logo.png') }}" alt="Site Logo" class="h-12 w-auto">
-    </div>
-    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
-</div>
-
-
-</div>
-
-
-    {{-- section --}}
-<section class="py-10 bg-[#601042] w-full">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 md:pr-8">
-                <h1 class="text-3xl font-light mb-2 text-white">Beginnings - Cornerstone of Each Story!</h1>
-                <p class="text-start text-white mb-8">
-                    The story of Gititra is indeed an epic scripted by six generations at the forefront of exceptional
-                    traditional designs and unparalleled craftsmanship. Discover how Gititra Jewellers Pvt. Ltd, founded in
-                    1832, went from a little jewellery shop in Sangli to a renowned design brand in the jewellery industry.
-                </p>
-                <a href="#"
-                    class="inline-block bg-white text-black font-semibold py-3 px-6  hover:bg-[#f6d7ac] transition duration-300 border-2 border-black">READ
-                    MORE</a>
-            </div>
-            <div class="md:w-1/2 mt-6 md:mt-0">
-            <img src="{{asset('asset/img/founder.png')}}" alt="">
-            </div>
+        <div class=" overflow-hidden aspect-square group">
+            <img src="{{asset('asset/img/pic7.png')}}" alt="Gold necklace detail" 
+                 class="w-full h-full object-cover -rotate-45 scale-150 transition-transform duration-300 group-hover:scale-125">
         </div>
-</section>
-
-
-  {{-- Horizontal Line --}}
-  <div class="flex items-center justify-center w-full mx-auto p-4">
-    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
-    <div class="mx-4">
-        <img src="{{ asset('asset\img\logo.png') }}" alt="Site Logo" class="h-12 w-auto">
     </div>
-    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
+</div>
+
+<div class="max-w-6xl mx-auto p-6 mt-12">
+    <!-- Who Are We Section -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Who Are We</h2>
+        <p class="text-gray-600 text-center">
+            At CaratLane, we believe that every woman deserves exquisite jewelry that complements her unique style and dynamic lifestyle. Conversations with hundreds of women across the country revealed a common challenge: the struggle to find beautiful, high-quality jewelry for significant occasions, often settling for designs that didn’t resonate with their daily lives.
+        </p>
+        <p class="text-gray-600 mt-2 text-center">
+            Founded in 2008, CaratLane was created to bridge the gap between opulent jewelry designed for special moments and the need for everyday wear. We aim to make diamond jewelry not only accessible and affordable but also a timeless addition to your wardrobe, allowing you to wear elegance effortlessly every day.
+        </p>
+        <p class="text-gray-600 mt-2 text-center">
+            Today, CaratLane proudly stands as India’s largest omni-channel jeweler, with a strong presence in over 100 cities and more than 250 retail stores nationwide.
+        </p>
+    </section>
+
+    <!-- Featured In Section -->
+    <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Featured In</h2>
+       
+    </section>
 </div>
 
 
-    {{-- section 2222--}}
-    <section class="py-10 bg-[#f8edde] w-full">
-        
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
-            <div class="md:w-1/2 mt-6 md:mt-0">
-                <img src="{{asset('asset/img/Saurabh.jpg')}}" alt="">
+{{-- Features --}}
+<div class="flex flex-wrap justify-center gap-4 bg-slate-300 p-6">
+    <div class="flex-shrink-0 w-1/5 md:w-1/6 lg:w-1/6">
+        <img src="{{ asset('asset/img/f1.png') }}" alt="Feature 1" class="w-full h-auto rounded shadow-md">
+    </div>
+    <div class="flex-shrink-0 w-1/5 md:w-1/6 lg:w-1/6">
+        <img src="{{ asset('asset/img/f2.png') }}" alt="Feature 2" class="w-full h-auto rounded shadow-md">
+    </div>
+    <div class="flex-shrink-0 w-1/5 md:w-1/6 lg:w-1/6">
+        <img src="{{ asset('asset/img/f3.png') }}" alt="Feature 3" class="w-full h-auto rounded shadow-md">
+    </div>
+    <div class="flex-shrink-0 w-1/5 md:w-1/6 lg:w-1/6">
+        <img src="{{ asset('asset/img/f4.png') }}" alt="Feature 4" class="w-full h-auto rounded shadow-md">
+    </div>
+    <div class="flex-shrink-0 w-1/5 md:w-1/6 lg:w-1/6">
+        <img src="{{ asset('asset/img/f5.png') }}" alt="Feature 5" class="w-full h-auto rounded shadow-md">
+    </div>
+</div>
+
+
+<div class="max-w-full mx-auto p-6 bg-white  my-12 flex flex-row gap-4">
+    <div>
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Mission</h2>
+    <p class="text-gray-600 mb-6">
+        Our mission is to make beautiful jewellery accessible. Jewellery that not only makes a woman look beautiful but also makes her feel beautiful and loved.
+    </p>
+
+    </div>
+    <div>
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Promise</h2>
+    <ul class="list-disc list-inside text-gray-600 space-y-2">
+        <li>Our style is relentlessly modern, yet intensely respectful of traditions.</li>
+        <li>We always look for better and newer ways to do things; from the designs that we make to the experiences that we deliver.</li>
+        <li>We are open in our interactions with our customers. Our prices and policies are always transparent.</li>
+    </ul>
+    </div>
+</div>
+
+
+{{-- services features --}}
+<div class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+            
+            <!-- 100% Certified & Free Shipping -->
+            <div class="flex flex-row items-center space-y-4">
+                <img src="{{ asset('asset/img/download.jpeg') }}" alt="Certified & Free Shipping" class="h-44 w-44 object-cover"> 
+                <a href="{{route('policy')}}"><div class="text-start">
+                    <h3 class="text-md font-semibold mb-2">100% Certified & Free Shipping</h3>
+                    <p class="text-sm text-purple-300">Our jewellery always comes with a certificate of authentication.</p>
+                </div></a>
+            </div>
+            
+            <!-- 15 Day Money-Back -->
+            <div class="flex flex-row items-center space-y-4">
+                <img src="{{ asset('asset/img/download.jpeg') }}" alt="15 Day Money-Back" class="h-44 w-44 object-cover">
+                <a href="{{route('policy')}}"><div class="text-start">
+                    <h3 class="text-md font-semibold mb-2">15 Day Money-Back</h3>
+                    <p class="text-sm text-purple-300">Get 100% refund if you don't like your jewellery.</p>
+                </div></a>
+            </div>
+            
+            <!-- Lifetime Exchange -->
+            <div class="flex flex-row items-center space-y-4 lg:pl-24">
+                <img src="{{ asset('asset/img/download.jpeg') }}" alt="Lifetime Exchange" class="h-44 w-44 object-cover">
+                <a href="{{route('policy')}}"><div class="text-start">
+                    <h3 class="text-md font-semibold mb-2">Lifetime Exchange</h3>
+                    <p class="text-sm text-purple-300">Exchange your old designs anytime you want an upgrade.</p>
+                </div></a>
+            </div>
+            
+            <!-- One Year Warranty* -->
+            <div class="flex flex-row items-center space-y-4 lg:pl-24">
+                <img src="{{ asset('asset/img/download.jpeg') }}" alt="One Year Warranty" class="h-44 w-44 object-cover">
+                <a href="{{route('policy')}}"><div class="text-start">
+                    <h3 class="text-md font-semibold mb-2">One Year Warranty*</h3>
+                    <p class="text-sm text-purple-300">If your jewellery has a defect, we will fix it.</p>
+                </div></a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+   
+
+    <!-- Founders Section -->
+    <section class="max-w-7xl mx-auto px-4 py-12">
+        <div class="flex items-start space-x-12">
+            <!-- Founder 1 -->
+            <div class="flex flex-col items-start">
+                <img src="{{asset('asset/img/begin.png')}}" alt="Founder" class="w-64 h-64 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-medium">Mithun Sacheti</h3>
+                <p class="text-pink-500">FOUNDER AND MD</p>
+            </div>
+
+            <div class="flex flex-col items-start hidden ">
+                <img src="{{asset('asset/img/2012.png')}}" alt="Founder" class="w-64 h-64 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-medium">Mithun Sacheti</h3>
+                <p class="text-pink-500">FOUNDER AND MD</p>
+            </div>
+
+            <div class="flex flex-col items-start hidden ">
+                <img src="{{asset('asset/img/2015.png')}}" alt="Founder" class="w-64 h-64 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-medium">Mithun Sacheti</h3>
+                <p class="text-pink-500">FOUNDER AND MD</p>
+            </div>
+            <div class="flex flex-col items-start hidden ">
+                <img src="{{asset('asset/img/2016.png')}}" alt="Founder" class="w-64 h-64 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-medium">Mithun Sacheti</h3>
+                <p class="text-pink-500">FOUNDER AND MD</p>
+            </div>
+
+            <div class="flex flex-col items-start hidden ">
+                <img src="{{asset('asset/img/2020.png')}}" alt="Founder" class="w-64 h-64 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-medium">Mithun Sacheti</h3>
+                <p class="text-pink-500">FOUNDER AND MD</p>
+            </div>
+
+            <!-- Timeline Section -->
+            <div class="flex-1">
+                <h2 class="text-3xl font-medium mb-8">The Beginning</h2>
+                
+                <!-- Timeline -->
+                <div class="flex items-center space-x-4 mb-8">
+                    <span class="text-pink-500 font-medium">2008</span>
+                    <span class="text-gray-300">—</span>
+                    <span class="text-gray-600">2012</span>
+                    <span class="text-gray-300">—</span>
+                    <span class="text-gray-600">2015</span>
+                    <span class="text-gray-300">—</span>
+                    <span class="text-gray-600">2016</span>
+                    <span class="text-gray-300">—</span>
+                    <span class="text-gray-600">2020</span>
                 </div>
-              <!-- Content Section -->
-              <div class="lg:w-1/2">
-                <h1 class="text-2xl font-semibold text-gray-800 mb-4">Saurabh Gadgil</h1>
-                <h2 class="text-xl font-medium text-gray-600 mb-4">Chairman and Managing Director</h2>
-                <p class="text-gray-700 mb-4">
-                    Creatively blending the age-old tradition with technology in a surging and booming Indian economy, the dynamic scion of the powerful, established business house, Saurabh Vidyadhar Gadgil, holds the spirit and modern vision for PNG Jewellers.
-                </p>
-                <p class="text-gray-700 mb-4">
-                    A sixth-generation successor of the distinguished Gadgil family – pioneers in Maharashtra's gold and jewellery industry, Saurabh has been instrumental in transforming the image of PNG Jewellers into a professionally run corporate entity with global ambitions. An ardent sports enthusiast, he has been a champion in many chess competitions and is good enough to finish second in the national championship. Besides being a movie and travel buff, Saurabh is a passionate, voracious reader with eclectic tastes.
-                </p>
-                <p class="text-gray-700 mb-4">
-                    From a single traditional store to a rapidly growing chain of outlets today, PNG Jewellers boasts of 35 swanky classy stores across India, U.S.A & Dubai. Remarkably, over 1000 employees and 500 craftsmen are under its umbrella. Over the years, the business diversified under his ever-advancing intellect and flourished through Gadgil Holdings Pvt Ltd, established in 2008.
+
+                <p class="text-gray-700 leading-relaxed">
+                    CaratLane was founded by Mithun Sacheti and Srinivasa Gopalan 
+                    with a refreshing and courageous objective – to make beautiful 
+                    jewellery accessible, affordable and forever wearable.
                 </p>
             </div>
         </div>
-</section>
-
- {{-- Horizontal Line --}}
- <div class="flex items-center justify-center w-full mx-auto p-4 bg-[#f8edde]">
-    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
-    <div class="mx-4">
-        <img src="{{ asset('asset\img\logo.png') }}" alt="Site Logo" class="h-12 w-auto">
-    </div>
-    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
-</div>
+    </section>
 
 
-    {{-- section 333--}}
-    <section class="py-10 bg-[#f8edde] w-full">
+{{-- team --}}
+
+<div class="flex flex-row gap-4 mx-24">
+    
+
+<div class="w-full max-w-sm bg-white  dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="p-8 rounded-t-lg" src="{{asset('asset/img/team1.png')}}" alt="product image" />
+    </a>
+    <div class="px-5 pb-5">
+       <h1>Mithun Sacheti
+       </h1>
+      <p> Founder and MD</p>
         
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
-            <div class="md:w-1/2 mt-6 md:mt-0">
-                <img src="{{asset('asset/img/Parag.jpg')}}" alt="">
-                </div>
-              <!-- Content Section -->
-              <div class="lg:w-1/2">
-                <h1 class="text-2xl font-semibold text-gray-800 mb-4">Parag Yashwant Gadgil</h1>
-                <h2 class="text-xl font-medium text-gray-600 mb-4">Executive Director</h2>
-                <p class="text-gray-700 mb-4">Parag Yashwant Gadgil is the Executive Director of PN Gadgil Jewellers Ltd. He has been active in the family business since 1981. Born on 27th July 1959 & brought up and educated in the city of Sangli. He has acquired a diploma in Mechanical Engineering. 
-                </p>
-                <p class="text-gray-700 mb-4">
-                    He is competent in every facet of the business. He has extensive expertise working with clients and solid grasp of psyche of those he serves. As executive director, he overseas all the customer relationships, Corporate engagements and CSR activity of the company. He is also responsible for ensuring that all the management policies and best practices at branch level operations are met for a company with over thousand employees.
-                </p>
-                <p class="text-gray-700 mb-4">He strongly believes in a collective effort in business expansion. He is a hard worker and readily receptive to any change. He prefers working with a low profile.
-                </p>
-            </div>
-        </div>
-</section>
-
-
- {{-- Horizontal Line --}}
- <div class="flex items-center justify-center w-full mx-auto p-4 bg-[#f8edde]">
-    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
-    <div class="mx-4">
-        <img src="{{ asset('asset\img\logo.png') }}" alt="Site Logo" class="h-12 w-auto">
     </div>
-    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
 </div>
-
-
-    {{-- section 333--}}
-    <section class="py-10 bg-[#f8edde] w-full">
+<div class="w-full max-w-sm bg-white  dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="p-8 rounded-t-lg" src="{{asset('asset/img/team2.png')}}" alt="product image" />
+    </a>
+    <div class="px-5 pb-5">
+       <h1>Mithun Sacheti
+       </h1>
+      <p> Founder and MD</p>
         
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
-            <div class="md:w-1/2 mt-6 md:mt-0">
-                <img src="{{asset('asset/img/Kiran.jpg')}}" alt="">
+    </div>
+</div>
+
+<div class="w-full max-w-sm bg-white  dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="p-8 rounded-t-lg" src="{{asset('asset/img/team3.png')}}" alt="product image" />
+    </a>
+    <div class="px-5 pb-5">
+       <h1>Mithun Sacheti
+       </h1>
+      <p> Founder and MD</p>
+        
+    </div>
+</div>
+
+<div class="w-full max-w-sm bg-white  dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="p-8 rounded-t-lg" src="{{asset('asset/img/team4.png')}}" alt="product image" />
+    </a>
+    <div class="px-5 pb-5">
+       <h1>Mithun Sacheti
+       </h1>
+      <p> Founder and MD</p>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+
+<div class="max-w-4xl mx-auto p-6  my-12 text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">CaratLane Advantage</h2>
+    <p class="text-gray-600 text-lg">
+        When you shop at CaratLane, you can always be assured of the highest quality standards. Every piece of jewellery is meticulously crafted with the utmost care. It goes through a thorough quality check and is then taken through certification.
+    </p>
+</div>
+
+
+    {{-- ***************** REVIEWS ************* --}}
+
+  
+    <div class="relative w-full mx-auto overflow-hidden my-8 mb-4">
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide px-4">
+                    <div class="w-full p-6 ">
+                        <div class="flex justify-center mb-4">
+                            <!-- Testimonial Image -->
+                            <i class="ri-instagram-line text-5xl bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent"></i>
+
+                        </div>
+                        <!-- Testimonial Text -->
+                        <p class="italic text-gray-700 text-center text-3xl px-12">
+                            "I received this Mangalsutra bracelet as my first Karva Chauth gift! It's simple and sweet, just
+                            like my husband."
+                        </p>
+                        <p class="font-semibold mt-2 text-sm text-gray-500 text-center">
+                            - Akanksha Joshi via Instagram
+                        </p>
+                        <!-- Read More Button -->
+                        <div class="flex justify-center mt-4 mb-4">
+                            <button
+                                class="border border-purple-500 text-purple-500 px-4 py-2 rounded-md transition duration-300 hover:from-pink-600 hover:to-purple-600">
+                                Read More
+                            </button>
+                        </div>
+                    </div>
                 </div>
-              <!-- Content Section -->
-              <div class="lg:w-1/2">
-                <h1 class="text-2xl font-semibold text-gray-800 mb-4">
-                    Kiran Prakash Firodiya</h1>
-                <h2 class="text-xl font-medium text-gray-600 mb-4">Group CFO & Executive Director</h2>
-                <p class="text-gray-700 mb-4">Kiran Prakash Firodiya is the Group CFO & Executive Director of P N Gadgil Jewellers Ltd. Born on 24th Nov 1980 & brought up and educated in the city of Pune. He is Chartered Accountant by profession. He has also completed Masters in Commerce, MBA Finance & MBA International Business Management from IIBM. He is certified Forensic Auditor from ICAI and GDCA from Pune University.   
-                </p>
-                <p class="text-gray-700 mb-4">
-                    He is competent in every facet of the business. He has extensive expertise working in the areas of Finance, Budgets & Accounts, Domestic & International Expansion, Treasury Management, Taxation & Compliances and Legal & Commercials. As a KMP, he oversees all the branches technical and operational aspects.  He is also responsible for ensuring that all legal requirements are met regarding inventory, sales logistics, accounting, and human resources for a company. 
-                </p>
-                <p class="text-gray-700 mb-4">He strongly believes in system building and implementing good practices & policies.
 
+                <!-- Slide 2 -->
+                <div class="swiper-slide px-4">
+                    <div class="w-full p-6 ">
+                        <div class="flex justify-center mb-4">
+                            <!-- Testimonial Image -->
+                            <i class="ri-instagram-line text-5xl bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent"></i>
 
-                </p>
+                        </div>
+                        <!-- Testimonial Text -->
+                        <p class="italic text-gray-700 text-center text-3xl px-12">
+                            "I received this Mangalsutra bracelet as my first Karva Chauth gift! It's simple and sweet, just
+                            like my husband."
+                        </p>
+                        <p class="font-semibold mt-2 text-sm text-gray-500 text-center">
+                            - Akanksha Joshi via Instagram
+                        </p>
+                        <!-- Read More Button -->
+                        <div class="flex justify-center mt-4 mb-4">
+                            <button
+                                class="border border-purple-500 text-purple-500 px-4 py-2 rounded-md transition duration-300 hover:from-pink-600 hover:to-purple-600">
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide px-4">
+                    <div class="w-full  p-6 ">
+                        <div class="flex justify-center mb-4">
+                            <!-- Testimonial Image -->
+                            <i class="ri-instagram-line text-5xl bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent"></i>
+
+                        </div>
+                        <!-- Testimonial Text -->
+                        <p class="italic text-gray-700 text-center text-3xl px-12">
+                            "I received this Mangalsutra bracelet as my first Karva Chauth gift! It's simple and sweet, just
+                            like my husband."
+                        </p>
+                        <p class="font-semibold mt-2 text-sm text-gray-500 text-center">
+                            - Akanksha Joshi via Instagram
+                        </p>
+                        <!-- Read More Button -->
+                        <div class="flex justify-center mt-4 mb-4">
+                            <button
+                                class="border border-purple-500 text-purple-500 px-4 py-2 rounded-md transition duration-300 hover:from-pink-600 hover:to-purple-600">
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+
+        
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+          
+        });
+    </script>
+
+{{-- making process --}}
+<div class="flex flex-col md:flex-row gap-4 my-12">
+    <div class="flex-shrink-0">
+        <img src="{{asset('asset/img/processing.png')}}" alt="Making Process" class="w-full h-auto rounded-lg shadow-md">
+    </div>
+    <div class="max-w-4xl p-6 bg-white top-8 text-start">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Making Process</h2>
+        <p class="text-gray-600 text-lg">
+            Our designs always come with a unique CaratLane touch through innovative designs or techniques, or both. Uncover our jewellery-making process, from the inspiration to the final outcome.
+        </p>
+    </div>
+
+</div>
+<div class="flex justify-center my-4">
+    <button class="bg-gradient-to-r from-pink-600 to-purple-500 text-white font-semibold py-2 px-6 rounded-lg shadow transition duration-300 hover:opacity-90">
+        Continue Shopping
+    </button>
+</div>
+
+{{-- shop by instagram --}}
+<div class="main overflow-hidden my-6">
+    <!-- Header Section -->
+    <div class="flex flex-col md:flex-row justify-between items-center mx-12 my-4">
+        <h1 class="text-xl md:text-2xl font-semibold">Shop Our Instagram</h1>
+        <h2 class="text-xl md:text-2xl text-black mt-4 md:mt-0">#MyCaratLaneStory</h2>
+    </div>
+
+    <!-- Image Grid Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 bg-red-800 mx-12">
+        <!-- Large Image -->
+        <div class="w-full h-full overflow-hidden bg-yellow-400">
+            <img src="https://cdn.caratlane.com/media/catalog/product/U/T/UT01166-1Y0000_3_lar.jpg"
+                alt="Product Image"
+                class="h-hull w-full object-cover">
+        </div>
+
+        <!-- Smaller Image Grid -->
+        <div class="grid grid-cols-2 lg:grid-cols-3 bg-blue-400">
+            <div class="overflow-hidden w-full h-full">
+                <img src="{{ asset('asset/img/insta1.jpg') }}" alt="Instagram Image"
+                    class="w-full h-full object-cover ">
+            </div>
+            <div class="overflow-hidden w-full h-full">
+                <img src="{{ asset('asset/img/insta2.jpg') }}" alt="Instagram Image"
+                    class="w-full h-full object-cover  ">
+            </div>
+            <div class="overflow-hidden w-full h-full">
+                <img src="{{ asset('asset/img/insta3.jpg') }}" alt="Instagram Image"
+                    class="w-full h-full object-cover  ">
+            </div>
+            <div class="overflow-hidden w-full h-full">
+                <img src="{{ asset('asset/img/insta4.jpg') }}" alt="Instagram Image"
+                    class="w-full h-full object-cover  ">
+            </div>
+            <div class="overflow-hidden w-full h-full">
+                <img src="{{ asset('asset/img/insta5.jpg') }}" alt="Instagram Image"
+                    class="w-full h-full object-cover  ">
+            </div>
+            <div class="overflow-hidden w-full h-full">
+                <img src="{{ asset('asset/img/insta6.jpg') }}" alt="Instagram Image"
+                    class="w-full h-full object-cover  ">
             </div>
         </div>
-</section>
-
-
- {{-- Horizontal Line --}}
- <div class="flex items-center justify-center w-full mx-auto p-4 ">
-    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
-    <div class="mx-4">
-        <img src="{{ asset('asset\img\logo.png') }}" alt="Site Logo" class="h-12 w-auto">
     </div>
-    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
 </div>
+
 
 @endsection

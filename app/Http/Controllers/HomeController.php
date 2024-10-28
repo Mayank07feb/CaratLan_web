@@ -216,4 +216,40 @@ class HomeController extends Controller
     public function jewelleryguide(){
         return view('frontend.jewelleryguide');
     }
+    // Gold Rate
+    public function goldrate(){
+        return view('frontend.goldrate');
+    }
+    // ORDER STATUS
+    public function order(){
+        return view ('frontend.order');
+    }
+    // POST CARDS
+    public function postcard(){
+        return view('frontend.postcard');
+    }
+    // free shipping
+    public function shipping(){
+        return view('frontend.shipping');
+    }
+    // glosarry
+    public function glosarry(){
+        return view('frontend.glosarry');
+    }
+    // Egold
+    public function egold(){
+        return view('frontend.egold');
+    }
+//    wearyourwins
+public function wearyourwins(){
+    return view('frontend.wearyourwins');
+}
+// press
+public function press(){
+    return view('frontend.press');
+}
+// find a store
+public function findstore(){
+    return view('frontend.findstore');
+}
 }
