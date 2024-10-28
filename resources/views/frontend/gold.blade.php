@@ -93,7 +93,7 @@
                     class="hidden md:block w-full md:w-1/5 p-4 bg-white h-screen sticky top-0 overflow-y-auto scrollbar-hidden">
                     <!-- Filters Heading -->
                     <div
-                        class="flex justify-between items-center mb-4 border-b border-gray-300 pb-2 pt-4 sticky top-0 bg-white z-10">
+                        class="flex justify-between items-center mb-4 border-b border-gray-300 pb-2 pt-4 sticky top-[-16px] bg-white z-20">
                         <h2 class="text-base font-semibold text-gray-800">FILTERS</h2>
                         <a href="#" class="text-purple-600 text-sm font-medium hover:underline">CLEAR ALL</a>
                     </div>
@@ -107,19 +107,19 @@
                             <div class="flex items-center">
                                 <input type="checkbox"
                                     class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
-                                <label class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">11
+                                <label class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">11
                                     (803)</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox"
                                     class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
-                                <label class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">10
+                                <label class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">10
                                     (620)</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox"
                                     class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
-                                <label class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">9
+                                <label class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">9
                                     (510)</label>
                             </div>
 
@@ -128,13 +128,13 @@
                                 <div class="flex items-center">
                                     <input type="checkbox"
                                         class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
-                                    <label class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">8
+                                    <label class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">8
                                         (410)</label>
                                 </div>
                                 <div class="flex items-center">
                                     <input type="checkbox"
                                         class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
-                                    <label class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">7
+                                    <label class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">7
                                         (350)</label>
                                 </div>
                             </div>
@@ -148,25 +148,21 @@
                         </div>
                     </div>
 
-
-
-
-
                     <!-- Price Filter -->
                     <div x-data="{ open: true, showMore: false }" class="mb-6 border-b border-gray-300 pb-6">
-                        <h3 @click="open = !open" class="text-base font-bold text-gray-700 cursor-pointer">Price</h3>
+                        <h3 @click="open = !open" class="text-sm font-bold text-gray-700 cursor-pointer">Price</h3>
                         <div x-show="open" class="mt-2">
                             <div class="flex items-center">
                                 <input type="checkbox"
                                     class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
-                                <label class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">₹10,001 -
+                                <label class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">₹10,001 -
                                     ₹15,000
                                     (262)</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox"
                                     class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
-                                <label class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">₹5,000 -
+                                <label class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">₹5,000 -
                                     ₹10,000 (180)</label>
                             </div>
 
@@ -175,7 +171,7 @@
                                 <div class="flex items-center">
                                     <input type="checkbox"
                                         class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
-                                    <label class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">₹15,001
+                                    <label class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">₹15,001
                                         -
                                         ₹20,000
                                         (100)</label>
@@ -183,7 +179,7 @@
                                 <div class="flex items-center">
                                     <input type="checkbox"
                                         class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
-                                    <label class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">₹20,001
+                                    <label class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">₹20,001
                                         -
                                         ₹25,000
                                         (50)</label>
@@ -199,27 +195,26 @@
                         </div>
                     </div>
 
-
                     <!-- Material Filter -->
                     <div x-data="{ open: true, showMore: false }" class="mb-6 border-b border-gray-300 pb-6">
-                        <h3 @click="open = !open" class="text-base font-bold text-gray-700 cursor-pointer">Material</h3>
+                        <h3 @click="open = !open" class="text-sm font-bold text-gray-700 cursor-pointer">Material</h3>
                         <div x-show="open" class="mt-2">
                             <div class="flex items-center">
                                 <input type="checkbox"
                                     class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
-                                <label class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">Gold
+                                <label class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">Gold
                                     (1200)</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox"
                                     class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
-                                <label class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">Silver
+                                <label class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">Silver
                                     (800)</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox"
                                     class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
-                                <label class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">Platinum
+                                <label class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">Platinum
                                     (450)</label>
                             </div>
 
@@ -228,7 +223,7 @@
                                 <div class="flex items-center">
                                     <input type="checkbox"
                                         class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
-                                    <label class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">Rose
+                                    <label class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">Rose
                                         Gold
                                         (300)</label>
                                 </div>
@@ -236,7 +231,7 @@
                                     <input type="checkbox"
                                         class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
                                     <label
-                                        class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">Titanium
+                                        class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">Titanium
                                         (200)</label>
                                 </div>
                             </div>
@@ -250,28 +245,27 @@
                         </div>
                     </div>
 
-
                     <!-- Occasion Filter -->
                     <div x-data="{ open: true, showMore: false }" class="mb-6 border-b border-gray-300 pb-6">
-                        <h3 @click="open = !open" class="text-base font-bold text-gray-700 cursor-pointer">Occasion</h3>
+                        <h3 @click="open = !open" class="text-sm font-bold text-gray-700 cursor-pointer">Occasion</h3>
                         <div x-show="open" class="mt-2">
                             <div class="flex items-center">
                                 <input type="checkbox"
                                     class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
-                                <label class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">Wedding
+                                <label class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">Wedding
                                     (503)</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox"
                                     class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
-                                <label class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">Casual
+                                <label class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">Casual
                                     (202)</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox"
                                     class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
                                 <label
-                                    class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">Anniversary
+                                    class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">Anniversary
                                     (150)</label>
                             </div>
 
@@ -281,14 +275,14 @@
                                     <input type="checkbox"
                                         class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
                                     <label
-                                        class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">Birthday
+                                        class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">Birthday
                                         (120)</label>
                                 </div>
                                 <div class="flex items-center">
                                     <input type="checkbox"
                                         class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
                                     <label
-                                        class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">Graduation
+                                        class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">Graduation
                                         (80)</label>
                                 </div>
                             </div>
@@ -302,27 +296,26 @@
                         </div>
                     </div>
 
-
                     <!-- Gender Filter -->
                     <div x-data="{ open: true, showMore: false }" class="mb-6 border-b border-gray-300 pb-6">
-                        <h3 @click="open = !open" class="text-base font-bold text-gray-700 cursor-pointer">Gender</h3>
+                        <h3 @click="open = !open" class="text-sm font-bold text-gray-700 cursor-pointer">Gender</h3>
                         <div x-show="open" class="mt-2">
                             <div class="flex items-center">
                                 <input type="checkbox"
                                     class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
-                                <label class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">Women
+                                <label class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">Women
                                     (1500)</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox"
                                     class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
-                                <label class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">Men
+                                <label class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">Men
                                     (900)</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox"
                                     class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
-                                <label class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">Unisex
+                                <label class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">Unisex
                                     (300)</label>
                             </div>
 
@@ -331,13 +324,13 @@
                                 <div class="flex items-center">
                                     <input type="checkbox"
                                         class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
-                                    <label class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">Kids
+                                    <label class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">Kids
                                         (150)</label>
                                 </div>
                                 <div class="flex items-center">
                                     <input type="checkbox"
                                         class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
-                                    <label class="ml-2 text-base text-gray-700 hover:text-purple-600 leading-[28px]">Babies
+                                    <label class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">Babies
                                         (100)</label>
                                 </div>
                             </div>
@@ -350,7 +343,6 @@
                             </a>
                         </div>
                     </div>
-
 
                     <!-- Apply Filters Button -->
                     <button
@@ -388,7 +380,7 @@
                                 <span
                                     class="absolute top-2 z-10 left-2 bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
                                 <div
-                                    class="absolute top-2 right-2 z-10 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
+                                    class="absolute top-2 right-2 z-10 opacity-0 sm:opacity-100 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <button class="bg-white p-1 rounded-full">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-black" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
@@ -397,15 +389,168 @@
                                         </svg>
                                     </button>
                                 </div>
+
                                 <div class="absolute top-48 z-10 left-40 text-xs font-bold px-2 py-1 rounded">
                                     <button
                                         class="group flex items-center bg-purple-50 text-purple-600 px-2 py-1 rounded-md text-sm hover:bg-purple-100">
                                         <i class="material-icons">image</i>
                                         <div
-                                            class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-in-out bg-white text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] shadow-lg whitespace-nowrap">
-                                            View similar</div>
+                                            class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 sm:group-hover:translate-x-0 sm:group-hover:opacity-100 transition-all duration-300 ease-in-out bg-white text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] shadow-lg whitespace-nowrap">
+                                            View similar
+                                        </div>
                                     </button>
                                 </div>
+
+                                <div class="relative">
+                                    <img id="productImage1" src="{{ asset('asset/img/best10.webp') }}" alt="Product"
+                                        class="w-full h-56 object-cover border border-gray-300 shadow rounded-lg transition-opacity duration-300 ease-in-out">
+                                    <div class="absolute top-48 left-2 flex items-start space-x-2">
+                                        <button onclick="changeImage(-1, 'productImage1')"
+                                            class="bg-white text-xs font-bold p-1 rounded-full">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M15 19l-7-7 7-7" />
+                                            </svg>
+                                        </button>
+                                        <button onclick="changeImage(1, 'productImage1')"
+                                            class="bg-white text-xs font-bold p-1 rounded-full">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="p-2">
+                                    <div class="flex items-center">
+                                        <div class="text-base font-semibold">₹24,733</div>
+                                        <div class="text-sm ml-2 line-through text-gray-500">₹32,282</div>
+                                    </div>
+                                    <p class="text-pink-600 font-semibold text-sm mt-1">Check delivery date</p>
+                                    <p class="text-xs text-gray-600 mt-1">Sameera Diamond Drop Earrings</p>
+                                </div>
+
+                                <div
+                                    class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                                    <button
+                                        class="text-lg sm:text-base text-[12px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950">
+                                        Try at Home
+                                    </button>
+                                    <button
+                                        class="border border-green-500 text-green-500 text-xs font-bold p-1 sm:p-2 rounded-[12px]">
+                                        <i class="material-icons">camera_alt</i>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Product Card 2 -->
+                        <div
+                            class="group rounded-lg relative w-full max-w-sm overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg hover:h-96">
+                            <div class="p-1">
+                                <span
+                                    class="absolute top-2 z-10 left-2 bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
+                                <div
+                                    class="absolute top-2 right-2 z-10 opacity-0 sm:opacity-100 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                                    <button class="bg-white p-1 rounded-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-black" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="absolute top-48 z-10 left-40 text-xs font-bold px-2 py-1 rounded">
+                                    <button
+                                        class="group flex items-center bg-purple-50 text-purple-600 px-2 py-1 rounded-md text-sm hover:bg-purple-100">
+                                        <i class="material-icons">image</i>
+                                        <div
+                                            class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 sm:group-hover:translate-x-0 sm:group-hover:opacity-100 transition-all duration-300 ease-in-out bg-white text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] shadow-lg whitespace-nowrap">
+                                            View similar
+                                        </div>
+                                    </button>
+                                </div>
+
+                                <div class="relative">
+                                    <img id="productImage2" src="{{ asset('asset/img/best10.webp') }}" alt="Product"
+                                        class="w-full h-56 object-cover border border-gray-300 shadow rounded-lg transition-opacity duration-300 ease-in-out">
+                                    <div class="absolute top-48 left-2 flex items-start space-x-2">
+                                        <button onclick="changeImage(-1, 'productImage2')"
+                                            class="bg-white text-xs font-bold p-1 rounded-full">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M15 19l-7-7 7-7" />
+                                            </svg>
+                                        </button>
+                                        <button onclick="changeImage(1, 'productImage2')"
+                                            class="bg-white text-xs font-bold p-1 rounded-full">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="p-2">
+                                    <div class="flex items-center">
+                                        <div class="text-base font-semibold">₹24,733</div>
+                                        <div class="text-sm ml-2 line-through text-gray-500">₹32,282</div>
+                                    </div>
+                                    <p class="text-pink-600 font-semibold text-sm mt-1">Check delivery date</p>
+                                    <p class="text-xs text-gray-600 mt-1">Sameera Diamond Drop Earrings</p>
+                                </div>
+
+                                <div
+                                    class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                                    <button
+                                        class="text-lg sm:text-base text-[12px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950">
+                                        Try at Home
+                                    </button>
+                                    <button
+                                        class="border border-green-500 text-green-500 text-xs font-bold p-1 sm:p-2 rounded-[12px]">
+                                        <i class="material-icons">camera_alt</i>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Product Card 3 -->
+                        <div
+                            class="group rounded-lg relative w-full max-w-sm overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg hover:h-96">
+                            <div class="p-1">
+                                <span
+                                    class="absolute top-2 z-10 left-2 bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
+                                <div
+                                    class="absolute top-2 right-2 z-10 opacity-0 sm:opacity-100 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                                    <button class="bg-white p-1 rounded-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-black" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="absolute top-48 z-10 left-40 text-xs font-bold px-2 py-1 rounded">
+                                    <button
+                                        class="group flex items-center bg-purple-50 text-purple-600 px-2 py-1 rounded-md text-sm hover:bg-purple-100">
+                                        <i class="material-icons">image</i>
+                                        <div
+                                            class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 sm:group-hover:translate-x-0 sm:group-hover:opacity-100 transition-all duration-300 ease-in-out bg-white text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] shadow-lg whitespace-nowrap">
+                                            View similar
+                                        </div>
+                                    </button>
+                                </div>
+
                                 <div class="relative">
                                     <img id="productImage" src="{{ asset('asset/img/best10.webp') }}" alt="Product"
                                         class="w-full h-56 object-cover border border-gray-300 shadow rounded-lg transition-opacity duration-300 ease-in-out">
@@ -428,78 +573,7 @@
                                         </button>
                                     </div>
                                 </div>
-                                <div class="p-2">
-                                    <div class="flex items-center">
-                                        <div class="text-base font-semibold">₹24,733</div>
-                                        <div class="text-sm ml-2 line-through text-gray-500">₹32,282</div>
-                                    </div>
-                                    <p class="text-pink-600 font-semibold text-sm mt-1">Check delivery date</p>
-                                    <p class="text-xs text-gray-600 mt-1">Sameera Diamond Drop Earrings</p>
-                                </div>
-                                <div
-                                    class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
-                                    <!-- Buttons to open the modal -->
-                                    <div class="flex gap-2">
-                                        <button onclick="openModal()"
-                                            class="text-lg font-bold px-6 py-1 text-primary rounded-[12px] border border-purple-950">
-                                            Try at Home
-                                        </button>
-                                        <button onclick="openModal()"
-                                            class="border border-green-500 text-green-500 text-xs font-bold p-2 rounded-[12px]">
-                                            <i class="material-icons">camera_alt</i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Product Card 2 -->
-                        <div
-                            class="group rounded-lg relative w-full max-w-sm overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg hover:h-96">
-                            <div class="p-1">
-                                <span
-                                    class="absolute top-2 z-10 left-2 bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
-                                <div
-                                    class="absolute top-2 right-2 z-10 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
-                                    <button class="bg-white p-1 rounded-full">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-black" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="absolute top-48 z-10 left-40 text-xs font-bold px-2 py-1 rounded">
-                                    <button
-                                        class="group flex items-center bg-purple-50 text-purple-600 px-2 py-1 rounded-md text-sm hover:bg-purple-100">
-                                        <i class="material-icons">image</i>
-                                        <div
-                                            class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-in-out bg-white text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] shadow-lg whitespace-nowrap">
-                                            View similar</div>
-                                    </button>
-                                </div>
-                                <div class="relative">
-                                    <img id="productImage2" src="{{ asset('asset/img/best10.webp') }}" alt="Product"
-                                        class="w-full h-56 object-cover border border-gray-300 shadow rounded-lg transition-opacity duration-300 ease-in-out">
-                                    <div class="absolute top-48 left-2 flex items-start space-x-2">
-                                        <button onclick="changeImage(-1)"
-                                            class="bg-white text-xs font-bold p-1 rounded-full">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M15 19l-7-7 7-7" />
-                                            </svg>
-                                        </button>
-                                        <button onclick="changeImage(1)"
-                                            class="bg-white text-xs font-bold p-1 rounded-full">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M9 5l7 7-7 7" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
                                 <div class="p-2">
                                     <div class="flex items-center">
                                         <div class="text-base font-semibold">₹24,733</div>
@@ -508,84 +582,19 @@
                                     <p class="text-pink-600 font-semibold text-sm mt-1">Check delivery date</p>
                                     <p class="text-xs text-gray-600 mt-1">Sameera Diamond Drop Earrings</p>
                                 </div>
+
                                 <div
-                                    class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
+                                    class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <button
-                                        class="text-lg font-bold px-6 py-1 text-primary rounded-[12px] border border-purple-950">Try
-                                        at Home</button>
+                                        class="text-lg sm:text-base text-[12px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950">
+                                        Try at Home
+                                    </button>
                                     <button
-                                        class="border border-green-500 text-green-500 text-xs font-bold p-2 rounded-[12px]">
+                                        class="border border-green-500 text-green-500 text-xs font-bold p-1 sm:p-2 rounded-[12px]">
                                         <i class="material-icons">camera_alt</i>
                                     </button>
                                 </div>
-                            </div>
-                        </div>
 
-                        <!-- Product Card 3 -->
-                        <div
-                            class="group rounded-lg relative w-full max-w-sm overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg hover:h-96">
-                            <div class="p-1">
-                                <span
-                                    class="absolute top-2 z-10 left-2 bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
-                                <div
-                                    class="absolute top-2 right-2 z-10 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
-                                    <button class="bg-white p-1 rounded-full">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-black" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="absolute top-48 z-10 left-40 text-xs font-bold px-2 py-1 rounded">
-                                    <button
-                                        class="group flex items-center bg-purple-50 text-purple-600 px-2 py-1 rounded-md text-sm hover:bg-purple-100">
-                                        <i class="material-icons">image</i>
-                                        <div
-                                            class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-in-out bg-white text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] shadow-lg whitespace-nowrap">
-                                            View similar</div>
-                                    </button>
-                                </div>
-                                <div class="relative">
-                                    <img id="productImage3" src="{{ asset('asset/img/best10.webp') }}" alt="Product"
-                                        class="w-full h-56 object-cover border border-gray-300 shadow rounded-lg transition-opacity duration-300 ease-in-out">
-                                    <div class="absolute top-48 left-2 flex items-start space-x-2">
-                                        <button onclick="changeImage(-1)"
-                                            class="bg-white text-xs font-bold p-1 rounded-full">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M15 19l-7-7 7-7" />
-                                            </svg>
-                                        </button>
-                                        <button onclick="changeImage(1)"
-                                            class="bg-white text-xs font-bold p-1 rounded-full">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M9 5l7 7-7 7" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="p-2">
-                                    <div class="flex items-center">
-                                        <div class="text-base font-semibold">₹24,733</div>
-                                        <div class="text-sm ml-2 line-through text-gray-500">₹32,282</div>
-                                    </div>
-                                    <p class="text-pink-600 font-semibold text-sm mt-1">Check delivery date</p>
-                                    <p class="text-xs text-gray-600 mt-1">Sameera Diamond Drop Earrings</p>
-                                </div>
-                                <div
-                                    class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
-                                    <button
-                                        class="text-lg font-bold px-6 py-1 text-primary rounded-[12px] border border-purple-950">Try
-                                        at Home</button>
-                                    <button
-                                        class="border border-green-500 text-green-500 text-xs font-bold p-2 rounded-[12px]">
-                                        <i class="material-icons">camera_alt</i>
-                                    </button>
-                                </div>
                             </div>
                         </div>
 
@@ -596,7 +605,7 @@
                                 <span
                                     class="absolute top-2 z-10 left-2 bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
                                 <div
-                                    class="absolute top-2 right-2 z-10 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
+                                    class="absolute top-2 right-2 z-10 opacity-0 sm:opacity-100 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <button class="bg-white p-1 rounded-full">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-black" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
@@ -605,17 +614,20 @@
                                         </svg>
                                     </button>
                                 </div>
+
                                 <div class="absolute top-48 z-10 left-40 text-xs font-bold px-2 py-1 rounded">
                                     <button
                                         class="group flex items-center bg-purple-50 text-purple-600 px-2 py-1 rounded-md text-sm hover:bg-purple-100">
                                         <i class="material-icons">image</i>
                                         <div
-                                            class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-in-out bg-white text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] shadow-lg whitespace-nowrap">
-                                            View similar</div>
+                                            class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 sm:group-hover:translate-x-0 sm:group-hover:opacity-100 transition-all duration-300 ease-in-out bg-white text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] shadow-lg whitespace-nowrap">
+                                            View similar
+                                        </div>
                                     </button>
                                 </div>
+
                                 <div class="relative">
-                                    <img id="productImage4" src="{{ asset('asset/img/best10.webp') }}" alt="Product"
+                                    <img id="productImage" src="{{ asset('asset/img/best10.webp') }}" alt="Product"
                                         class="w-full h-56 object-cover border border-gray-300 shadow rounded-lg transition-opacity duration-300 ease-in-out">
                                     <div class="absolute top-48 left-2 flex items-start space-x-2">
                                         <button onclick="changeImage(-1)"
@@ -636,6 +648,7 @@
                                         </button>
                                     </div>
                                 </div>
+
                                 <div class="p-2">
                                     <div class="flex items-center">
                                         <div class="text-base font-semibold">₹24,733</div>
@@ -644,16 +657,19 @@
                                     <p class="text-pink-600 font-semibold text-sm mt-1">Check delivery date</p>
                                     <p class="text-xs text-gray-600 mt-1">Sameera Diamond Drop Earrings</p>
                                 </div>
+
                                 <div
-                                    class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
+                                    class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <button
-                                        class="text-lg font-bold px-6 py-1 text-primary rounded-[12px] border border-purple-950">Try
-                                        at Home</button>
+                                        class="text-lg sm:text-base text-[12px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950">
+                                        Try at Home
+                                    </button>
                                     <button
-                                        class="border border-green-500 text-green-500 text-xs font-bold p-2 rounded-[12px]">
+                                        class="border border-green-500 text-green-500 text-xs font-bold p-1 sm:p-2 rounded-[12px]">
                                         <i class="material-icons">camera_alt</i>
                                     </button>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -728,13 +744,15 @@
                                     <div
                                         class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                         <button
-                                            class="text-lg font-bold px-6 py-1 text-primary rounded-[12px] border border-purple-950">Try
-                                            at Home</button>
+                                            class="text-lg sm:text-base text-[12px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950">
+                                            Try at Home
+                                        </button>
                                         <button
-                                            class="border border-green-500 text-green-500 text-xs font-bold p-2 rounded-[12px]">
+                                            class="border border-green-500 text-green-500 text-xs font-bold p-1 sm:p-2 rounded-[12px]">
                                             <i class="material-icons">camera_alt</i>
                                         </button>
                                     </div>
+
                                 </div>
                             </div>
 
@@ -746,7 +764,7 @@
                                     <span
                                         class="absolute top-2 z-10 left-2 bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
                                     <div
-                                        class="absolute top-2 right-2 z-10 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
+                                        class="absolute top-2 right-2 z-10 opacity-0 sm:opacity-100 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                         <button class="bg-white p-1 rounded-full">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-black"
                                                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -761,7 +779,7 @@
                                             class="group flex items-center bg-purple-50 text-purple-600 px-2 py-1 rounded-md text-sm hover:bg-purple-100">
                                             <i class="material-icons">image</i>
                                             <div
-                                                class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-in-out bg-white text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] shadow-lg whitespace-nowrap">
+                                                class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 sm:group-hover:translate-x-0 sm:group-hover:opacity-100 transition-all duration-300 ease-in-out bg-white text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] shadow-lg whitespace-nowrap">
                                                 View similar
                                             </div>
                                         </button>
@@ -800,16 +818,17 @@
                                     </div>
 
                                     <div
-                                        class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
+                                        class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                         <button
-                                            class="text-lg font-bold px-6 py-1 text-primary rounded-[12px] border border-purple-950">
+                                            class="text-lg sm:text-base text-[12px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950">
                                             Try at Home
                                         </button>
                                         <button
-                                            class="border border-green-500 text-green-500 text-xs font-bold p-2 rounded-[12px]">
+                                            class="border border-green-500 text-green-500 text-xs font-bold p-1 sm:p-2 rounded-[12px]">
                                             <i class="material-icons">camera_alt</i>
                                         </button>
                                     </div>
+
                                 </div>
                             </div>
 
@@ -853,10 +872,12 @@
 
             <div class="bg-white">
                 <!-- Header Section -->
-                <div class="bg-primary-gradient text-white py-4 px-6 text-center">
+                <div class="relative bg-[#300a30] text-white py-4 px-6 text-center">
                     <span class="text-lg lg:text-base font-bold">Know More about CaratLane</span>
-                    <div>line</div>
+                    <div class="absolute bottom-[-8px] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white rotate-45"></div>
                 </div>
+                
+                
 
                 <!-- Content Section -->
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -1145,6 +1166,48 @@
     </script>
 
     <script>
+        const images = {
+            "productImage1": ["{{ asset('asset/img/best10.webp') }}", "{{ asset('asset/img/best4.webp') }}",
+                "{{ asset('asset/img/best8.webp') }}"
+            ],
+            "productImage2": ["{{ asset('asset/img/all4.jpg') }}", "{{ asset('asset/img/all11.jpg') }}",
+                "{{ asset('asset/img/all12.jpg') }}"
+            ]
+        };
+
+        // Current index for each product's image
+        let currentIndexes = {
+            "productImage1": 0,
+            "productImage2": 0
+        };
+
+        // Change image function with direction and specific product ID
+        function changeImage(direction, productImageId) {
+            const productImage = document.getElementById(productImageId);
+            const productImages = images[productImageId];
+
+            // Fade out the current image
+            productImage.classList.add('opacity-0');
+
+            // Update the image source after the fade-out transition
+            setTimeout(() => {
+                currentIndexes[productImageId] += direction;
+
+                // Wrap around the index if out of bounds
+                if (currentIndexes[productImageId] < 0) {
+                    currentIndexes[productImageId] = productImages.length - 1;
+                } else if (currentIndexes[productImageId] >= productImages.length) {
+                    currentIndexes[productImageId] = 0;
+                }
+
+                // Set new image source and fade it in
+                productImage.src = productImages[currentIndexes[productImageId]];
+                productImage.classList.remove('opacity-0');
+            }, 300); // Duration matches CSS transition duration
+        }
+    </script>
+
+    <script>
         const filterButton = document.getElementById('filterButton');
         const filterModal = document.getElementById('filterModal');
         const closeFilterModal = document.getElementById('closeFilterModal');
@@ -1326,35 +1389,5 @@
                 }, 300);
             }
         });
-
-        const images = [
-            "{{ asset('asset/img/best10.webp') }}", // First Image
-            "{{ asset('asset/img/best4.webp') }}", // Second Image
-            "{{ asset('asset/img/best8.webp') }}" // Third Image
-        ];
-        let currentIndex = 0;
-
-        function changeImage(direction) {
-            const productImage = document.getElementById("productImage");
-
-            // Fade out the current image
-            productImage.classList.add('opacity-0');
-
-            setTimeout(() => {
-                currentIndex += direction;
-
-                // Loop back to the first image if we're at the end
-                if (currentIndex < 0) {
-                    currentIndex = images.length - 1;
-                } else if (currentIndex >= images.length) {
-                    currentIndex = 0;
-                }
-
-                productImage.src = images[currentIndex];
-
-                // Fade in the new image
-                productImage.classList.remove('opacity-0');
-            }, 300); // Duration should match the CSS transition duration
-        }
     </script>
 @endsection
