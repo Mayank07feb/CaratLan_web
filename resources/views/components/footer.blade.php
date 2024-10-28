@@ -10,21 +10,21 @@
                         <ul class="space-y-2 text-sm">
                             <li><a href="{{route('daimondguide,')}}" class="hover:text-caratlane-purple">Diamond guide</a></li>
                             <li><a href="{{route('jewelleryguide')}}" class="hover:text-caratlane-purple">Jewellery guide</a></li>
-                            <li><a href="#" class="hover:text-caratlane-purple">Gemstones guide</a></li>
-                            <li><a href="#" class="hover:text-caratlane-purple">Gold rate</a></li>
-                            <li><a href="#" class="hover:text-caratlane-purple">Egold</a></li>
+                            <li><a href="{{route('gemstone')}}" class="hover:text-caratlane-purple">Gemstones guide</a></li>
+                            <li><a href="{{route('goldrate')}}" class="hover:text-caratlane-purple">Gold rate</a></li>
+                            <li><a href="{{route('egold')}}" class="hover:text-caratlane-purple">Egold</a></li>
                             <li><a href="#" class="hover:text-caratlane-purple">Ear piercing</a></li>
-                            <li><a href="#" class="hover:text-caratlane-purple">Glossary</a></li>
+                            <li><a href="{{route('glosarry')}}" class="hover:text-caratlane-purple">Glossary</a></li>
                         </ul>
                     </div>
                     <div class="w-full">
                         <h3 class="font-semibold mb-4">CaratLane Advantage</h3>
                         <ul class="space-y-2 text-sm">
-                            <li><a href="#" class="hover:text-caratlane-purple">15-day returns</a></li>
-                            <li><a href="#" class="hover:text-caratlane-purple">Free shipping</a></li>
-                            <li><a href="#" class="hover:text-caratlane-purple">Postcards</a></li>
+                            <li><a href="{{route('policy')}}" class="hover:text-caratlane-purple">15-day returns</a></li>
+                            <li><a href="{{route('shipping')}}" class="hover:text-caratlane-purple">Free shipping</a></li>
+                            <li><a href="{{route('postcard')}}" class="hover:text-caratlane-purple">Postcards</a></li>
                             <li><a href="#" class="hover:text-caratlane-purple">Gold exchange</a></li>
-                            <li><a href="#" class="hover:text-caratlane-purple">#Wearyourwins</a></li>
+                            <li><a href="{{route('wearyourwins')}}" class="hover:text-caratlane-purple">#Wearyourwins</a></li>
                         </ul>
                     </div>
                 </div>
@@ -76,15 +76,15 @@
             <div>
                 <h3 class="font-semibold mb-4">Customer Service</h3>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-caratlane-purple">Return policy</a></li>
-                    <li><a href="#" class="hover:text-caratlane-purple">Order status</a></li>
+                    <li><a href="{{route('policy')}}" class="hover:text-caratlane-purple">Return policy</a></li>
+                    <li><a href="{{route('order')}}" class="hover:text-caratlane-purple">Order status</a></li>
                 </ul>
             </div>
             <div>
                 <h3 class="font-semibold mb-4">About Us</h3>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-caratlane-purple">Our story</a></li>
-                    <li><a href="#" class="hover:text-caratlane-purple">Press</a></li>
+                    <li><a href="{{route('ourstory')}}" class="hover:text-caratlane-purple">Our story</a></li>
+                    <li><a href="{{route('press')}}" class="hover:text-caratlane-purple">Press</a></li>
                     <li><a href="{{ route('blogs') }}" class="hover:text-caratlane-purple">Blog</a></li>
                     <li><a href="#" class="hover:text-caratlane-purple">Careers</a></li>
                 </ul>
@@ -131,7 +131,7 @@
                     </div>
 
                     <div class="flex justify-start">
-                        <a href="#"
+                        <a href="{{route('findstore')}}"
                             class="border border-[#de57e5] text-[#2e0a46] rounded-[10px] px-6 py-2 hover:bg-purple-50 hover:text-purple-700">
                             <i class="fas fa-store mr-2"></i> FIND A STORE
                         </a>
