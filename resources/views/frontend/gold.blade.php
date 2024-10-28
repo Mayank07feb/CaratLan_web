@@ -438,13 +438,17 @@
                                 </div>
                                 <div
                                     class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
-                                    <button
-                                        class="text-lg font-bold px-6 py-1 text-primary rounded-[12px] border border-purple-950">Try
-                                        at Home</button>
-                                    <button
-                                        class="border border-green-500 text-green-500 text-xs font-bold p-2 rounded-[12px]">
-                                        <i class="material-icons">camera_alt</i>
-                                    </button>
+                                    <!-- Buttons to open the modal -->
+                                    <div class="flex gap-2">
+                                        <button onclick="openModal()"
+                                            class="text-lg font-bold px-6 py-1 text-primary rounded-[12px] border border-purple-950">
+                                            Try at Home
+                                        </button>
+                                        <button onclick="openModal()"
+                                            class="border border-green-500 text-green-500 text-xs font-bold p-2 rounded-[12px]">
+                                            <i class="material-icons">camera_alt</i>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -663,12 +667,12 @@
                         <div class="grid grid-cols-12 gap-4">
                             <!-- Product Card 1 -->
                             <div
-                                class="col-span-3 group rounded-lg relative w-full overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg hover:h-96">
+                                class="col-span-6 sm:col-span-3 group rounded-lg relative w-full overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg hover:h-96">
                                 <div class="p-1">
                                     <span
                                         class="absolute top-2 z-10 left-2 bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
                                     <div
-                                        class="absolute top-2 right-2 z-10 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
+                                        class="absolute top-2 right-2 z-10 opacity-0 sm:opacity-100 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                         <button class="bg-white p-1 rounded-full">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-black"
                                                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -683,7 +687,7 @@
                                             class="group flex items-center bg-purple-50 text-purple-600 px-2 py-1 rounded-md text-sm hover:bg-purple-100">
                                             <i class="material-icons">image</i>
                                             <div
-                                                class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-in-out bg-white text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] shadow-lg whitespace-nowrap">
+                                                class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 sm:group-hover:translate-x-0 sm:group-hover:opacity-100 transition-all duration-300 ease-in-out bg-white text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] shadow-lg whitespace-nowrap">
                                                 View similar
                                             </div>
                                         </button>
@@ -722,11 +726,10 @@
                                     </div>
 
                                     <div
-                                        class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
+                                        class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                         <button
-                                            class="text-lg font-bold px-6 py-1 text-primary rounded-[12px] border border-purple-950">
-                                            Try at Home
-                                        </button>
+                                            class="text-lg font-bold px-6 py-1 text-primary rounded-[12px] border border-purple-950">Try
+                                            at Home</button>
                                         <button
                                             class="border border-green-500 text-green-500 text-xs font-bold p-2 rounded-[12px]">
                                             <i class="material-icons">camera_alt</i>
@@ -735,9 +738,10 @@
                                 </div>
                             </div>
 
+
                             <!-- Product Card 2 -->
                             <div
-                                class="col-span-3 group rounded-lg relative w-full overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg hover:h-96">
+                                class="col-span-6 sm:col-span-3 group rounded-lg relative w-full overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg hover:h-96">
                                 <div class="p-1">
                                     <span
                                         class="absolute top-2 z-10 left-2 bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
@@ -810,7 +814,7 @@
                             </div>
 
                             <!-- Filter Section -->
-                            <div class="col-span-6 bg-purple-50 rounded-lg p-6">
+                            <div class="col-span-12 sm:col-span-6 bg-purple-50 rounded-lg p-6">
                                 <h2 class="text-purple-600 font-semibold mb-4">Filter by Price</h2>
                                 <div class="grid grid-cols-4 gap-2">
                                     <button
@@ -850,56 +854,67 @@
             <div class="bg-white">
                 <!-- Header Section -->
                 <div class="bg-primary-gradient text-white py-4 px-6 text-center">
-                  <span class="text-lg lg:text-base font-bold">Know More about CaratLane</span>
-                  <div>line</div>
+                    <span class="text-lg lg:text-base font-bold">Know More about CaratLane</span>
+                    <div>line</div>
                 </div>
-              
+
                 <!-- Content Section -->
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                  <h1 class="text-3xl md:text-4xl lg:text-3xl font-bold text-gray-800 mb-4 text-center md:text-left">Rings | CaratLane</h1>
-                  
-                  <p class="text-gray-700 text-base md:text-lg lg:text-base leading-relaxed mb-6 text-center md:text-left">
-                    Rings are among the most meaningful gifts you can offer—to a loved one or to yourself. Whether they mark a special occasion, signify a lifelong commitment, 
-                    or celebrate a moment of joy, or simply reward yourself for personal achievement, rings are more than just pieces of jewellery—they symbolise love, 
-                    milestones, and memories. Each ring tells a story, and at CaratLane, we believe in crafting rings that stand the test of time and resonate with the unique 
-                    stories of those who wear them.
-                  </p>
-              
-                  <p class="text-gray-700 text-base md:text-lg lg:text-base leading-relaxed mb-6 text-center md:text-left">
-                    At the heart of CaratLane’s philosophy is our commitment to excellence in design and craftsmanship. Our in-house jewellery designers are passionate about 
-                    creating timeless, elegant jewellery while imbuing the designs with modern sensibilities. Every ring is a product of meticulous planning, innovative design, 
-                    and handcrafted perfection, ensuring that each piece is as unique as the person it is intended for and that our rings are not just beautiful but also hold a 
-                    deep personal significance.
-                  </p>
-              
-                  <!-- Rings Types Section -->
-                  <div>
-                    <h2 class="text-2xl md:text-3xl lg:text-2xl font-bold text-gray-800 mb-4">Types of Rings and CaratLane Collections</h2>
-              
-                    <ul class="list-disc pl-5 space-y-4">
-                      <li class="text-primary text-lg md:text-xl lg:text-lg font-semibold">
-                        <a href="#" class="hover:text-secondary">Engagement Rings: Timeless Love Tokens</a>
-                      </li>
-                      <li class="text-primary text-lg md:text-xl lg:text-lg font-semibold">
-                        <a href="#" class="hover:text-secondary">Cocktail Rings: Glamorous Statements</a>
-                      </li>
-                      <li class="text-primary text-lg md:text-xl lg:text-lg font-semibold">
-                        <a href="#" class="hover:text-secondary">Gold Rings: Eternal Gold Elegance</a>
-                      </li>
-                    </ul>
-                  </div>
-              
-                  <!-- Footer Section -->
-                  <div class="py-4 mt-8">
-                    <div class="w-full flex justify-end">
-                      <button class="bg-secondary text-white rounded-full px-6 py-2 hover:bg-purple-700 focus:outline-none">
-                        Learn More
-                      </button>
+                    <h1 class="text-3xl md:text-4xl lg:text-3xl font-bold text-gray-800 mb-4 text-center md:text-left">
+                        Rings | CaratLane</h1>
+
+                    <p
+                        class="text-gray-700 text-base md:text-lg lg:text-base leading-relaxed mb-6 text-center md:text-left">
+                        Rings are among the most meaningful gifts you can offer—to a loved one or to yourself. Whether they
+                        mark a special occasion, signify a lifelong commitment,
+                        or celebrate a moment of joy, or simply reward yourself for personal achievement, rings are more
+                        than just pieces of jewellery—they symbolise love,
+                        milestones, and memories. Each ring tells a story, and at CaratLane, we believe in crafting rings
+                        that stand the test of time and resonate with the unique
+                        stories of those who wear them.
+                    </p>
+
+                    <p
+                        class="text-gray-700 text-base md:text-lg lg:text-base leading-relaxed mb-6 text-center md:text-left">
+                        At the heart of CaratLane’s philosophy is our commitment to excellence in design and craftsmanship.
+                        Our in-house jewellery designers are passionate about
+                        creating timeless, elegant jewellery while imbuing the designs with modern sensibilities. Every ring
+                        is a product of meticulous planning, innovative design,
+                        and handcrafted perfection, ensuring that each piece is as unique as the person it is intended for
+                        and that our rings are not just beautiful but also hold a
+                        deep personal significance.
+                    </p>
+
+                    <!-- Rings Types Section -->
+                    <div>
+                        <h2 class="text-2xl md:text-3xl lg:text-2xl font-bold text-gray-800 mb-4">Types of Rings and
+                            CaratLane Collections</h2>
+
+                        <ul class="list-disc pl-5 space-y-4">
+                            <li class="text-primary text-lg md:text-xl lg:text-lg font-semibold">
+                                <a href="#" class="hover:text-secondary">Engagement Rings: Timeless Love Tokens</a>
+                            </li>
+                            <li class="text-primary text-lg md:text-xl lg:text-lg font-semibold">
+                                <a href="#" class="hover:text-secondary">Cocktail Rings: Glamorous Statements</a>
+                            </li>
+                            <li class="text-primary text-lg md:text-xl lg:text-lg font-semibold">
+                                <a href="#" class="hover:text-secondary">Gold Rings: Eternal Gold Elegance</a>
+                            </li>
+                        </ul>
                     </div>
-                  </div>
+
+                    <!-- Footer Section -->
+                    <div class="py-4 mt-8">
+                        <div class="w-full flex justify-end">
+                            <button
+                                class="bg-secondary text-white rounded-full px-6 py-2 hover:bg-purple-700 focus:outline-none">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              
+            </div>
+
 
             <!-- SORT Button Navigation (your existing code) -->
             <nav class="fixed bottom-0 left-0 right-0 bg-[#4F3267] text-white p-4 z-20 md:hidden">
@@ -1013,6 +1028,121 @@
             </div>
 
     </main>
+
+
+
+    <!-- Modal Structure -->
+    <div id="videoCallModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-2xl w-full max-w-3xl p-6 shadow-xl relative">
+            <!-- Close Button -->
+            <div class="relative">
+                <button onclick="closeModal()"
+                    class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-xl transition duration-200 ease-in-out">
+                    &times;
+                </button>
+
+                <!-- Modal Header -->
+                <h2 class="text-lg font-semibold bg-secondary p-4 text-center mb-4 text-primary rounded-lg shadow-md">
+                    Live Video Call at Your Convenience!
+                </h2>
+            </div>
+
+
+            <div class="flex flex-col md:flex-row items-start gap-4">
+                <!-- Left Section with Image/Video -->
+                <div class="w-full md:w-1/2 bg-white rounded-xl p-4 shadow-md flex flex-col items-center">
+                    <!-- Video Element -->
+                    <video src="{{ asset('asset/videos/popup.mp4') }}" class="w-full rounded-lg object-cover"></video>
+
+                    <!-- Description Text -->
+                    <p class="text-xs text-center text-primary px-4 py-2 bg-purple-50 rounded-lg mt-2 max-w-xs">
+                        Want to get a closer look? Hop on a video call with our design consultants and see your favorite
+                        designs live.
+                    </p>
+
+                    <!-- Additional Note -->
+                    <p class="mt-4 text-center text-xs text-gray-500 bg-yellow-50 px-3 py-2 rounded-lg w-full max-w-xs">
+                        Real images and videos will be shared via WhatsApp
+                    </p>
+                </div>
+
+                <!-- Right Section with Inputs -->
+                <div class="w-full md:w-1/2 bg-white rounded-xl p-4 shadow-md flex flex-col items-center">
+                    <!-- Mobile Number -->
+                    <div class="flex mb-6 w-full">
+                        <div class="flex-shrink-0">
+                            <input type="text" value="+91" readonly
+                                class="w-16 px-4 py-3 bg-secondary border border-transparent rounded-l-lg text-sm text-center focus:outline-none focus:border-purple-600 focus:ring-1 focus:ring-purple-600" />
+                        </div>
+                        <div class="flex-1 relative">
+                            <input type="tel" placeholder="Enter your mobile number" maxlength="10"
+                                pattern="[0-9]{10}" required
+                                class="w-full px-4 py-3 bg-secondary border border-transparent rounded-r-lg text-sm focus:outline-none focus:border-purple-600 focus:ring-1 focus:ring-purple-600" />
+                            <button type="button"
+                                class="absolute right-3 top-1/2 transform -translate-y-1/2 text-purple-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <!-- Pincode Input with Locate Me Button -->
+                    <div class="w-full">
+                        <div class="flex w-full">
+                            <input type="text" placeholder="Enter Pincode*"
+                                class="flex-grow px-4 py-3 bg-secondary border border-transparent rounded-l-lg text-sm focus:outline-none focus:border-purple-600 focus:ring-1 focus:ring-purple-600" />
+                            <button
+                                class="px-4 py-3 bg-secondary text-secondary font-medium text-xs rounded-r-lg hover:bg-primary-dark focus:outline-none focus:ring-1 focus:ring-purple-600 transition">
+                                LOCATE ME
+                            </button>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Language Preference Section -->
+                    <div>
+                        <p class="text-gray-600 font-medium text-sm">Language Preference</p>
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <button class="px-3 py-1 rounded-full bg-purple-500 text-white text-xs">English</button>
+                            <button class="px-3 py-1 rounded-full bg-purple-500 text-white text-xs">Hindi</button>
+                            <button class="px-3 py-1 rounded-full bg-purple-500 text-white text-xs">Tamil</button>
+                            <button class="px-3 py-1 rounded-full bg-purple-500 text-white text-xs">Telugu</button>
+                            <button class="px-3 py-1 rounded-full bg-purple-500 text-white text-xs">Marathi</button>
+                            <button class="px-3 py-1 rounded-full bg-purple-500 text-white text-xs">Gujarati</button>
+                            <button class="px-3 py-1 rounded-full bg-purple-500 text-white text-xs">Malayalam</button>
+                            <button class="px-3 py-1 rounded-full bg-purple-500 text-white text-xs">Others</button>
+                        </div>
+                    </div>
+
+                    <!-- Schedule Button -->
+                    <button
+                        class="w-full py-2 bg-green-400 text-white rounded-lg font-bold text-base mt-20 flex items-center justify-center">
+                        <span class="material-icons mr-2">videocam</span> <!-- Video Camera Icon -->
+                        SCHEDULE A VIDEO CALL
+                    </button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script>
+        function openModal() {
+            document.getElementById('videoCallModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('videoCallModal').classList.add('hidden');
+        }
+    </script>
 
     <script>
         const filterButton = document.getElementById('filterButton');
