@@ -1212,7 +1212,7 @@
 
     <!-- Modal Similar Designs-->
     <div id="similarModal"
-        class="fixed inset-x-0 bottom-0 z-20 hidden bg-white shadow-xl rounded-t-lg p-6 transition-transform transform translate-y-full ring-1 ring-gray-200">
+        class="fixed inset-x-0 bottom-0 z-20 hidden bg-white shadow-xl rounded-t-[20px] p-6 transition-transform transform translate-y-full ring-1 ring-gray-200">
         <button id="closeModal"
             class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 transition duration-150 ease-in-out text-2xl">&times;</button>
 
@@ -1222,9 +1222,10 @@
         <div class="flex items-center justify-center space-x-4">
             <!-- Left Arrow -->
             <button id="prevBtn"
-                class="p-3 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-600 transition duration-150 ease-in-out focus:outline-none">
-                &lt;
+                class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-600 transition duration-150 ease-in-out focus:outline-none">
+                <i class="fas fa-chevron-left"></i>
             </button>
+
 
             <!-- Slider Items -->
             <div id="slider" class="flex overflow-x-auto space-x-4 scrollbar-hide w-full mx-4">
@@ -1232,35 +1233,35 @@
                 <div
                     class="min-w-[300px] text-center bg-white p-4 rounded-lg shadow-lg transition-transform duration-150 ease-in-out">
                     <img src="{{ asset('asset/img/testing.png') }}" alt="Cyclonic Circle Diamond Ring"
-                        class="w-48 h-48 object-cover rounded-md mx-auto"> <!-- Increased size -->
+                        class="w-48 h-48 object-cover rounded-md mx-auto"> 
                     <p class="mt-2 font-semibold text-gray-600">₹18,722</p>
                     <p class="text-sm text-gray-500">Cyclonic Circle Diamond Ring</p>
                 </div>
                 <div
                     class="min-w-[300px] text-center bg-white p-4 rounded-lg shadow-lg transition-transform duration-150 ease-in-out">
                     <img src="{{ asset('asset/img/testing.png') }}" alt="Gemstone Delight Ring"
-                        class="w-48 h-48 object-cover rounded-md mx-auto"> <!-- Increased size -->
+                        class="w-48 h-48 object-cover rounded-md mx-auto"> 
                     <p class="mt-2 font-semibold text-gray-600">₹17,335</p>
                     <p class="text-sm text-gray-500">Gemstone Delight Ring</p>
                 </div>
                 <div
                     class="min-w-[300px] text-center bg-white p-4 rounded-lg shadow-lg transition-transform duration-150 ease-in-out">
                     <img src="{{ asset('asset/img/testing.png') }}" alt="Ella Diamond Ring"
-                        class="w-48 h-48 object-cover rounded-md mx-auto"> <!-- Increased size -->
+                        class="w-48 h-48 object-cover rounded-md mx-auto"> 
                     <p class="mt-2 font-semibold text-gray-600">₹20,289</p>
                     <p class="text-sm text-gray-500">Ella Diamond Ring</p>
                 </div>
                 <div
                     class="min-w-[300px] text-center bg-white p-4 rounded-lg shadow-lg transition-transform duration-150 ease-in-out">
                     <img src="{{ asset('asset/img/testing.png') }}" alt="Little Mermaid Diamond Ring"
-                        class="w-48 h-48 object-cover rounded-md mx-auto"> <!-- Increased size -->
+                        class="w-48 h-48 object-cover rounded-md mx-auto"> 
                     <p class="mt-2 font-semibold text-gray-600">₹17,221</p>
                     <p class="text-sm text-gray-500">Little Mermaid Diamond Ring</p>
                 </div>
                 <div
                     class="min-w-[300px] text-center bg-white p-4 rounded-lg shadow-lg transition-transform duration-150 ease-in-out">
                     <img src="{{ asset('asset/img/testing.png') }}" alt="Little Mermaid Diamond Ring"
-                        class="w-48 h-48 object-cover rounded-md mx-auto"> <!-- Increased size -->
+                        class="w-48 h-48 object-cover rounded-md mx-auto"> 
                     <p class="mt-2 font-semibold text-gray-600">₹17,221</p>
                     <p class="text-sm text-gray-500">Little Mermaid Diamond Ring</p>
                 </div>
@@ -1268,9 +1269,10 @@
 
             <!-- Right Arrow -->
             <button id="nextBtn"
-                class="p-3 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-600 transition duration-150 ease-in-out focus:outline-none">
-                &gt;
+                class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-600 transition duration-150 ease-in-out focus:outline-none">
+                <i class="fas fa-chevron-right"></i>
             </button>
+
         </div>
     </div>
 
