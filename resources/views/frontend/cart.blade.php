@@ -289,7 +289,7 @@
         </div>
     </main>
 
-    <footer class="bg-[#f6eff6] py-4 px-6 flex items-center justify-between">
+    {{-- <footer class="bg-[#f6eff6] py-4 px-6 flex items-center justify-between">
         <!-- Contact Information -->
         <div class="text-sm text-[#4F3267]">
             <p><strong>Contact Us:</strong> +91-44-66075200 (Helpline) | contactus@caratlane.com</p>
@@ -304,7 +304,7 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/American_Express_logo_%282018%29.svg"
                 alt="American Express" class="h-6">
         </div>
-    </footer>
+    </footer> --}}
 
 
 

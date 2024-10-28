@@ -19,8 +19,17 @@ module.exports = {
         textPrimary: '#4F3267', // Text primary color
         textSecondary: '#DE57E5', // Text secondary color
       },
+      backgroundColor: {
+        primary: '#4F3267',  // Primary background color
+        secondary: '#f6f3f9', // Secondary background color
+      },
+      borderColor: {
+        primary: '#4F3267',  // Primary border color
+        secondary: '#f6f3f9', // Secondary border color
+      },
       backgroundImage: {
         'primary-gradient': 'linear-gradient(90deg, #4F3267 0%, #DE57E5 100%)',
+        'secondary-gradient': 'linear-gradient(to right, #de57e5, #8863fb)',
       },
       screens: {
         'xs': '475px',   // Extra small screens (custom)
