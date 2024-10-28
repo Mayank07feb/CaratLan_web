@@ -21,6 +21,28 @@
             display: none;
             /* For Chrome, Safari, and Opera */
         }
+
+        /* Hide default scrollbar for the slider */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        /* Optional: Add CSS for modal open and close transitions */
+        #similarModal.show {
+            transform: translateY(0);
+        }
+
+        #overlaySimilarImages.show {
+            display: block;
+            /* Show overlay when modal is open */
+        }
     </style>
 
     <main class="mt-12">
@@ -230,8 +252,7 @@
                                 <div class="flex items-center">
                                     <input type="checkbox"
                                         class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
-                                    <label
-                                        class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">Titanium
+                                    <label class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">Titanium
                                         (200)</label>
                                 </div>
                             </div>
@@ -264,8 +285,7 @@
                             <div class="flex items-center">
                                 <input type="checkbox"
                                     class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
-                                <label
-                                    class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">Anniversary
+                                <label class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">Anniversary
                                     (150)</label>
                             </div>
 
@@ -274,8 +294,7 @@
                                 <div class="flex items-center">
                                     <input type="checkbox"
                                         class="h-4 w-4 text-purple-600 focus:outline-none focus:ring-0 border-gray-300 rounded">
-                                    <label
-                                        class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">Birthday
+                                    <label class="ml-2 text-sm text-gray-700 hover:text-purple-600 leading-[28px]">Birthday
                                         (120)</label>
                                 </div>
                                 <div class="flex items-center">
@@ -390,9 +409,10 @@
                                     </button>
                                 </div>
 
+                                <!-- Trigger Button -->
                                 <div class="absolute top-48 z-10 left-40 text-xs font-bold px-2 py-1 rounded">
-                                    <button
-                                        class="group flex items-center bg-purple-50 text-purple-600 px-2 py-1 rounded-md text-sm hover:bg-purple-100">
+                                    <button id="viewSimilarBtn"
+                                        class="group flex items-center text-purple-600 px-2 py-1 rounded-md text-sm">
                                         <i class="material-icons">image</i>
                                         <div
                                             class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 sm:group-hover:translate-x-0 sm:group-hover:opacity-100 transition-all duration-300 ease-in-out bg-white text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] shadow-lg whitespace-nowrap">
@@ -436,11 +456,13 @@
                                 <div
                                     class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <button
-                                        class="text-lg sm:text-base text-[12px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950">
+                                        class="text-lg sm:text-base text-[12px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
+                                        onclick="openModal()">
                                         Try at Home
                                     </button>
                                     <button
-                                        class="border border-green-500 text-green-500 text-xs font-bold p-1 sm:p-2 rounded-[12px]">
+                                        class="border border-green-500 text-green-500 text-xs font-bold p-1 sm:p-2 rounded-[12px]"
+                                        onclick="openModal()">
                                         <i class="material-icons">camera_alt</i>
                                     </button>
                                 </div>
@@ -673,12 +695,9 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Product List End-->
 
-
                     <!-- Product List 2-->
-
                     <div class="container mx-auto mt-10">
                         <div class="grid grid-cols-12 gap-4">
                             <!-- Product Card 1 -->
@@ -866,6 +885,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Product List 2 End-->
 
                 </div>
             </div>
@@ -873,53 +893,92 @@
             <div class="bg-white">
                 <!-- Header Section -->
                 <div class="relative bg-[#300a30] text-white py-4 px-6 text-center">
-                    <span class="text-lg lg:text-base font-bold">Know More about CaratLane</span>
-                    <div class="absolute bottom-[-8px] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white rotate-45"></div>
+                    <span class="text-lg lg:text-base font-bold">Discover the World of CaratLane</span>
+                    <div class="absolute bottom-[-8px] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white rotate-45">
+                    </div>
                 </div>
-                
-                
 
                 <!-- Content Section -->
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                    <h1 class="text-3xl md:text-4xl lg:text-3xl font-bold text-gray-800 mb-4 text-center md:text-left">
+                    <h1 class="text-2xl md:text-3xl lg:text-2xl font-bold text-gray-800 mb-4 text-center md:text-left">
                         Rings | CaratLane</h1>
 
-                    <p
-                        class="text-gray-700 text-base md:text-lg lg:text-base leading-relaxed mb-6 text-center md:text-left">
-                        Rings are among the most meaningful gifts you can offer—to a loved one or to yourself. Whether they
-                        mark a special occasion, signify a lifelong commitment,
-                        or celebrate a moment of joy, or simply reward yourself for personal achievement, rings are more
-                        than just pieces of jewellery—they symbolise love,
-                        milestones, and memories. Each ring tells a story, and at CaratLane, we believe in crafting rings
-                        that stand the test of time and resonate with the unique
+                    <p class="text-gray-700 text-sm md:text-base lg:text-sm leading-relaxed mb-6 text-center md:text-left">
+                        Rings are among the most meaningful gifts you can offer—to a loved one or to yourself. They
+                        symbolize love,
+                        milestones, and memories, telling unique stories. At CaratLane, we believe in crafting rings that
+                        resonate with the
                         stories of those who wear them.
                     </p>
 
-                    <p
-                        class="text-gray-700 text-base md:text-lg lg:text-base leading-relaxed mb-6 text-center md:text-left">
-                        At the heart of CaratLane’s philosophy is our commitment to excellence in design and craftsmanship.
-                        Our in-house jewellery designers are passionate about
-                        creating timeless, elegant jewellery while imbuing the designs with modern sensibilities. Every ring
-                        is a product of meticulous planning, innovative design,
-                        and handcrafted perfection, ensuring that each piece is as unique as the person it is intended for
-                        and that our rings are not just beautiful but also hold a
-                        deep personal significance.
+                    <p class="text-gray-700 text-sm md:text-base lg:text-sm leading-relaxed mb-6 text-center md:text-left">
+                        Our commitment to excellence in design and craftsmanship ensures that every ring is a product of
+                        meticulous
+                        planning, innovative design, and handcrafted perfection, making each piece as unique as the person
+                        it is intended for.
                     </p>
 
-                    <!-- Rings Types Section -->
-                    <div>
-                        <h2 class="text-2xl md:text-3xl lg:text-2xl font-bold text-gray-800 mb-4">Types of Rings and
-                            CaratLane Collections</h2>
+                    <!-- Types of Rings Section -->
+                    <div class="mb-8">
+                        <h2 class="text-xl md:text-2xl lg:text-xl font-bold text-gray-800 mb-4">Explore Our Collections
+                        </h2>
 
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-gray-100 p-4 rounded-lg shadow">
+                                <h3 class="font-semibold text-lg text-gray-800">Engagement Rings</h3>
+                                <p class="text-xs text-gray-600">Timeless love tokens crafted to perfection.</p>
+                                <a href="#" class="text-xs text-primary hover:text-secondary">View Collection</a>
+                            </div>
+
+                            <div class="bg-gray-100 p-4 rounded-lg shadow">
+                                <h3 class="font-semibold text-lg text-gray-800">Cocktail Rings</h3>
+                                <p class="text-xs text-gray-600">Glamorous statements for special occasions.</p>
+                                <a href="#" class="text-xs text-primary hover:text-secondary">View Collection</a>
+                            </div>
+
+                            <div class="bg-gray-100 p-4 rounded-lg shadow">
+                                <h3 class="font-semibold text-lg text-gray-800">Gold Rings</h3>
+                                <p class="text-xs text-gray-600">Eternal gold elegance for every moment.</p>
+                                <a href="#" class="text-xs text-primary hover:text-secondary">View Collection</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Customer Testimonials Section -->
+                    <div class="mb-8">
+                        <h2 class="text-xl md:text-2xl lg:text-xl font-bold text-gray-800 mb-4">What Our Customers Say</h2>
+                        <blockquote class="bg-gray-50 p-4 rounded-lg shadow mb-4">
+                            <p class="text-gray-700 text-sm italic">"The ring I purchased was exquisite! The craftsmanship
+                                is
+                                unparalleled, and I couldn't be happier!"</p>
+                            <footer class="text-gray-600 text-xs">— Sarah T.</footer>
+                        </blockquote>
+                        <blockquote class="bg-gray-50 p-4 rounded-lg shadow">
+                            <p class="text-gray-700 text-sm italic">"CaratLane's service is exceptional, and the rings are
+                                absolutely stunning!"</p>
+                            <footer class="text-gray-600 text-xs">— John M.</footer>
+                        </blockquote>
+                    </div>
+
+                    <!-- FAQ Section -->
+                    <div>
+                        <h2 class="text-xl md:text-2xl lg:text-xl font-bold text-gray-800 mb-4">Frequently Asked Questions
+                        </h2>
                         <ul class="list-disc pl-5 space-y-4">
-                            <li class="text-primary text-lg md:text-xl lg:text-lg font-semibold">
-                                <a href="#" class="hover:text-secondary">Engagement Rings: Timeless Love Tokens</a>
+                            <li class="text-xs">
+                                <strong>What materials are used in your rings?</strong>
+                                <p class="text-gray-600">We use a variety of high-quality materials including gold,
+                                    platinum, and diamonds.</p>
                             </li>
-                            <li class="text-primary text-lg md:text-xl lg:text-lg font-semibold">
-                                <a href="#" class="hover:text-secondary">Cocktail Rings: Glamorous Statements</a>
+                            <li class="text-xs">
+                                <strong>Do you offer customization?</strong>
+                                <p class="text-gray-600">Yes, we provide options for customizing your ring to fit your
+                                    style and preferences.</p>
                             </li>
-                            <li class="text-primary text-lg md:text-xl lg:text-lg font-semibold">
-                                <a href="#" class="hover:text-secondary">Gold Rings: Eternal Gold Elegance</a>
+                            <li class="text-xs">
+                                <strong>How do I care for my ring?</strong>
+                                <p class="text-gray-600">We recommend regular cleaning and professional inspections to keep
+                                    your ring looking its best.</p>
                             </li>
                         </ul>
                     </div>
@@ -928,13 +987,13 @@
                     <div class="py-4 mt-8">
                         <div class="w-full flex justify-end">
                             <button
-                                class="bg-secondary text-white rounded-full px-6 py-2 hover:bg-purple-700 focus:outline-none">
-                                Learn More
-                            </button>
+                                class="bg-secondary text-white rounded-full px-6 py-2 hover:bg-purple-700 focus:outline-none">Learn
+                                More</button>
                         </div>
                     </div>
                 </div>
             </div>
+
 
 
             <!-- SORT Button Navigation (your existing code) -->
@@ -1057,7 +1116,7 @@
         <div class="bg-white rounded-2xl w-full max-w-3xl p-6 shadow-xl relative">
             <!-- Close Button -->
             <div class="relative">
-                <button onclick="closeModal()"
+                <button onclick="closeVideoModal()"
                     class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-xl transition duration-200 ease-in-out">
                     &times;
                 </button>
@@ -1067,7 +1126,6 @@
                     Live Video Call at Your Convenience!
                 </h2>
             </div>
-
 
             <div class="flex flex-col md:flex-row items-start gap-4">
                 <!-- Left Section with Image/Video -->
@@ -1111,7 +1169,6 @@
                         </div>
                     </div>
 
-
                     <!-- Pincode Input with Locate Me Button -->
                     <div class="w-full">
                         <div class="flex w-full">
@@ -1123,8 +1180,6 @@
                             </button>
                         </div>
                     </div>
-
-
 
                     <!-- Language Preference Section -->
                     <div>
@@ -1149,18 +1204,121 @@
                     </button>
                 </div>
             </div>
-
-
         </div>
     </div>
 
+    <!-- Modal Overlay -->
+    <div id="overlaySimilarImages" class="fixed inset-0 bg-black bg-opacity-50 hidden z-10"></div>
+
+    <!-- Modal Similar Designs-->
+    <div id="similarModal"
+        class="fixed inset-x-0 bottom-0 z-20 hidden bg-white shadow-xl rounded-t-lg p-6 transition-transform transform translate-y-full ring-1 ring-gray-200">
+        <button id="closeModal"
+            class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 transition duration-150 ease-in-out text-2xl">&times;</button>
+
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Similar Designs</h2>
+
+        <!-- Slider Container -->
+        <div class="flex items-center justify-center space-x-4">
+            <!-- Left Arrow -->
+            <button id="prevBtn"
+                class="p-3 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-600 transition duration-150 ease-in-out focus:outline-none">
+                &lt;
+            </button>
+
+            <!-- Slider Items -->
+            <div id="slider" class="flex overflow-x-auto space-x-4 scrollbar-hide w-full mx-4">
+                <!-- Example items in slider -->
+                <div
+                    class="min-w-[300px] text-center bg-white p-4 rounded-lg shadow-lg transition-transform duration-150 ease-in-out">
+                    <img src="{{ asset('asset/img/testing.png') }}" alt="Cyclonic Circle Diamond Ring"
+                        class="w-48 h-48 object-cover rounded-md mx-auto"> <!-- Increased size -->
+                    <p class="mt-2 font-semibold text-gray-600">₹18,722</p>
+                    <p class="text-sm text-gray-500">Cyclonic Circle Diamond Ring</p>
+                </div>
+                <div
+                    class="min-w-[300px] text-center bg-white p-4 rounded-lg shadow-lg transition-transform duration-150 ease-in-out">
+                    <img src="{{ asset('asset/img/testing.png') }}" alt="Gemstone Delight Ring"
+                        class="w-48 h-48 object-cover rounded-md mx-auto"> <!-- Increased size -->
+                    <p class="mt-2 font-semibold text-gray-600">₹17,335</p>
+                    <p class="text-sm text-gray-500">Gemstone Delight Ring</p>
+                </div>
+                <div
+                    class="min-w-[300px] text-center bg-white p-4 rounded-lg shadow-lg transition-transform duration-150 ease-in-out">
+                    <img src="{{ asset('asset/img/testing.png') }}" alt="Ella Diamond Ring"
+                        class="w-48 h-48 object-cover rounded-md mx-auto"> <!-- Increased size -->
+                    <p class="mt-2 font-semibold text-gray-600">₹20,289</p>
+                    <p class="text-sm text-gray-500">Ella Diamond Ring</p>
+                </div>
+                <div
+                    class="min-w-[300px] text-center bg-white p-4 rounded-lg shadow-lg transition-transform duration-150 ease-in-out">
+                    <img src="{{ asset('asset/img/testing.png') }}" alt="Little Mermaid Diamond Ring"
+                        class="w-48 h-48 object-cover rounded-md mx-auto"> <!-- Increased size -->
+                    <p class="mt-2 font-semibold text-gray-600">₹17,221</p>
+                    <p class="text-sm text-gray-500">Little Mermaid Diamond Ring</p>
+                </div>
+                <div
+                    class="min-w-[300px] text-center bg-white p-4 rounded-lg shadow-lg transition-transform duration-150 ease-in-out">
+                    <img src="{{ asset('asset/img/testing.png') }}" alt="Little Mermaid Diamond Ring"
+                        class="w-48 h-48 object-cover rounded-md mx-auto"> <!-- Increased size -->
+                    <p class="mt-2 font-semibold text-gray-600">₹17,221</p>
+                    <p class="text-sm text-gray-500">Little Mermaid Diamond Ring</p>
+                </div>
+            </div>
+
+            <!-- Right Arrow -->
+            <button id="nextBtn"
+                class="p-3 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-600 transition duration-150 ease-in-out focus:outline-none">
+                &gt;
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const viewSimilarBtn = document.getElementById('viewSimilarBtn');
+        const similarModal = document.getElementById('similarModal');
+        const overlaySimilarImages = document.getElementById('overlaySimilarImages');
+        const closeModal = document.getElementById('closeModal');
+        const slider = document.getElementById('slider');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        // Open Modal
+        viewSimilarBtn.addEventListener('click', () => {
+            similarModal.classList.remove('hidden');
+            similarModal.classList.remove('translate-y-full'); // Slide modal up
+            overlaySimilarImages.classList.add('show'); // Show overlay
+        });
+
+        // Close Modal
+        closeModal.addEventListener('click', () => {
+            similarModal.classList.add('hidden');
+            similarModal.classList.add('translate-y-full'); // Slide modal down
+            overlaySimilarImages.classList.remove('show'); // Hide overlay
+        });
+
+        // Slider Navigation
+        nextBtn.addEventListener('click', () => {
+            slider.scrollBy({
+                left: 200,
+                behavior: 'smooth'
+            });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            slider.scrollBy({
+                left: -200,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 
     <script>
         function openModal() {
             document.getElementById('videoCallModal').classList.remove('hidden');
         }
 
-        function closeModal() {
+        function closeVideoModal() {
             document.getElementById('videoCallModal').classList.add('hidden');
         }
     </script>
