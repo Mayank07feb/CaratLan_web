@@ -36,6 +36,8 @@ Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
 
 Route::get('/profile/edit', [HomeController::class, 'profile_edit'])->name('profile.edit');
 
+Route::get('/profile/manage_refunds', [HomeController::class, 'profile_manage_refunds'])->name('profile.managerefunds');
+
 Route::get('/orderhistory', [HomeController::class, 'orderhistory'])->name('orderhistory');
 
 Route::get('/wishlist', [HomeController::class, 'wishlist'])->name('wishlist');

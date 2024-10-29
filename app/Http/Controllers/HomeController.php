@@ -113,6 +113,11 @@ class HomeController extends Controller
         return view('frontend.profile.user.edit');
     }
 
+    public function profile_manage_refunds()
+    {
+        return view('frontend.profile.user.manageRefunds');
+    }
+
     public function profile()
     {
         return view('frontend.profile.user.profile');
