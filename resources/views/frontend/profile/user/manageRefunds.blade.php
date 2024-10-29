@@ -3,7 +3,7 @@
     <!-- Main Content -->
     <main class="flex-1 flex flex-col">
 
-        <div class="w-full max-w-lg p-8 bg-white">
+        <div class="w-full h-screen p-8 bg-white">
             <!-- Title Section -->
             <h2 class="text-center text-xl font-semibold text-purple-700 mb-2">Manage Refunds</h2>
             <p class="text-center text-sm text-gray-500 mb-8">
