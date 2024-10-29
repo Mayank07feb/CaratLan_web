@@ -120,7 +120,7 @@
             </div>
         </div>
     </div>
-    <div class="flex justify-between pt-2 px-4">
+    <div class="flex justify-between pt-2 px-10">
         <div class="left w-1/2">
             <h3 class="font-semibold mb-4 text-left">Find Us On</h3>
             <div class="flex space-x-3">
