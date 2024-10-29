@@ -890,6 +890,7 @@
                 </div>
             </div>
 
+            <!--Discover the World of CaratLane -->
             <div class="bg-white">
                 <!-- Header Section -->
                 <div class="relative bg-[#300a30] text-white py-4 px-6 text-center">
@@ -1233,35 +1234,35 @@
                 <div
                     class="min-w-[300px] text-center bg-white p-4 rounded-lg shadow-lg transition-transform duration-150 ease-in-out">
                     <img src="{{ asset('asset/img/testing.png') }}" alt="Cyclonic Circle Diamond Ring"
-                        class="w-48 h-48 object-cover rounded-md mx-auto"> 
+                        class="w-48 h-48 object-cover rounded-md mx-auto">
                     <p class="mt-2 font-semibold text-gray-600">₹18,722</p>
                     <p class="text-sm text-gray-500">Cyclonic Circle Diamond Ring</p>
                 </div>
                 <div
                     class="min-w-[300px] text-center bg-white p-4 rounded-lg shadow-lg transition-transform duration-150 ease-in-out">
                     <img src="{{ asset('asset/img/testing.png') }}" alt="Gemstone Delight Ring"
-                        class="w-48 h-48 object-cover rounded-md mx-auto"> 
+                        class="w-48 h-48 object-cover rounded-md mx-auto">
                     <p class="mt-2 font-semibold text-gray-600">₹17,335</p>
                     <p class="text-sm text-gray-500">Gemstone Delight Ring</p>
                 </div>
                 <div
                     class="min-w-[300px] text-center bg-white p-4 rounded-lg shadow-lg transition-transform duration-150 ease-in-out">
                     <img src="{{ asset('asset/img/testing.png') }}" alt="Ella Diamond Ring"
-                        class="w-48 h-48 object-cover rounded-md mx-auto"> 
+                        class="w-48 h-48 object-cover rounded-md mx-auto">
                     <p class="mt-2 font-semibold text-gray-600">₹20,289</p>
                     <p class="text-sm text-gray-500">Ella Diamond Ring</p>
                 </div>
                 <div
                     class="min-w-[300px] text-center bg-white p-4 rounded-lg shadow-lg transition-transform duration-150 ease-in-out">
                     <img src="{{ asset('asset/img/testing.png') }}" alt="Little Mermaid Diamond Ring"
-                        class="w-48 h-48 object-cover rounded-md mx-auto"> 
+                        class="w-48 h-48 object-cover rounded-md mx-auto">
                     <p class="mt-2 font-semibold text-gray-600">₹17,221</p>
                     <p class="text-sm text-gray-500">Little Mermaid Diamond Ring</p>
                 </div>
                 <div
                     class="min-w-[300px] text-center bg-white p-4 rounded-lg shadow-lg transition-transform duration-150 ease-in-out">
                     <img src="{{ asset('asset/img/testing.png') }}" alt="Little Mermaid Diamond Ring"
-                        class="w-48 h-48 object-cover rounded-md mx-auto"> 
+                        class="w-48 h-48 object-cover rounded-md mx-auto">
                     <p class="mt-2 font-semibold text-gray-600">₹17,221</p>
                     <p class="text-sm text-gray-500">Little Mermaid Diamond Ring</p>
                 </div>
