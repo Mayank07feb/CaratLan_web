@@ -514,19 +514,68 @@
             <div class="flex items-center space-x-4 mr-4 md:mr-0 hidden md:flex">
                 <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="Flag"
                     class="w-6 h-4 mr-2">
-                <span class="material-icons text-gray-600">person</span>
-               <a href="{{route('wishlist')}}"><span class="material-icons text-gray-600">favorite</span> </a> 
-                <div class="relative">
-                    <span class="material-icons text-gray-600">shopping_cart</span>
-                    <span
-                        class="absolute -top-2 -right-2 bg-purple-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</span>
+
+                <!-- Profile Icon with Modal -->
+                <div class="relative group">
+                    <span class="material-icons text-gray-600 cursor-pointer">person</span>
+                    <!-- Modal on hover after login -->
+                    <div
+                        class="absolute -left-52 mt-7 w-72 p-4 bg-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
+                        <!-- User Email Display -->
+                        <p class="text-sm text-gray-500 mb-3">makedy07feb@gmail.com</p>
+
+                        <!-- Divider with line and accent color -->
+                        <div class="flex items-center mb-4">
+                            <div class="border-t border-purple-500 w-8 mr-2"></div>
+                            <div class="w-8 h-[1px] bg-primary"></div>
+                        </div>
+
+                        <!-- Account Options Links -->
+                        <nav class="space-y-2">
+                            <a href="{{route('profile')}}" class="block text-gray-800 font-medium hover:text-purple-600">MY
+                                ACCOUNTS</a>
+                            <a href="#" class="block text-gray-800 font-medium hover:text-purple-600">OUR
+                                STORY</a>
+                            <a href="#" class="block text-gray-800 font-medium hover:text-purple-600">LOGOUT</a>
+                        </nav>
+                    </div>
+                    <!-- Modal on hover, shifted more to the left -->
+                    {{-- <div
+                        class="absolute -left-52 mt-7 w-72 p-4 bg-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
+                        <h3 class="text-xl font-semibold text-gray-800">Your Account</h3>
+                        <p class="text-sm text-gray-600 mb-4">Access account & manage your orders.</p>
+                        <div class="flex space-x-2">
+                            <a href="{{route('signup')}}"
+                                class="w-full py-2 text-center text-white bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg font-semibold">
+                                Sign Up
+                            </a>
+                            <a href="{{route('login')}}"
+                                class="w-full py-2 text-center text-gray-700 border border-purple-500 rounded-lg font-semibold">
+                                Log In
+                            </a>
+                        </div>
+                    </div> --}}
                 </div>
             </div>
 
+            <!-- Wishlist Icon -->
+            <a href="{{ route('wishlist') }}">
+                <span class="material-icons text-gray-600">favorite</span>
+            </a>
 
-
+            <!-- Shopping Cart Icon with Badge -->
+            <div class="relative">
+                <span class="material-icons text-gray-600">shopping_cart</span>
+                <span
+                    class="absolute -top-2 -right-2 bg-purple-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</span>
+            </div>
         </div>
-    </header>
+
+
+
+
+</div>
+</header>
 </div>
 
 

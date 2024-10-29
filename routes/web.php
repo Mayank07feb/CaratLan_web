@@ -34,6 +34,8 @@ Route::get('/productdetail', [HomeController::class, 'productdetail'])->name('pr
 
 Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
 
+Route::get('/profile/edit', [HomeController::class, 'profile_edit'])->name('profile.edit');
+
 Route::get('/orderhistory', [HomeController::class, 'orderhistory'])->name('orderhistory');
 
 Route::get('/wishlist', [HomeController::class, 'wishlist'])->name('wishlist');

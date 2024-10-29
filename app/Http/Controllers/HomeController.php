@@ -108,9 +108,14 @@ class HomeController extends Controller
         return view('frontend.reset-password');
     }
 
+    public function profile_edit()
+    {
+        return view('frontend.profile.user.edit');
+    }
+
     public function profile()
     {
-        return view('frontend.profile');
+        return view('frontend.profile.user.profile');
     }
 
     public function orderhistory()
