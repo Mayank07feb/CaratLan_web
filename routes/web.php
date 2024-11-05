@@ -36,7 +36,15 @@ Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
 
 Route::get('/profile/edit', [HomeController::class, 'profile_edit'])->name('profile.edit');
 
-Route::get('/profile/manage_refunds', [HomeController::class, 'profile_manage_refunds'])->name('profile.managerefunds');
+Route::get('/profile/manage_refunds', [HomeController::class, 'profile_manage_refunds'])->name('profile.managerefund');
+
+Route::get('/profile/tah', [HomeController::class, 'profile_tah'])->name('profile.tah');
+
+Route::get('/profile/coupons', [HomeController::class, 'profile_coupons'])->name('profile.coupons');
+
+Route::get('/profile/payment', [HomeController::class, 'profile_payment'])->name('profile.payment');
+
+Route::get('/profile/plan-of-purchase', [HomeController::class, 'profile_planofpurchase'])->name('profile.plan-of-purchase');
 
 Route::get('/orderhistory', [HomeController::class, 'orderhistory'])->name('orderhistory');
 

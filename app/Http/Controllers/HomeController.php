@@ -118,6 +118,26 @@ class HomeController extends Controller
         return view('frontend.profile.user.manageRefunds');
     }
 
+    public function profile_coupons()
+    {
+        return view('frontend.profile.user.coupons');
+    }
+
+    public function profile_tah()
+    {
+        return view('frontend.profile.user.tah');
+    }
+
+    public function profile_payment()
+    {
+        return view('frontend.profile.user.payment');
+    }
+
+    public function profile_planofpurchase()
+    {
+        return view('frontend.profile.user.planofpurchase');
+    }
+
     public function profile()
     {
         return view('frontend.profile.user.profile');

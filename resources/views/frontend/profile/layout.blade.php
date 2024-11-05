@@ -21,9 +21,9 @@
                             <a href="#"
                                 class="text-purple-600 text-xs font-semibold block mb-1 leading-6 hover:text-purple-800 transition duration-200">ORDERS
                                 AND RETURNS</a>
-                            <a href="#"
+                            <a href="{{route('profile.payment')}}"
                                 class="text-gray-800 text-xs block mb-1 leading-6 hover:text-gray-600 transition duration-200">PAYMENT</a>
-                            <a href="#"
+                            <a href="{{route('profile.managerefund')}}"
                                 class="text-gray-800 text-xs block leading-6 hover:text-gray-600 transition duration-200">MANAGE
                                 REFUNDS</a>
                         </div>
@@ -32,7 +32,7 @@
                         <div>
                             <h4 class="text-xs text-gray-600 font-semibold mb-2 underline tracking-wide leading-6">
                                 APPOINTMENTS</h4>
-                            <a href="#"
+                            <a href="{{route('profile.tah')}}"
                                 class="text-gray-800 text-xs block leading-6 hover:text-gray-600 transition duration-200">TRY
                                 AT HOME</a>
                         </div>
@@ -41,7 +41,7 @@
                         <div>
                             <h4 class="text-xs text-gray-600 font-semibold mb-2 underline tracking-wide leading-6">OFFERS
                             </h4>
-                            <a href="#"
+                            <a href="{{route('profile.coupons')}}"
                                 class="text-gray-800 text-xs block leading-6 hover:text-gray-600 transition duration-200">COUPONS</a>
                         </div>
 
@@ -60,7 +60,7 @@
                             <a href="#"
                                 class="text-gray-800 text-xs block mb-1 leading-6 hover:text-gray-600 transition duration-200">CARATLANE
                                 eGold</a>
-                            <a href="#"
+                            <a href="{{route('profile.plan-of-purchase')}}"
                                 class="text-gray-800 text-xs block leading-6 hover:text-gray-600 transition duration-200">Caratlane
                                 PoP!</a>
                         </div>
