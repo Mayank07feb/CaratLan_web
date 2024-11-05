@@ -532,7 +532,7 @@
 
                         <!-- Account Options Links -->
                         <nav class="space-y-2">
-                            <a href="{{route('profile')}}" class="block text-gray-800 font-medium hover:text-purple-600">MY
+                            <a href="{{route('myaccount.profile')}}" class="block text-gray-800 font-medium hover:text-purple-600">MY
                                 ACCOUNTS</a>
                             <a href="#" class="block text-gray-800 font-medium hover:text-purple-600">OUR
                                 STORY</a>

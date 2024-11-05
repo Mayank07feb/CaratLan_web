@@ -1,4 +1,4 @@
-@extends('frontend.profile.layout')
+@extends('frontend.user.layout')
 @section('profileContent')
     <!-- Main Content -->
     <main class="flex-1 flex flex-col p-6 bg-white">

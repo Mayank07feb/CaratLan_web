@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -58,7 +59,7 @@ class HomeController extends Controller
 
     public function policies()
     {
-        return view('frontend.policies'); 
+        return view('frontend.policies');
     }
 
     public function giritraPromises()
@@ -106,41 +107,6 @@ class HomeController extends Controller
     public function showResetPasswordForm()
     {
         return view('frontend.reset-password');
-    }
-
-    public function profile_edit()
-    {
-        return view('frontend.profile.user.edit');
-    }
-
-    public function profile_manage_refunds()
-    {
-        return view('frontend.profile.user.manageRefunds');
-    }
-
-    public function profile_coupons()
-    {
-        return view('frontend.profile.user.coupons');
-    }
-
-    public function profile_tah()
-    {
-        return view('frontend.profile.user.tah');
-    }
-
-    public function profile_payment()
-    {
-        return view('frontend.profile.user.payment');
-    }
-
-    public function profile_planofpurchase()
-    {
-        return view('frontend.profile.user.planofpurchase');
-    }
-
-    public function profile()
-    {
-        return view('frontend.profile.user.profile');
     }
 
     public function orderhistory()
@@ -203,83 +169,152 @@ class HomeController extends Controller
         return view('frontend.customjewellery');
     }
     // OUR STORY
-    public function ourstory(){
+    public function ourstory()
+    {
         return view('frontend.ourstory');
     }
     // care guide
-    public function jewellerycareguide(){
+    public function jewellerycareguide()
+    {
         return view('frontend.jewellerycareguide');
     }
     // GEMSTONE
-    public function gemstone(){
+    public function gemstone()
+    {
         return view('frontend.gemstone');
     }
     // more jewellery
-    public function morejewellery(){
+    public function morejewellery()
+    {
         return view('frontend.morejewellery');
     }
     // ALL COLLECTION
-    public function allcollection(){
+    public function allcollection()
+    {
         return view('frontend.allcollection');
     }
     // Appointment
-    public function appointment(){
+    public function appointment()
+    {
         return view('frontend.appointment');
     }
     // KNOW MORE
-    public function knowmore(){
+    public function knowmore()
+    {
         return view('frontend.knowmore');
     }
     // know more2
-    public function know(){
+    public function know()
+    {
         return view('frontend.know');
     }
     // POLICY
-    public function policy(){
+    public function policy()
+    {
         return view('frontend.policy');
     }
     // DAIMOND GUIDE
-    public function daimondguide(){
+    public function daimondguide()
+    {
         return view('frontend.daimondguide');
     }
     // JEWELLERY GUIDE
-    public function jewelleryguide(){
+    public function jewelleryguide()
+    {
         return view('frontend.jewelleryguide');
     }
     // Gold Rate
-    public function goldrate(){
+    public function goldrate()
+    {
         return view('frontend.goldrate');
     }
     // ORDER STATUS
-    public function order(){
-        return view ('frontend.order');
+    public function order()
+    {
+        return view('frontend.order');
     }
     // POST CARDS
-    public function postcard(){
+    public function postcard()
+    {
         return view('frontend.postcard');
     }
     // free shipping
-    public function shipping(){
+    public function shipping()
+    {
         return view('frontend.shipping');
     }
     // glosarry
-    public function glosarry(){
+    public function glosarry()
+    {
         return view('frontend.glosarry');
     }
     // Egold
-    public function egold(){
+    public function egold()
+    {
         return view('frontend.egold');
     }
-//    wearyourwins
-public function wearyourwins(){
-    return view('frontend.wearyourwins');
-}
-// press
-public function press(){
-    return view('frontend.press');
-}
-// find a store
-public function findstore(){
-    return view('frontend.findstore');
-}
+    //    wearyourwins
+    public function wearyourwins()
+    {
+        return view('frontend.wearyourwins');
+    }
+    // press
+    public function press()
+    {
+        return view('frontend.press');
+    }
+    // find a store
+    public function findstore()
+    {
+        return view('frontend.findstore');
+    }
+
+
+
+    // * My Account * //
+
+    public function myaccount()
+    {
+        return view('frontend.user.myaccount.orders');
+    }
+
+    public function myaccount_edit()
+    {
+        return view('frontend.user.myaccount.edit');
+    }
+
+    public function myaccount_manage_refunds()
+    {
+        return view('frontend.user.myaccount.manage_refunds');
+    }
+
+    public function myaccount_tah()
+    {
+        return view('frontend.user.myaccount.tah');
+    }
+
+    public function myaccount_coupons()
+    {
+        return view('frontend.user.myaccount.coupons');
+    }
+
+    public function myaccount_payment()
+    {
+        return view('frontend.user.myaccount.payment');
+    }
+
+    public function myaccount_orders()
+    {
+        return view('frontend.user.myaccount.orders');
+    }
+
+    public function myaccount_profile()
+    {
+        return view('frontend.user.myaccount.profile');
+    }
+
+    public function myaccount_planofpurchase()
+    {
+        return view('frontend.user.myaccount.planofpurchase');
+    }
 }
