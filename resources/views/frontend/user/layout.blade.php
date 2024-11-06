@@ -7,7 +7,7 @@
             <aside class="w-96 p-6 bg-secondary border-r flex-shrink-0 hidden lg:block"> 
                 <div class="px-20">
                     <!-- User Info -->
-                    <p class="text-gray-400 text-xs mb-3 leading-6">makedy07feb@gmail.com</p>
+                    <p class="text-gray-400 text-xs mb-3 leading-6">demo@gmail.com</p>
                     <a href="{{ route('myaccount.edit') }}"
                         class="text-secondary text-xs mb-6 block leading-6 hover:text-purple-600 transition duration-200">Edit
                         Profile</a>

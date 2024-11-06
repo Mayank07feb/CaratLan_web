@@ -9,7 +9,7 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/blogs', [HomeController::class, 'Blogs'])->name('blogs');
 Route::get('/blog-details', [HomeController::class, 'showBlogDetails'])->name('blog.details');
 Route::get('/policies', [HomeController::class, 'policies'])->name('policies');
-Route::get('/page404', [HomeController::class, 'page404'])->name('page404');
+Route::get('/404', [HomeController::class, 'page404'])->name('page.404');
 Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
 Route::get('/productdetail', [HomeController::class, 'productdetail'])->name('productdetail');
 Route::get('/orderhistory', [HomeController::class, 'orderhistory'])->name('orderhistory');

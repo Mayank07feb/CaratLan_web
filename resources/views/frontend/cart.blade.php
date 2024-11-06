@@ -17,11 +17,7 @@
     </style>
 
 
-
-
     <main class="mt-12">
-
-
         <div class="flex justify-center text-center py-6">
             <!-- Center Cart Tabs -->
             <div class="flex gap-2 border border-purple-300 rounded-[12px] bg-purple-50 p-1">
