@@ -13,209 +13,221 @@
         </video>
     </div>
     {{--  --}}
-    <div class="flex justify-between items-start p-4 mx-16 py-8">
-        <div class="text-5xl font-bold font-cursive">
-            Wear <br><span class="text-purple-500">Your Wins</span>
+    <div class="flex flex-col md:flex-row justify-between items-center p-4 mx-4 md:mx-16 py-8 space-y-8 md:space-y-0">
+        <!-- Left Section: Title -->
+        <div class="text-4xl md:text-6xl font-bold font-cursive text-center md:text-left">
+            𝒲𝑒𝒶𝓇<br><span class="text-purple-500"> 𝒴𝑜𝓊𝓇 𝒲𝒾𝓃𝓈 </span>
         </div>
-        <div class="max-w-md">
-            <p class="mb-4">
+    
+        <!-- Right Section: Description and Button -->
+        <div class="max-w-md text-center md:text-left">
+            <p class="mb-4 text-lg md:text-xl font-extralight">
                 In life's journey, you have moments big & small, where you conquer challenges and rise above them all. Each win, whether it's a huge success or a tiny gain, deserves a celebration; a moment to reign.
             </p>
-            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+            <button class="bg-purple-500 text-white px-6 py-3 rounded hover:bg-purple-600 transition duration-300">
                 Know More
             </button>
-        </div>    
+        </div>
     </div>
-       
-    {{-- slider --}}
+    
+{{-- Slider Section --}}
+<!-- Heading Section -->
+<div class="bg-[#F3F3EA] py-8 text-center">
+    <h1 class="text-lg font-bold text-purple-500">Discover Designs</h1>
+    <p class="text-lg text-black mb-6">
+        That stand for who you are
+    </p>
+</div>
 
-     {{-- heading --}}
-     <div style=" padding: 30px; text-align: center;">
-        <h1 class="text-4xl font-bold text-purple-500 mb-4">Discover Designs</h1>
-        <p class="text-lg text-black italic mb-6">
-            That stand for who you are</p>
-    </div>
-
-
+<!-- Product Slider Styles -->
 <style>
-.product-slider {
-    scroll-behavior: smooth;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-.product-slider::-webkit-scrollbar {
-    display: none;
-}
+    .product-slider {
+        scroll-behavior: smooth;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .product-slider::-webkit-scrollbar {
+        display: none;
+    }
 </style>
 
-<div class="max-w-7xl mx-auto px-4 py-4">
 <!-- Slider Container -->
-<div class="relative">
-    <!-- Products Wrapper -->
-    <div class="product-slider flex space-x-6 overflow-x-scroll p-4">
-        <!-- Product Card 1 -->
-        <div class="flex-none w-64">
-            <div class="bg-white rounded-lg shadow-md p-4 relative group">
-                <img src="{{asset('asset/img/j1.jpg')}}" alt="Jewelry Rock Diamond Ring" class="w-full h-48 object-contain mb-4">
-                <div class="text-gray-800 font-medium">Jewelry Rock Diamond Ring</div>
-                <div class="flex items-baseline mt-2">
-                    <span class="text-purple-600 text-lg font-semibold">₹26,671</span>
-                    <span class="text-white text-sm line-through ml-2">₹34,025</span>
+<div class="w-full  px-4 py-4 bg-[#F3F3EA]">
+    <div class="relative">
+        <!-- Products Wrapper -->
+        <div class="product-slider flex space-x-6 overflow-x-auto pb-4">
+            <!-- Product Cards -->
+            <div class="flex-none w-64">
+                <div class="bg-white rounded-lg shadow-md p-4 group">
+                    <img src="{{asset('asset/img/j1.jpg')}}" alt="Jewelry Rock Diamond Ring" class="w-full h-48 object-contain mb-4">
+                    <div class="text-gray-800 font-medium text-sm">Jewelry Rock Diamond Ring</div>
+                    <div class="flex items-baseline mt-2">
+                        <span class="text-purple-600 text-lg font-semibold">₹26,671</span>
+                        <span class="text-white text-sm line-through ml-2">₹34,025</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-none w-64">
+                <div class="bg-white rounded-lg shadow-md p-4 group">
+                    <img src="{{asset('asset/img/j2.jpg')}}" alt="Threaded Treasure Diamond Band" class="w-full h-48 object-contain mb-4">
+                    <div class="text-gray-800 font-medium text-sm">Threaded Treasure Diamond Band</div>
+                    <div class="flex items-baseline mt-2">
+                        <span class="text-purple-600 text-lg font-semibold">₹68,314</span>
+                        <span class="text-white text-sm line-through ml-2">₹76,780</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-none w-64">
+                <div class="bg-white rounded-lg shadow-md p-4 group">
+                    <img src="{{asset('asset/img/j3.jpg')}}" alt="Snake Spring Diamond Cocktail Ring" class="w-full h-48 object-contain mb-4">
+                    <div class="text-gray-800 font-medium text-sm">Spring Diamond Cocktail Ring</div>
+                    <div class="flex items-baseline mt-2">
+                        <span class="text-purple-600 text-lg font-semibold">₹28,406</span>
+                        <span class="text-white text-sm line-through ml-2">₹34,321</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-none w-64">
+                <div class="bg-white rounded-lg shadow-md p-4 group">
+                    <img src="{{asset('asset/img/j4.jpg')}}" alt="Maharani Gemstone Cocktail Ring" class="w-full h-48 object-contain mb-4">
+                    <div class="text-gray-800 font-medium text-sm">Maharani Gemstone Cocktail Ring</div>
+                    <div class="flex items-baseline mt-2">
+                        <span class="text-purple-600 text-lg font-semibold">₹52,452</span>
+                        <span class="text-white text-sm line-through ml-2">₹60,753</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-none w-64">
+                <div class="bg-white rounded-lg shadow-md p-4 group">
+                    <img src="{{asset('asset/img/j5.jpg')}}" alt="Darning Diamond Ring" class="w-full h-48 object-contain mb-4">
+                    <div class="text-gray-800 font-medium text-sm">Darning Diamond Ring</div>
+                    <div class="flex items-baseline mt-2">
+                        <span class="text-purple-600 text-lg font-semibold">₹95,154</span>
+                        <span class="text-white text-sm line-through ml-2">₹1,03,108</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Product Card 2 -->
-        <div class="flex-none w-64">
-            <div class="bg-white rounded-lg shadow-md p-4 relative group">
-                <img src="{{asset('asset/img/j2.jpg')}}" alt="Threaded Treasure Diamond Band" class="w-full h-48 object-contain mb-4">
-                <div class="text-gray-800 font-medium">Threaded Treasure Diamond Band</div>
-                <div class="flex items-baseline mt-2">
-                    <span class="text-purple-600 text-lg font-semibold">₹68,314</span>
-                    <span class="text-white text-sm line-through ml-2">₹76,780</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Product Card 3 -->
-        <div class="flex-none w-64">
-            <div class="bg-white rounded-lg shadow-md p-4 relative group">
-                <img src="{{asset('asset/img/j3.jpg')}}" alt="Snake Spring Diamond Cocktail Ring" class="w-full h-48 object-contain mb-4">
-                <div class="text-gray-800 font-medium">Snake Spring Diamond Cocktail Ring</div>
-                <div class="flex items-baseline mt-2">
-                    <span class="text-purple-600 text-lg font-semibold">₹28,406</span>
-                    <span class="text-white text-sm line-through ml-2">₹34,321</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Product Card 4 -->
-        <div class="flex-none w-64">
-            <div class="bg-white rounded-lg shadow-md p-4 relative group">
-                <img src="{{asset('asset/img/j4.jpg')}}" alt="Maharani Gemstone Cocktail Ring" class="w-full h-48 object-contain mb-4">
-                <div class="text-gray-800 font-medium">Maharani Gemstone Cocktail Ring</div>
-                <div class="flex items-baseline mt-2">
-                    <span class="text-purple-600 text-lg font-semibold">₹52,452</span>
-                    <span class="text-white text-sm line-through ml-2">₹60,753</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Product Card 5 -->
-        <div class="flex-none w-64">
-            <div class="bg-white rounded-lg shadow-md p-4 relative group">
-                <img src="{{asset('asset/img/j5.jpg')}}" alt="Darning Diamond Ring" class="w-full h-48 object-contain mb-4">
-                <div class="text-gray-800 font-medium">Darning Diamond Ring</div>
-                <div class="flex items-baseline mt-2">
-                    <span class="text-purple-600 text-lg font-semibold">₹95,154</span>
-                    <span class="text-white text-sm line-through ml-2">₹1,03,108</span>
-                </div>
-            </div>
-        </div>
+        <!-- Navigation Arrows -->
+        <button 
+            class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 bg-black rounded-full shadow-lg flex items-center justify-center text-white"
+            aria-label="Scroll Left"
+            onclick="scrollSlider(-1)"
+        >
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button 
+            class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 bg-black rounded-full shadow-lg flex items-center justify-center text-white"
+            aria-label="Scroll Right"
+            onclick="scrollSlider(1)"
+        >
+            <i class="fas fa-chevron-right"></i>
+        </button>
     </div>
 
-    <!-- Navigation Arrows -->
-    <button class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 bg-black rounded-full shadow-lg flex items-center justify-center text-white" onclick="document.querySelector('.product-slider').scrollBy(-288, 0)">
-        <i class="fas fa-chevron-left"></i>
-    </button>
-    <button class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 bg-black rounded-full shadow-lg flex items-center justify-center text-white" onclick="document.querySelector('.product-slider').scrollBy(288, 0)">
-        <i class="fas fa-chevron-right"></i>
-    </button>
+    <!-- See More Button -->
+    <div class="text-center mt-8">
+        <button class="border border-purple-600 text-black px-8 py-3 rounded-full font-medium transition duration-300">
+            View all Designs
+        </button>
+    </div>
 </div>
 
-<!-- See More Button -->
-<div class="text-center mt-8">
-    <button class="border border-r-violet-600 text-black px-8 py-3 rounded-full font-medium transition duration-300">
-        View all Designs
-    </button>
-</div>
-</div>
-
+<!-- Optional: Touch Scroll Support -->
 <script>
-// Optional: Add touch scroll support
-const slider = document.querySelector('.product-slider');
-let isDown = false;
-let startX;
-let scrollLeft;
+    const slider = document.querySelector('.product-slider');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
 
-slider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-});
+    // Mouse Scroll
+    slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
 
-slider.addEventListener('mouseleave', () => {
-    isDown = false;
-});
+    slider.addEventListener('mouseleave', () => {
+        isDown = false;
+    });
 
-slider.addEventListener('mouseup', () => {
-    isDown = false;
-});
+    slider.addEventListener('mouseup', () => {
+        isDown = false;
+    });
 
-slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 2;
-    slider.scrollLeft = scrollLeft - walk;
-});
+    slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2;
+        slider.scrollLeft = scrollLeft - walk;
+    });
+
+    // Scroll on button click
+    function scrollSlider(direction) {
+        const scrollAmount = 288 * direction; // Adjust scroll distance here
+        slider.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    }
 </script>
 
-
-{{-- cards --}}
-<div class="flex flex-row gap-4 justify-center">
-    
-<div class="max-w-sm">
-    <div style=" padding: 20px; max-width: 400px; margin: auto; text-align: center;">
-        <h2>My Firsts</h2>
-        <p>
-            My debut at Cannes was a tribute to my hard work; this necklace is my reward.
-        </p>
-        <p style="font-weight: bold; margin-top: 20px;">
-            Nancy Tyagi, Content Creator & Designer
-        </p>
+<div class="flex flex-wrap gap-8 justify-center py-8">
+    <!-- Card 1 -->
+    <div class="max-w-sm bg-white  overflow-hidden">
+        <!-- Image -->
+        <a href="#">
+            <img class="w-full h-56 object-cover rounded-t-lg" src="{{asset('asset/img/my-firsts.jpg')}}" alt="My Firsts" />
+        </a>
+        <!-- Content -->
+        <div class="p-6 text-center">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">My Firsts</h2>
+            <p class="text-gray-600 mb-4">
+                My debut at Cannes was a tribute to my hard work; this necklace is my reward.
+            </p>
+            <p class="font-bold text-gray-800">Nancy Tyagi, Content Creator & Designer</p>
+        </div>
     </div>
-    
-    <a href="#">
-        <img class="rounded-t-lg" src="{{asset('asset/img/my-firsts.jpg')}}" alt="" />
-    </a>
-</div>
 
-
-<div class="max-w-sm ">
-    <div style=" padding: 20px; max-width: 400px; margin: auto; text-align: center;">
-        <h2>My Firsts</h2>
-        <p>
-            My debut at Cannes was a tribute to my hard work; this necklace is my reward.
-        </p>
-        <p style="font-weight: bold; margin-top: 20px;">
-            Nancy Tyagi, Content Creator & Designer
-        </p>
+    <!-- Card 2 -->
+    <div class="max-w-sm bg-white  overflow-hidden">
+        <!-- Image -->
+        <a href="#">
+            <img class="w-full h-56 object-cover rounded-t-lg" src="{{asset('asset/img/professional-wins.jpg')}}" alt="Professional Wins" />
+        </a>
+        <!-- Content -->
+        <div class="p-6 text-center">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">My Firsts</h2>
+            <p class="text-gray-600 mb-4">
+                My debut at Cannes was a tribute to my hard work; this necklace is my reward.
+            </p>
+            <p class="font-bold text-gray-800">Nancy Tyagi, Content Creator & Designer</p>
+        </div>
     </div>
-    
-    <a href="#">
-        <img class="rounded-t-lg" src="{{asset('asset/img/professional-wins.jpg')}}" alt="" />
-    </a>
-</div>
 
-
-<div class="max-w-sm">
-    <div style="padding: 20px; max-width: 400px; margin: auto; text-align: center;">
-        <h2>My Firsts</h2>
-        <p>
-            My debut at Cannes was a tribute to my hard work; this necklace is my reward.
-        </p>
-        <p style="font-weight: bold; margin-top: 20px;">
-            Nancy Tyagi, Content Creator & Designer
-        </p>
+    <!-- Card 3 -->
+    <div class="max-w-sm bg-white  overflow-hidden">
+        <!-- Image -->
+        <a href="#">
+            <img class="w-full h-56 object-cover rounded-t-lg" src="{{asset('asset/img/conquering-barriers.jpg')}}" alt="Conquering Barriers" />
+        </a>
+        <!-- Content -->
+        <div class="p-6 text-center">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">My Firsts</h2>
+            <p class="text-gray-600 mb-4">
+                My debut at Cannes was a tribute to my hard work; this necklace is my reward.
+            </p>
+            <p class="font-bold text-gray-800">Nancy Tyagi, Content Creator & Designer</p>
+        </div>
     </div>
-    
-    <a href="#">
-        <img class="rounded-t-lg" src="{{asset('asset/img/conquering-barriers.jpg')}}" alt="" />
-    </a>
 </div>
 
-</div>
 
 
 
@@ -378,22 +390,22 @@ slider.addEventListener('mousemove', (e) => {
     slider.scrollLeft = scrollLeft - walk;
 });
 </script>
-
 {{-- Card --}}
 <div class="max-w-lg mx-auto bg-white p-6 text-center mb-6">
     <h2 class="text-2xl font-bold mb-4">Let Us Make Your Special Day</h2>
     <p class="text-xl font-semibold text-gray-700">Truly Extraordinary!</p>
 </div>
 
-<div class="flex justify-center gap-4 mb-6">
-    <div class="flex-shrink-0">
-        <img src="{{ asset('asset/img/postcards-slide.jpg') }}" alt="Postcards" class="rounded-lg shadow-md max-w-sm h-auto" />
+{{-- Images Section --}}
+<div class="flex flex-wrap justify-center gap-4 mb-6">
+    <div class="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+        <img src="{{ asset('asset/img/postcards-slide.jpg') }}" alt="Postcards" class="rounded-lg shadow-md max-w-full h-auto" />
     </div>
-    <div class="flex-shrink-0">
-        <img src="{{ asset('asset/img/Engraved.png') }}" alt="Emerald" class="rounded-lg shadow-md max-w-sm h-auto" />
+    <div class="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+        <img src="{{ asset('asset/img/Engraved.png') }}" alt="Emerald" class="rounded-lg shadow-md max-w-full h-auto" />
     </div>
-    <div class="flex-shrink-0">
-        <img src="{{ asset('asset/img/truly-extraordinary_3.jpg') }}" alt="Truly Extraordinary" class="rounded-lg shadow-md max-w-sm h-auto" />
+    <div class="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+        <img src="{{ asset('asset/img/truly-extraordinary_3.jpg') }}" alt="Truly Extraordinary" class="rounded-lg shadow-md max-w-full h-auto" />
     </div>
 </div>
 

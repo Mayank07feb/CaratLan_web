@@ -76,25 +76,39 @@ Route::get('/jewellerycareguide', [HomeController::class, 'jewellerycareguide'])
 Route::get('/gemstone', [HomeController::class, 'gemstone'])->name('gemstone');
 Route::get('/morejewellery', [HomeController::class, 'morejewellery'])->name('morejewellery');
 // veiw collection
-Route::get('/allcollection', [HomeController::class, 'allcollection'])->name('allcollection');
-Route::get('/appointment', [HomeController::class, 'appointment'])->name('appointment');
-Route::get('/knowmore', [HomeController::class, 'knowmore'])->name('knowmore');
-Route::get('/know', [HomeController::class, 'know'])->name('know');
-Route::get('/policy', [HomeController::class, 'policy'])->name('policy');
-Route::get('/daimondguide', [HomeController::class, 'daimondguide'])->name('daimondguide,');
-Route::get('/jewelleryguide', [HomeController::class, 'jewelleryguide'])->name('jewelleryguide');
-Route::get('/gemstoneguide', [HomeController::class, 'gemstoneguide'])->name('gemstoneguide,');
-Route::get('/goldrate', [HomeController::class, 'goldrate'])->name('goldrate');
-Route::get('/order', [HomeController::class, 'order'])->name('order');
-Route::get('/postcard', [HomeController::class, 'postcard'])->name('postcard');
-Route::get('/shipping', [HomeController::class, 'shipping'])->name('shipping');
-Route::get('/glosarry', [HomeController::class, 'glosarry'])->name('glosarry');
-Route::get('/egold', [HomeController::class, 'egold'])->name('egold');
-Route::get('/wearyourwins', [HomeController::class, 'wearyourwins'])->name('wearyourwins');
-Route::get('/press', [HomeController::class, 'press'])->name('press');
-Route::get('/findstore', [HomeController::class, 'findstore'])->name('findstore');
 
-
+Route::get('/allcollection',[HomeController::class,'allcollection'])->name('allcollection');
+Route::get('/appointment',[HomeController::class,'appointment'])->name('appointment');
+Route::get('/knowmore', [HomeController::class,'knowmore'])->name('knowmore');
+Route::get('/know',[HomeController::class,'know'])->name('know');
+Route::get('/policy',[HomeController::class,'policy'])->name('policy');
+Route::get('/daimondguide',[HomeController::class,'daimondguide'])->name('daimondguide,');
+Route::get('/jewelleryguide',[HomeController::class,'jewelleryguide'])->name('jewelleryguide');
+Route::get('/gemstoneguide',[HomeController::class,'gemstoneguide'])->name('gemstoneguide,');
+Route::get('/goldrate',[HomeController::class,'goldrate'])->name('goldrate');
+Route::get('/order',[HomeController::class,'order'])->name('order');
+Route::get('/postcard',[HomeController::class,'postcard'])->name('postcard');
+Route::get('/shipping',[HomeController::class,'shipping'])->name('shipping');
+Route::get('/glosarry',[HomeController::class,'glosarry'])->name('glosarry');
+Route::get('/egold',[HomeController::class,'egold'])->name('egold');
+Route::get('/wearyourwins',[HomeController::class,'wearyourwins'])->name('wearyourwins');
+Route::get('/press',[HomeController::class,'press'])->name('press');
+Route::get('/findstore',[HomeController::class,'findstore'])->name('findstore');
+Route::get('/men',[HomeController::class,'men'])->name('men');
+Route::get('/women',[HomeController::class,'women'])->name('women');
+Route::get('/kids',[HomeController::class,'kids'])->name('kids');
+Route::get('/webstories',[HomeController::class,'webstories'])->name('webstories');
+Route::get('/Collaborations',[HomeController::class,'Collaborations'])->name('Collaborations');
+Route::get('/WhatNew',[HomeController::class,'WhatNew'])->name('WhatNew');
+Route::get('/occasion',[HomeController::class,'occasion'])->name('occasion');
+Route::get('/Jewellerycaretips',[HomeController::class,'Jewellerycaretips'])->name('Jewellerycaretips');
+Route::get('/Jewelleryguides',[HomeController::class,'Jewelleryguides'])->name('Jewelleryguides');
+Route::get('/Jewellerystylingideas',[HomeController::class,'Jewellerystylingideas'])->name('Jewellerystylingideas');
+Route::get('/calculate',[HomeController::class,'calculate'])->name('calculate');
+Route::get('/shaya',[HomeController::class,'shaya'])->name('shaya');
+Route::get('/earing',[HomeController::class,'earing'])->name('earing');
+Route::get('/necklace',[HomeController::class,'necklace'])->name('necklace');
+Route::get('/stories',[HomeController::class,'stories'])->name('stories');
 
 
 Route::prefix('/myaccount')->name('myaccount.')->group(function () {

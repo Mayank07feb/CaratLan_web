@@ -253,6 +253,77 @@ class HomeController extends Controller
     {
         return view('frontend.egold');
     }
+
+    // second nav bar 
+    // men 
+    public function men()
+    {
+        return view('frontend.men');
+    }
+    // women
+    public function women()
+    {
+        return view('frontend.women');
+    }
+    // kids
+    public function kids()
+    {
+        return view('frontend.kids');
+    }
+    // webstories
+    public function webstories()
+    {
+        return view('frontend.webstories');
+    }
+    // Collaborations
+    public function Collaborations()
+    {
+        return view('frontend.Collaborations');
+    }
+    // What’s New
+    public function WhatNew()
+    {
+        return view('frontend.WhatNew');
+    }
+    // occasion
+    public function occasion()
+    {
+        return view('frontend.occasion');
+    }
+    public function Jewellerycaretips()
+    {
+        return view('frontend.Jewellerycaretips');
+    }
+    public function Jewelleryguides()
+    {
+        return view('frontend.Jewelleryguides');
+    }
+    public function Jewellerystylingideas()
+    {
+        return view('frontend.Jewellerystylingideas');
+    }
+    public function calculate()
+    {
+        return view('frontend.calculate');
+    }
+    public function shaya()
+    {
+        return view('frontend.shaya');
+    }
+
+    public function earing()
+    {
+        return view('frontend.earing');
+    }
+    public function necklace()
+    {
+        return view('frontend.necklace');
+    }
+    public function stories()
+    {
+        return view('frontend.stories');
+    }
+
     //    wearyourwins
     public function wearyourwins()
     {

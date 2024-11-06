@@ -88,8 +88,8 @@
     {{-- div containers --}}
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 m-4 pt-4">
         <div class="flex items-center justify-center">
-            <img src="{{ asset('asset/img/Responsive-11.jpg') }}" alt="Best Image 12"
-                class="w-full h-auto rounded shadow-lg">
+           <a href="{{route('shaya')}}"> <img src="{{ asset('asset/img/Responsive-11.jpg') }}" alt="Best Image 12"
+            class="w-full h-auto rounded shadow-lg"></a>
         </div>
         <div class="grid grid-rows-2 gap-4">
             <div class="flex items-center justify-center">

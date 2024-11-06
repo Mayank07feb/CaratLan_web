@@ -1,121 +1,349 @@
-@extends('components.main')
-
-@section('content')
-    <!-- Banner Section with Background Image -->
-    <div class="relative bg-cover bg-center h-64" style="background-image: url('{{ asset('asset/img/banner2.webp') }}');">
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="relative max-w-7xl mx-auto h-full flex items-center justify-center px-4">
-            <div class="text-center text-white">
-                <h1 class="text-4xl lg:text-5xl font-bold mb-2">How to Choose the Best Jewellery for Your Gown</h1>
-                <p class="text-xl lg:text-2xl">Discover the latest trends in fashion and lifestyle</p>
-            </div>
+<script src="https://cdn.tailwindcss.com"></script>
+<nav class="bg-gray-100 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <div class="text-white text-2xl font-bold">
+            <a href="#"><img src="{{asset('asset/img/Horizondal.jpg')}}" alt="Logo" class="h-10 w-40"></a>
         </div>
-    </div>
 
-    <!-- Blog Details Section -->
-    <div class="mx-auto px-4 sm:px-6 lg:px-8 py-11 bg-gray-50">
-        <div class="bg-white rounded-lg shadow-lg p-6 lg:p-8">
-            <div class="mb-4">
-                <img src="https://png-devs3.s3.ap-south-1.amazonaws.com/how_to_choose_the_best_jewellery_for_your_gown_1372386072_23f363b07e.jpg" alt="How to Choose the Best Jewellery for Your Gown" class="w-full h-auto rounded-lg shadow-md">
-            </div>
-
-            <div class="max-w-4xl mx-auto leading-relaxed text-base">
-                <div class="text-sm text-gray-600 mb-4">
-                    <span class="font-medium">Posted on</span> 15th Jul 2024
+        <!-- Navbar Items -->
+        <ul class="flex space-x-6 text-black font-extralight relative">
+            <li><a href="{{route('men')}}" class="hover:text-black">Men</a></li>
+            <li><a href="{{route('women')}}" class="hover:text-black">Women</a></li>
+            <li><a href="{{route('kids')}}" class="hover:text-black">Kids</a></li>
+            
+            <!-- Dropdown for Collection and Occasion -->
+            <li class="relative group">
+                <a href="#" class="hover:text-black">Collection</a>
+                <div class="absolute left-0 hidden mt-2 w-40 bg-white rounded-lg shadow-lg group-hover:block z-10">
+                    <ul class="py-2">
+                        <li><a href="{{route('Collaborations')}}" class="block px-4 py-2 hover:bg-gray-100">Collaborations</a></li>
+                        <li><a href="{{route('WhatNew')}}" class="block px-4 py-2 hover:bg-gray-100">What’s New</a></li>
+                    </ul>
                 </div>
-                <h1 class="text-2xl lg:text-4xl font-light text-black mb-4">Buying Gold in Pushya Nakshatra: Is it Auspicious or Not?</h1>
-                <p class="font-bold text-lg mb-2">What is Pushya Nakshatra?</p>
-                <p class="mb-4">In Vedic astrology, Pushya Nakshatra, often called Pushyaami or Punarvasu, is the eighth nakshatra (lunar mansion). It is represented by the udder of a nursing cow or a lotus blossom. It is thought that this nakshatra has great astrological significance and impacts success and lives.</p>
-                
-                <h2 class="text-xl font-bold mb-2">Characteristics of Pushya Nakshatra</h2>
-                <ul class="list-disc list-inside mb-4 pl-4 space-y-2">
-                    <li><strong>Nurturing and Caring:</strong> People born during the time of Pushya Nakshatra are known for their nurturing and compassionate nature. They have a strong sense of empathy and compassion that makes them excellent caregivers, friends, and partners.</li>
-                    <li><strong>Prosperity and Abundance:</strong> Pushya is associated with prosperity and abundance. Individuals under this nakshatra tend to attract good fortune and success in their chosen fields.</li>
-                    <li><strong>Leadership and Determination:</strong> They have strong leadership abilities and a determined spirit. They are hardworking and determined to achieve their goals.</li>
-                    <li><strong>Peacefulness and Diplomacy:</strong> Pushya nakshatra natives are known for their peaceful and diplomatic nature. They are excellent at resolving conflicts.</li>
-                    <li><strong>Creativity and Intuition:</strong> Blessed with creativity and strong intuition, they have a knack for finding innovative solutions and making decisions based on their instincts.</li>
-                </ul>
+            </li>
+            <li class="relative group">
+                <a href="#" class="hover:text-black">Occasion</a>
+                <div class="absolute left-0 hidden mt-2 w-40 bg-white rounded-lg shadow-lg group-hover:block z-10">
+                    <ul class="py-2">
+                        <li><a href="{{route('occasion')}}" class="block px-4 py-2 hover:bg-gray-100">Diwali</a></li>
+                       
+                    </ul>
+                </div>
+            </li>
+            <li class="relative group">
+                <a href="#" class="hover:text-black">The-how-tos</a>
+                <div class="absolute left-0 hidden mt-2 w-40 bg-white rounded-lg shadow-lg group-hover:block z-10">
+                    <ul class="py-2">
+                        <li><a href="{{route('Jewellerycaretips')}}" class="block px-4 py-2 hover:bg-gray-100">Jewellery care tips</a></li>
+                        <li><a href="{{route('Jewelleryguides')}}" class="block px-4 py-2 hover:bg-gray-100">Jewellery guide</a></li>
+                        <li><a href="{{route('Jewellerystylingideas')}}" class="block px-4 py-2 hover:bg-gray-100">Jewellery styling ideas</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#" class="hover:text-black">Shop</a></li>
+            <li><a href="{{route('webstories')}}" class="hover:text-black">Web Stories</a></li>
+        </ul>
 
-                <h2 class="text-xl font-bold mb-2">Historical and Mythological Significance of Pushya Nakshatra</h2>
-                <p class="mb-4">Pushya Nakshatra holds a special place in Hindu mythology. It is associated with Brihaspati, the Guru (teacher) of the Devas (celestial beings). Pushya is also believed to be the nakshatra that governs rituals, offerings, and auspicious ceremonies. Some legends associate Pushya with the divine cow, Kamadhenu, known for fulfilling all desires.</p>
-                
-                <h2 class="text-xl font-bold mb-2">Why Pushya Nakshatra is Considered Auspicious for Certain Activities?</h2>
-                <ul class="list-disc list-inside mb-4 pl-4 space-y-2">
-                    <li><strong>Planetary Influence:</strong> Pushya is ruled by Jupiter, which is associated with prosperity, growth, and good fortune. This planetary influence makes Pushya nakshatra an auspicious time for undertaking new ventures.</li>
-                    <li><strong>Nourishing Energy:</strong> The symbol of the lotus flower and its association with nourishment signify a period of growth and abundance. Initiating new endeavors during Pushya is believed to be nurtured and flourish.</li>
-                    <li><strong>Harmony and Peace:</strong> The peaceful and diplomatic nature of Pushya makes it an ideal time for starting partnerships, negotiations, and important ceremonies.</li>
-                </ul>
-
-                <h2 class="text-xl font-bold mb-2">Popular Astrological Beliefs Associated with Buying Gold During Auspicious Times</h2>
-                <ul class="list-disc list-inside mb-4 pl-4 space-y-2">
-                    <li><strong>Gold and Prosperity:</strong> Gold is considered a symbol of wealth and financial security. Buying gold during Pushya, a time associated with abundance, is believed to attract more financial security.</li>
-                    <li><strong>Jupiter's Influence:</strong> As Pushya is ruled by the beneficent Jupiter, buying gold during this nakshatra is believed to invoke Jupiter's blessings, bringing good luck and appreciation for the gold.</li>
-                    <li><strong>Investment Potential:</strong> Gold is seen as a stable investment, and buying during this period ensures more investments that bring growth.</li>
-                    <li><strong>Auspiciousness for Weddings:</strong> Gold plays a significant role in Indian weddings. Buying gold during Pushya for a wedding is believed to bring blessings for a happy and married life.</li>
-                    <li><strong>Gift of Love and Security:</strong> Gold jewelry is often a token of love and security. Buying gold during Pushya for a loved one is believed to strengthen the bond and bring them good fortune.</li>
-                    <li><strong>Purity and Longevity:</strong> Gold is considered a pure and long-lasting metal. Buying gold during Pushya is believed to ensure the gold remains beautiful and retains its value for generations.</li>
-                    <li><strong>Spiritual Significance:</strong> In some traditions, gold is associated with spiritual enlightenment. Buying gold during Pushya is believed to bring spiritual growth.</li>
-                </ul>
-
-                <h2 class="text-xl font-bold mb-2">Auspicious Activities During Pushya Nakshatra</h2>
-                <ul class="list-disc list-inside mb-4 pl-4 space-y-2">
-                    <li>Starting a new business or venture</li>
-                    <li>Investing in property or valuables</li>
-                    <li>Getting married or starting a new relationship</li>
-                    <li>Making important purchases like gold</li>
-                    <li>Planting seeds or starting new agricultural projects</li>
-                    <li>Organizing educational or religious ceremonies</li>
-                    <li>Seeking blessings for good health and prosperity</li>
-                </ul>
-
-                <h2 class="text-xl font-bold mb-2">Skepticism and Debates Regarding Buying Gold in Pushya Nakshatra</h2>
-                <p class="mb-4">Not everyone agrees that purchasing gold in Pushya Nakshatra is a good idea. Opponents contend that economic variables such as supply and demand as well as world events—rather than the moon's position—drive the gold market. They argue that there is insufficient evidence to link astrology exclusively to price swings and profitable investments. This view emphasizes the need for careful financial preparation and market analysis over reliance on lucky dates.</p>
-
-                <h2 class="text-xl font-bold mb-2">Practical Tips for Buying Gold During Pushya Nakshatra</h2>
-                <p class="mb-4">Even if you believe in the auspiciousness of Pushya Nakshatra for buying gold, it's wise to be a smart shopper:</p>
-                <ul class="list-disc list-inside mb-4 pl-4 space-y-2">
-                    <li><strong>Do your research:</strong> Regardless of the timing, research current gold prices and market trends. Understanding the market helps individuals make favorable decisions.</li>
-                    <li><strong>Compare prices:</strong> Instead of rushing to buy, one should be patient and shop after research and price comparison.</li>
-                    <li><strong>Consider your budget:</strong> Instead of overspending, stick to your budget.</li>
-                    <li><strong>Look for hallmarks:</strong> Ensure the gold purchased is hallmarked, guaranteeing purity and adherence to government standards.</li>
-                    <li><strong>Ask about buyback policies:</strong> Understand the jeweler’s buyback policy in case you decide to resell your gold in the future.</li>
-                    <li><strong>Get a certificate:</strong> Reputable jewelers will provide a certificate for the gold you purchase, specifying its weight, purity, and value.</li>
-                </ul>
-                
-                <h2 class="text-xl font-bold mb-2">Conclusion</h2>
-                <p class="mb-4">Pushya Nakshatra is considered a highly auspicious time for purchasing gold in Vedic astrology, and many people believe that timing their investments in this way will attract prosperity and success. Whether you adhere to astrological beliefs or approach your investments with a more pragmatic perspective, buying gold can be a meaningful way to celebrate prosperity and secure your financial future. It's always best to balance astrological beliefs with practical considerations and make informed decisions based on your personal financial goals and circumstances.</p>
-            </div>
-        </div>
-        <div class="text-center mt-16">
-            <div class="inline-flex rounded-xl overflow-hidden shadow-[0_10px_20px_rgba(96,16,66,0.3)] transform hover:scale-105 transition-all duration-300 ease-in-out">
-                <a href="{{ url('/') }}" class="group relative flex items-center px-8 py-4 bg-gradient-to-br from-[#7a1955] to-[#601042] text-white overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-r from-[#9d6e2a] to-[#b7822f] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"></div>
-                    <span class="relative z-10 flex items-center">
-                        <span class="material-icons mr-3 text-2xl group-hover:scale-110 transition-transform duration-300">home</span>
-                        <span class="font-semibold text-lg">Back to Home</span>
-                    </span>
-                    <div class="absolute bottom-0 left-0 right-0 h-1 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></div>
-                </a>
-                <div class="w-px bg-white/20"></div>
-                <a href="{{ route('blogs') }}" class="group relative flex items-center px-8 py-4 bg-gradient-to-br from-[#7a1955] to-[#601042] text-white overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-r from-[#9d6e2a] to-[#b7822f] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"></div>
-                    <span class="relative z-10 flex items-center">
-                        <span class="material-icons mr-3 text-2xl group-hover:scale-110 transition-transform duration-300">article</span>
-                        <span class="font-semibold text-lg">Back to Blog</span>
-                    </span>
-                    <div class="absolute bottom-0 left-0 right-0 h-1 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></div>
-                </a>
-            </div>
+        <!-- Search Icon -->
+        <div>
+            <a href="#" class="text-black">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19a8 8 0 100-16 8 8 0 000 16zM21 21l-4.35-4.35" />
+                </svg>
+            </a>
         </div>
     </div>
+</nav>
+<div class="mx-12">
     
 
-    <!-- Horizontal Line with Logo -->
-    <div class="flex items-center justify-center w-screen px-10 bg-gray-50">
-        <div class="flex-grow h-px bg-[#9d6e2a]"></div>
-        <div class="mx-4">
-            <img src="{{ asset('asset/img/logo.png') }}" alt="Logo" class="h-12 w-auto">
-        </div>
-        <div class="flex-grow h-px bg-[#9d6e2a]"></div>
+
+
+<div class="max-w-7xl mx-auto p-6">
+    <!-- Categories Section -->
+    <div class="flex flex-wrap gap-4 mb-6">
+        <a href="#" class="bg-gray-200 text-gray-800 font-semibold px-4 py-2 rounded-full transition duration-300 hover:bg-gray-300">Collections</a>
+        <a href="#" class="bg-gray-200 text-gray-800 font-semibold px-4 py-2 rounded-full transition duration-300 hover:bg-gray-300">Diwali</a>
+        <a href="#" class="bg-gray-200 text-gray-800 font-semibold px-4 py-2 rounded-full transition duration-300 hover:bg-gray-300">Men</a>
+        <a href="#" class="bg-gray-200 text-gray-800 font-semibold px-4 py-2 rounded-full transition duration-300 hover:bg-gray-300">What's New</a>
+        <a href="#" class="bg-gray-200 text-gray-800 font-semibold px-4 py-2 rounded-full transition duration-300 hover:bg-gray-300">Women</a>
     </div>
-@endsection
+
+    <!-- Featured Article Section -->
+    <article class="bg-white p-6 rounded-lg shadow-md transition duration-300 hover:shadow-lg">
+        <h2 class="text-2xl font-serif font-medium mb-2">Latest Festive Postcard Rings: Top 15 Best-Selling Designs for Men and Women</h2>
+        <p class="text-sm text-gray-500 mb-4">OCTOBER 18, 2024</p>
+        <p class="text-gray-600">Explore our curated list of the best-selling festive postcard rings, perfect for celebrating the season in style. Whether for yourself or as a gift, these designs are sure to impress!</p>
+        <a href="#" class="mt-4 inline-block text-purple-600 hover:underline">Read More</a>
+    </article>
+</div>
+
+{{-- image --}}
+<div>
+    <img src="{{asset('asset/img/detail1.jpg')}}" alt="">
+</div>
+<div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-4">Festive Gifting: Discover the Magic of Postcard Rings</h1>
+    <div class="mb-6">
+        <p>
+            The festive season is the perfect time to think about giving gifts to your loved ones. It’s a season for exchanging presents and taking advantage of special offers and discounts. This year, why not surprise them with something truly unique and personal? Consider innovative gifts like Postcard Rings, which combine stunning design with heartfelt messages.
+        </p>
+        <p>
+            In this blog post, we’ll explore the top 15 best-selling Postcard Ring designs for both men and women, perfect for spreading joy and creating lasting memories this festive season and beyond.
+        </p>
+    </div>
+
+    <h2 class="text-2xl font-semibold mb-4">What Are Postcard Rings?</h2>
+    <div class="mb-6">
+        <p>
+            Before we dive into our top picks, let’s quickly see what makes Postcard Rings so special. These aren’t just beautifully designed pieces of jewelry; they offer a unique, heartfelt experience. Each ring comes with an embedded video message from the giver, accessible through a mobile app at any time.
+        </p>
+        <p>
+            Whether it’s a declaration of love, a message of support, or a celebratory note, it’s like carrying a personal postcard from your loved one on your finger! This feature makes Postcard Rings the perfect gift for this festive season, combining the timeless beauty of fine jewelry with a cutting-edge, sentimental touch.
+        </p>
+    </div>
+
+    <h2 class="text-2xl font-semibold mb-4">Experience the Innovation</h2>
+    <div class="mb-6">
+        <p>
+            To learn more about the Postcard Rings feature and experience this innovation firsthand, download the app. By scanning your ring through the app, the embedded video message comes alive, making it a memorable piece to cherish forever.
+        </p>
+    </div>
+
+    <h2 class="text-2xl font-semibold mb-4">Explore More</h2>
+    <div class="space-y-2 mb-6">
+        <a href="#" class="text-blue-500 hover:underline">Solitaire Rings for Men and Women</a>
+        <a href="#" class="text-blue-500 hover:underline">Diamond Rings at Best Prices</a>
+        <a href="#" class="text-blue-500 hover:underline">Best-Selling Festive Rings for Men</a>
+    </div>
+
+    <div class="mt-6">
+        <p>
+            This festive season, give the gift of a Postcard Ring and make the moments that matter even more special.
+        </p>
+    </div>
+</div>
+
+
+<div>
+    <img src="{{asset('asset/img/detail1.jpg')}}" alt="">
+</div>
+
+<div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-4">Top 15 Best-Selling Postcard Rings</h1>
+
+    <div class="mb-8">
+        <h2 class="text-2xl font-semibold mb-4">For Men</h2>
+        <div class="space-y-4">
+            <div class="ring-item">
+                <h3 class="font-medium">Issac Diamond Ring</h3>
+                <p>
+                    Combining luxury and personalization, the Issac Diamond Ring offers men a sophisticated design with the option to engrave a message. The Postcard feature adds a deeper layer of connection, making it perfect for those who want a constant reminder of a special bond.
+                </p>
+            </div>
+            <div class="ring-item">
+                <h3 class="font-medium">Glimmer Solitaire Ring</h3>
+                <p>
+                    With its minimalist yet powerful solitaire design, the Glimmer Solitaire Ring is ideal for men who prefer understated elegance. Its embedded video message adds a heartfelt touch to this classic design.
+                </p>
+            </div>
+            <div class="ring-item">
+                <h3 class="font-medium">Ayan Diamond Ring For Men</h3>
+                <p>
+                    The Ayan Diamond Ring has a bold design and is perfect for men who like to make a statement. Combined with the Postcard Ring feature, it becomes a keepsake that carries a message of love or inspiration.
+                </p>
+            </div>
+            <div class="ring-item">
+                <h3 class="font-medium">Dean Diamond Band For Men</h3>
+                <p>
+                    The Dean Diamond Band offers a blend of classic style and modern appeal. Its Postcard Ring technology ensures that this ring is not just a fashion statement but a personal reminder of a meaningful connection.
+                </p>
+            </div>
+            <div class="ring-item">
+                <h3 class="font-medium">Carter Platinum Band For Men</h3>
+                <p>
+                    Crafted from platinum, this sleek and durable Carter Platinum Band exudes strength. Paired with a personalized video message, it becomes a ring that holds both style and sentimental value.
+                </p>
+            </div>
+            <div class="ring-item">
+                <h3 class="font-medium">Justin Diamond Band For Men</h3>
+                <p>
+                    The Justin Diamond Band combines modern design with the brilliance of diamonds. The Postcard feature makes this ring memorable, capturing emotions in form and function.
+                </p>
+            </div>
+            <div class="ring-item">
+                <h3 class="font-medium">Adler Gold Band For Men</h3>
+                <p>
+                    The Adler Gold Band embodies timeless elegance with its sleek and sophisticated design. Paired with the innovative Postcard Ring feature, this gold band transforms into a heartfelt keepsake.
+                </p>
+            </div>
+        </div>
+    </div>
+<div class="flex flex-row gap-4 justify-center">
+    <img src="{{asset('asset/img/blog-det1.jpg')}}" alt="" class="w-1/3 h-1/2">
+    <img src="{{asset('asset/img/blog-det2.jpg')}}" alt="" class="w-1/3 h-1/2">
+</div>
+
+
+
+    <main class="container mx-auto my-10 p-4">
+        <section class="">
+            <article class="bg-white p-5">
+                <h2 class="text-xl font-semibold">The Blush Miracle Plate Diamond Ring</h2>
+                <p class="mt-2">A delicate, blush-hued setting that magnifies diamond sparkle. Perfect for elegance and technology.</p>
+            </article>
+
+            <article class="bg-white p-5">
+                <h2 class="text-xl font-semibold">Sparking Diamond Vanki Ring</h2>
+                <p class="mt-2">Inspired by South Indian bridal jewellery, this ring blends timeless beauty with modern technology.</p>
+            </article>
+
+            <article class="bg-white p-5">
+                <h2 class="text-xl font-semibold">Nora Rising Sun Diamond Ring</h2>
+                <p class="mt-2">Symbolising warmth and light, this ring connects you with loved ones through its unique message feature.</p>
+            </article>
+
+            <article class="bg-white p-5">
+                <h2 class="text-xl font-semibold">Citric Sparkle Diamond Ring</h2>
+                <p class="mt-2">Bright and playful, this ring ensures every glance brings joy and cherished memories.</p>
+            </article>
+
+            <article class="bg-white p-5">
+                <h2 class="text-xl font-semibold">Scattered Miracle Plate Band</h2>
+                <p class="mt-2">Simple yet captivating, perfect for everyday wear with added emotional depth.</p>
+            </article>
+
+            <article class="bg-white p-5">
+                <h2 class="text-xl font-semibold">Enchant Platinum Solitaire Ring</h2>
+                <p class="mt-2">Timeless beauty combined with modern features, carrying the emotions of your loved ones.</p>
+            </article>
+
+            <article class="bg-white p-5">
+                <h2 class="text-xl font-semibold">Evelyn Diamond Ring</h2>
+                <p class="mt-2">Vintage-inspired elegance that transforms into a personal memento.</p>
+            </article>
+
+            <article class="bg-white p-5">
+                <h2 class="text-xl font-semibold">Tri-Stripe Ring</h2>
+                <p class="mt-2">A three-tone design with a heart, allowing you to revisit cherished moments.</p>
+            </article>
+        </section>
+
+       
+    </main>
+    <div class="max-w-4xl mx-auto p-6 bg-gray-50">
+        <div class="flex items-start space-x-4">
+            <img src="/api/placeholder/80/80" alt="Profile Picture" class="w-20 h-20 rounded-full object-cover">
+            <div class="flex-1">
+                <h2 class="text-xl font-semibold text-gray-900">Profile Name</h2>
+                <p class="mt-1 text-gray-600">
+                    Strives to create innovative designs that add value and tell a compelling story.
+                </p>
+                <button class="mt-2 text-gray-700 font-medium hover:text-gray-900">
+                    VIEW PROFILE
+                </button>
+            </div>
+        </div>
+
+        <div class="mt-6 grid grid-cols-3 gap-4">
+            <button class="flex items-center justify-center px-4 py-2 bg-white rounded-lg shadow hover:shadow-md transition">
+                <span class="font-medium text-gray-700">Share</span>
+            </button>
+            <button class="flex items-center justify-center px-4 py-2 bg-white rounded-lg shadow hover:shadow-md transition">
+                <span class="font-medium text-gray-700">Pin</span>
+            </button>
+            <button class="flex items-center justify-center px-4 py-2 bg-white rounded-lg shadow hover:shadow-md transition">
+                <span class="font-medium text-gray-700">Tweet</span>
+            </button>
+        </div>
+
+       
+    </div>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <article class="bg-white p-4 ">
+            <h3 class="text-lg font-semibold text-gray-900">75 Happy Diwali Wishes, Quotes, and Greetings.</h3>
+        </article>
+        <article class="bg-white p-4 ">
+            <h3 class="text-lg font-semibold text-gray-900">Types of Gold Investments: Secure Your Future with Gold Coins and EGold</h3>
+        </article>
+        <article class="bg-white p-4 ">
+            <h3 class="text-lg font-semibold text-gray-900">Trending Self-Gift Ideas: Jewellery Designs to Pamper Yourself</h3>
+        </article>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<!-- Newsletter Section -->
+<div class="max-w-3xl mx-auto mt-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg p-8 text-white">
+    <h2 class="text-3xl font-semibold mb-4">Join our Free Newsletter and</h2>
+    <p class="mb-6">Get insider info on new arrivals, early access, and everything fine.</p>
+    <form class="flex gap-4">
+        <input type="email" placeholder="Email" class="flex-1 px-4 py-2 rounded-md text-gray-800">
+        <button type="submit" class="bg-gray-900 text-white px-6 py-2 rounded-md hover:bg-gray-800 transition-colors">
+            SUBSCRIBE
+        </button>
+    </form>
+</div>
+
+<footer class="max-w-7xl mx-auto px-4 py-12">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+        <!-- Left Side - Contact Information -->
+        <div class="space-y-4">
+            <h1 class="text-3xl md:text-4xl font-serif mb-8">Stay Connected with CaratLane</h1>
+            <div class="space-y-2">
+                <h2 class="text-gray-800 font-medium">CONTACT US</h2>
+                <div class="text-gray-600">
+                    <p>1800-102-0103 (TOLL FREE)</p>
+                    <p>+91-44-4293-5000</p>
+                    <p class="uppercase">contactus@caratlane.com</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side - Social Media Icons -->
+        <div class="flex items-center space-x-6 mt-8 md:mt-0">
+            <div class="flex items-center">
+                <i class="fab fa-instagram text-xl"></i>
+                <span class="ml-2 text-gray-800 font-medium">CARATLANE</span>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-800 hover:text-gray-600 transition-colors">
+                    <i class="fab fa-facebook-f text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-800 hover:text-gray-600 transition-colors">
+                    <i class="fab fa-youtube text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-800 hover:text-gray-600 transition-colors">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-800 hover:text-gray-600 transition-colors">
+                    <i class="fab fa-pinterest text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <div class="fixed bottom-8 right-8">
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="bg-gray-100 p-3 rounded-full hover:bg-gray-200 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+            </svg>
+        </button>
+    </div>
+</footer>
