@@ -51,7 +51,7 @@
             <!-- Breadcrumb and Title Section -->
             <div class="flex items-center justify-between mb-2">
                 <h1 class="text-lg font-semibold text-gray-800">
-                    Jewellery
+                    Earrings
                     <span class="text-xs font-normal text-gray-600">3855 Designs</span>
                 </h1>
             </div>
@@ -59,7 +59,8 @@
             <!-- Breadcrumb Navigation -->
             <nav class="text-xs text-gray-500">
                 <a href="#" class="hover:underline">Home</a> &gt;
-                <a href="#" class="hover:underline">Jewellery</a>
+                <a href="#" class="hover:underline">Jewellery</a> &gt;
+                <a href="#" class="hover:underline">Earrings</a>
             </nav>
         </div>
 
