@@ -4,30 +4,31 @@
     <main class="flex-1 flex flex-col">
 
         <div class="flex items-center border border-gray-300 shadow-lg p-4 bg-white mb-6">
-            <span class="material-symbols-outlined mr-2 text-gray-600">
+            <button class="material-symbols-outlined mr-2 text-gray-600">
                 arrow_back
-            </span>
+            </button>
             <h1 class="text-lg font-semibold text-primary">My Profile</h1>
         </div>
 
-        <div class="flex justify-center bg-white items-center p-8">
-            <div class="w-full p-8 rounded-lg shadow-lg">
+        <!-- Personal Details Section -->
+        <div class="flex justify-center bg-white items-center p-4 sm:p-8">
+            <div class="w-full max-w-full md:max-w-4xl rounded-lg shadow-lg border border-gray-100">
                 <div
-                    class="flex justify-between items-center text-lg font-semibold text-gray-700 mb-6 border-b-2 p-4 bg-secondary border-purple-100">
+                    class="flex shadow-md justify-between items-center text-lg font-semibold text-gray-700 mb-6 border-b-2 p-4 bg-secondary border-purple-100">
                     <span class="text-primary">Personal Details</span>
-                    <span
-                        class="material-icons p-2 border border-gray-300 bg-white rounded-full text-gray-600 hover:bg-gray-100 cursor-pointer">add</span>
+                    <button id="personal-details"
+                        class="material-icons p-2 border border-gray-300 bg-white rounded-full text-gray-600 hover:bg-gray-100 cursor-pointer">add</button>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 p-4 sm:p-8">
                     <!-- Name Fields -->
                     <div>
                         <label class="block text-sm font-medium text-gray-600">Let's start with your name*</label>
                         <div class="grid grid-cols-2 gap-4 mt-2">
                             <input type="text" placeholder="First Name"
-                                class="border border-purple-100 rounded-[12px] p-3 text-xs bg-secondary">
+                                class="border border-purple-100 rounded-[12px] p-3 text-xs bg-secondary w-full">
                             <input type="text" placeholder="Last Name"
-                                class="border border-purple-100 rounded-[12px] p-3 text-xs bg-secondary">
+                                class="border border-purple-100 rounded-[12px] p-3 text-xs bg-secondary w-full">
                         </div>
                     </div>
 
@@ -123,6 +124,165 @@
                             SAVE
                         </button>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Occasion Details Section -->
+        <div class="flex justify-center bg-white items-center p-4 sm:p-8">
+            <div class="w-full max-w-full md:max-w-4xl rounded-lg shadow-lg border border-gray-100">
+                <div
+                    class="flex shadow-md justify-between items-center text-lg font-semibold text-gray-700 mb-6 border-b-2 p-4 bg-secondary border-purple-100">
+                    <span class="text-primary">Occasion Details</span>
+                    <button id="personal-details"
+                        class="material-icons p-2 border border-gray-300 bg-white rounded-full text-gray-600 hover:bg-gray-100 cursor-pointer">
+                        add
+                    </button>
+                </div>
+
+                <!-- Personalized Offers Banner -->
+                <div class="p-4">
+                    <div
+                        class="bg-gradient-to-r from-pink-500 to-orange-400 text-white font-semibold p-4 rounded-lg flex justify-between items-center mb-6">
+                        <span>Personalized offers for your occasions!<br>Receive offers 21 days before every occasion you
+                            add, without disturbing your celebration!</span>
+                        <span class="material-icons text-yellow-300">card_giftcard</span>
+                    </div>
+                </div>
+
+                <!-- Content Section -->
+                <div class="w-full max-w-md p-6">
+
+                    <!-- Gifting Preferences -->
+                    <div>
+                        <p class="font-semibold text-sm text-primary">Who are you most likely to gift?</p>
+                        <p class="text-sm text-primary mb-4">Your gifting preferences help us suggest better options.</p>
+
+                        <!-- Gifting Options Grid -->
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                            <label
+                                class="flex items-center justify-center border border-gray-300 rounded-lg p-4 text-center text-gray-700 cursor-pointer hover:bg-purple-50">
+                                <input type="radio" name="gift-option" id="gift-self" class="hidden"> Self
+                            </label>
+                            <label
+                                class="flex items-center justify-center border border-gray-300 rounded-lg p-4 text-center text-gray-700 cursor-pointer hover:bg-purple-50">
+                                <input type="radio" name="gift-option" id="gift-wife" class="hidden"> Wife
+                            </label>
+                            <label
+                                class="flex items-center justify-center border border-gray-300 rounded-lg p-4 text-center text-gray-700 cursor-pointer hover:bg-purple-50">
+                                <input type="radio" name="gift-option" id="gift-mother" class="hidden"> Mother
+                            </label>
+                            <label
+                                class="flex items-center justify-center border border-gray-300 rounded-lg p-4 text-center text-gray-700 cursor-pointer hover:bg-purple-50">
+                                <input type="radio" name="gift-option" id="gift-sister" class="hidden"> Sister
+                            </label>
+                            <label
+                                class="flex items-center justify-center border border-gray-300 rounded-lg p-4 text-center text-gray-700 cursor-pointer hover:bg-purple-50">
+                                <input type="radio" name="gift-option" id="gift-friend" class="hidden"> Friend
+                            </label>
+                            <label
+                                class="flex items-center justify-center border border-gray-300 rounded-lg p-4 text-center text-gray-700 cursor-pointer hover:bg-purple-50">
+                                <input type="radio" name="gift-option" id="gift-girlfriend" class="hidden"> Girlfriend
+                            </label>
+                            <label
+                                class="flex items-center justify-center border border-gray-300 rounded-lg p-4 text-center text-gray-700 cursor-pointer hover:bg-purple-50">
+                                <input type="radio" name="gift-option" id="gift-daughter" class="hidden"> Daughter
+                            </label>
+                            <label
+                                class="flex items-center justify-center border border-gray-300 rounded-lg p-4 text-center text-gray-700 cursor-pointer hover:bg-purple-50">
+                                <input type="radio" name="gift-option" id="gift-husband" class="hidden"> Husband
+                            </label>
+                            <label
+                                class="flex items-center justify-center border border-gray-300 rounded-lg p-4 text-center text-gray-700 cursor-pointer hover:bg-purple-50">
+                                <input type="radio" name="gift-option" id="gift-father" class="hidden"> Father
+                            </label>
+                            <label
+                                class="flex items-center justify-center border border-gray-300 rounded-lg p-4 text-center text-gray-700 cursor-pointer hover:bg-purple-50">
+                                <input type="radio" name="gift-option" id="gift-son" class="hidden"> Son
+                            </label>
+                            <label
+                                class="flex items-center justify-center border border-gray-300 rounded-lg p-4 text-center text-gray-700 cursor-pointer hover:bg-purple-50">
+                                <input type="radio" name="gift-option" id="gift-niece-nephew" class="hidden">
+                                Niece/Nephew
+                            </label>
+                            <label
+                                class="flex items-center justify-center border border-gray-300 rounded-lg p-4 text-center text-gray-700 cursor-pointer hover:bg-purple-50">
+                                <input type="radio" name="gift-option" id="gift-grandparent" class="hidden">
+                                Grandparent
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Important Dates Section -->
+                    <div class="mt-6">
+                        <p class="font-semibold text-sm text-primary">Tell us which dates are important for you?</p>
+                        <p class="text-sm text-primary mb-4">We’ll make them extra special.</p>
+                        <input type="date" id="occasion-date" placeholder="Date of Occasion"
+                            class="w-full p-2 border bg-secondary border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+
+
+                    <!-- Occasion Types Section -->
+                    <div class="mt-6">
+                        <p class="font-semibold text-sm text-primary">Are you celebrating an occasion?</p>
+                        <p class="text-sm text-primary mb-4">Don’t worry we’ll keep it private too!</p>
+                        <div class="flex space-x-4">
+                            <label
+                                class="flex items-center justify-center border border-gray-300 rounded-lg p-4 text-center text-gray-700 cursor-pointer hover:bg-purple-50 h-16">
+                                <input type="radio" name="occasion-type" id="occasion-anniversary" class="hidden">
+                                Anniversary
+                            </label>
+                            <label
+                                class="flex items-center justify-center border border-gray-300 rounded-lg p-4 text-center text-gray-700 cursor-pointer hover:bg-purple-50 h-16">
+                                <input type="radio" name="occasion-type" id="occasion-birthday" class="hidden">
+                                Birthday
+                            </label>
+                        </div>
+                        <button class="text-white bg-gray-400 p-2 rounded-lg w-full mt-6">SAVE OCCASION DETAILS</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Govt. ID Details Section -->
+        <div class="flex justify-center bg-white items-center p-4 md:p-8">
+            <div class="w-full max-w-4xl rounded-lg shadow-lg border border-gray-100">
+
+                <!-- Header Section -->
+                <div
+                    class="flex shadow-md justify-between items-center text-lg font-semibold text-gray-700 mb-6 border-b-2 p-4 bg-purple-100">
+                    <span class="text-primary">Govt. ID</span>
+                    <button id="Govt-ID-details"
+                        class="material-icons p-2 border border-gray-300 bg-white rounded-full text-gray-600 hover:bg-gray-100 cursor-pointer">
+                        expand_less
+                    </button>
+                </div>
+
+                <!-- Content Section -->
+                <div class="p-6 w-full md:w-[800px]">
+                    <!-- PAN Card Number Input -->
+                    <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+                        <input type="text" placeholder="PAN Card Number"
+                            class="w-full md:w-1/2 p-3 mb-3 md:mb-0 bg-secondary rounded-md border border-gray-300 text-sm placeholder-gray-500 text-primary" />
+
+                        <!-- File upload styled as a button -->
+                        <label for="pan-card-upload"
+                            class="w-full md:w-1/3 p-3 bg-secondary text-primary font-semibold rounded-md hover:bg-purple-300 text-sm text-center cursor-pointer">
+                            + UPLOAD PAN CARD
+                        </label>
+                        <input type="file" id="pan-card-upload" name="pan-card-upload" class="hidden" />
+                    </div>
+
+                    <!-- Note Section -->
+                    <p class="text-xs text-purple-500 mb-6">
+                        This field is mandatory in case order value exceeds Rs. 2 lacs
+                    </p>
+
+                    <!-- Save Button -->
+                    <button class="w-full md:w-1/3 p-3 bg-gray-500 text-white font-semibold rounded-md hover:bg-gray-500">
+                        SAVE DETAILS
+                    </button>
                 </div>
             </div>
         </div>
