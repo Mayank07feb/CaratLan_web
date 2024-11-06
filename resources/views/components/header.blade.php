@@ -229,7 +229,7 @@
 
 
     <!-- Top Banner -->
-    <div class="relative bg-primary text-white text-sm py-4">
+    <div class="bg-primary text-white fixed top-0 z-50 text-sm py-4 w-full">
         <div id="first-text" class="mt-1 absolute inset-0 text-center transition-opacity duration-500">
             CaratLane - A Tanishq Partnership
         </div>
@@ -237,12 +237,13 @@
             Introducing CardzLane: UP TO 70% OFF | Plan your purchase here
         </div>
     </div>
+    
 
 
 
 
     <!-- Main Header -->
-    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+    <header class="bg-white shadow-md fixed w-full top-7 z-50">
 
         <div class="container mx-auto flex items-center justify-between py-4">
 
