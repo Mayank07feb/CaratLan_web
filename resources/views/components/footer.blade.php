@@ -28,7 +28,7 @@
                             <li><a href="{{route('policy')}}" class="hover:text-caratlane-purple">15-day returns</a></li>
                             <li><a href="{{route('shipping')}}" class="hover:text-caratlane-purple">Free shipping</a></li>
                             <li><a href="{{route('postcard')}}" class="hover:text-caratlane-purple">Postcards</a></li>
-                            <li><a href="#" class="hover:text-caratlane-purple">Gold exchange</a></li>
+                            <li><a href="{{route('goldrate')}}" class="hover:text-caratlane-purple">Gold exchange</a></li>
                             <li><a href="{{route('wearyourwins')}}" class="hover:text-caratlane-purple">#Wearyourwins</a></li>
                         </ul>
                     </div>
