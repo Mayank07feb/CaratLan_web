@@ -1,4 +1,5 @@
 <?php
+
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,8 +33,6 @@ Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
 
 Route::get('/productdetail', [HomeController::class, 'productdetail'])->name('productdetail');
 
-Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
-
 Route::get('/orderhistory', [HomeController::class, 'orderhistory'])->name('orderhistory');
 
 Route::get('/wishlist', [HomeController::class, 'wishlist'])->name('wishlist');
@@ -59,7 +58,7 @@ Route::get('/paymentconfirmation', [HomeController::class, 'paymentconfirmation'
 
 Route::get('/thankyou', [HomeController::class, 'thankyou'])->name('thankyou');
 
-Route::get('/storelocator',[HomeController::class,'storelocator'])->name('storelocator');
+Route::get('/storelocator', [HomeController::class, 'storelocator'])->name('storelocator');
 
 Route::get('/franchise', [HomeController::class, 'franchise'])->name('franchise');
 
@@ -75,8 +74,9 @@ Route::get('/ourstory', [HomeController::class, 'ourstory'])->name('ourstory');
 Route::get('/jewellerycareguide', [HomeController::class, 'jewellerycareguide'])->name('jewellerycareguide');
 
 Route::get('/gemstone', [HomeController::class, 'gemstone'])->name('gemstone');
-Route::get('/morejewellery', [HomeController::class,'morejewellery'])->name('morejewellery');
+Route::get('/morejewellery', [HomeController::class, 'morejewellery'])->name('morejewellery');
 // veiw collection
+
 Route::get('/allcollection',[HomeController::class,'allcollection'])->name('allcollection');
 Route::get('/appointment',[HomeController::class,'appointment'])->name('appointment');
 Route::get('/knowmore', [HomeController::class,'knowmore'])->name('knowmore');
@@ -109,3 +109,16 @@ Route::get('/shaya',[HomeController::class,'shaya'])->name('shaya');
 Route::get('/earing',[HomeController::class,'earing'])->name('earing');
 Route::get('/necklace',[HomeController::class,'necklace'])->name('necklace');
 Route::get('/stories',[HomeController::class,'stories'])->name('stories');
+
+
+Route::prefix('/myaccount')->name('myaccount.')->group(function () {
+    Route::get('/', [HomeController::class, 'myaccount'])->name('index');
+    Route::get('/edit', [HomeController::class, 'myaccount_edit'])->name('edit');
+    Route::get('/manage_refunds', [HomeController::class, 'myaccount_manage_refunds'])->name('manage_refunds');
+    Route::get('/tah', [HomeController::class, 'myaccount_tah'])->name('tah');
+    Route::get('/coupons', [HomeController::class, 'myaccount_coupons'])->name('coupons');
+    Route::get('/payment', [HomeController::class, 'myaccount_payment'])->name('payment');
+    Route::get('/profile', [HomeController::class, 'myaccount_profile'])->name('profile');
+    Route::get('/orders', [HomeController::class, 'myaccount_orders'])->name('orders');
+    Route::get('/plan-of-purchase', [HomeController::class, 'myaccount_planofpurchase'])->name('plan-of-purchase');
+});

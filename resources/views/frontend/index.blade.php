@@ -2,12 +2,12 @@
 
 @section('content')
 <style>
-    .clip-path {
+    /* .clip-path {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 53% 100%, 50% 97%, 46% 100%, 0 100%);
         width: 100%;
         height: 100%;
         object-fit: cover;
-    }
+    } */
     .slider-wrapper {
         display: flex;
         transition: transform 0.7s ease-in-out;
@@ -30,6 +30,8 @@
             <div class="slider-slide">
                 <img src="https://cdn.caratlane.com/media/static/images/V4/2024/CL/09_Sep/Banners/DT/Offer/02/Desktop1920x694_R1.webp"
                     alt="Banner Image" class="w-full h-full object-cover clip-path rounded shadow-lg">
+                    <div class="absolute bottom-[-8px] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white rotate-45">
+                    </div>
             </div>
 
             <!-- Slide 2 -->
