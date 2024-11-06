@@ -82,8 +82,8 @@
                         class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
                     <div
                         class="bg-white leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">
-                        <span class="text-sm sm:text-xs xs:text-[8px] block">Your Recently Viewed</span>
-                        <p class="text-sm sm:text-xs xs:text-[4px]">Have a look at your Recently viewed section</p>
+                        <span class="text-sm sm:text-xs xs:text-[12px] block">Your Recently Viewed</span>
+                        <p class="text-sm sm:text-xs xs:text-[10px]">Have a look at your Recently viewed section</p>
                     </div>
                 </div>
 
@@ -344,7 +344,7 @@
             <!-- Navigation -->
             <nav class="hidden lg:flex space-x-6">
                 <div class="hoverable relative">
-                    <a href="#"
+                    <a href="{{route('jewellery.rings')}}"
                         class="relative text-gray-600 hover:text-purple-600 text-sm font-semibold py-2 inline-flex items-center group">
                         <span>Ring</span>
                         <span
@@ -455,31 +455,31 @@
                         </div>
                     </div>
                 </div>
-                <a href="{{ route('gold') }}"
+                <a href="{{ route('jewellery.earrings') }}"
                     class="relative text-gray-600 hover:text-purple-600 text-sm font-semibold py-2 px-2 inline-flex items-center group">
                     <span>Earrings</span>
                     <span
                         class="absolute bottom-[-20px] left-0 w-full h-[4px] bg-gradient-to-r from-pink-600 to-purple-600 transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
                 </a>
-                <a href="#"
+                <a href="{{route('jewellery.bracelets-bangles')}}"
                     class="relative text-gray-600 hover:text-purple-600 text-sm font-semibold py-2 inline-flex items-center group">
                     <span>Bracelets & Bangles</span>
                     <span
                         class="absolute bottom-[-20px] left-0 w-full h-[4px] bg-gradient-to-r from-pink-600 to-purple-600 transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
                 </a>
-                <a href="#"
+                <a href="{{route('jewellery.solitaires')}}"
                     class="relative text-gray-600 hover:text-purple-600 text-sm font-semibold py-2 inline-flex items-center group">
                     <span>Solitaires</span>
                     <span
                         class="absolute bottom-[-20px] left-0 w-full h-[4px] bg-gradient-to-r from-pink-600 to-purple-600 transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
                 </a>
-                <a href="#"
+                <a href="{{route('jewellery.mangalsutras')}}"
                     class="relative text-gray-600 hover:text-purple-600 text-sm font-semibold py-2 inline-flex items-center group">
                     <span>Mangalsutras</span>
                     <span
                         class="absolute bottom-[-20px] left-0 w-full h-[4px] bg-gradient-to-r from-pink-600 to-purple-600 transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
                 </a>
-                <a href="#"
+                <a href="{{route('jewellery.necklaces')}}"
                     class="relative text-gray-600 hover:text-purple-600 text-sm font-semibold py-2 inline-flex items-center group">
                     <span>Necklaces</span>
                     <span
@@ -559,24 +559,20 @@
                 </div>
             </div>
 
-            <!-- Wishlist Icon -->
-            <a href="{{ route('wishlist') }}">
+            <!-- Wishlist Icon (Visible only on web view, hidden on mobile) -->
+            <a href="{{ route('wishlist') }}" class="hidden md:block">
                 <span class="material-icons text-gray-600">favorite</span>
             </a>
 
-            <!-- Shopping Cart Icon with Badge -->
-            <div class="relative">
+            <!-- Shopping Cart Icon with Badge (Visible only on web view, hidden on mobile) -->
+            <div class="relative hidden md:block">
                 <span class="material-icons text-gray-600">shopping_cart</span>
                 <span
                     class="absolute -top-2 -right-2 bg-purple-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</span>
             </div>
+
         </div>
-
-
-
-
-</div>
-</header>
+    </header>
 </div>
 
 
