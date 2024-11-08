@@ -1,30 +1,21 @@
 @extends('components.main')
 @section('content')
-    <div class="bg-white flex items-center justify-center h-screen">
-        <div class="text-center space-y-8">
-            <!-- 3D Rotating 404 Error Text -->
-            <div class="relative inline-block">
-                <h1
-                    class="text-9xl font-extrabold text-[#601042] transform transition-transform duration-700 hover:rotate-12 hover:scale-110 hover:text-[#9d6e2a] drop-shadow-lg">
-                    404
-                </h1>
+    <div class="bg-[#f8f5fa] flex items-center justify-center w-full h-screen m-0 p-0">
+        <div class="flex items-center justify-center w-full max-w-5xl space-x-8">
+            <!-- 60% Width Illustration Section -->
+            <div class="w-3/5 flex items-center justify-center">
+                <img src="{{ asset('asset/img/404.png') }}" alt="404 Illustration" class="w-full h-[80%] object-contain">
             </div>
 
-            <!-- Subheading and Description -->
-            <h2 class="text-3xl font-semibold text-gray-700 mt-4 animate-bounce">
-                Oops! Page Not Found
-            </h2>
-            <p class="text-gray-500 mt-2">
-                The page you're looking for might have been removed, had its name changed, or is temporarily unavailable.
-            </p>
-
-            <!-- Back to Home Button -->
-            <div class="mt-6">
-                <a href="/" class="px-6 py-3 bg-[#601042] text-white rounded-full hover:bg-[#9d6e2a] transition duration-300 shadow-md">
-                    Back to Home
+            <!-- 40% Width Text Section -->
+            <div class="w-2/5 text-left space-y-4">
+                <h1 class="text-xl font-bold text-primary">404 <span class="text-blue-600">NOT FOUND!</span> </h1>
+                <p class="text-4xl font-semibold">Looks like you got lost!</p>
+                <a href="/"
+                    class="inline-block font-semibold px-6 py-3 text-primary rounded-lg transition duration-300 border border-purple-700">
+                    Take Me Home
                 </a>
             </div>
         </div>
     </div>
-    
 @endsection

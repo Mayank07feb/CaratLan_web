@@ -229,7 +229,7 @@
 
 
     <!-- Top Banner -->
-    <div class="relative bg-primary text-white text-sm py-4">
+    <div class="bg-primary text-white fixed top-0 z-50 text-sm py-4 w-full">
         <div id="first-text" class="mt-1 absolute inset-0 text-center transition-opacity duration-500">
             CaratLane - A Tanishq Partnership
         </div>
@@ -237,12 +237,13 @@
             Introducing CardzLane: UP TO 70% OFF | Plan your purchase here
         </div>
     </div>
+    
 
 
 
 
     <!-- Main Header -->
-    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+    <header class="bg-white shadow-md fixed w-full top-7 z-50">
 
         <div class="container mx-auto flex items-center justify-between py-4">
 
@@ -277,9 +278,9 @@
                     <!-- Right Icons -->
                     <div class="flex items-center space-x-4">
                         <span class="material-icons text-gray-600">store</span>
-                        <a href=""> <span class="material-icons text-gray-600">favorite</span></a>
+                        <a href="{{route('wishlist')}}"> <span class="material-icons text-gray-600">favorite</span></a>
                         <div class="relative">
-                            <span class="material-icons text-gray-600">shopping_cart</span>
+                           <a href="{{route('cart')}}"><span class="material-icons text-gray-600">shopping_cart</span></a> 
                             <span
                                 class="absolute -top-2 -right-2 bg-purple-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</span>
                         </div>
@@ -344,11 +345,11 @@
             <!-- Navigation -->
             <nav class="hidden lg:flex space-x-6">
                 <div class="hoverable relative">
-                    <a href="{{route('jewellery.rings')}}"
+                    <a href="{{ route('jewellery.rings') }}"
                         class="relative text-gray-600 hover:text-purple-600 text-sm font-semibold py-2 inline-flex items-center group">
                         <span>Ring</span>
                         <span
-                            class="absolute bottom-[-20px] left-0 w-full h-[4px] bg-gradient-to-r from-pink-600 to-purple-600 transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
+                            class="absolute bottom-[-14px] left-0 w-full h-[4px] bg-gradient-to-r from-pink-600 to-purple-600 transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
                     </a>
 
                     <div class="mega-menu mt-4 bg-white border-t shadow-lg rounded-lg z-10 h-auto min-h-[450px] px-2">
@@ -461,25 +462,25 @@
                     <span
                         class="absolute bottom-[-20px] left-0 w-full h-[4px] bg-gradient-to-r from-pink-600 to-purple-600 transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
                 </a>
-                <a href="{{route('jewellery.bracelets-bangles')}}"
+                <a href="{{ route('jewellery.bracelets-bangles') }}"
                     class="relative text-gray-600 hover:text-purple-600 text-sm font-semibold py-2 inline-flex items-center group">
                     <span>Bracelets & Bangles</span>
                     <span
                         class="absolute bottom-[-20px] left-0 w-full h-[4px] bg-gradient-to-r from-pink-600 to-purple-600 transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
                 </a>
-                <a href="{{route('jewellery.solitaires')}}"
+                <a href="{{ route('jewellery.solitaires') }}"
                     class="relative text-gray-600 hover:text-purple-600 text-sm font-semibold py-2 inline-flex items-center group">
                     <span>Solitaires</span>
                     <span
                         class="absolute bottom-[-20px] left-0 w-full h-[4px] bg-gradient-to-r from-pink-600 to-purple-600 transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
                 </a>
-                <a href="{{route('jewellery.mangalsutras')}}"
+                <a href="{{ route('jewellery.mangalsutras') }}"
                     class="relative text-gray-600 hover:text-purple-600 text-sm font-semibold py-2 inline-flex items-center group">
                     <span>Mangalsutras</span>
                     <span
                         class="absolute bottom-[-20px] left-0 w-full h-[4px] bg-gradient-to-r from-pink-600 to-purple-600 transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
                 </a>
-                <a href="{{route('jewellery.necklaces')}}"
+                <a href="{{ route('jewellery.necklaces') }}"
                     class="relative text-gray-600 hover:text-purple-600 text-sm font-semibold py-2 inline-flex items-center group">
                     <span>Necklaces</span>
                     <span
@@ -516,13 +517,14 @@
                     class="w-6 h-4 mr-2">
 
                 <!-- Profile Icon with Modal -->
-                <div class="relative group">
-                    <span class="material-icons text-gray-600 cursor-pointer">person</span>
-                    <!-- Modal on hover after login -->
-                    <div
-                        class="absolute -left-52 mt-7 w-72 p-4 bg-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
+                <div class="relative" id="profile-icon-container">
+                    <span id="profile-icon" class="material-icons text-gray-600 cursor-pointer p-2">person</span>
+
+                    <!-- Modal positioned as per original setup -->
+                    <div id="profile-modal"
+                        class="absolute -left-52 mt-6 w-72 p-4 bg-white shadow-lg opacity-0 invisible transition-opacity duration-200 z-10">
                         <!-- User Email Display -->
-                        <p class="text-sm text-gray-500 mb-3">makedy07feb@gmail.com</p>
+                        <p class="text-sm text-gray-500 mb-3">demo@gmail.com</p>
 
                         <!-- Divider with line and accent color -->
                         <div class="flex items-center mb-4">
@@ -533,13 +535,13 @@
                         <!-- Account Options Links -->
                         <nav class="space-y-2">
                             <a href="{{ route('myaccount.profile') }}"
-                                class="block text-gray-800 font-medium hover:text-purple-600">MY
-                                ACCOUNTS</a>
-                            <a href="#" class="block text-gray-800 font-medium hover:text-purple-600">OUR
+                                class="block text-gray-800 font-base hover:text-purple-600">MY ACCOUNT</a>
+                            <a href="#" class="block text-gray-800 font-base hover:text-purple-600">OUR
                                 STORY</a>
-                            <a href="#" class="block text-gray-800 font-medium hover:text-purple-600">LOGOUT</a>
+                            <a href="#" class="block text-gray-800 font-base hover:text-purple-600">LOGOUT</a>
                         </nav>
                     </div>
+
                     <!-- Modal on hover, shifted more to the left -->
                     {{-- <div
                         class="absolute -left-52 mt-7 w-72 p-4 bg-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
@@ -557,6 +559,7 @@
                         </div>
                     </div> --}}
                 </div>
+
             </div>
 
             <!-- Wishlist Icon (Visible only on web view, hidden on mobile) -->
@@ -566,9 +569,11 @@
 
             <!-- Shopping Cart Icon with Badge (Visible only on web view, hidden on mobile) -->
             <div class="relative hidden md:block">
-                <span class="material-icons text-gray-600">shopping_cart</span>
-                <span
-                    class="absolute -top-2 -right-2 bg-purple-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</span>
+                <a href="{{ route('cart') }}">
+                    <span class="material-icons text-gray-600">shopping_cart</span>
+                    <span
+                        class="absolute -top-2 -right-2 bg-purple-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</span>
+                </a>
             </div>
 
         </div>
@@ -627,6 +632,29 @@
     });
 </script>
 
+<script>
+    const profileIcon = document.getElementById('profile-icon');
+    const profileModal = document.getElementById('profile-modal');
+    const profileContainer = document.getElementById('profile-icon-container');
+
+    // Show modal on hover over the icon
+    profileIcon.addEventListener('mouseenter', () => {
+        profileModal.classList.remove('opacity-0', 'invisible');
+        profileModal.classList.add('opacity-100', 'visible');
+    });
+
+    // Keep modal visible when hovering over the modal
+    profileModal.addEventListener('mouseenter', () => {
+        profileModal.classList.remove('opacity-0', 'invisible');
+        profileModal.classList.add('opacity-100', 'visible');
+    });
+
+    // Hide modal when leaving the icon or modal area
+    profileContainer.addEventListener('mouseleave', () => {
+        profileModal.classList.remove('opacity-100', 'visible');
+        profileModal.classList.add('opacity-0', 'invisible');
+    });
+</script>
 
 <script>
     const mobileMenu = document.getElementById('mobile-menu');
