@@ -17,13 +17,15 @@
     <!-- City Selection -->
     <div class="container mx-auto py-8">
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-            <div class="flex flex-col items-center border border-violet-700 p-2 rounded-lg">
-                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center">
-                    <img src="{{asset('asset/img/p1.svg')}}" alt="" class="h-44">
+            <a href="{{route('stores')}}">
+                <div class="flex flex-col items-center border border-violet-700 p-2 rounded-lg">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center">
+                        <img src="{{asset('asset/img/p1.svg')}}" alt="" class="h-44">
+                    </div>
+                    <span class="mt-2">Mumbai</span>
+                    <span class="text-sm text-gray-500">23 STORES</span>
                 </div>
-                <span class="mt-2">Mumbai</span>
-                <span class="text-sm text-gray-500">23 STORES</span>
-            </div>
+            </a>
             <div class="flex flex-col items-center border border-violet-700 p-2 rounded-lg">
                 <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center">
                     <img src="{{asset('asset/img/p2.svg')}}" alt="" class="h-44">
@@ -129,7 +131,7 @@
         </div>
     </div>
 {{-- Question --}}
-<div class="flex flex-row gap-8 p-4 max-w-7xl mx-auto">
+{{-- <div class="flex flex-row gap-8 p-4 max-w-7xl mx-auto">
     <div class="max-w-3xl">
         <h1 class="text-5xl font-bold mb-8 p-4">Have some Questions?</h1>
         
@@ -253,6 +255,154 @@
                 </svg>
             </button>
             <div 
+                class="pb-4"
+                x-show="selected === 4"
+                x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 transform -translate-y-2"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+            >
+                <p class="text-gray-600">Yes, all our jewellery is made with genuine materials. We use BIS hallmarked gold and natural diamonds certified by international laboratories.</p>
+            </div>
+        </div>
+    </div>
+</div> --}}
+<div class="flex flex-col md:flex-row gap-8 p-4 max-w-7xl mx-auto">
+    <!-- Contact Card Section -->
+    <div class="max-w-3xl flex-1">
+        <h1 class="text-5xl font-bold mb-8 p-4">Have some Questions?</h1>
+        
+        <!-- Contact Card -->
+        <div class="bg-gray-100 p-6 rounded-lg mb-8 inline-block">
+            <div class="flex items-center gap-4">
+                <div class="bg-purple-100 p-3 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                </div>
+                <div>
+                    <p class="font-medium">Just give us a call at</p>
+                    <p class="text-purple-600 font-medium">+91-44-66075200</p>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <!-- FAQ Section -->
+    <div class="space-y-4 flex-1" x-data="{ selected: null }">
+        <!-- Question 1 -->
+        <div class="border-b border-gray-200">
+            <button 
+                class="w-full flex justify-between items-center py-4 text-left focus:outline-none"
+                @click="selected !== 1 ? selected = 1 : selected = null"
+                aria-expanded="selected === 1 ? 'true' : 'false'"
+                aria-controls="faq1"
+            >
+                <span class="font-medium">Is there any difference in the prices online and in store?</span>
+                <svg 
+                    class="h-6 w-6 text-purple-600 transform transition-transform duration-200"
+                    :class="{'rotate-45': selected === 1}"
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                >
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+            </button>
+            <div 
+                id="faq1"
+                class="pb-4"
+                x-show="selected === 1"
+                x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 transform -translate-y-2"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+            >
+                <p class="text-gray-600">Our prices remain consistent across all channels - both online and in our stores.</p>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="border-b border-gray-200">
+            <button 
+                class="w-full flex justify-between items-center py-4 text-left focus:outline-none"
+                @click="selected !== 2 ? selected = 2 : selected = null"
+                aria-expanded="selected === 2 ? 'true' : 'false'"
+                aria-controls="faq2"
+            >
+                <span class="font-medium">How will I know if the designs I like are available in a store near me?</span>
+                <svg 
+                    class="h-6 w-6 text-purple-600 transform transition-transform duration-200"
+                    :class="{'rotate-45': selected === 2}"
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                >
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+            </button>
+            <div 
+                id="faq2"
+                class="pb-4"
+                x-show="selected === 2"
+                x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 transform -translate-y-2"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+            >
+                <p class="text-gray-600">You can check product availability at your nearest store through our website or by calling our customer service.</p>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="border-b border-gray-200">
+            <button 
+                class="w-full flex justify-between items-center py-4 text-left focus:outline-none"
+                @click="selected !== 3 ? selected = 3 : selected = null"
+                aria-expanded="selected === 3 ? 'true' : 'false'"
+                aria-controls="faq3"
+            >
+                <span class="font-medium">Can I exchange my gold jewellery at any CaratLane store?</span>
+                <svg 
+                    class="h-6 w-6 text-purple-600 transform transition-transform duration-200"
+                    :class="{'rotate-45': selected === 3}"
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                >
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+            </button>
+            <div 
+                id="faq3"
+                class="pb-4"
+                x-show="selected === 3"
+                x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 transform -translate-y-2"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+            >
+                <p class="text-gray-600">Yes, you can exchange your gold jewellery at any of our stores. Please contact us for more details about the exchange process.</p>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="border-b border-gray-200">
+            <button 
+                class="w-full flex justify-between items-center py-4 text-left focus:outline-none"
+                @click="selected !== 4 ? selected = 4 : selected = null"
+                aria-expanded="selected === 4 ? 'true' : 'false'"
+                aria-controls="faq4"
+            >
+                <span class="font-medium">Is CaratLane jewellery made of real gold and diamonds?</span>
+                <svg 
+                    class="h-6 w-6 text-purple-600 transform transition-transform duration-200"
+                    :class="{'rotate-45': selected === 4}"
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                >
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+            </button>
+            <div 
+                id="faq4"
                 class="pb-4"
                 x-show="selected === 4"
                 x-transition:enter="transition ease-out duration-200"

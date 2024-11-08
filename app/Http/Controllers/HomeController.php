@@ -140,6 +140,11 @@ class HomeController extends Controller
     {
         return view('frontend.gemstone');
     }
+    
+    public function gemstoneguide()
+    {
+        return view('frontend.gemstoneguide');
+    }
 
     public function morejewellery()
     {
@@ -227,6 +232,9 @@ class HomeController extends Controller
     public function kids()
     {
         return view('frontend.kids');
+    }
+    public function stores(){
+        return view('frontend.stores');
     }
 
     // ===== Web Stories & Collaborations =====

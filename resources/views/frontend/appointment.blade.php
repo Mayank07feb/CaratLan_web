@@ -50,7 +50,7 @@
     
 
     <!-- How It Works -->
-    <section class="bg-gradient-to-tr from-pink-200 to-pink-300 py-12">
+    <section class="bg-gradient-to-tr from-pink-300 to-purple-400 py-12">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-8">How It Works?</h2>
             <div class="flex flex-col md:flex-row gap-4 mx-auto justify-center">
@@ -281,7 +281,7 @@
         <p class="text-lg text-gray-600">Enjoy the Best of Shopping at Home, Together with Your Family</p>
     </div>
     
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-8 mb-6 px-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:py-8 lg:mb-6 lg:px-12">
         <div class="relative rounded-lg">
             <img src="{{asset('asset/img/home1.jpeg')}}" alt="" class="w-full h-32 object-cover rounded-lg">
             <div class="absolute inset-0 flex items-center justify-start bg-gradient-to from-[#1F275F] to-[#5468C1] bg-opacity-0 text-white text-lg p-4">Necklace</div>
@@ -361,10 +361,10 @@
         </div>
 
         <!-- Navigation Buttons -->
-        <div class="absolute top-1/2 left-0 right-0 flex justify-between transform -translate-y-1/2">
+        {{-- <div class="absolute top-1/2 left-0 right-0 flex justify-between transform -translate-y-1/2">
             <button id="prev" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Prev</button>
             <button id="next" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Next</button>
-        </div>
+        </div> --}}
     </div>
 </div>
 

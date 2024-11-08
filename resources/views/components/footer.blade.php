@@ -14,9 +14,9 @@
                                     guide</a></li>
                             <li><a href="{{ route('jewelleryguide') }}" class="hover:text-caratlane-purple">Jewellery
                                     guide</a></li>
-                            <li><a href="#" class="hover:text-caratlane-purple">Gemstones guide</a></li>
-                            <li><a href="#" class="hover:text-caratlane-purple">Gold rate</a></li>
-                            <li><a href="#" class="hover:text-caratlane-purple">Egold</a></li>
+                            <li><a href="{{route('gemstoneguide')}}" class="hover:text-caratlane-purple">Gemstones guide</a></li>
+                            <li><a href="{{route('knowmore')}}" class="hover:text-caratlane-purple">Gold rate</a></li>
+                            <li><a href="{{route('egold')}}" class="hover:text-caratlane-purple">Egold</a></li>
 
                             <li><a href="#" class="hover:text-caratlane-purple">Ear piercing</a></li>
                             <li><a href="{{route('glosarry')}}" class="hover:text-caratlane-purple">Glossary</a></li>

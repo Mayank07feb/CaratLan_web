@@ -1,7 +1,7 @@
 @extends('components.main')
 @section('content')
 {{-- BANNER-IMAGE --}}
-<div class="flex justify-center mx-6">
+<div class="flex justify-center mx-6 mt-12 lg:mt-0">
     <img src="{{asset('asset/img/daimond-cart.png')}}" alt="">
 </div>
 {{-- Diamond Buying Guide --}}

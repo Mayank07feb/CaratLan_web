@@ -39,7 +39,7 @@
 {{-- second div --}}
 
 <!-- Header Section -->
-<div class="flex flex-col items-center justify-center my-8">
+{{-- <div class="flex flex-col items-center justify-center my-8">
     <h1 class="text-xl text-gray-600 font-semibold mb-2 text-center">Calculate by Purity or Karatage</h1>
     <p class="text-gray-500 text-sm text-center">Calculate by Purity or Karatage to help you find the best old gold exchange value in the market</p>
 </div>
@@ -167,8 +167,143 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
+<div class="p-4 mx-12">
+    <!-- Title Section -->
+    <div class="flex flex-col items-center justify-center my-8">
+        <h1 class="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4 text-center">Calculate by Purity or Karatage</h1>
+        <p class="text-gray-500 text-sm sm:text-base text-center max-w-2xl">
+            Calculate by Purity or Karatage to help you find the best old gold exchange value in the market
+        </p>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="max-w-7xl mx-auto mb-8 flex flex-col md:flex-row gap-8">
+
+        <!-- Left Side: Form Section -->
+        <div class="flex-1 w-full md:w-2/3">
+
+            <!-- Tabs Section -->
+            <div class="mb-6">
+                <ul class="flex justify-center border-b">
+                    <li class="mr-2">
+                        <button id="karatage-tab" class="inline-block py-2 px-4 text-sm text-blue-600 border-b-2 border-blue-600 font-semibold">
+                            Karatage
+                        </button>
+                    </li>
+                    <li>
+                        <button id="purity-tab" class="inline-block py-2 px-4 text-sm text-gray-600 hover:text-blue-600 hover:border-blue-600 font-semibold">
+                            Purity
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tab Content Section -->
+            <div id="karatage-content" class="tab-content">
+                <div class="flex gap-8 mb-6 justify-center space-y-2">
+                    <!-- Karatage Dropdown -->
+                    <div class="w-full">
+                        <h2 class="text-gray-600 mb-4 text-sm">Karatage</h2>
+                        <select class="w-full p-3 text-sm border rounded-md bg-white text-gray-600">
+                            <option>Select Karatage</option>
+                            <option>14 Karat</option>
+                            <option>18 Karat</option>
+                            <option>22 Karat</option>
+                            <option>24 Karat</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div id="purity-content" class="tab-content hidden">
+                <div class="flex gap-8 mb-6 justify-center">
+                    <!-- Purity Dropdown -->
+                    <div class="w-full">
+                        <h2 class="text-gray-600 mb-4 text-sm">Purity</h2>
+                        <select class="w-full p-3 border rounded-md bg-white text-gray-600 text-sm">
+                            <option>Select Purity</option>
+                            <option>75% Purity</option>
+                            <option>85% Purity</option>
+                            <option>90% Purity</option>
+                            <option>99.9% Purity</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grams Input -->
+            <div class="mb-6">
+                <input type="number" placeholder="Enter Grams" class="w-full p-3 border rounded-md">
+            </div>
+
+            <!-- Calculate Button -->
+            <button class="w-full text-xs bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 mb-2 rounded-md hover:bg-blue-700 transition-colors">
+                CALCULATE EXCHANGE VALUE
+            </button>
+        </div>
+
+        <!-- Right Side: Rates Section -->
+        <div class="w-full md:w-1/3">
+            <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                <h2 class="text-gray-600 mb-4 text-sm">Standard gold rates for the day</h2>
+
+                <!-- Rate Items -->
+                <div class="space-y-4 bg-[#F0ECFF] p-4 rounded-2xl">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-gray-700 text-xs">14 Karat Gold</p>
+                            <p class="text-gray-500 text-xs">(1 Gram)</p>
+                        </div>
+                        <span class="text-gray-700 text-xs">₹ 4714</span>
+                    </div>
+
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-gray-700 text-xs">18 Karat Gold</p>
+                            <p class="text-gray-500 text-xs">(1 Gram)</p>
+                        </div>
+                        <span class="text-gray-700 text-xs">₹ 6064</span>
+                    </div>
+
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-gray-700 text-xs">22 Karat Gold</p>
+                            <p class="text-gray-500 text-xs">(1 Gram)</p>
+                        </div>
+                        <span class="text-gray-700 text-xs">₹ 7414</span>
+                    </div>
+
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-gray-700 text-xs">24 Karat Gold</p>
+                            <p class="text-gray-500 text-xs">(1 Gram)</p>
+                        </div>
+                        <span class="text-gray-700 text-xs">₹ 8085</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Tab Toggling -->
+    <script>
+        document.getElementById('karatage-tab').addEventListener('click', function() {
+            document.getElementById('karatage-content').classList.remove('hidden');
+            document.getElementById('purity-content').classList.add('hidden');
+            this.classList.add('border-blue-600', 'text-blue-600');
+            document.getElementById('purity-tab').classList.remove('border-blue-600', 'text-blue-600');
+        });
+
+        document.getElementById('purity-tab').addEventListener('click', function() {
+            document.getElementById('purity-content').classList.remove('hidden');
+            document.getElementById('karatage-content').classList.add('hidden');
+            this.classList.add('border-blue-600', 'text-blue-600');
+            document.getElementById('karatage-tab').classList.remove('border-blue-600', 'text-blue-600');
+        });
+    </script>
+</div>
 
 {{-- containers --}}
 <div class="max-w-6xl mx-auto px-4">

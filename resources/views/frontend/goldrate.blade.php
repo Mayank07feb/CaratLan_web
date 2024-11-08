@@ -1,122 +1,146 @@
 @extends('components.main')
 @section('content')
 <!-- Main Container -->
-<div class="main m-12 flex">
-    <div class="w-3/4">
-        <div class="main m-12">
-            <div class="grid grid-cols-1">
-                <div class="h-full bg-gray-100 flex items-center justify-center p-4">
-                    <div class="w-full max-w-3xl bg-[#f4b95f] rounded-3xl p-8">
-                        <h1 class="text-2xl text-purple-900 font-semibold mb-6">Gold Rate Today! in Salem</h1>
-                        
-                        <div class="flex gap-4 mb-6">
-                            <div class="relative w-1/2">
-                                <select class="w-full appearance-none bg-white text-gray-700 py-3 px-4 pr-8 rounded-lg focus:outline-none">
-                                    <option>Tamil Nadu</option>
-                                </select>
-                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4">
-                                    <svg class="fill-current h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            
-                            <div class="relative w-1/2">
-                                <select class="w-full appearance-none bg-white text-gray-700 py-3 px-4 pr-8 rounded-lg focus:outline-none">
-                                    <option>Salem</option>
-                                </select>
-                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4">
-                                    <svg class="fill-current h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-baseline gap-2 mb-2">
-                            <span class="text-4xl font-bold text-purple-900">₹ 7369</span>
-                            <span class="text-xl text-purple-900">/Gram (22ct)</span>
-                        </div>
-                        
-                        <p class="text-sm text-purple-900/70">*Price may vary by city</p>
-                    </div>
+<div class="main md:m-12 mt-24 flex flex-col md:flex-row">
+    <!-- Left Section for Gold Rate -->
+    <div class="w-full md:w-3/4 mb-6 md:mb-0">
+      <div class="grid grid-cols-1">
+        <div class="bg-gray-100 flex items-center justify-center p-6">
+          <div class="w-full max-w-3xl bg-[#f4b95f] rounded-3xl p-8">
+            <h1 class="text-2xl font-semibold text-purple-900 mb-6">Gold Rate Today! in Salem</h1>
+  
+            <!-- Dropdowns for Location -->
+            <div class="flex gap-4 mb-6">
+              <div class="relative w-1/2">
+                <select class="w-full bg-white text-gray-700 py-3 px-4 pr-8 rounded-lg focus:outline-none">
+                  <option>Tamil Nadu</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4">
+                  <svg class="fill-current h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                  </svg>
                 </div>
+              </div>
+              
+              <div class="relative w-1/2">
+                <select class="w-full bg-white text-gray-700 py-3 px-4 pr-8 rounded-lg focus:outline-none">
+                  <option>Salem</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4">
+                  <svg class="fill-current h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                  </svg>
+                </div>
+              </div>
             </div>
-        
-            <!-- Featured Sections -->
-            <div class="max-w-7xl mx-auto py-8 grid grid-cols-2 gap-8">
-                <!-- eGold Section -->
-                <div class="bg-purple-900 text-white p-8 rounded-lg flex">
-                    <div class="flex-1">
-                        <h2 class="text-2xl font-bold mb-4 text-yellow-300">Invest securely in eGold - Digital Gold by CaratLane</h2>
-                        <p class="mb-6">Discover the smart way to invest and gift with CaratLane's Digital Gold.</p>
-                        <button class="bg-yellow-400 text-white px-6 py-2 rounded-md font-semibold">
-                            Buy Digital Gold Now
-                        </button>
-                    </div>
-                    <div class="w-32">
-                        <img src="{{asset('asset/img/pigbank.png')}}" alt="Piggy Bank" class="w-full"/>
-                    </div>
-                </div>
-        
-                <!-- Best of the Best -->
-                <div class="bg-cover bg-center rounded-lg overflow-hidden">
-                    <img src="{{asset('asset/img/goldrate2.png')}}" alt="Best of the Best" class="w-full h-full object-cover"/>
-                </div>
+            
+            <!-- Gold Rate Display -->
+            <div class="flex items-baseline gap-2 mb-2">
+              <span class="text-4xl font-bold text-purple-900">₹ 7369</span>
+              <span class="text-xl text-purple-900">/Gram (22ct)</span>
             </div>
+            
+            <p class="text-sm text-purple-900/70">*Price may vary by city</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Right Section for Featured Products -->
+    <div class="w-full md:w-1/4">
+      <div class="max-w-7xl mx-auto py-8 grid grid-cols-1 gap-8">
+        <!-- eGold Section -->
+        <div class="bg-purple-900 text-white p-8 rounded-lg flex flex-col md:flex-row">
+          <div class="flex-1 mb-6 md:mb-0">
+            <h2 class="text-2xl font-bold mb-4 text-yellow-300">Invest securely in eGold - Digital Gold by CaratLane</h2>
+            <p class="mb-6">Discover the smart way to invest and gift with CaratLane's Digital Gold.</p>
+            <button class="bg-yellow-400 text-white px-6 py-2 rounded-md font-semibold">
+              Buy Digital Gold Now
+            </button>
+          </div>
+          <div class="w-32 md:w-40">
+            <img src="{{asset('asset/img/pigbank.png')}}" alt="Piggy Bank" class="w-full"/>
+          </div>
+        </div>
         
-            <!-- Gold Investment Section -->
-            <div class="max-w-7xl mx-auto py-8">
-                <h2 class="text-xl font-semibold mb-6">Invest in Gold Jewellery</h2>
-                <div id="coin-slider" class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <!-- Gold Coin 1 -->
-                        <div class="swiper-slide coin-item text-center">
-                            <img src="{{ asset('asset/img/coin.jpeg') }}" alt="Gold Coin" class="coin-image w-full rounded-full mb-4"/>
-                            <div class="coin-price font-semibold">₹1,75,260</div>
-                            <div class="coin-description text-sm text-gray-600">2gm 24KT Gold Coin</div>
-                        </div>
-                        <!-- Gold Coin 2 -->
-                        <div class="swiper-slide coin-item text-center">
-                            <img src="{{ asset('asset/img/coin.jpeg') }}" alt="Gold Coin" class="coin-image w-full rounded-full mb-4"/>
-                            <div class="coin-price font-semibold">₹1,80,000</div>
-                            <div class="coin-description text-sm text-gray-600">5gm 24KT Gold Coin</div>
-                        </div>
-                        <!-- Gold Coin 3 -->
-                        <div class="swiper-slide coin-item text-center">
-                            <img src="{{ asset('asset/img/coin.jpeg') }}" alt="Gold Coin" class="coin-image w-full rounded-full mb-4"/>
-                            <div class="coin-price font-semibold">₹3,50,520</div>
-                            <div class="coin-description text-sm text-gray-600">10gm 24KT Gold Coin</div>
-                        </div>
-                        <!-- Add more coins as needed -->
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination coin-pagination"></div>
-                    <!-- Add Navigation -->
-                    <div class="swiper-button-next coin-button-next"></div>
-                    <div class="swiper-button-prev coin-button-prev"></div>
-                </div>
-            </div>
-            <script>
-                var swiper = new Swiper('#coin-slider', {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                    navigation: {
-                        nextEl: '.coin-button-next',
-                        prevEl: '.coin-button-prev',
-                    },
-                    pagination: {
-                        el: '.coin-pagination',
-                        clickable: true,
-                        autoplay: true,
-                        delay: 3000,
-                    },
-                    
-                });
-            </script>
+        <!-- Best of the Best Image Section -->
+        <div class="bg-cover bg-center rounded-lg overflow-hidden">
+          <img src="{{asset('asset/img/goldrate2.png')}}" alt="Best of the Best Gold Rate" class="w-full h-full object-cover"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Gold Investment Section -->
+  <div class="max-w-7xl mx-auto py-8">
+    <h2 class="text-xl font-semibold mb-6">Invest in Gold Jewellery</h2>
+    
+    <!-- Swiper for Coins -->
+    <div id="coin-slider" class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- Gold Coin 1 -->
+        <div class="swiper-slide coin-item text-center">
+          <img src="{{ asset('asset/img/coin.jpeg') }}" alt="Gold Coin 2gm 24KT" class="coin-image w-full rounded-full mb-4"/>
+          <div class="coin-price font-semibold">₹1,75,260</div>
+          <div class="coin-description text-sm text-gray-600">2gm 24KT Gold Coin</div>
+        </div>
+        <!-- Gold Coin 2 -->
+        <div class="swiper-slide coin-item text-center">
+          <img src="{{ asset('asset/img/coin.jpeg') }}" alt="Gold Coin 5gm 24KT" class="coin-image w-full rounded-full mb-4"/>
+          <div class="coin-price font-semibold">₹1,80,000</div>
+          <div class="coin-description text-sm text-gray-600">5gm 24KT Gold Coin</div>
+        </div>
+        <!-- Gold Coin 3 -->
+        <div class="swiper-slide coin-item text-center">
+          <img src="{{ asset('asset/img/coin.jpeg') }}" alt="Gold Coin 10gm 24KT" class="coin-image w-full rounded-full mb-4"/>
+          <div class="coin-price font-semibold">₹3,50,520</div>
+          <div class="coin-description text-sm text-gray-600">10gm 24KT Gold Coin</div>
+        </div>
+        <!-- Add more coins as needed -->
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination coin-pagination"></div>
+      <!-- Add Navigation -->
+      <div class="swiper-button-next coin-button-next"></div>
+      <div class="swiper-button-prev coin-button-prev"></div>
+    </div>
+  </div>
+  
+  <script>
+    // Initialize Swiper for Gold Coins Slider
+    var swiper = new Swiper('#coin-slider', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '.coin-button-next',
+        prevEl: '.coin-button-prev',
+      },
+      pagination: {
+        el: '.coin-pagination',
+        clickable: true,
+        autoplay: true,
+        delay: 3000,
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        480: {
+          slidesPerView: 1,
+          spaceBetween: 10
+        }
+      }
+    });
+  </script>
+  
             
             <!-- Best Sellers -->
-            <div class="max-w-7xl mx-auto py-8">
+{{-- <div class="max-w-7xl mx-auto py-8">
                 <h2 class="text-xl font-semibold mb-6">Invest in Best Sellers</h2>
                 <div id="invest-slider" class="swiper-container">
                     <div class="swiper-wrapper">
@@ -148,8 +172,8 @@
                     <div class="swiper-button-next invest-button-next"></div>
                     <div class="swiper-button-prev invest-button-prev"></div>
                 </div>
-            </div>
-            <script>
+</div>
+<script>
                 var swiper = new Swiper('#invest-slider', {
                     slidesPerView: 4,
                     spaceBetween: 30,
@@ -162,29 +186,35 @@
                         clickable: true,
                     },
                 });
-            </script>
+</script> --}}
                         
         
             <!-- Information Sections -->
             <div class="max-w-7xl mx-auto py-8 space-y-8">
+                <!-- Inflation Section -->
                 <section>
-                    <h2 class="text-xl font-semibold mb-4">Inflation</h2>
-                    <p class="text-gray-700">While rapid inflation brings the value of money down, it makes buying gold more appealing. Economic unpredictability increases the demand for gold because we want to invest in gold, which is considered safer than cash.</p>
+                    <h2 class="text-xl font-semibold mb-4 text-gray-900">Inflation</h2>
+                    <p class="text-gray-700 text-base sm:text-lg md:text-xl">
+                        While rapid inflation brings the value of money down, it makes buying gold more appealing. Economic unpredictability increases the demand for gold because we want to invest in gold, which is considered safer than cash.
+                    </p>
                 </section>
-        
+            
+                <!-- Jewellery Associations Section -->
                 <section>
-                    <h2 class="text-xl font-semibold mb-4">Jewellery Associations</h2>
-                    <p class="text-gray-700">Associations like the Indian Bullion Jewellers Association also have a say in gold rates. Several states across the country have associations like the 'Jewellers and Diamond Traders Association' Tamil Nadu. They set the gold price within each city.</p>
+                    <h2 class="text-xl font-semibold mb-4 text-gray-900">Jewellery Associations</h2>
+                    <p class="text-gray-700 text-base sm:text-lg md:text-xl">
+                        Associations like the Indian Bullion Jewellers Association also have a say in gold rates. Several states across the country have associations like the 'Jewellers and Diamond Traders Association' Tamil Nadu. They set the gold price within each city.
+                    </p>
                 </section>
-                <!-- Add other sections similarly -->
+            
+                <!-- You can continue adding other sections here following the same pattern -->
             </div>
-        </div>
-    </div>
-    
+            
     <!-- City Links Sidebar -->
-    <div class="w-1/4 pl-4">
+    <div class="w-full md:w-1/4 pl-4 hidden md:block">
         <h2 class="text-xl font-semibold mb-4">Gold Rates in Other Cities</h2>
         <div class="grid grid-cols-1 gap-4">
+            <!-- Each City Item -->
             <div class="flex items-center justify-between p-4 hover:bg-gray-100 rounded">
                 <span>Gold Rate Today in Bangalore</span>
                 <span>›</span>
@@ -295,12 +325,13 @@
             </div>
         </div>
     </div>
+    
 
     
 </div>
 
-
-<div class="max-w-3xl mx-auto">
+<!-- Explanation on How to Calculate Gold Rate -->
+<div class="max-w-3xl mx-auto px-4 py-8">
     <h1 class="text-2xl font-semibold text-purple-800 mb-6">How do you calculate gold rate?</h1>
     
     <!-- Main explanation -->
@@ -318,8 +349,8 @@
         Final price of (22 or 18 K) gold multiplied by the weight in grams + making charges + GST on the price of jewellery + making charges
     </p>
     
-    <!-- Example calculation -->
-    <div class="bg-white rounded-lg p-6 shadow-sm space-y-3 mb-6">
+    <!-- Example Calculation -->
+    <div class="bg-white rounded-lg p-6 shadow-md space-y-3 mb-6">
         <p class="text-gray-600">
             If the gold rate today for 10 grams of <span class="text-pink-500">22 karats of pure gold</span> is INR 50,000:
         </p>
@@ -333,63 +364,66 @@
         </ul>
     </div>
     
-    <!-- Note -->
+    <!-- Disclaimer/Note -->
     <p class="text-gray-600 text-sm italic">
         There are no making charges or wastage included in this estimate, which are determined by the product's craftsmanship.
     </p>
 </div>
-<div class="bg-purple-200 p-6 rounded-lg max-w-7xl mx-auto">
-    <h1 class="text-2xl font-bold text-center mb-4">Why Does Gold's Price Fluctuate? - The Top 10 Factors</h1>
+
+<!-- Why Does Gold's Price Fluctuate Section -->
+<div class="bg-purple-200 p-6 rounded-lg max-w-7xl mx-auto mb-12">
+    <h1 class="text-2xl font-bold text-center mb-6 text-purple-800">Why Does Gold's Price Fluctuate? - The Top 10 Factors</h1>
     
     <div class="space-y-4">
-        <div class=" p-4 rounded shadow">
-            <h2 class="font-semibold">1. Inflation</h2>
-            <p>Rising inflation diminishes the purchasing power of money, making gold more attractive as a hedge against inflation. This increased demand can lead to higher gold prices.</p>
+        <!-- Each Factor -->
+        <div class="p-4 rounded-lg shadow-md bg-white">
+            <h2 class="font-semibold text-gray-800">1. Inflation</h2>
+            <p class="text-gray-600">Rising inflation diminishes the purchasing power of money, making gold more attractive as a hedge against inflation. This increased demand can lead to higher gold prices.</p>
         </div>
         
-        <div class=" p-4 rounded shadow">
-            <h2 class="font-semibold">2. Jewellery Associations</h2>
-            <p>Organizations like the Indian Bullion Jewellers Association influence gold pricing. Regional associations, such as the Jewellers and Diamond Traders Association in Tamil Nadu, help set gold prices within specific cities.</p>
+        <div class="p-4 rounded-lg shadow-md bg-white">
+            <h2 class="font-semibold text-gray-800">2. Jewellery Associations</h2>
+            <p class="text-gray-600">Organizations like the Indian Bullion Jewellers Association influence gold pricing. Regional associations, such as the Jewellers and Diamond Traders Association in Tamil Nadu, help set gold prices within specific cities.</p>
         </div>
         
-        <div class=" p-4 rounded shadow">
-            <h2 class="font-semibold">3. Purchase Price</h2>
-            <p>The purchase price of gold significantly affects its retail price. Jewelers who acquire gold at lower costs can offer more competitive prices, while the source of gold also plays a role in pricing.</p>
+        <div class="p-4 rounded-lg shadow-md bg-white">
+            <h2 class="font-semibold text-gray-800">3. Purchase Price</h2>
+            <p class="text-gray-600">The purchase price of gold significantly affects its retail price. Jewelers who acquire gold at lower costs can offer more competitive prices, while the source of gold also plays a role in pricing.</p>
         </div>
         
-        <div class=" p-4 rounded shadow">
-            <h2 class="font-semibold">4. Central Bank Actions</h2>
-            <p>Central banks hold substantial gold reserves and can impact prices through their buying and selling activities. When they purchase gold, demand increases, typically driving prices up. Conversely, selling can lead to lower prices.</p>
+        <div class="p-4 rounded-lg shadow-md bg-white">
+            <h2 class="font-semibold text-gray-800">4. Central Bank Actions</h2>
+            <p class="text-gray-600">Central banks hold substantial gold reserves and can impact prices through their buying and selling activities. When they purchase gold, demand increases, typically driving prices up. Conversely, selling can lead to lower prices.</p>
         </div>
         
-        <div class=" p-4 rounded shadow">
-            <h2 class="font-semibold">5. Currency Fluctuation</h2>
-            <p>The strength of a currency influences gold prices in India. A strong local currency can make gold cheaper for foreign buyers, potentially boosting demand and prices.</p>
+        <div class="p-4 rounded-lg shadow-md bg-white">
+            <h2 class="font-semibold text-gray-800">5. Currency Fluctuation</h2>
+            <p class="text-gray-600">The strength of a currency influences gold prices in India. A strong local currency can make gold cheaper for foreign buyers, potentially boosting demand and prices.</p>
         </div>
         
-        <div class=" p-4 rounded shadow">
-            <h2 class="font-semibold">6. Quantity of Gold</h2>
-            <p>Regional demand varies across India, with South India accounting for nearly 40% of gold imports. Areas with higher demand can see corresponding increases in gold prices.</p>
+        <div class="p-4 rounded-lg shadow-md bg-white">
+            <h2 class="font-semibold text-gray-800">6. Quantity of Gold</h2>
+            <p class="text-gray-600">Regional demand varies across India, with South India accounting for nearly 40% of gold imports. Areas with higher demand can see corresponding increases in gold prices.</p>
         </div>
         
-        <div class=" p-4 rounded shadow">
-            <h2 class="font-semibold">7. Seasonal Demand in India</h2>
-            <p>Festive seasons, weddings, and special occasions lead to spikes in gold purchases, affecting overall demand and subsequently driving up prices during these periods.</p>
+        <div class="p-4 rounded-lg shadow-md bg-white">
+            <h2 class="font-semibold text-gray-800">7. Seasonal Demand in India</h2>
+            <p class="text-gray-600">Festive seasons, weddings, and special occasions lead to spikes in gold purchases, affecting overall demand and subsequently driving up prices during these periods.</p>
         </div>
         
-        <div class=" p-4 rounded shadow">
-            <h2 class="font-semibold">8. Market Conditions</h2>
-            <p>Global market trends impact domestic gold rates. When gold prices rise internationally, it often correlates with increases in local prices.</p>
+        <div class="p-4 rounded-lg shadow-md bg-white">
+            <h2 class="font-semibold text-gray-800">8. Market Conditions</h2>
+            <p class="text-gray-600">Global market trends impact domestic gold rates. When gold prices rise internationally, it often correlates with increases in local prices.</p>
         </div>
         
-        <div class=" p-4 rounded shadow">
-            <h2 class="font-semibold">9. Production Costs</h2>
-            <p>The operational costs of mining can affect gold pricing. If production expenses rise, it may lead to higher prices as supply adjusts to meet costs.</p>
+        <div class="p-4 rounded-lg shadow-md bg-white">
+            <h2 class="font-semibold text-gray-800">9. Production Costs</h2>
+            <p class="text-gray-600">The operational costs of mining can affect gold pricing. If production expenses rise, it may lead to higher prices as supply adjusts to meet costs.</p>
         </div>
         
-        <div class=" p-4 rounded shadow">
-            <h2 class="font-semibold">10. Transport Costs</h2>
-            <p>As a physical asset, gold incurs transportation expenses. In India, significant costs related to fuel, vehicles, and security for transporting gold can influence its retail price.</p>
+        <div class="p-4 rounded-lg shadow-md bg-white">
+            <h2 class="font-semibold text-gray-800">10. Transport Costs</h2>
+            <p class="text-gray-600">As a physical asset, gold incurs transportation expenses. In India, significant costs related to fuel, vehicles, and security for transporting gold can influence its retail price.</p>
         </div>
     </div>
 </div>
@@ -401,36 +435,35 @@
             The Goods and Services Tax (GST) affects gold in several ways, both directly and indirectly, depending on the form of gold and the purpose of purchase. Here's a breakdown:
         </p>
     </div>
-    
+
     <div class="bg-p-6 rounded-lg">
         <h2 class="text-2xl font-bold text-center mb-4">Indirect Impact on Gold Pricing</h2>
-        
-        <div class="space-y-4 flex flex-row gap-8">
-            <div class="bg-yellow-50  p-4 rounded shadow">
+
+        <!-- Responsive flex layout for smaller screens -->
+        <div class="space-y-4 md:flex md:space-x-8 md:space-y-0">
+            <div class="bg-yellow-50 p-4 rounded shadow">
                 <h3 class="font-semibold">Direct impact:</h3>
                 <h5>GST on gold purchase:</h5>
                 <p>A flat 3% GST is levied on the gold value itself, whether it's in the form of bars, coins, or jewellery. This is considered lower than most other goods and services.
-
-                    Making charges: For jewellery, an additional 5% GST is charged on the making charges separately.
-                    
-                    Impact on price: Overall, the price of gold has increased slightly due to the combined effect of both 3% and 5% GST..</p>
+                    <br><br>Making charges: For jewellery, an additional 5% GST is charged on the making charges separately.
+                    <br><br>Impact on price: Overall, the price of gold has increased slightly due to the combined effect of both 3% and 5% GST.
+                </p>
             </div>
-            
-            <div class="bg-yellow-50  p-4 rounded shadow">
+
+            <div class="bg-yellow-50 p-4 rounded shadow">
                 <h3 class="font-semibold">Indirect impact:</h3>
                 <p>Import duty: Imported gold bears a 10% customs duty in addition to the 3% GST. This has made importing gold more expensive, impacting some segments of the industry.
-
-                    Formalisation of trade: GST has brought the gold industry under a more formal tax regime, potentially reducing tax evasion and black market activity. However, this might have also impacted some small informal players.</p>
+                    <br><br>Formalisation of trade: GST has brought the gold industry under a more formal tax regime, potentially reducing tax evasion and black market activity. However, this might have also impacted some small informal players.
+                </p>
             </div>
         </div>
     </div>
 </div>
 
-
 <div class="max-w-7xl mx-auto p-6">
     <div class="bg-purple-200 p-6 rounded-lg">
         <h1 class="text-3xl font-bold mb-4">What is the Hottest Jewellery Trend?</h1>
-        
+
         <p class="mb-4">
             We know there has been a resurgence in the popularity of vintage and antique jewellery. The latest jewellery trend is for unique pieces with a history. Antique or heirloom jewellery is having a moment. Another hot trend is lightweight jewellery. Let's start with jewellery with history.
         </p>
@@ -450,7 +483,7 @@
         <p class="mb-4">
             The jewellery world is constantly evolving, and new trends are always emerging. As much as antique jewellery is trending, so is lightweight jewellery.
         </p>
-        
+
         <h3 class="text-xl font-semibold mt-4">Lightweight Earrings</h3>
         <p class="mb-4">
             You can choose stud or drop earrings. For example, Hover Butterfly Diamond Stud Earrings would be a good choice for the office and an evening out. If you like wearing drop earrings, the Rhodeus Drop Gold Earrings or the Twinkling Circlet Diamond Drop Earrings will go well with any outfit.
@@ -472,19 +505,18 @@
     </div>
 </div>
 
-
 <div class="max-w-7xl mx-auto p-6">
     <div class="bg-purple-200 p-6 rounded-lg">
         <h1 class="text-3xl font-bold mb-4">Will the Gold Rate Increase in the Coming Days?</h1>
-        
+
         <p class="mb-4">
             Physical gold has been used as a form of currency, jewellery, and other decorative items for centuries. Supply and demand must be factored in to determine the value of gold. When the demand for gold is high, the price of gold will increase.
         </p>
-        
+
         <p class="mb-4">
             The reverse is also true; when the demand for gold is low, the price of gold will decrease. Gold investment is typically seen as safe, especially during times of economic uncertainty. This is because gold is not affected by the same economic factors that can cause the value of other investments, such as stocks and bonds, to fluctuate.
         </p>
-        
+
         <p class="mb-4">
             For this reason, many investors choose to invest in gold in a volatile stock market. According to market studies and future predictions on gold rates, the price is expected to increase.
         </p>
@@ -537,8 +569,6 @@
         </ol>
     </div>
 </div>
-
-
 
 <div class="max-w-7xl mx-auto p-6">
     <div class="bg-purple-200 p-6 rounded-lg">
@@ -581,7 +611,6 @@
     </div>
 </div>
 
-
 <div class="max-w-7xl mx-auto p-6">
     <div class="bg-purple-200 p-6 rounded-lg">
         <h1 class="text-3xl font-bold mb-4">How to Check the Purity of Gold</h1>
@@ -612,8 +641,6 @@
         </p>
     </div>
 </div>
-
-
 
 <div class="max-w-7xl mx-auto p-6">
     <div class="bg-purple-200 p-6 rounded-lg">
@@ -653,58 +680,47 @@
         </p>
     </div>
 </div>
-
-
-
 <div class="max-w-7xl mx-auto p-6">
-    <div class="bg-purple-200 p-6 rounded-lg">
+    <section class="bg-purple-200 p-6 rounded-lg">
         <h1 class="text-3xl font-bold mb-4">Keep Your Gold Safe by Following These Steps</h1>
-
         <p class="mb-4">
             Buying gold is a significant part of our culture and is considered one of the safer investments. Once your gold has reached your hands, ensuring its security is essential. Here are some steps to keep your gold safe and secure:
         </p>
-
         <ol class="list-decimal list-inside space-y-4 mt-4">
             <li>
-                <strong>Get a Home Safe:</strong> 
-                Investing in a home safe is one of the best ways to keep your gold secure. A robust safe is tough to break into and will deter potential thieves.
+                <strong>Get a Home Safe:</strong> Investing in a home safe is one of the best ways to keep your gold secure. A robust safe is tough to break into and will deter potential thieves.
             </li>
             <li>
-                <strong>Use a Safety Deposit Box:</strong>
-                If you don’t have a home safe, consider storing your gold in a safety deposit box at the bank. This is a secure option for safeguarding your assets.
+                <strong>Use a Safety Deposit Box:</strong> If you don’t have a home safe, consider storing your gold in a safety deposit box at the bank. This is a secure option for safeguarding your assets.
             </li>
             <li>
-                <strong>Choose a Safe Location at Home:</strong>
-                If you prefer keeping your gold at home, store it in a locked drawer or closet. Ensure that the location is not obvious to others.
+                <strong>Choose a Safe Location at Home:</strong> If you prefer keeping your gold at home, store it in a locked drawer or closet. Ensure that the location is not obvious to others.
             </li>
             <li>
-                <strong>Insure Your Gold:</strong>
-                Obtaining gold insurance protects your investment against fire, natural disasters, theft, or loss, providing peace of mind.
+                <strong>Insure Your Gold:</strong> Obtaining gold insurance protects your investment against fire, natural disasters, theft, or loss, providing peace of mind.
             </li>
             <li>
-                <strong>Invest in Digi Gold:</strong>
-                Digi Gold offers a modern approach to buying and storing gold digitally. It eliminates the risks associated with physical storage and allows easy access to your investment through online platforms.
+                <strong>Invest in Digi Gold:</strong> Digi Gold offers a modern approach to buying and storing gold digitally. It eliminates the risks associated with physical storage and allows easy access to your investment through online platforms.
             </li>
         </ol>
-
         <p class="mt-4">
             By following these steps, you can keep your gold safe and protect your investment for years to come.
         </p>
-    </div>
+    </section>
 </div>
 
-
-
 <div class="max-w-7xl mx-auto p-6">
-    <div class="bg-purple-50 p-6 rounded-lg">
+    <section class="bg-purple-50 p-6 rounded-lg">
         <h1 class="text-3xl font-bold mb-6">Frequently Asked Questions</h1>
 
         <div class="space-y-6">
+            <!-- FAQ 1 -->
             <div>
                 <h2 class="text-xl font-semibold">Is 916 gold 22k or 24k?</h2>
                 <p>916 denotes the purity of gold in the final product, meaning it contains 91.6 grams of pure gold in a 100-gram alloy. So, 916 gold is 91.6% pure gold (22K).</p>
             </div>
 
+            <!-- FAQ 2 -->
             <div>
                 <h2 class="text-xl font-semibold">Who imports gold in India?</h2>
                 <p>India imports nearly all of its gold from abroad. Major importers include:</p>
@@ -719,6 +735,7 @@
                 </ul>
             </div>
 
+            <!-- FAQ 3 -->
             <div>
                 <h2 class="text-xl font-semibold">How to invest in Gold?</h2>
                 <p>Gold can be purchased from various sources, including online dealers, jewellery stores, and banks. Investment options include:</p>
@@ -730,30 +747,36 @@
                 </ul>
             </div>
 
+            <!-- FAQ 4 -->
             <div>
                 <h2 class="text-xl font-semibold">Is inflation a big determinant of gold rates in India?</h2>
                 <p>Yes, inflation significantly impacts gold prices. Generally, when inflation is high, gold prices rise as it is viewed as a hedge against inflation.</p>
             </div>
 
+            <!-- FAQ 5 -->
             <div>
                 <h2 class="text-xl font-semibold">Where is gold cheapest in India?</h2>
                 <p>Gold is usually cheapest in Kerala, followed by Karnataka, while cities like Delhi, Mumbai, Hyderabad, and Kolkata often have higher prices.</p>
             </div>
 
+            <!-- FAQ 6 -->
             <div>
                 <h2 class="text-xl font-semibold">What is the best time to purchase gold?</h2>
                 <p>The ideal time to purchase gold is when prices are low, typically during economic downturns or when inflation is high.</p>
             </div>
 
+            <!-- FAQ 7 -->
             <div>
                 <h2 class="text-xl font-semibold">Who determines the gold rate today?</h2>
                 <p>The Indian Bullion Jewellers Association (IBJA) determines the daily gold rates based on market conditions and supply-demand dynamics.</p>
             </div>
 
+            <!-- FAQ 8 -->
             <div>
                 <h2 class="text-xl font-semibold">Where to Buy Gold?</h2>
                 <p>You can buy gold either in-store or online. CaratLane offers an extensive collection with the benefits of both options.</p>
-                <h3 class="font-semibold">1. In-Store Gold Buying</h3>
+
+                <h3 class="font-semibold mt-4">1. In-Store Gold Buying</h3>
                 <ol class="list-decimal list-inside ml-6">
                     <li>Locate a CaratLane Store using the store locator.</li>
                     <li>Visit the store to browse the collection.</li>
@@ -761,6 +784,7 @@
                     <li>Check for ongoing promotions.</li>
                     <li>Make your purchase and take it home.</li>
                 </ol>
+
                 <h3 class="font-semibold mt-4">2. Buying Gold Online</h3>
                 <ol class="list-decimal list-inside ml-6">
                     <li>Visit the CaratLane website.</li>
@@ -771,7 +795,7 @@
                 </ol>
             </div>
         </div>
-    </div>
+    </section>
 </div>
 
 

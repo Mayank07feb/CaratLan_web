@@ -5,7 +5,7 @@
   <main class="w-full mx-auto px-4 py-8 mt-20">
     <!-- Shipping Information -->
     <div class="mb-12">
-    <div class="flex flex-row gap-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div class="mx-8">
             <h1 class="text-3xl p-4">Shipping</h1>
             <p class="text-gray-700 mb-6">
