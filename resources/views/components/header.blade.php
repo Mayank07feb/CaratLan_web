@@ -86,42 +86,48 @@
                         <p class="text-sm sm:text-xs xs:text-[10px]">Have a look at your Recently viewed section</p>
                     </div>
                 </div>
+                <a href="{{ route('jewellery.earrings') }}">
+                    <div class="menu-item flex items-center space-x-4">
+                        <img src="{{ asset('asset/img/best2.webp') }}" alt="Earrings"
+                            class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
+                        <span
+                            class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Earrings</span>
+                    </div>
+                </a>
+                <a href="{{ route('jewellery.rings') }}">
+                    <div class="menu-item flex items-center space-x-4">
+                        <img src="{{ asset('asset/img/best2.webp') }}" alt="Rings"
+                            class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
+                        <span
+                            class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Rings</span>
+                    </div>
+                </a>
+                <a href="{{ route('jewellery.bracelets-bangles') }}">
+                    <div class="menu-item flex items-center space-x-4">
+                        <img src="{{ asset('asset/img/best2.webp') }}" alt="Bracelets & Bangles"
+                            class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
+                        <span
+                            class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Bracelets
+                            & Bangles</span>
+                    </div>
+                </a>
+                <a href="{{ route('jewellery.solitaires') }}">
+                    <div class="menu-item flex items-center space-x-4">
+                        <img src="{{ asset('asset/img/best2.webp') }}" alt="Solitaires"
+                            class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
+                        <span
+                            class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Solitaires</span>
+                    </div>
+                </a>
 
-                <div class="menu-item flex items-center space-x-4">
-                    <img src="{{ asset('asset/img/best2.webp') }}" alt="Earrings"
-                        class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
-                    <span
-                        class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Earrings</span>
-                </div>
-
-                <div class="menu-item flex items-center space-x-4">
-                    <img src="{{ asset('asset/img/best2.webp') }}" alt="Rings"
-                        class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
-                    <span
-                        class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Rings</span>
-                </div>
-
-                <div class="menu-item flex items-center space-x-4">
-                    <img src="{{ asset('asset/img/best2.webp') }}" alt="Bracelets & Bangles"
-                        class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
-                    <span
-                        class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Bracelets
-                        & Bangles</span>
-                </div>
-
-                <div class="menu-item flex items-center space-x-4">
-                    <img src="{{ asset('asset/img/best2.webp') }}" alt="Solitaires"
-                        class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
-                    <span
-                        class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Solitaires</span>
-                </div>
-
-                <div class="menu-item flex items-center space-x-4">
-                    <img src="{{ asset('asset/img/best2.webp') }}" alt="Mangalsutras"
-                        class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
-                    <span
-                        class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Mangalsutras</span>
-                </div>
+                <a href="{{ route('jewellery.mangalsutras') }}">
+                    <div class="menu-item flex items-center space-x-4">
+                        <img src="{{ asset('asset/img/best2.webp') }}" alt="Mangalsutras"
+                            class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
+                        <span
+                            class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Mangalsutras</span>
+                    </div>
+                </a>
 
                 <div class="menu-item flex items-center space-x-4">
                     <img src="{{ asset('asset/img/best2.webp') }}" alt="Necklaces"
@@ -237,7 +243,7 @@
             Introducing CardzLane: UP TO 70% OFF | Plan your purchase here
         </div>
     </div>
-    
+
 
 
 
@@ -278,9 +284,11 @@
                     <!-- Right Icons -->
                     <div class="flex items-center space-x-4">
                         <span class="material-icons text-gray-600">store</span>
-                        <a href="{{route('wishlist')}}"> <span class="material-icons text-gray-600">favorite</span></a>
+                        <a href="{{ route('wishlist') }}"> <span
+                                class="material-icons text-gray-600">favorite</span></a>
                         <div class="relative">
-                           <a href="{{route('cart')}}"><span class="material-icons text-gray-600">shopping_cart</span></a> 
+                            <a href="{{ route('cart') }}"><span
+                                    class="material-icons text-gray-600">shopping_cart</span></a>
                             <span
                                 class="absolute -top-2 -right-2 bg-purple-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</span>
                         </div>
