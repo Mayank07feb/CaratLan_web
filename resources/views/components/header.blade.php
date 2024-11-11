@@ -129,12 +129,14 @@
                     </div>
                 </a>
 
-                <div class="menu-item flex items-center space-x-4">
-                    <img src="{{ asset('asset/img/best2.webp') }}" alt="Necklaces"
-                        class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
-                    <span
-                        class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Necklaces</span>
-                </div>
+                <a href="{{ route('jewellery.necklaces') }}">
+                    <div class="menu-item flex items-center space-x-4">
+                        <img src="{{ asset('asset/img/best2.webp') }}" alt="Necklaces"
+                            class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
+                        <span
+                            class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Necklaces</span>
+                    </div>
+                </a>
 
                 <div class="menu-item flex items-center space-x-4">
                     <img src="{{ asset('asset/img/best2.webp') }}" alt="Men's Jewellery"
