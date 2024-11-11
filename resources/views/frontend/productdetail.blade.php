@@ -2,6 +2,26 @@
 
 @section('content')
     <style>
+        /* Container styling to keep overflow hidden */
+        #productContainer {
+            position: relative;
+            cursor: crosshair;
+            overflow: hidden;
+            /* Keep the zoom within bounds */
+        }
+
+        /* Image Styling for Zoom */
+        #zoomImage {
+            transition: transform 0.2s ease;
+            /* Smooth zoom effect */
+        }
+
+        /* On hover, apply zoom effect */
+        #productContainer:hover #zoomImage {
+            transform: scale(2);
+            /* Adjust scale for the zoom level */
+        }
+
         .purple-gradient {
             background: linear-gradient(180deg, #1E1333 0%, #8B3FDB 100%);
         }
@@ -118,7 +138,7 @@
         </div>
     </div> --}}
 
-    <main class="mt-14 md:mt-14 sm:mt-14">
+    <main class="mt-14 md:mt-24 sm:mt-14">
         <div class="bg-white">
             <!-- Breadcrumb Navigation -->
             <nav class="p-4 border-b">
@@ -142,9 +162,10 @@
                     <div class="md:col-span-6 space-y-4">
                         <!-- Main Product Image -->
                         <div class="flex justify-center space-x-4">
-                            <div class="product-image rounded-lg p-8 relative">
+                            <div class="product-image rounded-lg p-8 relative overflow-hidden" id="productContainer">
                                 <img src="{{ asset('asset/img/testing.png') }}" alt="Mathew Gold Band Ring"
-                                    class="w-full object-contain" />
+                                    class="w-full h-full object-cover transition-transform duration-200 ease-in-out"
+                                    id="zoomImage" />
                                 <button class="absolute top-4 right-4 bg-white p-2 rounded-lg shadow-md">
                                     <i class="fas fa-expand-arrows-alt text-gray-600"></i>
                                 </button>
@@ -202,7 +223,7 @@
                                             <h2 class="text-lg font-bold text-primary">32% OFF</h2>
                                             <p class="text-xs text-primary">On All Similar Designs</p>
                                             <button
-                                                class="w-full mt-2 bg-primary text-white text-[10px] border p-2 rounded-[12px] flex items-center gap-1 hover:text-purple-800 transition">
+                                                class="w-full mt-2 bg-primary text-white text-[10px] border p-2 rounded-[12px] flex items-center gap-1 hover:text-white transition">
                                                 VIEW ALL
                                                 <span class="material-symbols-outlined text-[12px]">
                                                     chevron_right
@@ -311,11 +332,12 @@
                         <div class="space-y-3">
                             <div class="flex gap-3">
 
-                                <button
-                                    class="flex-1 py-2 bg-gradient-to-r from-[#de57e5] to-[#8863fb] text-white rounded-[12px] font-medium hover:bg-purple-600 transition">
+                                <a href="{{ route('cart') }}"
+                                    class="flex-1 py-2 bg-gradient-to-r from-[#de57e5] to-[#8863fb] text-white rounded-[12px] font-medium hover:bg-purple-600 transition inline-flex items-center justify-center">
                                     <span class="material-icons text-base">shopping_cart</span>
                                     ADD TO CART
-                                </button>
+                                </a>
+
 
                                 <button
                                     class="w-12 h-12 border border-gray-300 rounded-[12px] flex items-center justify-center hover:bg-gray-50 transition">
@@ -1359,7 +1381,27 @@
     </div>
 
 
-
+    <script>
+        const container = document.getElementById("productContainer");
+        const image = document.getElementById("zoomImage");
+    
+        // Adjust image position on mouse movement within the container
+        container.addEventListener("mousemove", (e) => {
+            const { left, top, width, height } = container.getBoundingClientRect();
+            
+            // Calculate the relative mouse position
+            const x = ((e.clientX - left) / width) * 100;
+            const y = ((e.clientY - top) / height) * 100;
+    
+            // Set the transform origin based on the mouse position
+            image.style.transformOrigin = `${x}% ${y}%`;
+        });
+    
+        // Reset transform origin when the mouse leaves the container
+        container.addEventListener("mouseleave", () => {
+            image.style.transformOrigin = "center center"; // Reset to center
+        });
+    </script>
 
     <script>
         function toggleModal() {

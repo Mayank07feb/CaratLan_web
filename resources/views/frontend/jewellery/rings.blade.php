@@ -422,29 +422,30 @@
                                     </button>
                                 </div>
 
-                                <div class="relative">
-                                    <img id="productImage1" src="{{ asset('asset/img/best10.webp') }}" alt="Product"
-                                        class="w-full h-56 object-cover border border-gray-300 shadow rounded-lg transition-opacity duration-300 ease-in-out">
-                                    <div class="absolute top-48 left-2 flex items-start space-x-2">
-                                        <button onclick="changeImage(-1, 'productImage1')"
-                                            class="bg-white text-xs font-bold p-1 rounded-full">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M15 19l-7-7 7-7" />
-                                            </svg>
-                                        </button>
-                                        <button onclick="changeImage(1, 'productImage1')"
-                                            class="bg-white text-xs font-bold p-1 rounded-full">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M9 5l7 7-7 7" />
-                                            </svg>
-                                        </button>
+                                <a href="{{route('productdetail')}}">
+                                    <div class="relative">
+                                        <img id="productImage1" src="{{ asset('asset/img/best10.webp') }}" alt="Product"
+                                            class="w-full h-56 object-cover border border-gray-300 shadow rounded-lg transition-opacity duration-300 ease-in-out">
+                                        <div class="absolute top-48 left-2 flex items-start space-x-2">
+                                            <button onclick="changeImage(-1, 'productImage1')"
+                                                class="bg-white text-xs font-bold p-1 rounded-full">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                        d="M15 19l-7-7 7-7" />
+                                                </svg>
+                                            </button>
+                                            <button onclick="changeImage(1, 'productImage1')"
+                                                class="bg-white text-xs font-bold p-1 rounded-full">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                        d="M9 5l7 7-7 7" />
+                                                </svg>
+                                            </button>
+                                        </div>
                                     </div>
-                                </div>
-
+                                </a>
                                 <div class="p-2">
                                     <div class="flex items-center">
                                         <div class="text-base font-semibold">₹24,733</div>

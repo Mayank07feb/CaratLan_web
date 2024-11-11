@@ -1,6 +1,27 @@
 @extends('components.main')
 @section('content')
     <style>
+        /* Mobile view */
+        @media (max-width: 640px) {
+            #quantity-sidebar {
+                right: 0;
+                top: auto;
+                bottom: 0;
+                width: 100%;
+                height: auto;
+                transform: translateY(100%);
+            }
+
+            /* Adjust transform classes for bottom animation */
+            #quantity-sidebar.translate-x-full {
+                transform: translateY(100%);
+            }
+
+            #quantity-sidebar.translate-x-0 {
+                transform: translateY(0);
+            }
+        }
+
         /* Custom scrollbar styles */
         .overflow-y-auto::-webkit-scrollbar {
             width: 4px;
@@ -141,7 +162,7 @@
 
                                         <!-- Sidebar (Quantity Selection) -->
                                         <div id="quantity-sidebar"
-                                            class=" rounded-l-[30px] fixed right-0 top-0 h-full w-1/3 bg-white shadow-lg p-6 z-50 transform translate-x-full transition-transform duration-300 ease-in-out opacity-0">
+                                            class=" rounded-l-[30px] fixed right-0 top-0 h-full w-1/3 bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300 ease-in-out opacity-0">
                                             <!-- Close Button -->
                                             <button id="close-sidebar"
                                                 class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
@@ -151,44 +172,44 @@
                                             <!-- Sidebar Content -->
                                             <div class="text-center ">
                                                 <!-- Price Section -->
-                                                <div class="bg-purple-50 p-4 rounded-lg mb-6 flex items-center">
+                                                <div class="bg-purple-50 p-6 rounded-lg mb-6 flex items-center">
                                                     <p class="text-lg font-bold text-gray-900">₹12,005</p>
                                                     <p class="text-sm line-through text-gray-400 ml-2">₹15,404</p>
                                                 </div>
 
+                                                <div class="p-6">
+                                                    <!-- Title -->
+                                                    <h3 class="text-lg text-left font-semibold text-gray-800 mb-4">Select
+                                                        Quantity</h3>
 
-                                                <!-- Title -->
-                                                <h3 class="text-lg text-left font-semibold text-gray-800 mb-4">Select
-                                                    Quantity</h3>
-
-                                                <!-- Quantity Options -->
-                                                <div class="grid grid-cols-5 gap-3 mb-8">
-                                                    <!-- Quantity buttons with consistent spacing -->
-                                                    <button
-                                                        class="py-2 px-4 rounded-md text-gray-700 bg-purple-100 hover:bg-purple-200">1</button>
-                                                    <button
-                                                        class="py-2 px-4 rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200">2</button>
-                                                    <button
-                                                        class="py-2 px-4 rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200">3</button>
-                                                    <button
-                                                        class="py-2 px-4 rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200">4</button>
-                                                    <button
-                                                        class="py-2 px-4 rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200">5</button>
-                                                    <button
-                                                        class="py-2 px-4 rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200">6</button>
-                                                    <button
-                                                        class="py-2 px-4 rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200">7</button>
-                                                    <button
-                                                        class="py-2 px-4 rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200">8</button>
-                                                    <button
-                                                        class="py-2 px-4 rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200">9</button>
-                                                    <button
-                                                        class="py-2 mt px-4 rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200">10</button>
+                                                    <!-- Quantity Options -->
+                                                    <div class="grid grid-cols-5 gap-3 mb-8">
+                                                        <!-- Quantity buttons with consistent spacing -->
+                                                        <button
+                                                            class="py-2 px-4 rounded-md text-gray-700 bg-purple-100 hover:bg-purple-200">1</button>
+                                                        <button
+                                                            class="py-2 px-4 rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200">2</button>
+                                                        <button
+                                                            class="py-2 px-4 rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200">3</button>
+                                                        <button
+                                                            class="py-2 px-4 rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200">4</button>
+                                                        <button
+                                                            class="py-2 px-4 rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200">5</button>
+                                                        <button
+                                                            class="py-2 px-4 rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200">6</button>
+                                                        <button
+                                                            class="py-2 px-4 rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200">7</button>
+                                                        <button
+                                                            class="py-2 px-4 rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200">8</button>
+                                                        <button
+                                                            class="py-2 px-4 rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200">9</button>
+                                                        <button
+                                                            class="py-2 mt px-4 rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200">10</button>
+                                                    </div>
                                                 </div>
-
                                                 <!-- Confirm Button -->
                                                 <button
-                                                    class="mt-64 w-full bg-[#4F3267]  text-white font-semibold py-3 rounded-lg hover:opacity-90 transition-all duration-300">
+                                                    class="mt-64 w-full bg-[#4F3267]  text-white font-semibold py-3 hover:opacity-90 transition-all duration-300">
                                                     Confirm Quantity
                                                 </button>
                                             </div>
@@ -306,7 +327,7 @@
 
     <!-- Coupon Popup Box -->
     <div id="discount-popup"
-        class="fixed inset-0 bg-black/30 flex items-center justify-center p-4 opacity-0 pointer-events-none">
+        class="fixed inset-0 bg-black/30 flex items-center justify-center p-4 opacity-0 pointer-events-none mt-24 sm:mt-10">
         <div class="bg-white rounded-3xl shadow-xl max-w-[400px] w-full">
             <!-- Header -->
             <div class="flex justify-between items-center px-6 pt-5 pb-4">
