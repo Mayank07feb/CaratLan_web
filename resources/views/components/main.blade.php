@@ -70,7 +70,7 @@
     </div>
 
 
-    <!-- Include the header -->
+    <!-- Include the header --> 
     @include('components.header')
 
     <div class="mt-24 sm:mt-12 md:mt-0 lg:mt-0 xl:mt-0">
