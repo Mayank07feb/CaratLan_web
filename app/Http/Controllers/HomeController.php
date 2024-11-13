@@ -192,6 +192,12 @@ class HomeController extends Controller
         return view('frontend.goldrate');
     }
 
+
+    public function shayadetail(){
+        return view('frontend.shayadetail');
+    }
+
+    
     // ===== Order Status & Miscellaneous Pages =====
     public function order()
     {
@@ -237,6 +243,10 @@ class HomeController extends Controller
         return view('frontend.stores');
     }
 
+    public function selectshape(){
+        return view('frontend.selectshape');
+    }
+    
     // ===== Web Stories & Collaborations =====
     public function webstories()
     {

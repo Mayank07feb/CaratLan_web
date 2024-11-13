@@ -21,7 +21,7 @@
 
 {{-- HOME BANNER SLIDER --}}
 <!-- Slider Container -->
-<div class="relative w-full  md:h-100 overflow-hidden">
+<div class="relative w-full  md:h-full md:mt-12 overflow-hidden mt-40 lg:mt-0">
     <!-- Slider Wrapper -->
     <div class="relative w-full h-full flex items-center justify-center overflow-hidden">
         <!-- Slides Wrapper -->
@@ -135,12 +135,12 @@
 
     <div class="relative w-full h-full mx-0 overflow-hidden grid grid-cols-1 md:grid-cols-3 px-4 md:px-8 gap-0">
         <!-- Video Section -->
-        <div class="relative col-span-1 md:col-span-2 aspect-w-16 aspect-h-9 rounded-l-lg overflow-hidden">
+        <div class="relative col-span-1 md:col-span-2 aspect-w-16 aspect-h-9 rounded-t-lg md:rounded-l-lg overflow-hidden">
             <iframe class="w-full h-full" src="https://www.youtube.com/embed/Vz0l_OYJofo?si=tYVrySeJr6cU62c6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     
         <!-- Overlay and Text Section -->
-        <div class="flex items-center justify-center bg-purple-900 p-6 md:p-12 rounded-r-lg col-span-1">
+        <div class="flex items-center justify-center bg-purple-900 p-6 md:p-12 rounded-b-lg md:rounded-r-lg col-span-1">
             <div class="text-right max-w-md space-y-6">
                 <h2 class="text-4xl md:text-5xl lg:text-6xl text-pretty text-white mb-4 drop-shadow-lg">
                     <span class="cursive font-light text-balance">𝗟𝗮𝘁𝗲𝘀𝘁</span><br>𝒟𝑒𝓈𝒾𝑔𝓃
@@ -157,7 +157,7 @@
 
 
     {{-- COLLECTIONS --}}
-    <div class="container mx-auto p-4 py-24">
+    <div class="container mx-auto p-4 pt-14 ">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <!-- Image 1 -->
             <div class="relative group overflow-hidden">
@@ -166,7 +166,7 @@
             </div>
 
             <!-- Image 2 (Centered and Adjusted) -->
-            <div class="relative group overflow-hidden flex flex-col items-center justify-center -mt-8">
+            <div class="relative group overflow-hidden flex flex-col items-center justify-center mt-4 lg:-mt-8">
                 <!-- Image with hover effect -->
                 <img src="{{ asset('asset/img/Utsav.jpg') }}" alt="Utsav Collection"
                     class="w-full h-auto rounded-lg shadow-md transition-transform duration-300 transform group-hover:scale-105">
@@ -207,12 +207,12 @@
    
     <div class="relative w-full h-full mx-auto overflow-hidden py-4 grid grid-cols-1 lg:grid-cols-3 px-4 md:px-8 gap-0">
         <!-- Video Section -->
-        <div class="relative col-span-1 lg:col-span-2 aspect-w-16 aspect-h-9 rounded-l-lg overflow-hidden" dir="ltr">
+        <div class="relative col-span-1 lg:col-span-2 aspect-w-16 aspect-h-9 rounded-t-lg md:rounded-l-lg overflow-hidden" dir="ltr">
             <iframe class="w-full h-full" src="https://www.youtube.com/embed/KhrPUQsYcNo?si=yrOniYEbEwi8kLbl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     
         <!-- Overlay and Text Section -->
-        <aside class="flex items-center justify-center bg-purple-900 p-6 md:p-12 rounded-r-lg col-span-1" dir="rtl">
+        <aside class="flex items-center justify-center bg-purple-900 p-6 md:p-12 rounded-b-lg md:rounded-r-lg col-span-1" dir="rtl">
             <div class="text-right max-w-md space-y-4">
                 <h2 class="text-5xl md:text-6xl text-pretty text-white mb-2 drop-shadow-lg">
                     <span class="cursive font-light text-balance">Get</span><br>

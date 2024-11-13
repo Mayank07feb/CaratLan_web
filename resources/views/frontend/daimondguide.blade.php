@@ -256,38 +256,38 @@
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-1 justify-items-center">
         <!-- Shape Item -->
         <div class="flex flex-col items-center">
-            <img src="{{asset('asset/img/shape1.png')}}" alt="Round Diamond" class="w-24 h-24 object-cover mb-2">
+           <a href="{{route('selectshape')}}"> <img src="{{asset('asset/img/shape1.png')}}" alt="Round Diamond" class="w-24 h-24 object-cover mb-2"></a>
             <p class="text-gray-700 text-sm font-medium capitalize">Round</p>
         </div>
 
         <!-- Repeat the Shape Item for other shapes -->
         <div class="flex flex-col items-center">
-            <img src="{{asset('asset/img/shape2.png')}}" alt="Round Diamond" class="w-24 h-24 object-cover mb-2">
+            <a href="{{route('selectshape')}}"><img src="{{asset('asset/img/shape2.png')}}" alt="Round Diamond" class="w-24 h-24 object-cover mb-2"></a>
             <p class="text-gray-700 text-sm font-medium capitalize">Pear</p>
         </div>
 
         <div class="flex flex-col items-center">
-            <img src="{{asset('asset/img/shap3.png')}}" alt="Round Diamond" class="w-24 h-24 object-cover mb-2">
+            <a href="{{route('selectshape')}}"><img src="{{asset('asset/img/shap3.png')}}" alt="Round Diamond" class="w-24 h-24 object-cover mb-2"></a>
             <p class="text-gray-700 text-sm font-medium capitalize">Heart</p>
         </div>
 
         <div class="flex flex-col items-center">
-            <img src="{{asset('asset/img/shape4.png')}}" alt="Round Diamond" class="w-24 h-24 object-cover mb-2">
+            <a href="{{route('selectshape')}}"><img src="{{asset('asset/img/shape4.png')}}" alt="Round Diamond" class="w-24 h-24 object-cover mb-2"></a>
             <p class="text-gray-700 text-sm font-medium capitalize">Princess</p>
         </div>
 
         <div class="flex flex-col items-center">
-            <img src="{{asset('asset/img/shape5.png')}}" alt="Round Diamond" class="w-24 h-24 object-cover mb-2">
+            <a href="{{route('selectshape')}}"><img src="{{asset('asset/img/shape5.png')}}" alt="Round Diamond" class="w-24 h-24 object-cover mb-2"></a>
             <p class="text-gray-700 text-sm font-medium capitalize">Oval</p>
         </div>
 
         <div class="flex flex-col items-center">
-            <img src="{{asset('asset/img/shape6.png')}}" alt="Round Diamond" class="w-24 h-24 object-cover mb-2">
+            <a href="{{route('selectshape')}}"><img src="{{asset('asset/img/shape6.png')}}" alt="Round Diamond" class="w-24 h-24 object-cover mb-2"></a>
             <p class="text-gray-700 text-sm font-medium capitalize">Cushion</p>
         </div>
 
         <div class="flex flex-col items-center">
-            <img src="{{asset('asset/img/shape7.png')}}" alt="Round Diamond" class="w-24 h-24 object-cover mb-2">
+            <a href="{{route('selectshape')}}"><img src="{{asset('asset/img/shape7.png')}}" alt="Round Diamond" class="w-24 h-24 object-cover mb-2"></a>
             <p class="text-gray-700 text-sm font-medium capitalize">Emerald</p>
         </div>
     </div>

@@ -73,80 +73,94 @@
 
 
 {{-- RING SECTION --}}
-<div class="flex flex-col items-center p-8 bg-gray-50 mx-4 md:mx-12">
+<div class="flex flex-col items-center p-4 sm:p-8 bg-gray-50 mx-4 md:mx-12 lg:mx-24 xl:mx-32">
     <!-- Title and Description -->
-    <div class="text-center mb-6">
-        <h1 class="text-3xl md:text-4xl font-bold text-gray-800">Rings</h1>
-        <p class="mt-2 text-gray-700 max-w-3xl mx-auto">For rings, the more, the merrier. Multiple and stacked rings are grouped together and worn on different fingers for a nice style statement.</p>
+    <div class="text-center mb-6 px-4">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">Rings</h1>
+        <p class="mt-2 text-gray-700 max-w-2xl sm:max-w-3xl mx-auto text-sm sm:text-base md:text-lg">
+            For rings, the more, the merrier. Multiple and stacked rings are grouped together and worn on different fingers for a nice style statement.
+        </p>
         
-        <h2 class="text-xs font-semibold mt-4 text-purple-400">CaratLane Style Tip:</h2>
-        <p class="mt-2 text-gray-700 max-w-3xl mx-auto">Let your personality shine through your rings by mixing a variety of colours & designs. The rainbow awaits...minus the unicorns though ;)</p>
+        <h2 class="text-xs sm:text-sm font-semibold mt-4 text-purple-400">CaratLane Style Tip:</h2>
+        <p class="mt-2 text-gray-700 max-w-2xl sm:max-w-3xl mx-auto text-sm sm:text-base md:text-lg">
+            Let your personality shine through your rings by mixing a variety of colours & designs. The rainbow awaits...minus the unicorns though ;)
+        </p>
     </div>
 
     <!-- Image Gallery -->
     <div class="overflow-x-auto w-full">
         <div class="flex flex-wrap justify-center gap-4 p-4">
-            <img src="{{ asset('asset/img/ring1.jpg') }}" alt="Ring 1" class="w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
-            <img src="{{ asset('asset/img/ring2.jpg') }}" alt="Ring 2" class="w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
-            <img src="{{ asset('asset/img/ring3.jpg') }}" alt="Ring 3" class="w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
-            <img src="{{ asset('asset/img/ring4.jpg') }}" alt="Ring 4" class="w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
-            <img src="{{ asset('asset/img/ring5.jpg') }}" alt="Ring 5" class="w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
-            <img src="{{ asset('asset/img/ring6.jpg') }}" alt="Ring 6" class="w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
-            <img src="{{ asset('asset/img/ring7.jpg') }}" alt="Ring 7" class="w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
-            <img src="{{ asset('asset/img/ring8.jpg') }}" alt="Ring 8" class="w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
+            <img src="{{ asset('asset/img/ring1.jpg') }}" alt="Ring 1" class="w-28 sm:w-36 md:w-48 lg:w-64 h-28 sm:h-36 md:h-48 lg:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
+            <img src="{{ asset('asset/img/ring2.jpg') }}" alt="Ring 2" class="w-28 sm:w-36 md:w-48 lg:w-64 h-28 sm:h-36 md:h-48 lg:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
+            <img src="{{ asset('asset/img/ring3.jpg') }}" alt="Ring 3" class="w-28 sm:w-36 md:w-48 lg:w-64 h-28 sm:h-36 md:h-48 lg:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
+            <img src="{{ asset('asset/img/ring4.jpg') }}" alt="Ring 4" class="w-28 sm:w-36 md:w-48 lg:w-64 h-28 sm:h-36 md:h-48 lg:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
+            <img src="{{ asset('asset/img/ring5.jpg') }}" alt="Ring 5" class="w-28 sm:w-36 md:w-48 lg:w-64 h-28 sm:h-36 md:h-48 lg:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
+            <img src="{{ asset('asset/img/ring6.jpg') }}" alt="Ring 6" class="w-28 sm:w-36 md:w-48 lg:w-64 h-28 sm:h-36 md:h-48 lg:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
+            <img src="{{ asset('asset/img/ring7.jpg') }}" alt="Ring 7" class="w-28 sm:w-36 md:w-48 lg:w-64 h-28 sm:h-36 md:h-48 lg:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
+            <img src="{{ asset('asset/img/ring8.jpg') }}" alt="Ring 8" class="w-28 sm:w-36 md:w-48 lg:w-64 h-28 sm:h-36 md:h-48 lg:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
         </div>
     </div>
 </div>
 
 {{-- Earing Section --}}
-<div class="flex flex-col items-center p-8 bg-gray-50 mx-4 md:mx-12">
+<div class="flex flex-col items-center p-4 sm:p-8 bg-gray-50 mx-4 md:mx-12 lg:mx-24 xl:mx-32">
     <!-- Title and Description -->
-    <div class="text-center mb-6">
-        <h1 class="text-3xl md:text-4xl font-bold text-gray-800">Earrings</h1>
-        <p class="mt-2 text-gray-700 max-w-3xl mx-auto">For rings, the more, the merrier. Multiple and stacked rings are grouped together and worn on different fingers for a nice style statement.</p>
+    <div class="text-center mb-6 px-4">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">Earrings</h1>
+        <p class="mt-2 text-gray-700 max-w-2xl sm:max-w-3xl mx-auto text-sm sm:text-base md:text-lg">
+            For rings, the more, the merrier. Multiple and stacked rings are grouped together and worn on different fingers for a nice style statement.
+        </p>
         
         <h2 class="text-xs font-semibold mt-4 text-purple-400">CaratLane Style Tip:</h2>
-        <p class="mt-2 text-gray-700 max-w-3xl mx-auto">Let your personality shine through your rings by mixing a variety of colours & designs. The rainbow awaits...minus the unicorns though ;)</p>
+        <p class="mt-2 text-gray-700 max-w-2xl sm:max-w-3xl mx-auto text-sm sm:text-base md:text-lg">
+            Let your personality shine through your rings by mixing a variety of colours & designs. The rainbow awaits...minus the unicorns though ;)
+        </p>
     </div>
 
     <!-- Image Gallery -->
     <div class="overflow-x-auto w-full">
-        <div class="flex flex-wrap justify-center gap-4 p-4">
-            <img src="{{ asset('asset/img/ear1.jpg') }}" alt="ear 1" class="w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
-            <img src="{{ asset('asset/img/ear2.jpg') }}" alt="ear 2" class="w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
-            <img src="{{ asset('asset/img/ear3.jpg') }}" alt="ear 3" class="w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
-            <img src="{{ asset('asset/img/ear4.jpg') }}" alt="ear 4" class="w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
-            <img src="{{ asset('asset/img/ear5.jpg') }}" alt="ear 5" class="w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
-            <img src="{{ asset('asset/img/ear6.jpg') }}" alt="ear 6" class="w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
-            <img src="{{ asset('asset/img/ear7.jpg') }}" alt="ear 7" class="w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-4 p-2 sm:p-4">
+            <img src="{{ asset('asset/img/ear1.jpg') }}" alt="ear 1" class="w-28 h-28 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
+            <img src="{{ asset('asset/img/ear2.jpg') }}" alt="ear 2" class="w-28 h-28 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
+            <img src="{{ asset('asset/img/ear3.jpg') }}" alt="ear 3" class="w-28 h-28 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
+            <img src="{{ asset('asset/img/ear4.jpg') }}" alt="ear 4" class="w-28 h-28 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
+            <img src="{{ asset('asset/img/ear5.jpg') }}" alt="ear 5" class="w-28 h-28 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
+            <img src="{{ asset('asset/img/ear6.jpg') }}" alt="ear 6" class="w-28 h-28 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
+            <img src="{{ asset('asset/img/ear7.jpg') }}" alt="ear 7" class="w-28 h-28 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
         </div>
     </div>
 </div>
+
 
 
 {{-- Bracelets
  --}}
- <div class="flex flex-col items-center p-8 bg-gray-50 mx-4 md:mx-12">
+ <div class="flex flex-col items-center p-4 sm:p-8 bg-gray-50 mx-4 md:mx-12 lg:mx-24 xl:mx-32">
     <!-- Title and Description -->
-    <div class="text-center mb-6">
-        <h1 class="text-3xl md:text-4xl font-bold text-gray-800">Bracelets</h1>
-        <p class="mt-2 text-gray-700 max-w-3xl mx-auto">For rings, the more, the merrier. Multiple and stacked rings are grouped together and worn on different fingers for a nice style statement.</p>
+    <div class="text-center mb-6 px-4">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">Bracelets</h1>
+        <p class="mt-2 text-gray-700 max-w-2xl sm:max-w-3xl mx-auto text-sm sm:text-base md:text-lg">
+            For rings, the more, the merrier. Multiple and stacked rings are grouped together and worn on different fingers for a nice style statement.
+        </p>
         
-        <h2 class="text-xs font-semibold mt-4 text-purple-400">CaratLane Style Tip:</h2>
-        <p class="mt-2 text-gray-700 max-w-3xl mx-auto">Let your personality shine through your rings by mixing a variety of colours & designs. The rainbow awaits...minus the unicorns though ;)</p>
+        <h2 class="text-xs sm:text-sm font-semibold mt-4 text-purple-400">CaratLane Style Tip:</h2>
+        <p class="mt-2 text-gray-700 max-w-2xl sm:max-w-3xl mx-auto text-sm sm:text-base md:text-lg">
+            Let your personality shine through your rings by mixing a variety of colours & designs. The rainbow awaits...minus the unicorns though ;)
+        </p>
     </div>
 
     <!-- Image Gallery -->
     <div class="overflow-x-auto w-full">
         <div class="flex flex-wrap justify-center gap-4 p-4">
-            <img src="{{ asset('asset/img/b1.jpg') }}" alt="b 1" class="w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
-            <img src="{{ asset('asset/img/b2.jpg') }}" alt="b 2" class="w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
-            <img src="{{ asset('asset/img/b3.jpg') }}" alt="b 3" class="w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
-            <img src="{{ asset('asset/img/b4.jpg') }}" alt="b 4" class="w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
-            <img src="{{ asset('asset/img/b5.jpg') }}" alt="b 5" class="w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
+            <img src="{{ asset('asset/img/b1.jpg') }}" alt="b 1" class="w-28 sm:w-36 md:w-48 lg:w-64 h-28 sm:h-36 md:h-48 lg:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
+            <img src="{{ asset('asset/img/b2.jpg') }}" alt="b 2" class="w-28 sm:w-36 md:w-48 lg:w-64 h-28 sm:h-36 md:h-48 lg:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
+            <img src="{{ asset('asset/img/b3.jpg') }}" alt="b 3" class="w-28 sm:w-36 md:w-48 lg:w-64 h-28 sm:h-36 md:h-48 lg:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
+            <img src="{{ asset('asset/img/b4.jpg') }}" alt="b 4" class="w-28 sm:w-36 md:w-48 lg:w-64 h-28 sm:h-36 md:h-48 lg:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
+            <img src="{{ asset('asset/img/b5.jpg') }}" alt="b 5" class="w-28 sm:w-36 md:w-48 lg:w-64 h-28 sm:h-36 md:h-48 lg:h-64 object-cover rounded-lg transition-transform transform hover:scale-105">
         </div>
     </div>
 </div>
+
 
 
 

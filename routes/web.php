@@ -66,6 +66,8 @@ Route::get('/earing', [HomeController::class, 'earing'])->name('earing');
 Route::get('/necklace', [HomeController::class, 'necklace'])->name('necklace');
 Route::get('/stories', [HomeController::class, 'stories'])->name('stories');
 Route::get('/stores',[HomeController::class, 'stores'])->name('stores');
+Route::get('/selectshape',[HomeController::class,'selectshape'])->name('selectshape');
+Route::get('/shayadetail',[HomeController::class,'shayadetail'])->name('shayadetail');
 
 // Group Jewellery Routes
 Route::prefix('/jewellery')->name('jewellery.')->group(function () {
