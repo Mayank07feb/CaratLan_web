@@ -1,100 +1,79 @@
 @include('components.shayaheader')
 {{-- BANNER --}}
-<main class="flex flex-col md:flex-row h-full overflow-hidden">
-    <section class="w-full md:w-1/2 mx-8 py-2">
-        <img src="{{ asset('asset/img/shaya.jpg') }}" alt="Model wearing jewelry" class="w-full h-full object-cover" />
+<main class="flex flex-col md:flex-row h-auto overflow-hidden">
+    <!-- First Section: Image on the Left (Mobile: Full Width, Desktop: Half Width) -->
+    <section class="w-full md:w-1/2 mx-4 py-4">
+        <img src="{{ asset('asset/img/shaya.jpg') }}" alt="Model wearing jewelry" class="object-cover rounded-lg shadow-md" />
     </section>
-    <section class="w-full md:w-1/2 flex items-center justify-center bg-white p-8">
-        <img src="{{ asset('asset/img/shaya-banner.jpg') }}" alt="Jewelry display" class="max-w-full h-auto" />
+
+    <!-- Second Section: Image on the Right (Mobile: Full Width, Desktop: Half Width) -->
+    <section class="w-full md:w-1/2 flex items-center justify-center bg-white p-4 md:p-8">
+        <img src="{{ asset('asset/img/shaya-banner.jpg') }}" alt="Jewelry display" class="rounded-lg shadow-md" />
     </section>
 </main>
+
 {{-- VIDEO --}}
-<main class="flex flex-col md:flex-row h-full overflow-hidden mt-12">
-    <section class="w-full md:w-1/2 flex items-center justify-center bg-white p-8">
-        <img src="{{ asset('asset/img/shaya-video.gif') }}" alt="Jewelry display" class="max-w-full h-auto" />
+<main class="flex flex-col md:flex-row h-auto overflow-hidden mt-12">
+    <!-- Left Section: Image 1 -->
+    <section class="w-full md:w-1/2 flex items-center justify-center bg-white p-4 sm:p-8">
+        <img src="{{ asset('asset/img/shaya-video.gif') }}" 
+             alt="Jewelry display" 
+             class="w-full h-auto object-contain" />
     </section>
-    <section class="w-full md:w-1/2 flex items-center justify-center bg-white p-8">
+    
+    <!-- Right Section: Image 2 -->
+    <section class="w-full md:w-1/2 flex items-center justify-center bg-white p-4 sm:p-8">
         <img src="{{ asset('asset/img/shaya-v-text.jpg') }}" 
              alt="Jewelry display" 
-             class="max-w-full h-auto" />
+             class="w-full h-auto object-contain" />
     </section>
 </main>
-<main class="flex flex-col md:flex-row h-full overflow-hidden mt-12">
-    <section class="w-full md:w-1/2 mx-8 py-2">
-        <img src="{{ asset('asset/img/shaya-img3.jpg') }}" alt="Model wearing jewelry" class="w-full h-full object-cover" />
+
+<main class="flex flex-col md:flex-row h-auto overflow-hidden mt-12">
+    <!-- Left Section: Image 1 (Model wearing jewelry) -->
+    <section class="w-full md:w-1/2 px-4 sm:px-8 py-4">
+       <a href="{{route('shayadetail')}}"> <img src="{{ asset('asset/img/shaya-img3.jpg') }}"</a> 
+             alt="Model wearing jewelry" 
+             class="w-full h-full object-cover rounded-lg shadow-lg" />
     </section>
-    <section class="w-full md:w-1/2 flex items-center justify-center bg-white p-8">
-        <img src="{{ asset('asset/img/shaya gif.gif') }}" alt="Jewelry display" class="max-w-full h-auto" />
+
+    <!-- Right Section: Image 2 (Jewelry display gif) -->
+    <section class="w-full md:w-1/2 flex items-center justify-center bg-white p-4 sm:p-8">
+        <img src="{{ asset('asset/img/shaya gif.gif') }}" 
+             alt="Jewelry display" 
+             class="max-w-full h-auto object-contain rounded-lg shadow-lg" />
     </section>
 </main>
+
 {{--  --}}
 <section class="max-w-7xl mx-auto px-4 py-16">
-    <div class="grid md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Everyday Queen Collection -->
-        <div class="relative group cursor-pointer flex flex-row items-center">
+        <div class="relative group cursor-pointer flex flex-col items-center">
             <div class="overflow-hidden rounded-lg w-full h-[400px]">
-                <img src="{{asset('asset/img/shaya1.jpg')}}" alt="A stylish model showcasing the Everyday Queen Collection" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
+                <img src="{{asset('asset/img/shaya1.jpg')}}" 
+                     alt="A stylish model showcasing the Everyday Queen Collection" 
+                     class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
                 <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
-            <div class="mt-6 text-center">
-                <h2 class="text-2xl font-medium">To the Everyday Queen</h2>
-                <div class="mt-2 w-24 h-0.5 bg-black mx-auto"></div>
+            <div class="mt-6 text-center px-4">
+                <h2 class="text-xl sm:text-2xl font-medium text-gray-800">To the Everyday Queen</h2>
+                <div class="mt-2 w-24 h-0.5 bg-teal-200 mx-auto"></div>
                 <p class="mt-2 text-sm text-gray-700">Celebrate your everyday elegance with our unique styles.</p>
             </div>
         </div>
 
         <!-- Shaadi Squad Collection -->
-        <div class="relative group cursor-pointer flex flex-row items-center">
+        <div class="relative group cursor-pointer flex flex-col items-center">
             <div class="overflow-hidden rounded-lg w-full h-[400px]">
-                <img src="{{asset('asset/img/shaya2.jpg')}}" alt="A vibrant display of the Shaadi Squad Collection" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
+                <img src="{{asset('asset/img/shaya2.jpg')}}" 
+                     alt="A vibrant display of the Shaadi Squad Collection" 
+                     class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
                 <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
-            <div class="mt-6 text-center">
-                <h2 class="text-2xl font-medium">Shaadi Squad</h2>
-                <div class="mt-2 w-24 h-0.5 bg-black mx-auto"></div>
-                <p class="mt-2 text-sm text-gray-700">Join the celebration with vibrant outfits perfect for every occasion.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-{{-- 
- --}}
- <main class="flex flex-col md:flex-row h-full overflow-hidden mt-12">
-    <section class="w-full md:w-1/2 mx-8 py-2">
-        <img src="{{ asset('asset/img/shaya3.jpg') }}" alt="Model wearing jewelry" class="w-full h-full object-cover" />
-    </section>
-    <section class="w-full md:w-1/2 flex flex-col items-center justify-center bg-white p-8">
-        <h1 class="text-4xl -pl-8 font-bold">
-            Rani Udaymati</h1>
-        <img src="{{ asset('asset/img/shaya4.jpg') }}" alt="Jewelry display" class="max-w-full h-auto" />
-    </section>
-</main>
-{{--  --}}
-<section class="max-w-7xl mx-auto px-4 py-16">
-    <div class="grid md:grid-cols-2 gap-8">
-        <!-- Everyday Queen Collection -->
-        <div class="relative group cursor-pointer flex flex-row items-center">
-            <div class="overflow-hidden rounded-lg w-full h-[400px]">
-                <img src="{{asset('asset/img/shaya5.jpg')}}" alt="A stylish model showcasing the Everyday Queen Collection" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
-                <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
-            <div class="mt-6 text-center">
-                <h2 class="text-2xl font-medium">To the Everyday Queen</h2>
-                <div class="mt-2 w-24 h-0.5 bg-black mx-auto"></div>
-                <p class="mt-2 text-sm text-gray-700">Celebrate your everyday elegance with our unique styles.</p>
-            </div>
-        </div>
-
-        <!-- Shaadi Squad Collection -->
-        <div class="relative group cursor-pointer flex flex-row items-center">
-            <div class="overflow-hidden rounded-lg w-full h-[400px]">
-                <img src="{{asset('asset/img/shaya6.jpg')}}" alt="A vibrant display of the Shaadi Squad Collection" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
-                <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
-            <div class="mt-6 text-center">
-                <h2 class="text-2xl font-medium">Shaadi Squad</h2>
-                <div class="mt-2 w-24 h-0.5 bg-black mx-auto"></div>
+            <div class="mt-6 text-center px-4">
+                <h2 class="text-xl sm:text-2xl font-medium text-gray-800">Shaadi Squad</h2>
+                <div class="mt-2 w-24 h-0.5 bg-teal-200 mx-auto"></div>
                 <p class="mt-2 text-sm text-gray-700">Join the celebration with vibrant outfits perfect for every occasion.</p>
             </div>
         </div>
@@ -104,91 +83,309 @@
 
 {{-- 
  --}}
- <main class="flex flex-col md:flex-row h-full overflow-hidden mt-12">
-    <section class="w-full md:w-1/2 mx-8 py-2">
-        <img src="{{ asset('asset/img/shaya7.jpg') }}" alt="Model wearing jewelry" class="w-full h-full object-cover" />
+ <main class="flex flex-col md:flex-row h-auto overflow-hidden mt-12">
+    <!-- Left Section: Model wearing jewelry -->
+    <section class="w-full md:w-1/2 mx-4 sm:mx-8 py-4">
+        <img src="{{ asset('asset/img/shaya3.jpg') }}" 
+             alt="Model wearing jewelry" 
+             class="w-full h-full object-cover rounded-lg shadow-lg"/>
     </section>
-    <section class="w-full md:w-1/2 flex flex-col items-center justify-center bg-white p-8">
-        <h1 class="text-4xl -pl-8 font-bold">
-            KOLKATA</h1>
-        <img src="{{ asset('asset/img/shaya8.jpg') }}" alt="Jewelry display" class="max-w-full h-auto" />
+
+    <!-- Right Section: Jewelry Display with Heading -->
+    <section class="w-full md:w-1/2 flex flex-col items-center justify-center bg-white p-6 sm:p-8">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-800 text-center -mb-4 sm:mb-6">
+            Rani Udaymati
+        </h1>
+        <img src="{{ asset('asset/img/shaya4.jpg') }}" 
+             alt="Jewelry display" 
+             class="max-w-full h-auto object-contain rounded-lg shadow-lg" />
     </section>
 </main>
+
+{{--  --}}
+<section class="max-w-7xl mx-auto px-4 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Everyday Queen Collection -->
+        <div class="relative group cursor-pointer flex flex-col items-center">
+            <div class="overflow-hidden rounded-lg w-full h-[400px]">
+                <img src="{{asset('asset/img/shaya5.jpg')}}" 
+                     alt="A stylish model showcasing the Everyday Queen Collection" 
+                     class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
+                <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div class="mt-6 text-center px-4">
+                <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">To the Everyday Queen</h2>
+                <div class="mt-2 w-24 h-0.5 bg-teal-200 mx-auto"></div>
+                <p class="mt-2 text-sm sm:text-base text-gray-700">Celebrate your everyday elegance with our unique styles.</p>
+            </div>
+        </div>
+
+        <!-- Shaadi Squad Collection -->
+        <div class="relative group cursor-pointer flex flex-col items-center">
+            <div class="overflow-hidden rounded-lg w-full h-[400px]">
+                <img src="{{asset('asset/img/shaya6.jpg')}}" 
+                     alt="A vibrant display of the Shaadi Squad Collection" 
+                     class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
+                <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div class="mt-6 text-center px-4">
+                <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Shaadi Squad</h2>
+                <div class="mt-2 w-24 h-0.5 bg-teal-200 mx-auto"></div>
+                <p class="mt-2 text-sm sm:text-base text-gray-700">Join the celebration with vibrant outfits perfect for every occasion.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="flex flex-col md:flex-row h-auto overflow-hidden mt-12">
+    <section class="w-full md:w-1/2 mx-4 sm:mx-8 py-4">
+        <img src="{{ asset('asset/img/shaya7.jpg') }}" 
+             alt="Model wearing jewelry" 
+             class="w-full h-full object-cover rounded-lg shadow-lg"/>
+    </section>
+    <section class="w-full md:w-1/2 flex flex-col items-center justify-center bg-white p-6 sm:p-8">
+        <h1 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 -mb-4 sm:mb-6">
+            KOLKATA
+        </h1>
+        <img src="{{ asset('asset/img/shaya8.jpg') }}" 
+             alt="Jewelry display" 
+             class="max-w-full h-auto object-contain rounded-lg shadow-lg"/>
+    </section>
+</main>
+
 {{-- ugy --}}
-<main class="flex flex-col md:flex-row h-full overflow-hidden mt-12">
-    <section class="w-full md:w-1/2 mx-8 py-2">
-        <img src="{{ asset('asset/img/shaya9.jpg') }}" alt="Model wearing jewelry" class="w-full h-full object-cover" />
+<section class="max-w-7xl mx-auto px-4 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Everyday Queen Collection -->
+        <div class="relative group cursor-pointer flex flex-col items-center">
+            <div class="overflow-hidden rounded-lg w-full h-[400px]">
+                <img src="{{asset('asset/img/shaya5.jpg')}}" 
+                     alt="A stylish model showcasing the Everyday Queen Collection" 
+                     class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
+                <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div class="mt-6 text-center px-4">
+                <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">To the Everyday Queen</h2>
+                <div class="mt-2 w-24 h-0.5 bg-teal-200 mx-auto"></div>
+                <p class="mt-2 text-sm sm:text-base text-gray-700">Celebrate your everyday elegance with our unique styles.</p>
+            </div>
+        </div>
+
+        <!-- Shaadi Squad Collection -->
+        <div class="relative group cursor-pointer flex flex-col items-center">
+            <div class="overflow-hidden rounded-lg w-full h-[400px]">
+                <img src="{{asset('asset/img/shaya6.jpg')}}" 
+                     alt="A vibrant display of the Shaadi Squad Collection" 
+                     class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
+                <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div class="mt-6 text-center px-4">
+                <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Shaadi Squad</h2>
+                <div class="mt-2 w-24 h-0.5 bg-teal-200 mx-auto"></div>
+                <p class="mt-2 text-sm sm:text-base text-gray-700">Join the celebration with vibrant outfits perfect for every occasion.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="flex flex-col md:flex-row h-auto overflow-hidden mt-12">
+    <section class="w-full md:w-1/2 mx-4 sm:mx-8 py-4">
+        <img src="{{ asset('asset/img/shaya7.jpg') }}" 
+             alt="Model wearing jewelry" 
+             class="w-full h-full object-cover rounded-lg shadow-lg"/>
     </section>
-    <section class="w-full md:w-1/2 flex flex-col items-center justify-center bg-white p-8">
-        <p class="text-normal text-md">  Rise Above</p>
-        <h1 class="text-4xl -pl-8 font-bold">
-           Like a Lotus</h1>
-        <img src="{{ asset('asset/img/shaya10.jpg') }}" alt="Jewelry display" class="max-w-full h-auto" />
+    <section class="w-full md:w-1/2 flex flex-col items-center justify-center bg-white p-6 sm:p-8">
+        <h1 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 -mb-4 sm:mb-6">
+            KOLKATA
+        </h1>
+        <img src="{{ asset('asset/img/shaya8.jpg') }}" 
+             alt="Jewelry display" 
+             class="max-w-full h-auto object-contain rounded-lg shadow-lg"/>
     </section>
 </main>
+
 {{--  --}}
-<main class="flex flex-col md:flex-row h-full overflow-hidden mt-12">
-    <section class="w-full md:w-1/2 mx-8 py-2">
-        <img src="{{ asset('asset/img/shaya11.jpg') }}" alt="Model wearing jewelry" class="w-full h-full object-cover" />
+<main class="flex flex-col md:flex-row h-auto overflow-hidden mt-12">
+    <!-- Left Section with Image -->
+    <section class="w-full md:w-1/2 mx-4 sm:mx-8 py-4">
+        <img src="{{ asset('asset/img/shaya11.jpg') }}" 
+             alt="Model wearing jewelry" 
+             class="w-full h-full object-cover rounded-lg shadow-lg"/>
     </section>
-    <section class="w-full md:w-1/2 flex flex-col items-center justify-center bg-white p-8">
-        <p class="text-normal text-md"> Own your</p>
-        <h1 class="text-4xl -pl-8 font-bold">
-        plumes</h1>
-        <img src="{{ asset('asset/img/shaya12.jpg') }}" alt="Jewelry display" class="max-w-full h-auto" />
+
+    <!-- Right Section with Text and Image -->
+    <section class="w-full md:w-1/2 flex flex-col items-center justify-center bg-white p-6 sm:p-8">
+        <!-- Text Section -->
+        <p class="text-md text-gray-700 text-center font-medium mb-2">Own your</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 -mb-4 sm:mb-6">plumes</h1>
+
+        <!-- Image Section -->
+        <img src="{{ asset('asset/img/shaya12.jpg') }}" 
+             alt="Jewelry display" 
+             class="max-w-full h-auto object-contain rounded-lg shadow-lg"/>
     </section>
 </main>
+
 {{--  --}}
-<main class="flex flex-col md:flex-row h-full overflow-hidden mt-12">
-    <section class="w-full md:w-1/2 mx-8 py-2">
-        <img src="{{ asset('asset/img/shaya11.jpg') }}" alt="Model wearing jewelry" class="w-full h-full object-cover" />
+<main class="flex flex-col md:flex-row h-auto overflow-hidden mt-12">
+    <!-- Left Section with Image -->
+    <section class="w-full md:w-1/2 mx-4 sm:mx-8 py-4">
+        <img src="{{ asset('asset/img/shaya11.jpg') }}" 
+             alt="Model wearing jewelry" 
+             class="w-full h-full object-cover rounded-lg shadow-lg"/>
     </section>
-    <section class="w-full md:w-1/2 flex flex-col items-center justify-center bg-white p-8">
-        <p class="text-normal text-md"> Own your</p>
-        <h1 class="text-4xl -pl-8 font-bold">
-        plumes</h1>
-        <img src="{{ asset('asset/img/shaya12.jpg') }}" alt="Jewelry display" class="max-w-full h-auto" />
+
+    <!-- Right Section with Text and Image -->
+    <section class="w-full md:w-1/2 flex flex-col items-center justify-center bg-white p-6 sm:p-8">
+        <!-- Text Section -->
+        <p class="text-md text-gray-700 text-center font-medium mb-2">Own your</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 -mb-4 sm:mb-6">plumes</h1>
+
+        <!-- Image Section -->
+        <img src="{{ asset('asset/img/shaya12.jpg') }}" 
+             alt="Jewelry display" 
+             class="max-w-full h-auto object-contain rounded-lg shadow-lg"/>
     </section>
 </main>
+
+{{--  --}}
+<main class="flex flex-col md:flex-row h-auto overflow-hidden mt-12">
+    <!-- Left Section with Image -->
+    <section class="w-full md:w-1/2 mx-4 sm:mx-8 py-4">
+        <img src="{{ asset('asset/img/shaya11.jpg') }}" 
+             alt="Model wearing jewelry" 
+             class="w-full h-full object-cover rounded-lg shadow-lg"/>
+    </section>
+
+    <!-- Right Section with Text and Image -->
+    <section class="w-full md:w-1/2 flex flex-col items-center justify-center bg-white p-6 sm:p-8">
+        <!-- Text Section -->
+        <p class="text-md text-gray-700 text-center font-medium mb-2">Own your</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 -mb-4 sm:mb-6">plumes</h1>
+
+        <!-- Image Section -->
+        <img src="{{ asset('asset/img/shaya12.jpg') }}" 
+             alt="Jewelry display" 
+             class="max-w-full h-auto object-contain rounded-lg shadow-lg"/>
+    </section>
+</main>
+
+
+{{--  --}}
+<section class="max-w-7xl mx-auto px-4 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Everyday Queen Collection -->
+        <div class="relative group cursor-pointer flex flex-col items-center">
+            <div class="overflow-hidden rounded-lg w-full h-[300px] sm:h-[350px] md:h-[400px]">
+                <img src="{{asset('asset/img/shaya5.jpg')}}" 
+                     alt="A stylish model showcasing the Everyday Queen Collection" 
+                     class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
+                <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div class="mt-4 text-center">
+                <h2 class="text-xl sm:text-2xl font-medium text-gray-800">To the Everyday Queen</h2>
+                <div class="mt-2 w-24 h-0.5 bg-teal-200 mx-auto"></div>
+                <p class="mt-2 text-sm sm:text-base text-gray-700">Celebrate your everyday elegance with our unique styles.</p>
+            </div>
+        </div>
+
+        <!-- Shaadi Squad Collection -->
+        <div class="relative group cursor-pointer flex flex-col items-center">
+            <div class="overflow-hidden rounded-lg w-full h-[300px] sm:h-[350px] md:h-[400px]">
+                <img src="{{asset('asset/img/shaya6.jpg')}}" 
+                     alt="A vibrant display of the Shaadi Squad Collection" 
+                     class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
+                <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div class="mt-4 text-center">
+                <h2 class="text-xl sm:text-2xl font-medium text-gray-800">Shaadi Squad</h2>
+                <div class="mt-2 w-24 h-0.5 bg-teal-200 mx-auto"></div>
+                <p class="mt-2 text-sm sm:text-base text-gray-700">Join the celebration with vibrant outfits perfect for every occasion.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{--  --}}
+<section class="max-w-7xl mx-auto px-4 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Everyday Queen Collection -->
+        <div class="relative group cursor-pointer flex flex-col items-center">
+            <div class="overflow-hidden rounded-lg w-full h-[300px] sm:h-[350px] md:h-[400px]">
+                <img src="{{asset('asset/img/shaya5.jpg')}}" alt="A stylish model showcasing the Everyday Queen Collection" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
+                <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div class="mt-6 text-center px-4">
+                <h2 class="text-xl sm:text-2xl font-medium text-gray-800">To the Everyday Queen</h2>
+                <div class="mt-2 w-24 h-0.5 bg-teal-200 mx-auto"></div>
+                <p class="mt-2 text-sm sm:text-base text-gray-700">Celebrate your everyday elegance with our unique styles.</p>
+            </div>
+        </div>
+
+        <!-- Shaadi Squad Collection -->
+        <div class="relative group cursor-pointer flex flex-col items-center">
+            <div class="overflow-hidden rounded-lg w-full h-[300px] sm:h-[350px] md:h-[400px]">
+                <img src="{{asset('asset/img/shaya6.jpg')}}" alt="A vibrant display of the Shaadi Squad Collection" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
+                <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div class="mt-6 text-center px-4">
+                <h2 class="text-xl sm:text-2xl font-medium text-gray-800">Shaadi Squad</h2>
+                <div class="mt-2 w-24 h-0.5 bg-teal-200 mx-auto"></div>
+                <p class="mt-2 text-sm sm:text-base text-gray-700">Join the celebration with vibrant outfits perfect for every occasion.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 {{--  --}}
 <main class="flex flex-col md:flex-row h-full overflow-hidden mt-12">
+    <!-- Left Section with Image -->
     <section class="w-full md:w-1/2 mx-8 py-2">
-        <img src="{{ asset('asset/img/shaya11.jpg') }}" alt="Model wearing jewelry" class="w-full h-full object-cover" />
+        <img src="{{ asset('asset/img/shaya11.jpg') }}" alt="Model wearing jewelry" class="w-full h-full object-cover rounded-lg shadow-lg"/>
     </section>
+
+    <!-- Right Section with Text and Image -->
     <section class="w-full md:w-1/2 flex flex-col items-center justify-center bg-white p-8">
-        <p class="text-normal text-md"> Own your</p>
-        <h1 class="text-4xl -pl-8 font-bold">
-        plumes</h1>
-        <img src="{{ asset('asset/img/shaya12.jpg') }}" alt="Jewelry display" class="max-w-full h-auto" />
+        <p class="text-lg sm:text-xl text-gray-600">Own your</p>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mt-2 text-center -pl-8 sm:pl-0">
+            plumes
+        </h1>
+        <img src="{{ asset('asset/img/shaya12.jpg') }}" alt="Jewelry display" class="max-w-full h-auto mt-6"/>
     </section>
 </main>
 
 {{--  --}}
 <section class="max-w-7xl mx-auto px-4 py-16">
-    <div class="grid md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Everyday Queen Collection -->
-        <div class="relative group cursor-pointer flex flex-row items-center">
-            <div class="overflow-hidden rounded-lg w-full h-[400px]">
-                <img src="{{asset('asset/img/shaya5.jpg')}}" alt="A stylish model showcasing the Everyday Queen Collection" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
+        <div class="relative group cursor-pointer flex flex-col items-center">
+            <div class="overflow-hidden rounded-lg w-full h-[350px] md:h-[400px]">
+                <img src="{{asset('asset/img/shaya5.jpg')}}" 
+                     alt="A stylish model showcasing the Everyday Queen Collection" 
+                     class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
                 <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
-            <div class="mt-6 text-center">
-                <h2 class="text-2xl font-medium">To the Everyday Queen</h2>
-                <div class="mt-2 w-24 h-0.5 bg-black mx-auto"></div>
-                <p class="mt-2 text-sm text-gray-700">Celebrate your everyday elegance with our unique styles.</p>
+            <div class="mt-6 text-center px-4">
+                <h2 class="text-xl sm:text-2xl font-medium text-gray-800">To the Everyday Queen</h2>
+                <div class="mt-2 w-24 h-0.5 bg-teal-200 mx-auto"></div>
+                <p class="mt-2 text-sm sm:text-base text-gray-700">Celebrate your everyday elegance with our unique styles.</p>
             </div>
         </div>
 
         <!-- Shaadi Squad Collection -->
-        <div class="relative group cursor-pointer flex flex-row items-center">
-            <div class="overflow-hidden rounded-lg w-full h-[400px]">
-                <img src="{{asset('asset/img/shaya6.jpg')}}" alt="A vibrant display of the Shaadi Squad Collection" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
+        <div class="relative group cursor-pointer flex flex-col items-center">
+            <div class="overflow-hidden rounded-lg w-full h-[350px] md:h-[400px]">
+                <img src="{{asset('asset/img/shaya6.jpg')}}" 
+                     alt="A vibrant display of the Shaadi Squad Collection" 
+                     class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
                 <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
-            <div class="mt-6 text-center">
-                <h2 class="text-2xl font-medium">Shaadi Squad</h2>
-                <div class="mt-2 w-24 h-0.5 bg-black mx-auto"></div>
-                <p class="mt-2 text-sm text-gray-700">Join the celebration with vibrant outfits perfect for every occasion.</p>
+            <div class="mt-6 text-center px-4">
+                <h2 class="text-xl sm:text-2xl font-medium text-gray-800">Shaadi Squad</h2>
+                <div class="mt-2 w-24 h-0.5 bg-teal-200 mx-auto"></div>
+                <p class="mt-2 text-sm sm:text-base text-gray-700">Join the celebration with vibrant outfits perfect for every occasion.</p>
             </div>
         </div>
     </div>
@@ -196,30 +393,65 @@
 
 {{--  --}}
 <section class="max-w-7xl mx-auto px-4 py-16">
-    <div class="grid md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Everyday Queen Collection -->
-        <div class="relative group cursor-pointer flex flex-row items-center">
-            <div class="overflow-hidden rounded-lg w-full h-[400px]">
+        <div class="relative group cursor-pointer flex flex-col items-center">
+            <div class="overflow-hidden rounded-lg w-full h-[350px] md:h-[400px]">
                 <img src="{{asset('asset/img/shaya5.jpg')}}" alt="A stylish model showcasing the Everyday Queen Collection" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
                 <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
-            <div class="mt-6 text-center">
-                <h2 class="text-2xl font-medium">To the Everyday Queen</h2>
-                <div class="mt-2 w-24 h-0.5 bg-black mx-auto"></div>
-                <p class="mt-2 text-sm text-gray-700">Celebrate your everyday elegance with our unique styles.</p>
+            <div class="mt-6 text-center px-4">
+                <h2 class="text-xl sm:text-2xl font-medium text-gray-800">To the Everyday Queen</h2>
+                <div class="mt-2 w-24 h-0.5 bg-teal-200 mx-auto"></div>
+                <p class="mt-2 text-sm sm:text-base text-gray-700">Celebrate your everyday elegance with our unique styles.</p>
             </div>
         </div>
 
         <!-- Shaadi Squad Collection -->
-        <div class="relative group cursor-pointer flex flex-row items-center">
-            <div class="overflow-hidden rounded-lg w-full h-[400px]">
+        <div class="relative group cursor-pointer flex flex-col items-center">
+            <div class="overflow-hidden rounded-lg w-full h-[350px] md:h-[400px]">
                 <img src="{{asset('asset/img/shaya6.jpg')}}" alt="A vibrant display of the Shaadi Squad Collection" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
                 <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
-            <div class="mt-6 text-center">
-                <h2 class="text-2xl font-medium">Shaadi Squad</h2>
-                <div class="mt-2 w-24 h-0.5 bg-black mx-auto"></div>
-                <p class="mt-2 text-sm text-gray-700">Join the celebration with vibrant outfits perfect for every occasion.</p>
+            <div class="mt-6 text-center px-4">
+                <h2 class="text-xl sm:text-2xl font-medium text-gray-800">Shaadi Squad</h2>
+                <div class="mt-2 w-24 h-0.5 bg-teal-200 mx-auto"></div>
+                <p class="mt-2 text-sm sm:text-base text-gray-700">Join the celebration with vibrant outfits perfect for every occasion.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{--  --}}
+<section class="max-w-7xl mx-auto px-4 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Everyday Queen Collection -->
+        <div class="relative group cursor-pointer flex flex-col items-center">
+            <div class="overflow-hidden rounded-lg w-full h-[350px] md:h-[400px]">
+                <img src="{{asset('asset/img/shaya5.jpg')}}" 
+                     alt="A stylish model showcasing the Everyday Queen Collection" 
+                     class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
+                <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div class="mt-6 text-center px-4">
+                <h2 class="text-xl sm:text-2xl font-semibold text-gray-800">To the Everyday Queen</h2>
+                <div class="mt-2 w-24 h-0.5 bg-teal-200 mx-auto"></div>
+                <p class="mt-2 text-sm sm:text-base text-gray-700">Celebrate your everyday elegance with our unique styles.</p>
+            </div>
+        </div>
+
+        <!-- Shaadi Squad Collection -->
+        <div class="relative group cursor-pointer flex flex-col items-center">
+            <div class="overflow-hidden rounded-lg w-full h-[350px] md:h-[400px]">
+                <img src="{{asset('asset/img/shaya6.jpg')}}" 
+                     alt="A vibrant display of the Shaadi Squad Collection" 
+                     class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
+                <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div class="mt-6 text-center px-4">
+                <h2 class="text-xl sm:text-2xl font-semibold text-gray-800">Shaadi Squad</h2>
+                <div class="mt-2 w-24 h-0.5 bg-teal-200 mx-auto"></div>
+                <p class="mt-2 text-sm sm:text-base text-gray-700">Join the celebration with vibrant outfits perfect for every occasion.</p>
             </div>
         </div>
     </div>
@@ -227,130 +459,46 @@
 
 {{--  --}}
 <main class="flex flex-col md:flex-row h-full overflow-hidden mt-12">
-    <section class="w-full md:w-1/2 mx-8 py-2">
-        <img src="{{ asset('asset/img/shaya11.jpg') }}" alt="Model wearing jewelry" class="w-full h-full object-cover" />
+    <!-- Left Section: Image -->
+    <section class="w-full md:w-1/2 mx-4 md:mx-8 py-2">
+        <img src="{{ asset('asset/img/shaya11.jpg') }}" 
+             alt="Model wearing jewelry" 
+             class="w-full h-full object-cover rounded-lg shadow-md"/>
     </section>
-    <section class="w-full md:w-1/2 flex flex-col items-center justify-center bg-white p-8">
-        <p class="text-normal text-md"> Own your</p>
-        <h1 class="text-4xl -pl-8 font-bold">
-        plumes</h1>
-        <img src="{{ asset('asset/img/shaya12.jpg') }}" alt="Jewelry display" class="max-w-full h-auto" />
+
+    <!-- Right Section: Text and Image -->
+    <section class="w-full md:w-1/2 flex flex-col items-center justify-center bg-white p-6 md:p-8">
+        <p class="text-normal text-md text-gray-600">Own your</p>
+        <h1 class="text-4xl sm:text-5xl font-bold text-center text-gray-800 mt-2">
+            plumes
+        </h1>
+        <img src="{{ asset('asset/img/shaya12.jpg') }}" 
+             alt="Jewelry display" 
+             class="max-w-full h-auto mt-4 md:mt-8 rounded-lg shadow-md"/>
     </section>
 </main>
-{{--  --}}
-<section class="max-w-7xl mx-auto px-4 py-16">
-    <div class="grid md:grid-cols-2 gap-8">
-        <!-- Everyday Queen Collection -->
-        <div class="relative group cursor-pointer flex flex-row items-center">
-            <div class="overflow-hidden rounded-lg w-full h-[400px]">
-                <img src="{{asset('asset/img/shaya5.jpg')}}" alt="A stylish model showcasing the Everyday Queen Collection" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
-                <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
-            <div class="mt-6 text-center">
-                <h2 class="text-2xl font-medium">To the Everyday Queen</h2>
-                <div class="mt-2 w-24 h-0.5 bg-black mx-auto"></div>
-                <p class="mt-2 text-sm text-gray-700">Celebrate your everyday elegance with our unique styles.</p>
-            </div>
-        </div>
 
-        <!-- Shaadi Squad Collection -->
-        <div class="relative group cursor-pointer flex flex-row items-center">
-            <div class="overflow-hidden rounded-lg w-full h-[400px]">
-                <img src="{{asset('asset/img/shaya6.jpg')}}" alt="A vibrant display of the Shaadi Squad Collection" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
-                <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
-            <div class="mt-6 text-center">
-                <h2 class="text-2xl font-medium">Shaadi Squad</h2>
-                <div class="mt-2 w-24 h-0.5 bg-black mx-auto"></div>
-                <p class="mt-2 text-sm text-gray-700">Join the celebration with vibrant outfits perfect for every occasion.</p>
-            </div>
-        </div>
-    </div>
-</section>
-{{--  --}}
-<section class="max-w-7xl mx-auto px-4 py-16">
-    <div class="grid md:grid-cols-2 gap-8">
-        <!-- Everyday Queen Collection -->
-        <div class="relative group cursor-pointer flex flex-row items-center">
-            <div class="overflow-hidden rounded-lg w-full h-[400px]">
-                <img src="{{asset('asset/img/shaya5.jpg')}}" alt="A stylish model showcasing the Everyday Queen Collection" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
-                <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
-            <div class="mt-6 text-center">
-                <h2 class="text-2xl font-medium">To the Everyday Queen</h2>
-                <div class="mt-2 w-24 h-0.5 bg-black mx-auto"></div>
-                <p class="mt-2 text-sm text-gray-700">Celebrate your everyday elegance with our unique styles.</p>
-            </div>
-        </div>
-
-        <!-- Shaadi Squad Collection -->
-        <div class="relative group cursor-pointer flex flex-row items-center">
-            <div class="overflow-hidden rounded-lg w-full h-[400px]">
-                <img src="{{asset('asset/img/shaya6.jpg')}}" alt="A vibrant display of the Shaadi Squad Collection" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
-                <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
-            <div class="mt-6 text-center">
-                <h2 class="text-2xl font-medium">Shaadi Squad</h2>
-                <div class="mt-2 w-24 h-0.5 bg-black mx-auto"></div>
-                <p class="mt-2 text-sm text-gray-700">Join the celebration with vibrant outfits perfect for every occasion.</p>
-            </div>
-        </div>
-    </div>
-</section>
-{{--  --}}
-<section class="max-w-7xl mx-auto px-4 py-16">
-    <div class="grid md:grid-cols-2 gap-8">
-        <!-- Everyday Queen Collection -->
-        <div class="relative group cursor-pointer flex flex-row items-center">
-            <div class="overflow-hidden rounded-lg w-full h-[400px]">
-                <img src="{{asset('asset/img/shaya5.jpg')}}" alt="A stylish model showcasing the Everyday Queen Collection" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
-                <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
-            <div class="mt-6 text-center">
-                <h2 class="text-2xl font-medium">To the Everyday Queen</h2>
-                <div class="mt-2 w-24 h-0.5 bg-black mx-auto"></div>
-                <p class="mt-2 text-sm text-gray-700">Celebrate your everyday elegance with our unique styles.</p>
-            </div>
-        </div>
-
-        <!-- Shaadi Squad Collection -->
-        <div class="relative group cursor-pointer flex flex-row items-center">
-            <div class="overflow-hidden rounded-lg w-full h-[400px]">
-                <img src="{{asset('asset/img/shaya6.jpg')}}" alt="A vibrant display of the Shaadi Squad Collection" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"/>
-                <div class="absolute inset-0 border-4 border-teal-200 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
-            <div class="mt-6 text-center">
-                <h2 class="text-2xl font-medium">Shaadi Squad</h2>
-                <div class="mt-2 w-24 h-0.5 bg-black mx-auto"></div>
-                <p class="mt-2 text-sm text-gray-700">Join the celebration with vibrant outfits perfect for every occasion.</p>
-            </div>
-        </div>
-    </div>
-</section>
 {{--  --}}
 <main class="flex flex-col md:flex-row h-full overflow-hidden mt-12">
-    <section class="w-full md:w-1/2 mx-8 py-2">
-        <img src="{{ asset('asset/img/shaya11.jpg') }}" alt="Model wearing jewelry" class="w-full h-full object-cover" />
+    <!-- Left Section: Image -->
+    <section class="w-full md:w-1/2 mx-4 md:mx-8 py-2">
+        <img src="{{ asset('asset/img/shaya11.jpg') }}" 
+             alt="Model wearing jewelry" 
+             class="w-full h-full object-cover rounded-lg shadow-lg"/>
     </section>
-    <section class="w-full md:w-1/2 flex flex-col items-center justify-center bg-white p-8">
-        <p class="text-normal text-md"> Own your</p>
-        <h1 class="text-4xl -pl-8 font-bold">
-        plumes</h1>
-        <img src="{{ asset('asset/img/shaya12.jpg') }}" alt="Jewelry display" class="max-w-full h-auto" />
-    </section>
-</main>
-{{--  --}}
-<main class="flex flex-col md:flex-row h-full overflow-hidden mt-12">
-    <section class="w-full md:w-1/2 mx-8 py-2">
-        <img src="{{ asset('asset/img/shaya11.jpg') }}" alt="Model wearing jewelry" class="w-full h-full object-cover" />
-    </section>
-    <section class="w-full md:w-1/2 flex flex-col items-center justify-center bg-white p-8">
-        <p class="text-normal text-md"> Own your</p>
-        <h1 class="text-4xl -pl-8 font-bold">
-        plumes</h1>
-        <img src="{{ asset('asset/img/shaya12.jpg') }}" alt="Jewelry display" class="max-w-full h-auto" />
+
+    <!-- Right Section: Text and Image -->
+    <section class="w-full md:w-1/2 flex flex-col items-center justify-center bg-white p-6 md:p-8">
+        <p class="text-normal text-md text-gray-600">Own your</p>
+        <h1 class="text-4xl sm:text-5xl font-bold text-center text-gray-800 mt-2">
+            plumes
+        </h1>
+        <img src="{{ asset('asset/img/shaya12.jpg') }}" 
+             alt="Jewelry display" 
+             class="max-w-full h-auto mt-4 md:mt-8 rounded-lg shadow-lg"/>
     </section>
 </main>
+
 
 
 

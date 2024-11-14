@@ -192,6 +192,22 @@ class HomeController extends Controller
         return view('frontend.goldrate');
     }
 
+
+    public function shayadetail(){
+        return view('frontend.shayadetail');
+    }
+    public function disney(){
+        return view('frontend.disney');
+    }
+
+    public function error500(){
+        return view('frontend.error500');
+    }
+
+    public function harrypoter(){
+        return view('frontend.harrypoter');
+    }
+    
     // ===== Order Status & Miscellaneous Pages =====
     public function order()
     {
@@ -237,6 +253,10 @@ class HomeController extends Controller
         return view('frontend.stores');
     }
 
+    public function selectshape(){
+        return view('frontend.selectshape');
+    }
+    
     // ===== Web Stories & Collaborations =====
     public function webstories()
     {
