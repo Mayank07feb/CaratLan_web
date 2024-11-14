@@ -1,33 +1,35 @@
 @extends('components.main')
 @section('content')
+<div class="mt-32 w-full h-full">
+    <img src="{{asset('asset/videos/Desktop_Landing.jpg')}}" alt="Gold Exchange Program" class="w-full object-cover">
+</div>
+
 <div class="intro p-4">
-    <div class="main bg-[#E1D097] rounded-3xl shadow-lg max-w-3xl mx-auto">
-        <!-- Header -->
-       <div class="pt-4">
-        <div class="header w-full sm:w-1/2 bg-white text-[#E1D097] border p-2 text-base sm:text-lg font-semibold text-center mx-auto rounded-full my-4">
-            GOLD EXCHANGE PROGRAM
-        </div>
-       </div>
+    <div class="main bg-[#E1D097] rounded-3xl shadow-lg max-w-3xl mx-auto ">
         
-        <!-- Description -->
-        <div class="description px-4 sm:px-12 py-4 text-sm sm:text-sm text-gray-700 text-center">
+        <!-- Header Section -->
+        <header class="pt-4">
+            <div class="header w-full sm:w-1/2 bg-white text-[#E1D097] border p-2 text-base sm:text-lg font-semibold text-center mx-auto rounded-full my-4">
+                GOLD EXCHANGE PROGRAM
+            </div>
+        </header>
+
+        <!-- Description Section -->
+        <section class="description px-4 sm:px-12 py-4 text-sm sm:text-sm text-gray-700 text-center">
             <p>Jewellery looks good on you, and not inside your locker! With CaratLane's Gold Exchange Program, you can upgrade your precious gold with stylish new diamond designs, that you'll love wearing every day!</p>
-        </div>
+        </section>
 
-
-         <div class="flex justify-center">
-             <!-- Calculate Button -->
-             <button class="bg-[#4F3267] text-white py-2 px-6 rounded-md text-base sm:text-lg hover:bg-[#3b2750] focus:ring focus:ring-[#4F3267] focus:ring-opacity-50 transition-all">
+        <!-- Call to Action Section -->
+        <div class="flex justify-center my-4">
+            <button class="bg-[#4F3267] text-white py-2 px-6 rounded-md text-base sm:text-lg hover:bg-[#3b2750] focus:ring focus:ring-[#4F3267] focus:ring-opacity-50 transition-all">
                 Calculate
             </button>
-         </div>
-        <!-- Buttons -->
-        <div class="buttons  items-center justify-center sm:justify-between p-4 space-y-4 sm:space-y-0 sm:space-x-4">
-          
+        </div>
 
-            <!-- Stores with Karatmeter Button -->
+        <!-- Additional Buttons Section -->
+        <div class="buttons flex flex-col sm:flex-row items-center justify-center sm:justify-between p-4 space-y-4 sm:space-y-0 sm:space-x-4">
             <div class="flex items-center justify-center space-x-1">
-                <button class=" text-white py-2 px-6 rounded-md text-xs sm:text-sm hover:text-white transition-all">
+                <button class="bg-[#4F3267] text-white py-2 px-6 rounded-md text-xs sm:text-sm hover:bg-[#3b2750] transition-all">
                     STORES WITH KARATMETER
                 </button>
                 <i class="ri-arrow-down-s-line text-xl text-white" aria-hidden="true"></i>
@@ -36,140 +38,8 @@
     </div>
 </div>
 
-{{-- second div --}}
 
-<!-- Header Section -->
-{{-- <div class="flex flex-col items-center justify-center my-8">
-    <h1 class="text-xl text-gray-600 font-semibold mb-2 text-center">Calculate by Purity or Karatage</h1>
-    <p class="text-gray-500 text-sm text-center">Calculate by Purity or Karatage to help you find the best old gold exchange value in the market</p>
-</div>
-
-<div class="max-w-4xl mx-auto mb-8 flex justify-center flex-col items-center md:flex-row gap-8">
-    <!-- Main Content -->
-    <div class="flex-2 w-1/3">
-        
-
-        <!-- Tabs Section -->
-        <div class="mb-6">
-            <ul class="flex justify-center border-b">
-                <li class="mr-2">
-                    <button id="karatage-tab" class="inline-block py-2 px-4 text-sm text-blue-600 border-b-2 border-blue-600 font-semibold">
-                        Karatage
-                    </button>
-                </li>
-                <li>
-                    <button id="purity-tab" class="inline-block py-2 px-4 text-sm  text-gray-600 hover:text-blue-600 hover:border-blue-600 font-semibold">
-                        Purity
-                    </button>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Tab Content -->
-        <div id="karatage-content" class="tab-content">
-            <div class="flex gap-8 mb-6 justify-center space-y-2">
-                <!-- Karatage Dropdown -->
-                <div class="w-full">
-                    <h2 class="text-gray-600 mb-4 text-sm">Karatage</h2>
-                    <select class="w-full p-3 text-sm border rounded-md bg-white text-gray-600">
-                        <option>Select Karatage</option>
-                        <option>14 Karat</option>
-                        <option>18 Karat</option>
-                        <option>22 Karat</option>
-                        <option>24 Karat</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-        <div id="purity-content" class="tab-content hidden">
-            <div class="flex gap-8 mb-6 justify-center">
-                <!-- Purity Dropdown -->
-                <div class="w-full">
-                    <h2 class="text-gray-600 mb-4 text-sm">Purity</h2>
-                    <select class="w-full p-3 border rounded-md bg-white text-gray-600 text-sm">
-                        <option>Select Purity</option>
-                        <option>75% Purity</option>
-                        <option>85% Purity</option>
-                        <option>90% Purity</option>
-                        <option>99.9% Purity</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-        <!-- Grams Input -->
-        <div class="mb-6">
-            <input type="number" placeholder="Enter Grams" class="w-full p-3 border rounded-md">
-        </div>
-
-        <!-- Calculate Button -->
-        <button class="w-full text-xs bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 mb-2 rounded-md hover:bg-blue-700 transition-colors">
-            CALCULATE EXCHANGE VALUE
-        </button>
-    </div>
-
-    <script>
-        // JavaScript for toggling between tabs
-        document.getElementById('karatage-tab').addEventListener('click', function() {
-            document.getElementById('karatage-content').classList.remove('hidden');
-            document.getElementById('purity-content').classList.add('hidden');
-            this.classList.add('border-blue-600', 'text-blue-600');
-            document.getElementById('purity-tab').classList.remove('border-blue-600', 'text-blue-600');
-        });
-
-        document.getElementById('purity-tab').addEventListener('click', function() {
-            document.getElementById('purity-content').classList.remove('hidden');
-            document.getElementById('karatage-content').classList.add('hidden');
-            this.classList.add('border-blue-600', 'text-blue-600');
-            document.getElementById('karatage-tab').classList.remove('border-blue-600', 'text-blue-600');
-        });
-    </script>
-
-    <!-- Rates Section -->
-    <div class="md:w-80 w-full">
-        <div class="bg-white p-6 rounded-lg shadow-sm text-center">
-            <h2 class="text-gray-600 mb-4 text-sm">Standard gold rates for the day</h2>
-
-            <!-- Rate Items -->
-            <div class="space-y-4 bg-[#F0ECFF] p-4 rounded-2xl">
-                <div class="flex justify-between items-center">
-                    <div>
-                        <p class="text-gray-700 text-xs">14 Karat Gold</p>
-                        <p class="text-gray-500 text-xs">(1 Gram)</p>
-                    </div>
-                    <span class="text-gray-700 text-xs">₹ 4714</span>
-                </div>
-
-                <div class="flex justify-between items-center">
-                    <div>
-                        <p class="text-gray-700 text-xs">18 Karat Gold</p>
-                        <p class="text-gray-500 text-xs">(1 Gram)</p>
-                    </div>
-                    <span class="text-gray-700 text-xs">₹ 6064</span>
-                </div>
-
-                <div class="flex justify-between items-center">
-                    <div>
-                        <p class="text-gray-700 text-xs">22 Karat Gold</p>
-                        <p class="text-gray-500 text-xs">(1 Gram)</p>
-                    </div>
-                    <span class="text-gray-700 text-xs">₹ 7414</span>
-                </div>
-
-                <div class="flex justify-between items-center">
-                    <div>
-                        <p class="text-gray-700 text-xs">24 Karat Gold</p>
-                        <p class="text-gray-500 text-xs">(1 Gram)</p>
-                    </div>
-                    <span class="text-gray-700 text-xs">₹ 8085</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> --}}
-
-<div class="p-4 mx-12">
+<div class="p-4 lg:mx-12">
     <!-- Title Section -->
     <div class="flex flex-col items-center justify-center my-8">
         <h1 class="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4 text-center">Calculate by Purity or Karatage</h1>
