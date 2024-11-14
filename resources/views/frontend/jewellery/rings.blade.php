@@ -45,7 +45,7 @@
         }
     </style>
 
-    <main class="mt-12">
+    <main class="mt-40 sm:mt-40 md:mt-28">
         <div class="hidden md:block bg-gray-100 p-6 pl-24">
 
             <!-- Breadcrumb and Title Section -->
@@ -395,7 +395,7 @@
                     <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
                         <!-- Product Card 1 -->
                         <div
-                            class="group rounded-lg relative w-full max-w-sm overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg hover:h-96">
+                            class="group rounded-lg relative w-full max-w-sm overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg h-[430px] sm:h-96 md:h-[400px]">
                             <div class="p-1">
                                 <span
                                     class="absolute top-2 z-10 left-2 bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
@@ -422,7 +422,7 @@
                                     </button>
                                 </div>
 
-                                <a href="{{route('productdetail')}}">
+                                <a href="{{ route('productdetail') }}">
                                     <div class="relative">
                                         <img id="productImage1" src="{{ asset('asset/img/best10.webp') }}" alt="Product"
                                             class="w-full h-56 object-cover border border-gray-300 shadow rounded-lg transition-opacity duration-300 ease-in-out">
@@ -458,7 +458,7 @@
                                 <div
                                     class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <button
-                                        class="text-lg sm:text-base text-[12px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
+                                        class="text-lg sm:text-base text-[8px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
                                         onclick="openModal()">
                                         Try at Home
                                     </button>
@@ -474,7 +474,7 @@
 
                         <!-- Product Card 2 -->
                         <div
-                            class="group rounded-lg relative w-full max-w-sm overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg hover:h-96">
+                            class="group rounded-lg relative w-full max-w-sm overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg h-[430px] sm:h-96 md:h-[400px]">
                             <div class="p-1">
                                 <span
                                     class="absolute top-2 z-10 left-2 bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
@@ -549,7 +549,7 @@
 
                         <!-- Product Card 3 -->
                         <div
-                            class="group rounded-lg relative w-full max-w-sm overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg hover:h-96">
+                            class="group rounded-lg relative w-full max-w-sm overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg h-[430px] sm:h-96 md:h-[400px]">
                             <div class="p-1">
                                 <span
                                     class="absolute top-2 z-10 left-2 bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
@@ -624,7 +624,7 @@
 
                         <!-- Product Card 4 -->
                         <div
-                            class="group rounded-lg relative w-full max-w-sm overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg hover:h-96">
+                            class="group rounded-lg relative w-full max-w-sm overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg h-[430px] sm:h-96 md:h-[400px]">
                             <div class="p-1">
                                 <span
                                     class="absolute top-2 z-10 left-2 bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
@@ -704,7 +704,7 @@
                         <div class="grid grid-cols-12 gap-4">
                             <!-- Product Card 1 -->
                             <div
-                                class="col-span-6 sm:col-span-3 group rounded-lg relative w-full overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg hover:h-96">
+                                class="col-span-6 sm:col-span-3 group rounded-lg relative w-full overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg h-[430px] sm:h-96 md:h-[400px]">
                                 <div class="p-1">
                                     <span
                                         class="absolute top-2 z-10 left-2 bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
@@ -780,7 +780,7 @@
 
                             <!-- Product Card 2 -->
                             <div
-                                class="col-span-6 sm:col-span-3 group rounded-lg relative w-full overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg hover:h-96">
+                                class="col-span-6 sm:col-span-3 group rounded-lg relative w-full overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg h-[430px] sm:h-96 md:h-[400px]">
                                 <div class="p-1">
                                     <span
                                         class="absolute top-2 z-10 left-2 bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
