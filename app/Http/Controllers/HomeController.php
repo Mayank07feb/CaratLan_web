@@ -196,6 +196,13 @@ class HomeController extends Controller
     public function shayadetail(){
         return view('frontend.shayadetail');
     }
+    public function disney(){
+        return view('frontend.disney');
+    }
+
+    public function harrypoter(){
+        return view('frontend.harrypoter');
+    }
 
     
     // ===== Order Status & Miscellaneous Pages =====

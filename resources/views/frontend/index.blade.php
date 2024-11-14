@@ -157,37 +157,38 @@
 
 
     {{-- COLLECTIONS --}}
-    <div class="container mx-auto p-4 pt-14 ">
+    <div class="container mx-auto p-4 pt-14">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <!-- Image 1 -->
-            <div class="relative group overflow-hidden">
-                <img src="{{ asset('asset/img/Collection_disney_11.jpg') }}" alt="Disney Collection"
-                    class="w-full h-auto rounded-lg shadow-md transition-transform duration-300 transform group-hover:scale-105">
-            </div>
-
-            <!-- Image 2 (Centered and Adjusted) -->
-            <div class="relative group overflow-hidden flex flex-col items-center justify-center mt-4 lg:-mt-8">
-                <!-- Image with hover effect -->
-                <img src="{{ asset('asset/img/Utsav.jpg') }}" alt="Utsav Collection"
-                    class="w-full h-auto rounded-lg shadow-md transition-transform duration-300 transform group-hover:scale-105">
-            
-                <!-- Button positioned below the image -->
-                <a href="{{route('allcollection')}}">
+            <a href="{{ route('disney') }}" class="relative group overflow-hidden">
+                <div class="w-full h-auto rounded-lg shadow-md transition-transform duration-300 transform group-hover:scale-105">
+                    <img src="{{ asset('asset/img/Collection_disney_11.jpg') }}" alt="Disney Collection" class="w-full h-auto">
+                </div>
+            </a>
+    
+            <!-- Image 2 with Centered Button -->
+            <div class="relative group overflow-hidden flex flex-col items-center mt-4 lg:-mt-8">
+                <a href="#" class="w-full h-auto">
+                    <img src="{{ asset('asset/img/Utsav.jpg') }}" alt="Utsav Collection"
+                        class="w-full h-auto rounded-lg shadow-md transition-transform duration-300 transform group-hover:scale-105">
+                </a>
+                <a href="{{ route('allcollection') }}" class="mt-6">
                     <button
-                        class="mt-6 text-black py-2 px-6 bg-white  hover:bg-gray-100 hover:border-gray-400 transition duration-300">
+                        class="text-black py-2 px-6 bg-white hover:bg-gray-100 hover:border-gray-400 transition duration-300 rounded">
                         View All Collections
                     </button>
                 </a>
             </div>
-            
-
+    
             <!-- Image 3 -->
-            <div class="relative group overflow-hidden">
-                <img src="{{ asset('asset/img/Collection_Harry_potter.jpg') }}" alt="Harry Potter Collection"
-                    class="w-full h-auto rounded-lg shadow-md transition-transform duration-300 transform group-hover:scale-105">
-            </div>
+            <a href="{{ route('harrypoter') }}" class="relative group overflow-hidden">
+                <div class="w-full h-auto rounded-lg shadow-md transition-transform duration-300 transform group-hover:scale-105">
+                    <img src="{{ asset('asset/img/Collection_Harry_potter.jpg') }}" alt="Harry Potter Collection" class="w-full h-auto">
+                </div>
+            </a>
         </div>
     </div>
+    
    
     
 
