@@ -200,10 +200,13 @@ class HomeController extends Controller
         return view('frontend.disney');
     }
 
+    public function error500(){
+        return view('frontend.error500');
+    }
+
     public function harrypoter(){
         return view('frontend.harrypoter');
     }
-
     
     // ===== Order Status & Miscellaneous Pages =====
     public function order()

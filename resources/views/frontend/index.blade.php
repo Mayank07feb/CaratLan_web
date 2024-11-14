@@ -168,7 +168,7 @@
     
             <!-- Image 2 with Centered Button -->
             <div class="relative group overflow-hidden flex flex-col items-center mt-4 lg:-mt-8">
-                <a href="#" class="w-full h-auto">
+                <a href="{{route('error500')}}" class="w-full h-auto">
                     <img src="{{ asset('asset/img/Utsav.jpg') }}" alt="Utsav Collection"
                         class="w-full h-auto rounded-lg shadow-md transition-transform duration-300 transform group-hover:scale-105">
                 </a>
