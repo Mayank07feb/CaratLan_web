@@ -279,9 +279,9 @@
             <div class=" justify-center items-center text-center text-black my-2">
                 <h2 class="text-lg md:text-xl font-bold mb-2">Unsure Which Design To Pick?</h2>
                 <p class="text-sm md:text-base mb-2">Book A FREE Home Trial!</p>
-                <button class="bg-gradient-to-r from-pink-500 to-purple-600 text-black px-4 py-2 rounded text-sm md:text-base transition duration-300 hover:from-pink-600 hover:to-purple-700">
-                    Schedule Appointment
-                </button>
+               <a href="{{route('appointment')}}"> <button class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded text-sm md:text-base transition duration-300 hover:from-pink-600 hover:to-purple-700">
+                Schedule Appointment
+            </button></a>
             </div>
            
         </div>
@@ -320,7 +320,7 @@
                     - Enjoy 0% Deduction on your gold exchange value. Please note: The old gold doesn't have to be from only CaratLane; it can be any gold jewellery you have.
                 </p>
                 <a href="{{route('knowmore')}}"><button
-                    class="mt-4 w-1/3 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-2 rounded transition duration-300 hover:from-pink-600 hover:to-purple-600">
+                    class="mt-4 w-1/2 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-2 rounded transition duration-300 hover:from-pink-600 hover:to-purple-600">
                     Know More
                 </button></a>
             </div>
@@ -330,22 +330,28 @@
 
     {{-- SECTION --}}
     <div class="flex items-center justify-center py-8 bg-[#231535]">
-        <div class="max-w-xl w-full px-4 md:px-0 text-center">
+        <div class="max-w-xl w-full px-6 sm:px-8 md:px-12 lg:px-0 text-center">
+            
             <!-- Image -->
-            <img src="{{asset('asset/img/section-img.png')}}" alt="" class="object-center mx-auto mb-4 md:pl-20 lg:pl-0">
+            <img src="{{ asset('asset/img/section-img.png') }}" alt="Section Image" 
+                 class="mx-auto mb-4 md:pl-20 lg:pl-0 object-cover max-w-full h-auto">
             
             <!-- Text -->
-            <p class="text-sm md:text-md lg:text-md text-purple-300 mb-8 px-4 md:px-12 lg:px-24 -mt-2 py-2">
-                The highest quality of craftsmanship and innovation, that brings you modern, everyday designs.
+            <p class="text-sm sm:text-base md:text-lg lg:text-md text-purple-300 mb-8 px-2 sm:px-6 md:px-12 lg:px-24 -mt-2">
+                The highest quality of craftsmanship and innovation, bringing you modern, everyday designs.
             </p>
             
             <!-- Button -->
-            <a href="{{route('know')}}"><button
-                class="border-gradient-to-r from-pink-600 to-purple-700 hover:from-pink-500 hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 text-white px-6 py-2 rounded transition duration-300">
-             Know More
-            </button></a>
+            <a href="{{ route('know') }}">
+                <button class="w-1/2 md:w-1/3 lg:w-1/4 bg-gradient-to-r from-pink-600 to-purple-700 
+                               hover:from-pink-500 hover:to-purple-600 focus:outline-none focus:ring-2 
+                               focus:ring-purple-500 text-white px-6 py-2 rounded transition duration-300 text-sm">
+                    Know More
+                </button>
+            </a>
         </div>
     </div>
+    
     
 
     {{-- SLIDER - - CARDS --}}
@@ -673,7 +679,7 @@ document.querySelectorAll('.tab-btn').forEach(button => {
 
                             </div>
                             <!-- Testimonial Text -->
-                            <p class="italic text-gray-700 text-center text-3xl px-12">
+                            <p class="italic text-gray-700 text-center lg:text-3xl lg:px-12 text-sm">
                                 "I received this Mangalsutra bracelet as my first Karva Chauth gift! It's simple and sweet, just
                                 like my husband."
                             </p>
@@ -681,7 +687,7 @@ document.querySelectorAll('.tab-btn').forEach(button => {
                                 - Akanksha Joshi via Instagram
                             </p>
                             <!-- Read More Button -->
-                            <div class="flex justify-center mt-4 mb-4">
+                            <div class="flex justify-center md:mt-4 md:mb-4">
                                 <button
                                     class="border border-purple-500 text-purple-500 px-4 py-2 rounded-md transition duration-300 hover:from-pink-600 hover:to-purple-600">
                                     Read More
@@ -691,15 +697,15 @@ document.querySelectorAll('.tab-btn').forEach(button => {
                     </div>
     
                     <!-- Slide 2 -->
-                    <div class="swiper-slide px-4">
-                        <div class="w-full p-6 ">
-                            <div class="flex justify-center mb-4">
+                    <div class="swiper-slide md:px-4">
+                        <div class="w-full lg:p-6 ">
+                            <div class="flex justify-center md:mb-4">
                                 <!-- Testimonial Image -->
                                 <i class="ri-instagram-line text-5xl bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent"></i>
 
                             </div>
                             <!-- Testimonial Text -->
-                            <p class="italic text-gray-700 text-center text-3xl px-12">
+                            <p class="italic text-gray-700 text-center lg:text-3xl lg:px-12 text-sm">
                                 "I received this Mangalsutra bracelet as my first Karva Chauth gift! It's simple and sweet, just
                                 like my husband."
                             </p>
@@ -707,7 +713,7 @@ document.querySelectorAll('.tab-btn').forEach(button => {
                                 - Akanksha Joshi via Instagram
                             </p>
                             <!-- Read More Button -->
-                            <div class="flex justify-center mt-4 mb-4">
+                            <div class="flex justify-center md:mt-4 md:mb-4">
                                 <button
                                     class="border border-purple-500 text-purple-500 px-4 py-2 rounded-md transition duration-300 hover:from-pink-600 hover:to-purple-600">
                                     Read More
@@ -725,7 +731,7 @@ document.querySelectorAll('.tab-btn').forEach(button => {
 
                             </div>
                             <!-- Testimonial Text -->
-                            <p class="italic text-gray-700 text-center text-3xl px-12">
+                            <p class="italic text-gray-700 text-center lg:text-3xl md:text-sm lg:px-12">
                                 "I received this Mangalsutra bracelet as my first Karva Chauth gift! It's simple and sweet, just
                                 like my husband."
                             </p>
@@ -733,7 +739,7 @@ document.querySelectorAll('.tab-btn').forEach(button => {
                                 - Akanksha Joshi via Instagram
                             </p>
                             <!-- Read More Button -->
-                            <div class="flex justify-center mt-4 mb-4">
+                            <div class="flex justify-center md:mt-4 md:mb-4">
                                 <button
                                     class="border border-purple-500 text-purple-500 px-4 py-2 rounded-md transition duration-300 hover:from-pink-600 hover:to-purple-600">
                                     Read More
@@ -777,150 +783,9 @@ document.querySelectorAll('.tab-btn').forEach(button => {
 
 
     {{-- **************** shop by instagram*********** --}}
-{{-- 
-    <div class="main px-6 overflow-hidden my-6">
-        <!-- Header Section -->
-        <div class="flex flex-col md:flex-row justify-between items-center">
-            <h1 class="text-xl md:text-2xl font-semibold">Shop Our Instagram</h1>
-            <h2 class="text-xl md:text-2xl text-black mt-4 md:mt-0">#MyCaratLaneStory</h2>
-        </div>
-
-        <!-- Image Grid Section -->
-        <div class="grid grid-cols-1 md:grid-cols-2">
-            <!-- Large Image -->
-            <div class="w-full overflow-hidden">
-                <img src="https://cdn.caratlane.com/media/catalog/product/U/T/UT01166-1Y0000_3_lar.jpg"
-                    alt="Product Image"
-                    class="h-[420px] w-full object-cover transition-transform scale-95 hover:scale-100 ease-in-out duration-300 ">
-            </div>
-
-            <!-- Smaller Image Grid -->
-            <div class="grid grid-cols-2 lg:grid-cols-3">
-                <div class="overflow-hidden">
-                    <img src="{{ asset('asset/img/insta1.jpg') }}" alt="Instagram Image"
-                        class="w-full h-full object-cover transition-transform scale-95 hover:scale-100 ease-in-out duration-300">
-                </div>
-                <div class="overflow-hidden">
-                    <img src="{{ asset('asset/img/insta2.jpg') }}" alt="Instagram Image"
-                        class="w-full h-full object-cover transition-transform scale-95 hover:scale-100 ease-in-out duration-300">
-                </div>
-                <div class="overflow-hidden">
-                    <img src="{{ asset('asset/img/insta3.jpg') }}" alt="Instagram Image"
-                        class="w-full h-full object-cover transition-transform scale-95 hover:scale-100 ease-in-out duration-300">
-                </div>
-                <div class="overflow-hidden">
-                    <img src="{{ asset('asset/img/insta4.jpg') }}" alt="Instagram Image"
-                        class="w-full h-full object-cover transition-transform scale-95 hover:scale-100 ease-in-out duration-300">
-                </div>
-                <div class="overflow-hidden">
-                    <img src="{{ asset('asset/img/insta5.jpg') }}" alt="Instagram Image"
-                        class="w-full h-full object-cover transition-transform scale-95 hover:scale-100 ease-in-out duration-300">
-                </div>
-                <div class="overflow-hidden">
-                    <img src="{{ asset('asset/img/insta6.jpg') }}" alt="Instagram Image"
-                        class="w-full h-full object-cover transition-transform scale-95 hover:scale-100 ease-in-out duration-300">
-                </div>
-            </div>
-        </div>
-
-
-    </div> --}}
-    <div class="main overflow-hidden my-6">
-        <!-- Header Section -->
-        <div class="flex flex-col md:flex-row justify-between items-center mx-12 my-4">
-            <h1 class="text-xl md:text-2xl font-semibold">Shop Our Instagram</h1>
-            <h2 class="text-xl md:text-2xl text-black mt-4 md:mt-0">#MyCaratLaneStory</h2>
-        </div>
-    
-        <!-- Image Grid Section -->
-        <div class="grid grid-cols-1 md:grid-cols-2 bg-red-800 mx-12">
-            <!-- Large Image -->
-            <div class="w-full h-full overflow-hidden bg-yellow-400">
-                <img src="https://cdn.caratlane.com/media/catalog/product/U/T/UT01166-1Y0000_3_lar.jpg"
-                    alt="Product Image"
-                    class="h-hull w-full object-cover">
-            </div>
-    
-            <!-- Smaller Image Grid -->
-            <div class="grid grid-cols-2 lg:grid-cols-3 bg-blue-400">
-                <div class="overflow-hidden w-full h-full">
-                    <img src="{{ asset('asset/img/insta1.jpg') }}" alt="Instagram Image"
-                        class="w-full h-full object-cover ">
-                </div>
-                <div class="overflow-hidden w-full h-full">
-                    <img src="{{ asset('asset/img/insta2.jpg') }}" alt="Instagram Image"
-                        class="w-full h-full object-cover  ">
-                </div>
-                <div class="overflow-hidden w-full h-full">
-                    <img src="{{ asset('asset/img/insta3.jpg') }}" alt="Instagram Image"
-                        class="w-full h-full object-cover  ">
-                </div>
-                <div class="overflow-hidden w-full h-full">
-                    <img src="{{ asset('asset/img/insta4.jpg') }}" alt="Instagram Image"
-                        class="w-full h-full object-cover  ">
-                </div>
-                <div class="overflow-hidden w-full h-full">
-                    <img src="{{ asset('asset/img/insta5.jpg') }}" alt="Instagram Image"
-                        class="w-full h-full object-cover  ">
-                </div>
-                <div class="overflow-hidden w-full h-full">
-                    <img src="{{ asset('asset/img/insta6.jpg') }}" alt="Instagram Image"
-                        class="w-full h-full object-cover  ">
-                </div>
-            </div>
-        </div>
-    </div>
-    
-
-
-    {{-- contact --}}
-    {{-- <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-6 bg-gradient-to-b from-purple-900 to-purple-400 rounded-lg shadow-md items-center justify-center mx-4 md:mx-12">
-        <!-- Left Section -->
-        <div class="flex items-center justify-center space-x-4 px-4 md:px-8">
-            <div>
-                <img src="{{ asset('asset/img/purple-gift-icon.png') }}" alt="Gift Icon" class="w-24 h-24">
-            </div>
-            <div>
-                <h1 class="text-xl font-semibold text-white">Join CaratLane Insider</h1>
-                <p class="text-gray-200">Discover enticing deals, latest arrivals, & more.</p>
-            </div>
-        </div>
-    
-        <!-- Right Section -->
-        <div class="flex flex-col space-y-4">
-            <!-- Email Input -->
-            <div class="mb-4">
-                <input type="text" placeholder="Enter your email"
-                    class="w-full md:w-1/2 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-300">
-            </div>
-    
-            <div>
-                <button
-                    class="w-full md:w-1/2 px-6 py-2 bg-purple-500 text-white rounded-md hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-300">Submit</button>
-            </div>
-    
-            <!-- Gender Selection -->
-            <div class="flex flex-col space-y-2">
-                <label class="inline-flex items-center">
-                    <input type="radio" name="gender" class="form-radio text-purple-500" aria-label="Female">
-                    <span class="ml-2 text-white">Female</span>
-                </label>
-                <label class="inline-flex items-center">
-                    <input type="radio" name="gender" class="form-radio text-purple-500" aria-label="Male">
-                    <span class="ml-2 text-white">Male</span>
-                </label>
-                <label class="inline-flex items-center">
-                    <input type="radio" name="gender" class="form-radio text-purple-500" aria-label="Others">
-                    <span class="ml-2 text-white">Others</span>
-                </label>
-            </div>
-        </div>
-    </div>
-     --}}
-
 
     <div
-        class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:p-6 p-2 bg-gradient-to-b from-[#10091B] to-[#6F40B8] rounded-lg shadow-md items-center justify-center lg:mx-12 mx-4 py-8">
+        class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:p-6 p-2 bg-gradient-to-b from-[#10091B] to-[#6F40B8] mt-4 items-center justify-center lg:mx-12 md:mx-4 py-8">
         <!-- Left Section -->
         <div class="lg:flex items-center justify-center space-x-4 lg:px-8">
             <div class="flex justify-center">
