@@ -1012,28 +1012,31 @@
 
 
 
-            <!-- SORT Button Navigation (your existing code) -->
-            <nav class="fixed bottom-0 left-0 right-0 bg-[#4F3267] text-white p-4 z-20 md:hidden">
-                <ul class="flex justify-between items-center">
+            <!-- Bottom Navbar Mobile View -->
+            <nav class="fixed bottom-0 left-0 right-0 bg-[#4F3267] text-white py-1 px-2 z-20 md:hidden shadow-md">
+                <ul class="flex justify-around items-center">
                     <!-- CATEGORY -->
                     <li class="flex-1 text-center">
-                        <a href="#" class="flex flex-row items-center justify-center space-x-2">
-                            <span class="material-icons">category</span>
-                            <span class="text-xs">CATEGORY</span>
+                        <a href="#" class="flex flex-col items-center hover:text-gray-300 transition duration-200"
+                            aria-label="Category">
+                            <span class="material-icons text-base">category</span>
+                            <span class="text-[10px] font-medium">CATEGORY</span>
                         </a>
                     </li>
                     <!-- SORT -->
                     <li class="flex-1 text-center">
-                        <a href="#" class="flex flex-row items-center justify-center space-x-2" id="sortButton">
-                            <span class="material-icons">sort</span>
-                            <span class="text-xs">SORT</span>
+                        <a href="#" class="flex flex-col items-center hover:text-gray-300 transition duration-200"
+                            id="sortButton" aria-label="Sort">
+                            <span class="material-icons text-base">sort</span>
+                            <span class="text-[10px] font-medium">SORT</span>
                         </a>
                     </li>
                     <!-- FILTER -->
                     <li class="flex-1 text-center">
-                        <a href="#" class="flex flex-row items-center justify-center space-x-2" id="filterButton">
-                            <span class="material-icons">filter_list</span>
-                            <span class="text-xs">FILTER</span>
+                        <a href="#" class="flex flex-col items-center hover:text-gray-300 transition duration-200"
+                            id="filterButton" aria-label="Filter">
+                            <span class="material-icons text-base">filter_list</span>
+                            <span class="text-[10px] font-medium">FILTER</span>
                         </a>
                     </li>
                 </ul>
