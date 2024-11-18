@@ -45,7 +45,7 @@
         }
     </style>
 
-    <main class="mt-12">
+    <main class="mt-40 sm:mt-40 md:mt-28">
         <div class="hidden md:block bg-gray-100 p-6 pl-24">
 
             <!-- Breadcrumb and Title Section -->
@@ -395,7 +395,7 @@
                     <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
                         <!-- Product Card 1 -->
                         <div
-                            class="group rounded-lg relative w-full max-w-sm overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg hover:h-96">
+                            class="group rounded-lg relative w-full max-w-sm overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg h-[400px] sm:h-96 md:h-[400px]">
                             <div class="p-1">
                                 <span
                                     class="absolute top-2 z-10 left-2 bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
@@ -416,35 +416,36 @@
                                         class="group flex items-center text-purple-600 px-2 py-1 rounded-md text-sm">
                                         <i class="material-icons">image</i>
                                         <div
-                                            class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 sm:group-hover:translate-x-0 sm:group-hover:opacity-100 transition-all duration-300 ease-in-out bg-white text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] shadow-lg whitespace-nowrap">
+                                            class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 sm:group-hover:translate-x-0 sm:group-hover:opacity-100 transition-all duration-300 ease-in-out text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] whitespace-nowrap">
                                             View similar
                                         </div>
                                     </button>
                                 </div>
 
-                                <div class="relative">
-                                    <img id="productImage1" src="{{ asset('asset/img/best10.webp') }}" alt="Product"
-                                        class="w-full h-56 object-cover border border-gray-300 shadow rounded-lg transition-opacity duration-300 ease-in-out">
-                                    <div class="absolute top-48 left-2 flex items-start space-x-2">
-                                        <button onclick="changeImage(-1, 'productImage1')"
-                                            class="bg-white text-xs font-bold p-1 rounded-full">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M15 19l-7-7 7-7" />
-                                            </svg>
-                                        </button>
-                                        <button onclick="changeImage(1, 'productImage1')"
-                                            class="bg-white text-xs font-bold p-1 rounded-full">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M9 5l7 7-7 7" />
-                                            </svg>
-                                        </button>
+                                <a href="{{ route('productdetail') }}">
+                                    <div class="relative">
+                                        <img id="productImage1" src="{{ asset('asset/img/best10.webp') }}" alt="Product"
+                                            class="w-full h-56 object-cover border border-gray-300 shadow rounded-lg transition-opacity duration-300 ease-in-out">
+                                        <div class="absolute top-48 left-2 flex items-start space-x-2">
+                                            <button onclick="changeImage(-1, 'productImage1')"
+                                                class="bg-white text-xs font-bold p-1 rounded-full">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                        d="M15 19l-7-7 7-7" />
+                                                </svg>
+                                            </button>
+                                            <button onclick="changeImage(1, 'productImage1')"
+                                                class="bg-white text-xs font-bold p-1 rounded-full">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                        d="M9 5l7 7-7 7" />
+                                                </svg>
+                                            </button>
+                                        </div>
                                     </div>
-                                </div>
-
+                                </a>
                                 <div class="p-2">
                                     <div class="flex items-center">
                                         <div class="text-base font-semibold">₹24,733</div>
@@ -457,12 +458,12 @@
                                 <div
                                     class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <button
-                                        class="text-lg sm:text-base text-[12px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
+                                        class="text-[10px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
                                         onclick="openModal()">
                                         Try at Home
                                     </button>
                                     <button
-                                        class="border border-green-500 text-green-500 text-xs font-bold p-1 sm:p-2 rounded-[12px]"
+                                        class="border border-green-500 text-green-500 text-[10px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
                                         onclick="openModal()">
                                         <i class="material-icons">camera_alt</i>
                                     </button>
@@ -473,7 +474,7 @@
 
                         <!-- Product Card 2 -->
                         <div
-                            class="group rounded-lg relative w-full max-w-sm overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg hover:h-96">
+                            class="group rounded-lg relative w-full max-w-sm overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg h-[400px] sm:h-96 md:h-[400px]">
                             <div class="p-1">
                                 <span
                                     class="absolute top-2 z-10 left-2 bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
@@ -488,12 +489,13 @@
                                     </button>
                                 </div>
 
+                                <!-- Trigger Button -->
                                 <div class="absolute top-48 z-10 left-40 text-xs font-bold px-2 py-1 rounded">
-                                    <button
-                                        class="group flex items-center bg-purple-50 text-purple-600 px-2 py-1 rounded-md text-sm hover:bg-purple-100">
+                                    <button id="viewSimilarBtn"
+                                        class="group flex items-center text-purple-600 px-2 py-1 rounded-md text-sm">
                                         <i class="material-icons">image</i>
                                         <div
-                                            class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 sm:group-hover:translate-x-0 sm:group-hover:opacity-100 transition-all duration-300 ease-in-out bg-white text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] shadow-lg whitespace-nowrap">
+                                            class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 sm:group-hover:translate-x-0 sm:group-hover:opacity-100 transition-all duration-300 ease-in-out text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] whitespace-nowrap">
                                             View similar
                                         </div>
                                     </button>
@@ -534,11 +536,13 @@
                                 <div
                                     class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <button
-                                        class="text-lg sm:text-base text-[12px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950">
+                                        class="text-[10px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
+                                        onclick="openModal()">
                                         Try at Home
                                     </button>
                                     <button
-                                        class="border border-green-500 text-green-500 text-xs font-bold p-1 sm:p-2 rounded-[12px]">
+                                        class="border border-green-500 text-green-500 text-[10px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
+                                        onclick="openModal()">
                                         <i class="material-icons">camera_alt</i>
                                     </button>
                                 </div>
@@ -548,7 +552,7 @@
 
                         <!-- Product Card 3 -->
                         <div
-                            class="group rounded-lg relative w-full max-w-sm overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg hover:h-96">
+                            class="group rounded-lg relative w-full max-w-sm overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg h-[400px] sm:h-96 md:h-[400px]">
                             <div class="p-1">
                                 <span
                                     class="absolute top-2 z-10 left-2 bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
@@ -563,12 +567,13 @@
                                     </button>
                                 </div>
 
+                                <!-- Trigger Button -->
                                 <div class="absolute top-48 z-10 left-40 text-xs font-bold px-2 py-1 rounded">
-                                    <button
-                                        class="group flex items-center bg-purple-50 text-purple-600 px-2 py-1 rounded-md text-sm hover:bg-purple-100">
+                                    <button id="viewSimilarBtn"
+                                        class="group flex items-center text-purple-600 px-2 py-1 rounded-md text-sm">
                                         <i class="material-icons">image</i>
                                         <div
-                                            class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 sm:group-hover:translate-x-0 sm:group-hover:opacity-100 transition-all duration-300 ease-in-out bg-white text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] shadow-lg whitespace-nowrap">
+                                            class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 sm:group-hover:translate-x-0 sm:group-hover:opacity-100 transition-all duration-300 ease-in-out text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] whitespace-nowrap">
                                             View similar
                                         </div>
                                     </button>
@@ -609,11 +614,13 @@
                                 <div
                                     class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <button
-                                        class="text-lg sm:text-base text-[12px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950">
+                                        class="text-[10px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
+                                        onclick="openModal()">
                                         Try at Home
                                     </button>
                                     <button
-                                        class="border border-green-500 text-green-500 text-xs font-bold p-1 sm:p-2 rounded-[12px]">
+                                        class="border border-green-500 text-green-500 text-[10px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
+                                        onclick="openModal()">
                                         <i class="material-icons">camera_alt</i>
                                     </button>
                                 </div>
@@ -623,7 +630,7 @@
 
                         <!-- Product Card 4 -->
                         <div
-                            class="group rounded-lg relative w-full max-w-sm overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg hover:h-96">
+                            class="group rounded-lg relative w-full max-w-sm overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg h-[400px] sm:h-96 md:h-[400px]">
                             <div class="p-1">
                                 <span
                                     class="absolute top-2 z-10 left-2 bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
@@ -638,12 +645,13 @@
                                     </button>
                                 </div>
 
+                                <!-- Trigger Button -->
                                 <div class="absolute top-48 z-10 left-40 text-xs font-bold px-2 py-1 rounded">
-                                    <button
-                                        class="group flex items-center bg-purple-50 text-purple-600 px-2 py-1 rounded-md text-sm hover:bg-purple-100">
+                                    <button id="viewSimilarBtn"
+                                        class="group flex items-center text-purple-600 px-2 py-1 rounded-md text-sm">
                                         <i class="material-icons">image</i>
                                         <div
-                                            class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 sm:group-hover:translate-x-0 sm:group-hover:opacity-100 transition-all duration-300 ease-in-out bg-white text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] shadow-lg whitespace-nowrap">
+                                            class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 sm:group-hover:translate-x-0 sm:group-hover:opacity-100 transition-all duration-300 ease-in-out text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] whitespace-nowrap">
                                             View similar
                                         </div>
                                     </button>
@@ -684,15 +692,16 @@
                                 <div
                                     class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <button
-                                        class="text-lg sm:text-base text-[12px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950">
+                                        class="text-[10px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
+                                        onclick="openModal()">
                                         Try at Home
                                     </button>
                                     <button
-                                        class="border border-green-500 text-green-500 text-xs font-bold p-1 sm:p-2 rounded-[12px]">
+                                        class="border border-green-500 text-green-500 text-[10px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
+                                        onclick="openModal()">
                                         <i class="material-icons">camera_alt</i>
                                     </button>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -703,7 +712,7 @@
                         <div class="grid grid-cols-12 gap-4">
                             <!-- Product Card 1 -->
                             <div
-                                class="col-span-6 sm:col-span-3 group rounded-lg relative w-full overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg hover:h-96">
+                                class="col-span-6 sm:col-span-3 group rounded-lg relative w-full overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg h-[400px] sm:h-96 md:h-[400px]">
                                 <div class="p-1">
                                     <span
                                         class="absolute top-2 z-10 left-2 bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
@@ -718,12 +727,13 @@
                                         </button>
                                     </div>
 
+                                    <!-- Trigger Button -->
                                     <div class="absolute top-48 z-10 left-40 text-xs font-bold px-2 py-1 rounded">
-                                        <button
-                                            class="group flex items-center bg-purple-50 text-purple-600 px-2 py-1 rounded-md text-sm hover:bg-purple-100">
+                                        <button id="viewSimilarBtn"
+                                            class="group flex items-center text-purple-600 px-2 py-1 rounded-md text-sm">
                                             <i class="material-icons">image</i>
                                             <div
-                                                class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 sm:group-hover:translate-x-0 sm:group-hover:opacity-100 transition-all duration-300 ease-in-out bg-white text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] shadow-lg whitespace-nowrap">
+                                                class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 sm:group-hover:translate-x-0 sm:group-hover:opacity-100 transition-all duration-300 ease-in-out text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] whitespace-nowrap">
                                                 View similar
                                             </div>
                                         </button>
@@ -764,11 +774,13 @@
                                     <div
                                         class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                         <button
-                                            class="text-lg sm:text-base text-[12px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950">
+                                            class="text-[10px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
+                                            onclick="openModal()">
                                             Try at Home
                                         </button>
                                         <button
-                                            class="border border-green-500 text-green-500 text-xs font-bold p-1 sm:p-2 rounded-[12px]">
+                                            class="border border-green-500 text-green-500 text-[10px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
+                                            onclick="openModal()">
                                             <i class="material-icons">camera_alt</i>
                                         </button>
                                     </div>
@@ -779,7 +791,7 @@
 
                             <!-- Product Card 2 -->
                             <div
-                                class="col-span-6 sm:col-span-3 group rounded-lg relative w-full overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg hover:h-96">
+                                class="col-span-6 sm:col-span-3 group rounded-lg relative w-full overflow-hidden border border-transparent shadow transition-all duration-300 ease-in-out hover:border-gray-300 hover:shadow-lg h-[400px] sm:h-96 md:h-[400px]">
                                 <div class="p-1">
                                     <span
                                         class="absolute top-2 z-10 left-2 bg-yellow-200 text-yellow-800 text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
@@ -794,12 +806,13 @@
                                         </button>
                                     </div>
 
+                                    <!-- Trigger Button -->
                                     <div class="absolute top-48 z-10 left-40 text-xs font-bold px-2 py-1 rounded">
-                                        <button
-                                            class="group flex items-center bg-purple-50 text-purple-600 px-2 py-1 rounded-md text-sm hover:bg-purple-100">
+                                        <button id="viewSimilarBtn"
+                                            class="group flex items-center text-purple-600 px-2 py-1 rounded-md text-sm">
                                             <i class="material-icons">image</i>
                                             <div
-                                                class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 sm:group-hover:translate-x-0 sm:group-hover:opacity-100 transition-all duration-300 ease-in-out bg-white text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] shadow-lg whitespace-nowrap">
+                                                class="absolute top-1/2 right-full transform translate-y-[-50%] translate-x-[50%] opacity-0 sm:group-hover:translate-x-0 sm:group-hover:opacity-100 transition-all duration-300 ease-in-out text-purple-600 text-[10px] font-semibold px-1 py-1 rounded-[12px] whitespace-nowrap">
                                                 View similar
                                             </div>
                                         </button>
@@ -840,11 +853,13 @@
                                     <div
                                         class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                         <button
-                                            class="text-lg sm:text-base text-[12px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950">
+                                            class="text-[10px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
+                                            onclick="openModal()">
                                             Try at Home
                                         </button>
                                         <button
-                                            class="border border-green-500 text-green-500 text-xs font-bold p-1 sm:p-2 rounded-[12px]">
+                                            class="border border-green-500 text-green-500 text-[10px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
+                                            onclick="openModal()">
                                             <i class="material-icons">camera_alt</i>
                                         </button>
                                     </div>
@@ -887,7 +902,6 @@
                         </div>
                     </div>
                     <!-- Product List 2 End-->
-
                 </div>
             </div>
 

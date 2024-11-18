@@ -458,12 +458,12 @@
                                 <div
                                     class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <button
-                                        class="text-[12px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
+                                        class="text-[10px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
                                         onclick="openModal()">
                                         Try at Home
                                     </button>
                                     <button
-                                        class="border border-green-500 text-green-500 text-[12px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
+                                        class="border border-green-500 text-green-500 text-[10px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
                                         onclick="openModal()">
                                         <i class="material-icons">camera_alt</i>
                                     </button>
@@ -536,12 +536,12 @@
                                 <div
                                     class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <button
-                                        class="text-[12px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
+                                        class="text-[10px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
                                         onclick="openModal()">
                                         Try at Home
                                     </button>
                                     <button
-                                        class="border border-green-500 text-green-500 text-[12px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
+                                        class="border border-green-500 text-green-500 text-[10px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
                                         onclick="openModal()">
                                         <i class="material-icons">camera_alt</i>
                                     </button>
@@ -614,12 +614,12 @@
                                 <div
                                     class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <button
-                                        class="text-[12px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
+                                        class="text-[10px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
                                         onclick="openModal()">
                                         Try at Home
                                     </button>
                                     <button
-                                        class="border border-green-500 text-green-500 text-[12px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
+                                        class="border border-green-500 text-green-500 text-[10px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
                                         onclick="openModal()">
                                         <i class="material-icons">camera_alt</i>
                                     </button>
@@ -692,12 +692,12 @@
                                 <div
                                     class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <button
-                                        class="text-[12px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
+                                        class="text-[10px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
                                         onclick="openModal()">
                                         Try at Home
                                     </button>
                                     <button
-                                        class="border border-green-500 text-green-500 text-[12px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
+                                        class="border border-green-500 text-green-500 text-[10px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
                                         onclick="openModal()">
                                         <i class="material-icons">camera_alt</i>
                                     </button>
@@ -774,12 +774,12 @@
                                     <div
                                         class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                         <button
-                                            class="text-[12px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
+                                            class="text-[10px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
                                             onclick="openModal()">
                                             Try at Home
                                         </button>
                                         <button
-                                            class="border border-green-500 text-green-500 text-[12px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
+                                            class="border border-green-500 text-green-500 text-[10px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
                                             onclick="openModal()">
                                             <i class="material-icons">camera_alt</i>
                                         </button>
@@ -853,12 +853,12 @@
                                     <div
                                         class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                         <button
-                                            class="text-[12px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
+                                            class="text-[10px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
                                             onclick="openModal()">
                                             Try at Home
                                         </button>
                                         <button
-                                            class="border border-green-500 text-green-500 text-[12px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
+                                            class="border border-green-500 text-green-500 text-[10px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
                                             onclick="openModal()">
                                             <i class="material-icons">camera_alt</i>
                                         </button>
@@ -903,6 +903,7 @@
                     </div>
                     <!-- Product List 2 End-->
                 </div>
+
             </div>
 
             <!--Discover the World of CaratLane -->
