@@ -225,20 +225,7 @@
         </div>
     </section>
     
-    <script>
-        // Function to toggle visibility of founder images
-        function toggleFounder(year) {
-            // Hide all founder divs first
-            const founderDivs = document.querySelectorAll('[id^="founder-"]');
-            founderDivs.forEach(div => div.classList.add('hidden'));
-    
-            // Show the selected founder div
-            const selectedDiv = document.getElementById(`founder-${year}`);
-            if (selectedDiv) {
-                selectedDiv.classList.remove('hidden');
-            }
-        }
-    </script>
+
     
 
 
@@ -392,22 +379,7 @@
         </div>
     </div>
 
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper('.swiper-container', {
-            loop: true,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-          
-        });
-    </script>
+  
 
 {{-- making process --}}
 <div class="flex flex-col md:flex-row gap-6 my-12">
@@ -480,5 +452,34 @@
     </div>
 </div>
 
+<script>
+    // Function to toggle visibility of founder images
+    function toggleFounder(year) {
+        // Hide all founder divs first
+        const founderDivs = document.querySelectorAll('[id^="founder-"]');
+        founderDivs.forEach(div => div.classList.add('hidden'));
 
+        // Show the selected founder div
+        const selectedDiv = document.getElementById(`founder-${year}`);
+        if (selectedDiv) {
+            selectedDiv.classList.remove('hidden');
+        }
+    }
+</script>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+      const swiper = new Swiper('.swiper-container', {
+          loop: true,
+          autoplay: {
+              delay: 3000,
+              disableOnInteraction: false,
+          },
+          pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+          },
+        
+      });
+  </script>
 @endsection

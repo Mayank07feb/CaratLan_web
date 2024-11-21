@@ -1,4 +1,4 @@
-<script src="https://cdn.tailwindcss.com"></script>
+
 <nav class="bg-gray-100 p-4">
     <div class="container mx-auto flex justify-between items-center">
         <!-- Logo -->
@@ -347,3 +347,4 @@
         </button>
     </div>
 </footer>
+<script src="https://cdn.tailwindcss.com"></script>

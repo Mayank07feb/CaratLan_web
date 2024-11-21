@@ -178,52 +178,7 @@
         }
     </style>
     
-    <script>
-        const slider = document.getElementById('slider');
-        const slides = document.querySelectorAll('.slide');
-        const prevButton = document.getElementById('prev');
-        const nextButton = document.getElementById('next');
-    
-        let currentIndex = 0;
-        const slidesToShow = 3; // Adjust how many slides you want to show at once
-        const slideCount = slides.length;
-        const slideWidth = slides[0].offsetWidth + 16; // Width of one slide + margin
-    
-        // Clone first and last few slides for seamless infinite scroll
-        const startClone = slides[0].cloneNode(true);
-        const endClone = slides[slideCount - 1].cloneNode(true);
-        slider.appendChild(startClone);
-        slider.insertBefore(endClone, slider.firstChild);
-    
-        function updateSlider() {
-            slider.style.transition = 'transform 0.5s ease';
-            slider.style.transform = `translateX(-${(currentIndex + 1) * slideWidth}px)`;
-        }
-    
-        nextButton.addEventListener('click', () => {
-            currentIndex++;
-            updateSlider();
-            if (currentIndex >= slideCount) {
-                setTimeout(() => {
-                    slider.style.transition = 'none';
-                    currentIndex = 0;
-                    slider.style.transform = `translateX(-${(currentIndex + 1) * slideWidth}px)`;
-                }, 500); // Match with the CSS transition duration
-            }
-        });
-    
-        prevButton.addEventListener('click', () => {
-            currentIndex--;
-            updateSlider();
-            if (currentIndex < 0) {
-                setTimeout(() => {
-                    slider.style.transition = 'none';
-                    currentIndex = slideCount - 1;
-                    slider.style.transform = `translateX(-${(currentIndex + 1) * slideWidth}px)`;
-                }, 500); // Match with the CSS transition duration
-            }
-        });
-    </script>
+
     
     
  {{-- category --}}
@@ -301,91 +256,7 @@
     </div>
     
 </div>
-{{-- REVIEW  --}}
-{{-- <div class="max-w-7xl mx-auto py-12">
-    <h2 class="text-3xl font-semibold text-center mb-4">1200+ Unforgettable Moments</h2>
-    <p class="text-center text-gray-600 mb-8">Try anything designed at home & discover your perfect match</p>
 
-    <div class="overflow-hidden relative">
-        <div id="testimonial-carousel" class="flex transition-transform duration-500">
-            <!-- Testimonial Card 1 -->
-            <div class="testimonial-card bg-white rounded-lg p-6 shadow-sm flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
-                <div class="flex justify-between items-start mb-4">
-                    <div>
-                        <h3 class="font-medium">Customer Name 1</h3>
-                        <p class="text-gray-500 text-sm">Member</p>
-                    </div>
-                    <div class="flex text-blue-500">
-                        <!-- Star Rating -->
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                    </div>
-                </div>
-                <p class="text-gray-600 text-sm">Great experience! The product exceeded my expectations. Very satisfied with the quality and service.</p>
-            </div>
-
-            <!-- Testimonial Card 2 -->
-            <div class="testimonial-card bg-white rounded-lg p-6 shadow-sm flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
-                <div class="flex justify-between items-start mb-4">
-                    <div>
-                        <h3 class="font-medium">Customer Name 2</h3>
-                        <p class="text-gray-500 text-sm">Member</p>
-                    </div>
-                    <div class="flex text-blue-500">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                    </div>
-                </div>
-                <p class="text-gray-600 text-sm">I loved the personalized service! It made my shopping experience so much better.</p>
-            </div>
-
-            <!-- Testimonial Card 3 -->
-            <div class="testimonial-card bg-white rounded-lg p-6 shadow-sm flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
-                <div class="flex justify-between items-start mb-4">
-                    <div>
-                        <h3 class="font-medium">Customer Name 3</h3>
-                        <p class="text-gray-500 text-sm">Member</p>
-                    </div>
-                    <div class="flex text-blue-500">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                    </div>
-                </div>
-                <p class="text-gray-600 text-sm">Fantastic products! I will definitely be returning for more.</p>
-            </div>
-        </div>
-
-        <!-- Navigation Buttons -->
-        {{-- <div class="absolute top-1/2 left-0 right-0 flex justify-between transform -translate-y-1/2">
-            <button id="prev" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Prev</button>
-            <button id="next" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Next</button>
-        </div> --}}
-    {{-- </div>
-</div>
-
-<script>
-    let currentIndex = 0;
-    const testimonials = document.querySelectorAll('.testimonial-card');
-    const totalTestimonials = testimonials.length;
-
-    function showTestimonial(index) {
-        const offset = -index * (100 / totalTestimonials);
-        document.getElementById('testimonial-carousel').style.transform = `translateX(${offset}%)`;
-    }
-
-    function showNextTestimonial() {
-        currentIndex = (currentIndex + 1) % totalTestimonials;
-        showTestimonial(currentIndex);
-    }
-
-    function showPrevTestimonial() {
-        currentIndex = (currentIndex - 1 + totalTestimonials) % totalTestimonials;
-        showTestimonial(currentIndex);
-    }
-
-    document.getElementById('next').addEventListener('click', showNextTestimonial);
-    document.getElementById('prev').addEventListener('click', showPrevTestimonial);
-
-    // Auto-Swipe Functionality
-    setInterval(showNextTestimonial, 3000); // Change every 3 seconds
-</script> --}} 
 
 <section class="bg-white">
     <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
@@ -968,5 +839,50 @@
   
 
 
-    
+  <script>
+    const slider = document.getElementById('slider');
+    const slides = document.querySelectorAll('.slide');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+
+    let currentIndex = 0;
+    const slidesToShow = 3; // Adjust how many slides you want to show at once
+    const slideCount = slides.length;
+    const slideWidth = slides[0].offsetWidth + 16; // Width of one slide + margin
+
+    // Clone first and last few slides for seamless infinite scroll
+    const startClone = slides[0].cloneNode(true);
+    const endClone = slides[slideCount - 1].cloneNode(true);
+    slider.appendChild(startClone);
+    slider.insertBefore(endClone, slider.firstChild);
+
+    function updateSlider() {
+        slider.style.transition = 'transform 0.5s ease';
+        slider.style.transform = `translateX(-${(currentIndex + 1) * slideWidth}px)`;
+    }
+
+    nextButton.addEventListener('click', () => {
+        currentIndex++;
+        updateSlider();
+        if (currentIndex >= slideCount) {
+            setTimeout(() => {
+                slider.style.transition = 'none';
+                currentIndex = 0;
+                slider.style.transform = `translateX(-${(currentIndex + 1) * slideWidth}px)`;
+            }, 500); // Match with the CSS transition duration
+        }
+    });
+
+    prevButton.addEventListener('click', () => {
+        currentIndex--;
+        updateSlider();
+        if (currentIndex < 0) {
+            setTimeout(() => {
+                slider.style.transition = 'none';
+                currentIndex = slideCount - 1;
+                slider.style.transform = `translateX(-${(currentIndex + 1) * slideWidth}px)`;
+            }, 500); // Match with the CSS transition duration
+        }
+    });
+</script>
 @endsection
