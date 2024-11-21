@@ -286,7 +286,7 @@
 
                     <!-- Right Icons -->
                     <div class="flex items-center space-x-4">
-                        <span class="material-icons text-gray-600">store</span>
+                        <a href="{{ route('findstore') }}"> <span class="material-icons text-gray-600">store</span></a>
                         <a href="{{ route('wishlist') }}"> <span
                                 class="material-icons text-gray-600">favorite</span></a>
                         <div class="relative">

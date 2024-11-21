@@ -39,7 +39,7 @@
 </div>
 
 
-<div class="p-4 lg:mx-12">
+<div class="p-4 lg: mx-12">
     <!-- Title Section -->
     <div class="flex flex-col items-center justify-center my-8">
         <h1 class="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4 text-center">Calculate by Purity or Karatage</h1>

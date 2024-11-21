@@ -3,7 +3,7 @@
 
 
     <!-- Hero Section -->
-    <section class="container md:mt-44 lg:mt-0 mx-auto px-6 md:px-14 py-12 flex flex-wrap items-center bg-gradient-to-r from-[#F1E6FF] to-[#F2EDFF]">
+    <section class="container md:mt-44 lg:mt-56 mx-auto px-6 md:px-14 py-12 flex flex-wrap items-center bg-gradient-to-r from-[#F1E6FF] to-[#F2EDFF]">
         <!-- Video Section -->
         <div class="w-full md:w-1/2 lg:w-1/3 flex justify-center relative mb-8 md:mb-0">
             <!-- Background Overlay -->
@@ -385,7 +385,7 @@
 
     // Auto-Swipe Functionality
     setInterval(showNextTestimonial, 3000); // Change every 3 seconds
-</script> --}} --}}
+</script> --}} 
 
 <section class="bg-white">
     <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
@@ -931,12 +931,12 @@
   
         
         <!-- Swiper Pagination and Navigation -->
-        <div class="swiper-pagination"></div>
+        {{-- <div class="swiper-pagination"></div>
         <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-prev"></div> --}}
       </div>
     </div>
-  </section>
+</section>
   
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

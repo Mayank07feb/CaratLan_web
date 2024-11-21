@@ -15,7 +15,7 @@
                             <li><a href="{{ route('jewelleryguide') }}" class="hover:text-caratlane-purple">Jewellery
                                     guide</a></li>
                             <li><a href="{{route('gemstoneguide')}}" class="hover:text-caratlane-purple">Gemstones guide</a></li>
-                            <li><a href="{{route('knowmore')}}" class="hover:text-caratlane-purple">Gold rate</a></li>
+                            <li><a href="{{route('goldrate')}}" class="hover:text-caratlane-purple">Gold rate</a></li>
                             <li><a href="{{route('egold')}}" class="hover:text-caratlane-purple">Egold</a></li>
 
                             <li><a href="#" class="hover:text-caratlane-purple">Ear piercing</a></li>
@@ -28,7 +28,7 @@
                             <li><a href="{{route('policy')}}" class="hover:text-caratlane-purple">15-day returns</a></li>
                             <li><a href="{{route('shipping')}}" class="hover:text-caratlane-purple">Free shipping</a></li>
                             <li><a href="{{route('postcard')}}" class="hover:text-caratlane-purple">Postcards</a></li>
-                            <li><a href="{{route('goldrate')}}" class="hover:text-caratlane-purple">Gold exchange</a></li>
+                            <li><a href="{{route('knowmore')}}" class="hover:text-caratlane-purple">Gold exchange</a></li>
                             <li><a href="{{route('wearyourwins')}}" class="hover:text-caratlane-purple">#Wearyourwins</a></li>
                         </ul>
                     </div>

@@ -11,27 +11,27 @@
 </style>
 <div class="relative h-[90vh]"> 
   <!-- Background Image (Right Half) -->
-  <div class="absolute right-0 top-0 w-1/2 h-full bg-cover bg-center" style="background-image: url('{{asset('asset/img/blog-bg.jpeg')}}');"></div>
+  <div class="absolute right-0 top-0 w-full lg:w-1/2 h-full bg-cover bg-center" style="background-image: url('{{asset('asset/img/blog-bg.jpeg')}}');"></div>
   
   <!-- Overlay to darken the background slightly (on the right side only) -->
   <div class="absolute right-0 top-0 w-1/2 h-full bg-white opacity-50"></div>
 
   <!-- Content -->
-  <div class="relative z-10 flex items-center h-full pl-12 pr-24">
+  <div class="relative z-10 flex items-center h-full md:pl-12 md:pr-24">
     <!-- Vertical Text on the Left -->
-    <div class="text-black text-sm font-light text-pretty text-space-2 vertical-text pr-8">
+    <div class="text-black text-sm font-light text-pretty text-space-2 vertical-text md:pr-8">
       LATEST
     </div>
 
     <!-- Main Text (Centered Content) -->
-    <div class="text-black pl-4 text-md lg:text-8xl font-light leading-tight w-full">
+    <div class="text-black pl-4 text-md lg:text-8xl text-2xl font-light leading-tight w-full">
 
       Best Jewellery Gifts in 2024: Diwali Special
     </div>
     <div>
-      <a href="#" class="items-center text-black hover:underline">
+      <a href="#" class="items-center text-black hover:underline text-xs md:text-lg">
           Read More
-          <img src="{{asset('asset/img/arrow.png')}}" alt="Arrow" class="h-8 w-8 ml-16 -mt-4">
+          <img src="{{asset('asset/img/arrow.png')}}" alt="Arrow" class="h-8 w-8 md:ml-16 md:-mt-4">
         </a>
     </div> 
   

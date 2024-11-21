@@ -6,9 +6,9 @@
         <div class="text-black text-lg font-bold">Gold Exchange</div>
         <!-- Navigation links -->
         <div class="flex flex-wrap space-x-4 mt-4 lg:mt-0">
-            <a href="#buy" class="text-black hover:text-yellow-500">Buy Gold</a>
-            <a href="#exchange" class="text-black hover:text-yellow-500">Exchange / Redeem</a>
-            <a href="#sell" class="text-black hover:text-yellow-500">Sell Gold</a>
+            <a href="{{route('buygold')}}" class="text-black hover:text-yellow-500">Buy Gold</a>
+            <a href="{{route('redeem')}}" class="text-black hover:text-yellow-500">Exchange / Redeem</a>
+            <a href="{{route('sellgold')}}" class="text-black hover:text-yellow-500">Sell Gold</a>
             <a href="#faqs" class="text-black hover:text-yellow-500">FAQs</a>
         </div>
     </div>

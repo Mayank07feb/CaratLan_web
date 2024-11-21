@@ -71,6 +71,10 @@ Route::get('/shayadetail',[HomeController::class,'shayadetail'])->name('shayadet
 Route::get('/disney',[HomeController::class,'disney'])->name('disney');
 Route::get('/error500',[HomeController::class,'error500'])->name('error500');
 Route::get('/harrypoter',[HomeController::class,'harrypoter'])->name('harrypoter');
+Route::get('/buygold',[HomeController::class,'buygold'])->name('buygold');
+Route::get('/redeem',[HomeController::class,'redeem'])->name('redeem');
+Route::get('/sellgold',[HomeController::class,'sellgold'])->name('sellgold');
+
 // Group Jewellery Routes
 Route::prefix('/jewellery')->name('jewellery.')->group(function () {
     Route::get('/rings', [HomeController::class, 'rings'])->name('rings');

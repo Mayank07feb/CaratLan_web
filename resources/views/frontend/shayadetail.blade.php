@@ -1,4 +1,4 @@
-@extends('components.shayaheader')
+@extends('components.shayamain')
 @section('content')
 
 {{-- Section --}}

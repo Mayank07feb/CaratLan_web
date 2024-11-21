@@ -1,7 +1,7 @@
 @extends('components.main')
 @section('content')
 
-<div class="flex flex-col sm:flex-row lg:gap-12 w-full lg:px-28 lg:py-8 px-4 py-2 gap-2 lg:mt-24 md:mt-24 mt-2
+<div class="flex flex-col sm:flex-row lg:gap-12 w-full lg:px-28 lg:py-8 px-4 py-2 gap-2 lg:mt-28 md:mt-24 mt-44
 ">
     <!-- First Item -->
     <div class="relative overflow-hidden rounded-3xl aspect-[3/2] group w-full sm:w-1/2 md:mx-8">

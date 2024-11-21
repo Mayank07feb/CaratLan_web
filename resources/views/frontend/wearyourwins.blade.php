@@ -1,7 +1,7 @@
 @extends('components.main')
 @section('content')
     {{-- BANNER --}}
-    <div class="flex justify-center mt-8">
+    <div class="flex justify-center lg:mt-8 md:mt-6 mt-44">
         <video 
             src="{{ asset('asset/img/self-rewards-banner-video-desktop.mp4') }}" 
             controls 
@@ -178,400 +178,314 @@
     }
 </script>
 
-<div class="flex flex-wrap gap-8 justify-center py-8">
-    <!-- Card 1 -->
-    <div class="max-w-sm bg-white  overflow-hidden">
-        <!-- Image -->
-        <a href="#">
-            <img class="w-full h-56 object-cover rounded-t-lg" src="{{asset('asset/img/my-firsts.jpg')}}" alt="My Firsts" />
-        </a>
-        <!-- Content -->
-        <div class="p-6 text-center">
-            <h2 class="text-xl font-semibold text-gray-800 mb-4">My Firsts</h2>
-            <p class="text-gray-600 mb-4">
-                My debut at Cannes was a tribute to my hard work; this necklace is my reward.
-            </p>
-            <p class="font-bold text-gray-800">Nancy Tyagi, Content Creator & Designer</p>
+{{-- images section --}}
+<div class="bg-gray-100 py-12 px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+        <!-- Card 1 -->
+        <div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+            <!-- Image -->
+            <a href="#">
+                <img class="w-full h-56 object-cover" src="{{asset('asset/img/my-firsts.jpg')}}" alt="My Firsts" />
+            </a>
+            <!-- Content -->
+            <div class="p-6 text-center">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">My Firsts</h2>
+                <p class="text-gray-600 mb-4">
+                    My debut at Cannes was a tribute to my hard work; this necklace is my reward.
+                </p>
+                <p class="font-bold text-gray-800">Nancy Tyagi, Content Creator & Designer</p>
+            </div>
         </div>
-    </div>
 
-    <!-- Card 2 -->
-    <div class="max-w-sm bg-white  overflow-hidden">
-        <!-- Image -->
-        <a href="#">
-            <img class="w-full h-56 object-cover rounded-t-lg" src="{{asset('asset/img/professional-wins.jpg')}}" alt="Professional Wins" />
-        </a>
-        <!-- Content -->
-        <div class="p-6 text-center">
-            <h2 class="text-xl font-semibold text-gray-800 mb-4">My Firsts</h2>
-            <p class="text-gray-600 mb-4">
-                My debut at Cannes was a tribute to my hard work; this necklace is my reward.
-            </p>
-            <p class="font-bold text-gray-800">Nancy Tyagi, Content Creator & Designer</p>
+        <!-- Card 2 -->
+        <div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+            <!-- Image -->
+            <a href="#">
+                <img class="w-full h-56 object-cover" src="{{asset('asset/img/professional-wins.jpg')}}" alt="Professional Wins" />
+            </a>
+            <!-- Content -->
+            <div class="p-6 text-center">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Professional Wins</h2>
+                <p class="text-gray-600 mb-4">
+                    Achieving milestones with confidence and grace, this piece signifies my success.
+                </p>
+                <p class="font-bold text-gray-800">Anita Mehra, Corporate Leader</p>
+            </div>
         </div>
-    </div>
 
-    <!-- Card 3 -->
-    <div class="max-w-sm bg-white  overflow-hidden">
-        <!-- Image -->
-        <a href="#">
-            <img class="w-full h-56 object-cover rounded-t-lg" src="{{asset('asset/img/conquering-barriers.jpg')}}" alt="Conquering Barriers" />
-        </a>
-        <!-- Content -->
-        <div class="p-6 text-center">
-            <h2 class="text-xl font-semibold text-gray-800 mb-4">My Firsts</h2>
-            <p class="text-gray-600 mb-4">
-                My debut at Cannes was a tribute to my hard work; this necklace is my reward.
-            </p>
-            <p class="font-bold text-gray-800">Nancy Tyagi, Content Creator & Designer</p>
+        <!-- Card 3 -->
+        <div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+            <!-- Image -->
+            <a href="#">
+                <img class="w-full h-56 object-cover" src="{{asset('asset/img/conquering-barriers.jpg')}}" alt="Conquering Barriers" />
+            </a>
+            <!-- Content -->
+            <div class="p-6 text-center">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Conquering Barriers</h2>
+                <p class="text-gray-600 mb-4">
+                    Every obstacle overcome is a step closer to my dreams; this ring symbolizes my journey.
+                </p>
+                <p class="font-bold text-gray-800">Priya Sharma, Entrepreneur</p>
+            </div>
         </div>
     </div>
 </div>
+
 
 
 
 
 {{-- peak video --}}
-<div class="max-w-lg mx-auto bg-white rounded-lg mt-4 p-6 text-center mb-6">
-    <h2 class="text-2xl font-bold mb-4">Introducing ‘Peak’</h2>
-    <h3 class="text-xl font-semibold mb-2">by CaratLane</h3>
-    <p class="text-gray-700 mb-4">
-        When you’re at the peak of success, the world sees
+{{-- <div class="max-w-lg md:mx-auto mx-8 bg-white rounded-lg shadow-lg mt-8 p-8 text-center mb-8">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">Introducing ‘Peak’</h2>
+    <h3 class="text-xl font-semibold text-gray-600 mb-3">by CaratLane</h3>
+    <p class="text-gray-700 text-lg leading-relaxed">
+        When you’re at the peak of success, the world sees 
         a brilliant and shining version of you!
     </p>
-</div>
+</div> --}}
 
-<div class="flex justify-center">
+
+<div class="flex justify-center m-4 w-full lg:mx-0">
     <video 
         src="{{ asset('asset/img/peak-video-desktop.mp4') }}" 
         controls 
         autoplay 
         muted 
         loop 
-        class="rounded-lg" 
-        style="max-width: 100%; height: auto;">
+        class="rounded-lg max-w-full h-auto" 
+        playsinline>
         Your browser does not support the video tag.
     </video>
 </div>
 
 
-{{-- slider 2 --}}
-
-   {{-- slider --}}
-
-     {{-- heading --}}
-     <div style=" padding: 30px; text-align: center;">
+<!-- Slider Section -->
+<section class="bg-gray-50 py-12">
+    <!-- Heading -->
+    <div class="text-center mb-8 px-4">
         <h1 class="text-4xl font-bold text-purple-500 mb-4">Discover Designs</h1>
-        <p class="text-lg text-black italic mb-6">
-            That stand for who you are</p>
+        <p class="text-lg text-gray-700 italic">That stand for who you are</p>
     </div>
 
+    <!-- Slider Container -->
+    <div class="max-w-7xl mx-auto px-4 relative group">
+        <!-- Products Wrapper -->
+        <div 
+            class="product-slider flex space-x-6 overflow-x-auto p-4 snap-x snap-mandatory scrollbar-hide"
+            role="region" 
+            aria-label="Product Slider">
+            <!-- Product Cards -->
+            @php
+            $products = [
+                ['img' => 'j1.jpg', 'title' => 'Jewelry Rock Diamond Ring', 'price' => 26671, 'oldPrice' => 34025],
+                ['img' => 'j2.jpg', 'title' => 'Threaded Treasure Diamond Band', 'price' => 68314, 'oldPrice' => 76780],
+                ['img' => 'j3.jpg', 'title' => 'Snake Spring Diamond Cocktail Ring', 'price' => 28406, 'oldPrice' => 34321],
+                ['img' => 'j4.jpg', 'title' => 'Maharani Gemstone Cocktail Ring', 'price' => 52452, 'oldPrice' => 60753],
+                ['img' => 'j5.jpg', 'title' => 'Darning Diamond Ring', 'price' => 95154, 'oldPrice' => 103108],
+            ];
+            @endphp
 
+            @foreach ($products as $product)
+            <div class="flex-none w-64 snap-start">
+                <div class="bg-white rounded-lg shadow-md p-4 transition-transform transform hover:scale-105">
+                    <img 
+                        src="{{ asset('asset/img/' . $product['img']) }}" 
+                        alt="{{ $product['title'] }}" 
+                        class="w-full h-48 object-contain mb-4">
+                    <div class="text-gray-800 font-medium">{{ $product['title'] }}</div>
+                    <div class="flex items-baseline mt-2">
+                        <span class="text-purple-600 text-lg font-semibold">₹{{ number_format($product['price']) }}</span>
+                        <span class="text-gray-500 text-sm line-through ml-2">₹{{ number_format($product['oldPrice']) }}</span>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+
+        
+    </div>
+
+    <!-- See More Button -->
+    <div class="text-center mt-8">
+        <a href="/all-designs" 
+           class="bg-purple-500 text-white px-8 py-3 rounded-full font-medium shadow-lg transition duration-300 hover:bg-purple-600 focus:outline-none focus:ring-4 focus:ring-purple-300">
+            View all Designs
+        </a>
+    </div>
+</section>
+
+<!-- Custom Styles -->
 <style>
-.product-slider {
-    scroll-behavior: smooth;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+.scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
-.product-slider::-webkit-scrollbar {
-    display: none;
+.scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+.product-slider {
+    scroll-snap-type: x mandatory;
 }
 </style>
 
-<div class="max-w-7xl mx-auto px-4 py-4">
-<!-- Slider Container -->
-<div class="relative">
-    <!-- Products Wrapper -->
-    <div class="product-slider flex space-x-6 overflow-x-scroll p-4">
-        <!-- Product Card 1 -->
-        <div class="flex-none w-64">
-            <div class="bg-white rounded-lg shadow-md p-4 relative group">
-                <img src="{{asset('asset/img/j1.jpg')}}" alt="Jewelry Rock Diamond Ring" class="w-full h-48 object-contain mb-4">
-                <div class="text-gray-800 font-medium">Jewelry Rock Diamond Ring</div>
-                <div class="flex items-baseline mt-2">
-                    <span class="text-purple-600 text-lg font-semibold">₹26,671</span>
-                    <span class="text-white text-sm line-through ml-2">₹34,025</span>
-                </div>
-            </div>
-        </div>
 
-        <!-- Product Card 2 -->
-        <div class="flex-none w-64">
-            <div class="bg-white rounded-lg shadow-md p-4 relative group">
-                <img src="{{asset('asset/img/j2.jpg')}}" alt="Threaded Treasure Diamond Band" class="w-full h-48 object-contain mb-4">
-                <div class="text-gray-800 font-medium">Threaded Treasure Diamond Band</div>
-                <div class="flex items-baseline mt-2">
-                    <span class="text-purple-600 text-lg font-semibold">₹68,314</span>
-                    <span class="text-white text-sm line-through ml-2">₹76,780</span>
-                </div>
-            </div>
-        </div>
+  
 
-        <!-- Product Card 3 -->
-        <div class="flex-none w-64">
-            <div class="bg-white rounded-lg shadow-md p-4 relative group">
-                <img src="{{asset('asset/img/j3.jpg')}}" alt="Snake Spring Diamond Cocktail Ring" class="w-full h-48 object-contain mb-4">
-                <div class="text-gray-800 font-medium">Snake Spring Diamond Cocktail Ring</div>
-                <div class="flex items-baseline mt-2">
-                    <span class="text-purple-600 text-lg font-semibold">₹28,406</span>
-                    <span class="text-white text-sm line-through ml-2">₹34,321</span>
-                </div>
-            </div>
-        </div>
 
-        <!-- Product Card 4 -->
-        <div class="flex-none w-64">
-            <div class="bg-white rounded-lg shadow-md p-4 relative group">
-                <img src="{{asset('asset/img/j4.jpg')}}" alt="Maharani Gemstone Cocktail Ring" class="w-full h-48 object-contain mb-4">
-                <div class="text-gray-800 font-medium">Maharani Gemstone Cocktail Ring</div>
-                <div class="flex items-baseline mt-2">
-                    <span class="text-purple-600 text-lg font-semibold">₹52,452</span>
-                    <span class="text-white text-sm line-through ml-2">₹60,753</span>
-                </div>
-            </div>
-        </div>
 
-        <!-- Product Card 5 -->
-        <div class="flex-none w-64">
-            <div class="bg-white rounded-lg shadow-md p-4 relative group">
-                <img src="{{asset('asset/img/j5.jpg')}}" alt="Darning Diamond Ring" class="w-full h-48 object-contain mb-4">
-                <div class="text-gray-800 font-medium">Darning Diamond Ring</div>
-                <div class="flex items-baseline mt-2">
-                    <span class="text-purple-600 text-lg font-semibold">₹95,154</span>
-                    <span class="text-white text-sm line-through ml-2">₹1,03,108</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Navigation Arrows -->
-    <button class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 bg-black rounded-full shadow-lg flex items-center justify-center text-white" onclick="document.querySelector('.product-slider').scrollBy(-288, 0)">
-        <i class="fas fa-chevron-left"></i>
-    </button>
-    <button class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 bg-black rounded-full shadow-lg flex items-center justify-center text-white" onclick="document.querySelector('.product-slider').scrollBy(288, 0)">
-        <i class="fas fa-chevron-right"></i>
-    </button>
-</div>
-
-<!-- See More Button -->
-<div class="text-center mt-8">
-    <button class="border border-r-violet-600 text-black px-8 py-3 rounded-full font-medium transition duration-300">
-        View all Designs
-    </button>
-</div>
-</div>
-
-<script>
-// Optional: Add touch scroll support
-const slider = document.querySelector('.product-slider');
-let isDown = false;
-let startX;
-let scrollLeft;
-
-slider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-});
-
-slider.addEventListener('mouseleave', () => {
-    isDown = false;
-});
-
-slider.addEventListener('mouseup', () => {
-    isDown = false;
-});
-
-slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 2;
-    slider.scrollLeft = scrollLeft - walk;
-});
-</script>
 {{-- Card --}}
-<div class="max-w-lg mx-auto bg-white p-6 text-center mb-6">
-    <h2 class="text-2xl font-bold mb-4">Let Us Make Your Special Day</h2>
-    <p class="text-xl font-semibold text-gray-700">Truly Extraordinary!</p>
+<div class="max-w-lg mx-auto bg-white p-8 text-center mb-8">
+    <h2 class="text-xl font-extrabold text-gray-800 mb-4 leading-tight">
+        Let Us Make Your Special Day
+    </h2>
+    <p class="text-lg font-medium text-purple-600">
+        Truly Extraordinary!
+    </p>
 </div>
+
 
 {{-- Images Section --}}
-<div class="flex flex-wrap justify-center gap-4 mb-6">
-    <div class="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-        <img src="{{ asset('asset/img/postcards-slide.jpg') }}" alt="Postcards" class="rounded-lg shadow-md max-w-full h-auto" />
+<div class="flex flex-wrap justify-center gap-6 mb-8 m-4">
+    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+        <img src="{{ asset('asset/img/postcards-slide.jpg') }}" alt="Postcards" class="rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300" />
     </div>
-    <div class="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-        <img src="{{ asset('asset/img/Engraved.png') }}" alt="Emerald" class="rounded-lg shadow-md max-w-full h-auto" />
+    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+        <img src="{{ asset('asset/img/Engraved.png') }}" alt="Emerald" class="rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300" />
     </div>
-    <div class="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-        <img src="{{ asset('asset/img/truly-extraordinary_3.jpg') }}" alt="Truly Extraordinary" class="rounded-lg shadow-md max-w-full h-auto" />
-    </div>
-</div>
-
-
-{{-- celebrating card --}}
-<div class="max-w-lg mx-auto  p-6 text-center mb-6">
-    <h2 class="text-3xl font-bold mb-4">Celebrating Wins</h2>
-    <h3 class="text-xl font-semibold text-gray-700">Blogs & Ideas</h3>
-</div>
-
-<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mx-12">
-    <div class="">
-        <img src="{{asset('asset/img/cele1.jpg')}}" alt="Celebrating Wins 1" class="rounded mb-2">
-        <p class="font-semibold">Celebrate Your Wins: Why Women Should Embrace Self-Rewards</p>
-    </div>
-    <div class="">
-        <img src="{{asset('asset/img/cele2.jpg')}}" alt="Celebrating Wins 2" class="rounded mb-2">
-        <p class="font-semibold">From Self-Doubt To Self-Rewards: Celebrating Women’s Successes</p>
-    </div>
-    <div class="">
-        <img src="{{asset('asset/img/cele3.jpg')}}" alt="Celebrating Wins 3" class="rounded mb-2">
-        <p class="font-semibold">Women Stories: How To Reward Yourself With No Regrets?</p>
+    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+        <img src="{{ asset('asset/img/truly-extraordinary_3.jpg') }}" alt="Truly Extraordinary" class="rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300" />
     </div>
 </div>
 
 
-{{-- slider3 --}}
-{{-- slider 2 --}}
 
-   {{-- slider --}}
+{{-- Celebrating Card --}}
+<div class="max-w-7xl mx-auto p-8 text-center mb-12">
+    <h2 class="text-3xl font-extrabold text-gray-800 mb-4">Celebrating Wins</h2>
+    <h3 class="text-xl font-medium text-gray-600">Blogs & Ideas</h3>
+</div>
 
-     {{-- heading --}}
-     <div style=" padding: 30px; text-align: center;">
-        <h1 class="text-4xl font-bold text-purple-500 mb-4">Discover Designs</h1>
-        <p class="text-lg text-black italic mb-6">
-            That stand for who you are</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-4 md:mx-12">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="{{ asset('asset/img/cele1.jpg') }}" alt="Celebrating Wins 1" class="w-full h-48 object-cover mb-4">
+        <p class="px-4 py-2 font-semibold text-lg text-gray-800">Celebrate Your Wins: Why Women Should Embrace Self-Rewards</p>
     </div>
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="{{ asset('asset/img/cele2.jpg') }}" alt="Celebrating Wins 2" class="w-full h-48 object-cover mb-4">
+        <p class="px-4 py-2 font-semibold text-lg text-gray-800">From Self-Doubt To Self-Rewards: Celebrating Women’s Successes</p>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="{{ asset('asset/img/cele3.jpg') }}" alt="Celebrating Wins 3" class="w-full h-48 object-cover mb-4">
+        <p class="px-4 py-2 font-semibold text-lg text-gray-800">Women Stories: How To Reward Yourself With No Regrets?</p>
+    </div>
+</div>
 
+
+{{-- Discover Designs Slider --}}
+
+<!-- Heading Section -->
+<div class="py-12 text-center">
+    <h1 class="text-4xl font-bold text-purple-500 mb-4">Discover Designs</h1>
+    <p class="text-lg text-gray-800 italic mb-6">That stand for who you are</p>
+</div>
 
 <style>
-.product-slider {
-    scroll-behavior: smooth;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-.product-slider::-webkit-scrollbar {
-    display: none;
-}
+    .product-slider {
+        scroll-behavior: smooth;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .product-slider::-webkit-scrollbar {
+        display: none;
+    }
+
+    .product-card {
+        transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+        transform: scale(1.05);
+    }
 </style>
 
 <div class="max-w-7xl mx-auto px-4 py-4">
-<!-- Slider Container -->
-<div class="relative">
-    <!-- Products Wrapper -->
-    <div class="product-slider flex space-x-6 overflow-x-scroll p-4">
-        <!-- Product Card 1 -->
-        <div class="flex-none w-64">
-            <div class="bg-white rounded-lg shadow-md p-4 relative group">
-                <img src="{{asset('asset/img/j1.jpg')}}" alt="Jewelry Rock Diamond Ring" class="w-full h-48 object-contain mb-4">
-                <div class="text-gray-800 font-medium">Jewelry Rock Diamond Ring</div>
-                <div class="flex items-baseline mt-2">
-                    <span class="text-purple-600 text-lg font-semibold">₹26,671</span>
-                    <span class="text-white text-sm line-through ml-2">₹34,025</span>
+    <!-- Slider Container -->
+    <div class="relative">
+        <!-- Products Wrapper -->
+        <div class="product-slider flex space-x-6 overflow-x-auto p-4">
+            <!-- Product Card 1 -->
+            <div class="flex-none w-64">
+                <div class="product-card bg-white rounded-lg shadow-md p-4 relative group">
+                    <img src="{{ asset('asset/img/j1.jpg') }}" alt="Jewelry Rock Diamond Ring" class="w-full h-48 object-contain mb-4">
+                    <div class="text-gray-800 font-medium">Jewelry Rock Diamond Ring</div>
+                    <div class="flex items-baseline mt-2">
+                        <span class="text-purple-600 text-lg font-semibold">₹26,671</span>
+                        <span class="text-gray-500 text-sm line-through ml-2">₹34,025</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="flex-none w-64">
+                <div class="product-card bg-white rounded-lg shadow-md p-4 relative group">
+                    <img src="{{ asset('asset/img/j2.jpg') }}" alt="Threaded Treasure Diamond Band" class="w-full h-48 object-contain mb-4">
+                    <div class="text-gray-800 font-medium">Threaded Treasure Diamond Band</div>
+                    <div class="flex items-baseline mt-2">
+                        <span class="text-purple-600 text-lg font-semibold">₹68,314</span>
+                        <span class="text-gray-500 text-sm line-through ml-2">₹76,780</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="flex-none w-64">
+                <div class="product-card bg-white rounded-lg shadow-md p-4 relative group">
+                    <img src="{{ asset('asset/img/j3.jpg') }}" alt="Snake Spring Diamond Cocktail Ring" class="w-full h-48 object-contain mb-4">
+                    <div class="text-gray-800 font-medium">Snake Spring Diamond Cocktail Ring</div>
+                    <div class="flex items-baseline mt-2">
+                        <span class="text-purple-600 text-lg font-semibold">₹28,406</span>
+                        <span class="text-gray-500 text-sm line-through ml-2">₹34,321</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="flex-none w-64">
+                <div class="product-card bg-white rounded-lg shadow-md p-4 relative group">
+                    <img src="{{ asset('asset/img/j4.jpg') }}" alt="Maharani Gemstone Cocktail Ring" class="w-full h-48 object-contain mb-4">
+                    <div class="text-gray-800 font-medium">Maharani Gemstone Cocktail Ring</div>
+                    <div class="flex items-baseline mt-2">
+                        <span class="text-purple-600 text-lg font-semibold">₹52,452</span>
+                        <span class="text-gray-500 text-sm line-through ml-2">₹60,753</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="flex-none w-64">
+                <div class="product-card bg-white rounded-lg shadow-md p-4 relative group">
+                    <img src="{{ asset('asset/img/j5.jpg') }}" alt="Darning Diamond Ring" class="w-full h-48 object-contain mb-4">
+                    <div class="text-gray-800 font-medium">Darning Diamond Ring</div>
+                    <div class="flex items-baseline mt-2">
+                        <span class="text-purple-600 text-lg font-semibold">₹95,154</span>
+                        <span class="text-gray-500 text-sm line-through ml-2">₹1,03,108</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Product Card 2 -->
-        <div class="flex-none w-64">
-            <div class="bg-white rounded-lg shadow-md p-4 relative group">
-                <img src="{{asset('asset/img/j2.jpg')}}" alt="Threaded Treasure Diamond Band" class="w-full h-48 object-contain mb-4">
-                <div class="text-gray-800 font-medium">Threaded Treasure Diamond Band</div>
-                <div class="flex items-baseline mt-2">
-                    <span class="text-purple-600 text-lg font-semibold">₹68,314</span>
-                    <span class="text-white text-sm line-through ml-2">₹76,780</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Product Card 3 -->
-        <div class="flex-none w-64">
-            <div class="bg-white rounded-lg shadow-md p-4 relative group">
-                <img src="{{asset('asset/img/j3.jpg')}}" alt="Snake Spring Diamond Cocktail Ring" class="w-full h-48 object-contain mb-4">
-                <div class="text-gray-800 font-medium">Snake Spring Diamond Cocktail Ring</div>
-                <div class="flex items-baseline mt-2">
-                    <span class="text-purple-600 text-lg font-semibold">₹28,406</span>
-                    <span class="text-white text-sm line-through ml-2">₹34,321</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Product Card 4 -->
-        <div class="flex-none w-64">
-            <div class="bg-white rounded-lg shadow-md p-4 relative group">
-                <img src="{{asset('asset/img/j4.jpg')}}" alt="Maharani Gemstone Cocktail Ring" class="w-full h-48 object-contain mb-4">
-                <div class="text-gray-800 font-medium">Maharani Gemstone Cocktail Ring</div>
-                <div class="flex items-baseline mt-2">
-                    <span class="text-purple-600 text-lg font-semibold">₹52,452</span>
-                    <span class="text-white text-sm line-through ml-2">₹60,753</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Product Card 5 -->
-        <div class="flex-none w-64">
-            <div class="bg-white rounded-lg shadow-md p-4 relative group">
-                <img src="{{asset('asset/img/j5.jpg')}}" alt="Darning Diamond Ring" class="w-full h-48 object-contain mb-4">
-                <div class="text-gray-800 font-medium">Darning Diamond Ring</div>
-                <div class="flex items-baseline mt-2">
-                    <span class="text-purple-600 text-lg font-semibold">₹95,154</span>
-                    <span class="text-white text-sm line-through ml-2">₹1,03,108</span>
-                </div>
-            </div>
-        </div>
+      
     </div>
 
-    <!-- Navigation Arrows -->
-    <button class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 bg-black rounded-full shadow-lg flex items-center justify-center text-white" onclick="document.querySelector('.product-slider').scrollBy(-288, 0)">
-        <i class="fas fa-chevron-left"></i>
-    </button>
-    <button class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 bg-black rounded-full shadow-lg flex items-center justify-center text-white" onclick="document.querySelector('.product-slider').scrollBy(288, 0)">
-        <i class="fas fa-chevron-right"></i>
-    </button>
+    <!-- See More Button -->
+    <div class="text-center mt-8">
+        <button class="border border-purple-600 text-black px-8 py-3 rounded-full font-medium transition duration-300 hover:bg-purple-600 hover:text-white">
+            View all Designs
+        </button>
+    </div>
 </div>
-
-<!-- See More Button -->
-<div class="text-center mt-8">
-    <button class="border border-r-violet-600 text-black px-8 py-3 rounded-full font-medium transition duration-300">
-        View all Designs
-    </button>
-</div>
-</div>
-
-<script>
-// Optional: Add touch scroll support
-const slider = document.querySelector('.product-slider');
-let isDown = false;
-let startX;
-let scrollLeft;
-
-slider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-});
-
-slider.addEventListener('mouseleave', () => {
-    isDown = false;
-});
-
-slider.addEventListener('mouseup', () => {
-    isDown = false;
-});
-
-slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 2;
-    slider.scrollLeft = scrollLeft - walk;
-});
-</script>
-
-
-
-
 
 
     <!-- FAQ Section -->

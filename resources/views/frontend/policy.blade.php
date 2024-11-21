@@ -1,6 +1,6 @@
 @extends('components.main')
 @section('content')
-<div class="max-w-4xl mx-auto px-4 py-12">
+<div class="max-w-4xl mx-auto px-4 py-12 mt-32 ">
     <h1 class="text-3xl font-semibold text-gray-800 mb-4">Return Policy</h1>
     <p class="text-gray-600 mb-8">Go ahead and shop with complete peace of mind!</p>
 
@@ -59,86 +59,127 @@
         }
     </style>
 
-    <div class="max-w-2xl mx-auto space-y-2">
-        <!-- Money-Back Section -->
-        <div class="border border-gray-200 rounded-lg bg-white">
-            <button 
-                class="accordion-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none" 
-                aria-expanded="false"
-                onclick="toggleAccordion(this)"
-            >
-                <span class="text-lg text-gray-700">Money-Back, Buyback & Exchanges:</span>
-                <svg class="chevron w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-            </button>
-            <div class="accordion-content px-6 pb-4">
-                <p class="text-gray-600">
-                    Our money-back guarantee ensures your satisfaction. We offer hassle-free returns and exchanges within 30 days of purchase.
-                </p>
+
+
+<!-- component -->
+<div class="lg:container lg:mx-auto lg:py-16 md:py-12 md:px-6 py-12 px-4">
+    
+    <div class="lg:w-8/12 w-full mx-auto">
+        <!-- Question 1 -->
+        <hr class="w-full lg:mt-10 md:mt-12 md:mb-8 my-8" />
+
+        <div class="w-full md:px-6">
+            <div id="mainHeading" class="flex justify-between items-center w-full">
+                <div class="">
+                    <p class="flex justify-center items-center dark:text-white font-medium text-base leading-6 md:leading-4 text-gray-800"><span class="lg:mr-6 mr-4 dark:text-white lg:text-2xl md:text-xl text-lg leading-6 md:leading-5 lg:leading-4 font-semibold text-gray-800">Q1.</span> How do i know if a product is available in boutiques?</p>
+                </div>
+                <button aria-label="toggler" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" data-menu>
+                    <img class="transform dark:hidden " src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2.svg" alt="toggler">
+                    <img class="transform dark:block hidden " src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2dark.svg" alt="toggler">
+                </button>
+            </div>
+            <div id="menu" class="hidden mt-6 w-full">
+                <p class="text-base leading-6 text-gray-600 dark:text-gray-300 font-normal">Remember you can query the status of your orders any time in My orders in the My account section. if you are not resigered at Mango.com, you can access dierectly in the Orders section. In this cause, you will have enter your e-mail address and order number.</p>
             </div>
         </div>
 
-        <!-- Resizing Section -->
-        <div class="border border-gray-200 rounded-lg bg-white">
-            <button 
-                class="accordion-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none" 
-                aria-expanded="false"
-                onclick="toggleAccordion(this)"
-            >
-                <span class="text-lg text-gray-700">Resizing & Repairs:</span>
-                <svg class="chevron w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-            </button>
-            <div class="accordion-content px-6 pb-4">
-                <p class="text-gray-600">
-                    We provide professional resizing and repair services to ensure your items maintain their perfect fit and condition.
-                </p>
+        <!-- Question 2 -->
+
+        <hr class="w-full lg:mt-10 my-8" />
+
+        <div class="w-full md:px-6">
+            <div id="mainHeading" class="flex justify-between items-center w-full">
+                <div class="">
+                    <p class="flex justify-center items-center dark:text-white font-medium text-base leading-6 lg:leading-4 text-gray-800"><span class="lg:mr-6 dark:text-white mr-4 lg:text-2xl md:text-xl text-lg leading-6 md:leading-5 lg:leading-4 font-semibold text-gray-800">Q2.</span> How can i find the prices or get other information about chanel products?</p>
+                </div>
+                <button aria-label="toggler" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" data-menu>
+                    <img class="transform dark:hidden " src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2.svg" alt="toggler">
+                    <img class="transform dark:block hidden " src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2dark.svg" alt="toggler">
+                </button>
+            </div>
+            <div id="menu" class="hidden mt-6 w-full">
+                <p class="text-base leading-6 text-gray-600 dark:text-gray-300 font-normal">Remember you can query the status of your orders any time in My orders in the My account section. if you are not resigered at Mango.com, you can access dierectly in the Orders section. In this cause, you will have enter your e-mail address and order number.</p>
             </div>
         </div>
 
-        <!-- Warranty Section -->
-        <div class="border border-gray-200 rounded-lg bg-white">
-            <button 
-                class="accordion-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none" 
-                aria-expanded="false"
-                onclick="toggleAccordion(this)"
-            >
-                <span class="text-lg text-gray-700">1 Year Replacement Warranty*</span>
-                <svg class="chevron w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-            </button>
-            <div class="accordion-content px-6 pb-4">
-                <p class="text-gray-600">
-                    Our products come with a 1-year replacement warranty covering manufacturing defects and material issues.
-                </p>
+        <!-- Question 3 -->
+
+        <hr class="w-full lg:mt-10 my-8" />
+
+        <div class="w-full md:px-6">
+            <div id="mainHeading" class="flex justify-between items-center w-full">
+                <div class="">
+                    <p class="flex justify-center items-center dark:text-white font-medium text-base leading-6 lg:leading-4 text-gray-800"><span class="lg:mr-6 dark:text-white mr-4 lg:text-2xl md:text-xl text-lg leading-6 md:leading-5 lg:leading-4 font-semibold text-gray-800">Q3.</span>How many collections come out every year?</p>
+                </div>
+                <button aria-label="toggler" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" data-menu>
+                    <img class="transform dark:hidden " src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2.svg" alt="toggler">
+                    <img class="transform dark:block hidden " src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2dark.svg" alt="toggler">
+                </button>
+            </div>
+            <div id="menu" class="hidden mt-6 w-full">
+                <p class="text-base leading-6 text-gray-600 dark:text-gray-300 font-normal">Remember you can query the status of your orders any time in My orders in the My account section. if you are not resigered at Mango.com, you can access dierectly in the Orders section. In this cause, you will have enter your e-mail address and order number.</p>
             </div>
         </div>
+
+        <!-- Question 4 -->
+
+        <hr class="w-full lg:mt-10 my-8" />
+
+        <div class="w-full md:px-6">
+            <div id="mainHeading" class="flex justify-between items-center w-full">
+                <div class="">
+                    <p class="flex justify-center items-center dark:text-white font-medium text-base leading-6 lg:leading-4 text-gray-800"><span class="lg:mr-6 dark:text-white mr-4 lg:text-2xl md:text-xl text-lg leading-6 md:leading-5 lg:leading-4 font-semibold text-gray-800">Q4.</span>Are all of the fashion collections features on the website?</p>
+                </div>
+                <button aria-label="toggler" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" data-menu>
+                    <img class="transform dark:hidden " src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2.svg" alt="toggler">
+                    <img class="transform dark:block hidden " src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2dark.svg" alt="toggler">
+                </button>
+            </div>
+            <div id="menu" class="hidden mt-6 w-full">
+                <p class="text-base leading-6 text-gray-600 dark:text-gray-300 font-normal">Remember you can query the status of your orders any time in My orders in the My account section. if you are not resigered at Mango.com, you can access dierectly in the Orders section. In this cause, you will have enter your e-mail address and order number.</p>
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+
+        <hr class="w-full lg:mt-10 my-8" />
+
+        <div class="w-full md:px-6">
+            <div id="mainHeading" class="flex justify-between items-center w-full">
+                <div class="">
+                    <p class="flex justify-center items-center dark:text-white font-medium text-base leading-6 lg:leading-4 text-gray-800"><span class="lg:mr-6 dark:text-white mr-4 lg:text-2xl md:text-xl text-lg leading-6 md:leading-5 lg:leading-4 font-semibold text-gray-800">Q5.</span>Where do i find products that i have seen in magazines or Social Media?</p>
+                </div>
+                <button aria-label="toggler" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" data-menu>
+                    <img class="transform dark:hidden " src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2.svg" alt="toggler">
+                    <img class="transform dark:block hidden " src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2dark.svg" alt="toggler">
+                </button>
+            </div>
+            <div id="menu" class="hidden mt-6 w-full">
+                <p class="text-base leading-6 text-gray-600 dark:text-gray-300 font-normal">Remember you can query the status of your orders any time in My orders in the My account section. if you are not resigered at Mango.com, you can access dierectly in the Orders section. In this cause, you will have enter your e-mail address and order number.</p>
+            </div>
+        </div>
+
+        <hr class="w-full lg:mt-10 my-8" />
     </div>
+</div>
 
-    <script>
-        function toggleAccordion(button) {
-            const content = button.nextElementSibling;
-            const isExpanded = button.getAttribute('aria-expanded') === 'true';
-            
-            // Close all other sections
-            document.querySelectorAll('.accordion-button').forEach(btn => {
-                if (btn !== button) {
-                    btn.setAttribute('aria-expanded', 'false');
-                    btn.nextElementSibling.style.maxHeight = '0px';
-                }
-            });
+<script>
+let elements = document.querySelectorAll("[data-menu]");
+for (let i = 0; i < elements.length; i++) {
+let main = elements[i];
 
-            // Toggle current section
-            button.setAttribute('aria-expanded', !isExpanded);
-            if (!isExpanded) {
-                content.style.maxHeight = content.scrollHeight + 'px';
-            } else {
-                content.style.maxHeight = '0px';
-            }
-        }
+main.addEventListener("click", function () {
+let element = main.parentElement.parentElement;
+let indicators = main.querySelectorAll("img");
+let child = element.querySelector("#menu");
+let h = element.querySelector("#mainHeading>div>p");
+
+h.classList.toggle("font-semibold");
+child.classList.toggle("hidden");
+// console.log(indicators[0]);
+indicators[0].classList.toggle("rotate-180");
+});
+}
     </script>
 
 @endsection

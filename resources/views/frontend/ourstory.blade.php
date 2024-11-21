@@ -2,16 +2,19 @@
 @section('content')
 
 {{-- BANNER IMAGE --}}
-<div class="max-w-6xl mx-auto mt-24 py-8">
+<div class="max-w-6xl mx-auto mt-32 py-8 px-4 sm:px-6 lg:px-8">
     <!-- Diamond Grid Container -->
-    <div class="grid grid-cols-1 items-center justify-center">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-center justify-center">
         <!-- Jewelry Image -->
-        <div class="overflow-hidden relative group ">
-            <img src="{{asset('asset/img/pic7.png')}}" alt="Gold necklace detail" 
-                 class="w-full h-full object-cover flex justify-center transform group-hover:scale-125 group-hover:rotate-12 transition-transform duration-300 ease-in-out">
+        <div class="relative overflow-hidden group">
+            <img src="{{asset('asset/img/pic7.png')}}" 
+                 alt="Gold necklace detail" 
+                 class="w-full h-auto object-cover transform group-hover:scale-125 group-hover:rotate-6 transition-transform duration-300 ease-in-out">
         </div>
+        <!-- Add more images or content if necessary -->
     </div>
 </div>
+
 
 {{-- WHO WE ARE???? --}}
 <div class="max-w-6xl mx-auto p-6 mt-8">

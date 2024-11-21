@@ -233,7 +233,18 @@ class HomeController extends Controller
     {
         return view('frontend.egold');
     }
+    public function buygold(){
+        return view('frontend.buygold');
+    }
 
+    public function redeem(){
+        return view('frontend.redeem');
+    }
+
+    public function sellgold(){
+        return view('frontend.sellgold');
+    }
+    
     // ===== Second Navbar Pages =====
     public function men()
     {

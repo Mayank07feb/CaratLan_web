@@ -784,6 +784,55 @@ document.querySelectorAll('.tab-btn').forEach(button => {
 
     {{-- **************** shop by instagram*********** --}}
 
+    {{-- shop by instagram --}}
+<div class="main overflow-hidden my-6">
+    <!-- Header Section -->
+    <div class="flex flex-col md:flex-row justify-between items-center lg:mx-12 lg:my-4">
+        <h1 class="text-xl md:text-2xl font-semibold">Shop Our Instagram</h1>
+        <h2 class="lg:text-xl md:text-lg text-sm text-black mt-4 md:mt-0">#MyCaratLaneStory</h2>
+    </div>
+
+    <!-- Image Grid Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 bg-red-800 lg:mx-12">
+        <!-- Large Image -->
+        <div class="w-full h-full overflow-hidden bg-yellow-400">
+            <img src="https://cdn.caratlane.com/media/catalog/product/U/T/UT01166-1Y0000_3_lar.jpg"
+                alt="Product Image"
+                class="h-hull w-full object-cover">
+        </div>
+
+        <!-- Smaller Image Grid -->
+        <div class="grid grid-cols-2 lg:grid-cols-3 bg-blue-400">
+            <div class="overflow-hidden w-full h-full">
+                <img src="{{ asset('asset/img/insta1.jpg') }}" alt="Instagram Image"
+                    class="w-full h-full object-cover ">
+            </div>
+            <div class="overflow-hidden w-full h-full">
+                <img src="{{ asset('asset/img/insta2.jpg') }}" alt="Instagram Image"
+                    class="w-full h-full object-cover  ">
+            </div>
+            <div class="overflow-hidden w-full h-full">
+                <img src="{{ asset('asset/img/insta3.jpg') }}" alt="Instagram Image"
+                    class="w-full h-full object-cover  ">
+            </div>
+            <div class="overflow-hidden w-full h-full">
+                <img src="{{ asset('asset/img/insta4.jpg') }}" alt="Instagram Image"
+                    class="w-full h-full object-cover  ">
+            </div>
+            <div class="overflow-hidden w-full h-full">
+                <img src="{{ asset('asset/img/insta5.jpg') }}" alt="Instagram Image"
+                    class="w-full h-full object-cover  ">
+            </div>
+            <div class="overflow-hidden w-full h-full">
+                <img src="{{ asset('asset/img/insta6.jpg') }}" alt="Instagram Image"
+                    class="w-full h-full object-cover  ">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
     <div
         class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:p-6 p-2 bg-gradient-to-b from-[#10091B] to-[#6F40B8] mt-4 items-center justify-center lg:mx-12 md:mx-4 py-8">
         <!-- Left Section -->

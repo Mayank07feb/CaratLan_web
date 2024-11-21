@@ -17,7 +17,8 @@
         </div>
 
         <!-- Navbar Items -->
-        <ul id="navbar" class="lg:flex lg:space-x-6 text-black font-extralight space-y-4 lg:space-y-0 absolute lg:relative left-0 w-full bg-gray-100 lg:bg-transparent top-16 lg:top-auto p-4 lg:p-0 hidden lg:block">
+        <ul id="navbar" class="lg:flex lg:space-x-6 z-50 text-black font-extralight space-y-4 lg:space-y-0 absolute lg:relative left-0 w-full bg-gray-100 lg:bg-transparent top-16 lg:top-auto p-4 lg:p-0 hidden lg:block">
+            <li><a href="#" class="hover:text-black" aria-label="Men's Collection">Home</a></li>
             <li><a href="{{ route('men') }}" class="hover:text-black" aria-label="Men's Collection">Men</a></li>
             <li><a href="{{ route('women') }}" class="hover:text-black" aria-label="Women's Collection">Women</a></li>
             <li><a href="{{ route('kids') }}" class="hover:text-black" aria-label="Kids Collection">Kids</a></li>

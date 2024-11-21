@@ -33,7 +33,7 @@
 
     {{-- collection --}}
     <div class="bg-[#2C1043] p-4">
-        <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <!-- Product Item -->
             <div class="flex flex-col items-center">
                 <img src="{{ asset('asset/img/disney-earings.png') }}" alt="Disney Earrings" class="w-full h-auto rounded-lg shadow-md">

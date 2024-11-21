@@ -1,6 +1,6 @@
 @extends('components.main')
 @section('content')
-<div class="w-full max-w-full">
+<div class="w-full max-w-full mt-56">
     <img src="{{asset('asset/img/jewellerycareguid BANNER.jpg')}}" alt="Jewellery Care Guide" class="w-full h-auto object-cover">
 </div>
 <div class="w-full lg:max-w-none mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-gray-50">
