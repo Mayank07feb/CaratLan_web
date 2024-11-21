@@ -262,7 +262,7 @@
 
                 <!-- Sign Up and Log In Buttons -->
                 <div class="flex justify-center space-x-4 mb-8">
-                    <a href="{{route('login')}}">
+                    <a href="{{ route('login') }}">
                         <div class="flex-1">
                             <button
                                 class="w-full border border-pink-500 text-pink-500 text-sm px-8 py-2 rounded-[12px] hover:bg-pink-100 transition">
@@ -270,7 +270,7 @@
                             </button>
                         </div>
                     </a>
-                    <a href="{{route('signup')}}">
+                    <a href="{{ route('signup') }}">
                         <div class="flex-1">
                             <button
                                 class="w-full border border-pink-500 text-pink-500 text-sm px-8 py-2 rounded-[12px] hover:bg-pink-100 transition">
@@ -698,7 +698,7 @@
 </nav> --}}
 
 
-
+<!-- // Top Bar JS // -->
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const firstText = document.getElementById('first-text');
@@ -713,6 +713,7 @@
     });
 </script>
 
+<!-- // Account JS // -->
 <script>
     const profileIcon = document.getElementById('profile-icon');
     const profileModal = document.getElementById('profile-modal');
@@ -737,6 +738,7 @@
     });
 </script>
 
+<!-- // Mobile Toggle JS // -->
 <script>
     const mobileMenu = document.getElementById('mobile-menu');
     const openMenuBtn = document.getElementById('open-menu');

@@ -260,7 +260,7 @@
                 </div>
 
                 <!-- Content Section -->
-                <div class="p-6 w-full md:w-[800px]">
+                <div id="govtIDContent" class="p-6 w-full md:w-[800px] hidden">
                     <!-- PAN Card Number Input -->
                     <div class="flex flex-col md:flex-row justify-between items-center mb-6">
                         <input type="text" placeholder="PAN Card Number"
@@ -288,4 +288,23 @@
         </div>
 
     </main>
+
+
+    <script>
+        // Toggle functionality for the Govt. ID details section
+        document.getElementById('Govt-ID-details').addEventListener('click', function() {
+            const content = document.getElementById('govtIDContent');
+            const button = document.getElementById('Govt-ID-details');
+
+            // Toggle the hidden class to show or hide the content
+            content.classList.toggle('hidden');
+
+            // Change the icon based on the visibility
+            if (content.classList.contains('hidden')) {
+                button.textContent = 'expand_less'; // Icon for collapsed state
+            } else {
+                button.textContent = 'expand_more'; // Icon for expanded state
+            }
+        });
+    </script>
 @endsection
