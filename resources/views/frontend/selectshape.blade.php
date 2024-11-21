@@ -1,4 +1,4 @@
-<script src="https://cdn.tailwindcss.com"></script>
+
 
 <!-- Header -->
 <header class="bg-[#28242a] text-white py-2 px-4 flex justify-between items-center">
@@ -146,3 +146,4 @@
     </div>
   </div>
 </footer>
+<script src="https://cdn.tailwindcss.com"></script>

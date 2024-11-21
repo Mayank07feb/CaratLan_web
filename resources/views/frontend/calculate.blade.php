@@ -186,7 +186,11 @@
     </div>
   </div>
   
-  <script>
+
+
+</div>
+
+<script>
     document.querySelectorAll('[data-accordion-target]').forEach(button => {
       button.addEventListener('click', () => {
         const targetId = button.getAttribute('data-accordion-target');
@@ -199,6 +203,4 @@
     });
   </script>
   
-
-</div>
 @endsection

@@ -714,6 +714,15 @@ class="fixed inset-y-0 right-0 w-full max-w-xs z-40 bg-white text-black shadow-x
     </ul>
 </div>
 </div>
+<!-- Horizontal line with logo -->
+<div class="flex items-center justify-center w-full my-8">
+    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
+    <div class="mx-4">
+        <img src="{{ asset('asset/img/logo.png') }}" alt="Logo" class="h-12 w-auto">
+    </div>
+    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
+</div>
+</div>
 
 <script>
 // Wishlist functionality
@@ -850,13 +859,5 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<!-- Horizontal line with logo -->
-<div class="flex items-center justify-center w-full my-8">
-    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
-    <div class="mx-4">
-        <img src="{{ asset('asset/img/logo.png') }}" alt="Logo" class="h-12 w-auto">
-    </div>
-    <div class="flex-grow h-px bg-[#9d6e2a]"></div>
-</div>
-</div>
+
 @endsection

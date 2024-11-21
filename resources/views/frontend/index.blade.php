@@ -56,33 +56,6 @@
     </div>
 </div>
 
-<script>
-    const slides = document.querySelectorAll('.slider-slide');
-    const paginationDots = document.querySelectorAll('.pagination-dot');
-    let currentIndex = 0;
-
-    function showSlide(index) {
-        const sliderWrapper = document.getElementById('sliderWrapper');
-        sliderWrapper.style.transform = `translateX(-${index * 100}%)`;
-        paginationDots.forEach((dot, i) => {
-            dot.classList.toggle('bg-gray-400', i !== index);
-            dot.classList.toggle('bg-white', i === index);
-        });
-    }
-
-    paginationDots.forEach(dot => {
-        dot.addEventListener('click', (e) => {
-            currentIndex = parseInt(e.target.dataset.index);
-            showSlide(currentIndex);
-        });
-    });
-
-    // Auto slide functionality (optional)
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % slides.length;
-        showSlide(currentIndex);
-    }, 5000); // Change slide every 5 seconds
-</script>
 
 
     {{-- div containers --}}
@@ -557,62 +530,7 @@
     </div>
 </div>
 
-<script>
 
-    const visibleSlides = 4;
-    const sliderWidth = document.querySelector('.slider-wrapper').clientWidth / visibleSlides;
-    
-    function updateSlider(slider, index) {
-        const offset = -index * sliderWidth;
-        slider.style.transform = `translateX(${offset}px)`;
-    }
-
-    let currentSlideIndex1 = 0;
-    let currentSlideIndex2 = 0;
-
-    document.getElementById('next1').addEventListener('click', () => {
-        const slider = document.querySelector('#slider1 .slider');
-        const totalSlides = slider.children.length;
-        currentSlideIndex1 = (currentSlideIndex1 + 1) % (totalSlides - visibleSlides + 1);
-        updateSlider(slider, currentSlideIndex1);
-    });
-
-    document.getElementById('prev1').addEventListener('click', () => {
-        const slider = document.querySelector('#slider1 .slider');
-        currentSlideIndex1 = (currentSlideIndex1 - 1 + (slider.children.length - visibleSlides + 1)) % (slider.children.length - visibleSlides + 1);
-        updateSlider(slider, currentSlideIndex1);
-    });
-
-    document.getElementById('next2').addEventListener('click', () => {
-        const slider = document.querySelector('#slider2 .slider');
-        const totalSlides = slider.children.length;
-        currentSlideIndex2 = (currentSlideIndex2 + 1) % (totalSlides - visibleSlides + 1);
-        updateSlider(slider, currentSlideIndex2);
-    });
-
-    document.getElementById('prev2').addEventListener('click', () => {
-        const slider = document.querySelector('#slider2 .slider');
-        currentSlideIndex2 = (currentSlideIndex2 - 1 + (slider.children.length - visibleSlides + 1)) % (slider.children.length - visibleSlides + 1);
-        updateSlider(slider, currentSlideIndex2);
-    });
-
-
-    // JavaScript to handle button toggle effect
-document.querySelectorAll('.tab-btn').forEach(button => {
-    button.addEventListener('click', function () {
-        // Remove 'active' state from all buttons
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.classList.remove('bg-purple-500', 'text-black', 'hover:bg-purple-600');
-            btn.classList.add('bg-white', 'text-gray-700', 'hover:bg-gray-100', 'hover:text-purple-700');
-        });
-
-        // Add 'active' state to clicked button
-        this.classList.remove('bg-white', 'text-gray-700', 'hover:bg-gray-100', 'hover:text-purple-700');
-        this.classList.add('bg-purple-500', 'text-black', 'hover:bg-purple-600');
-    });
-});
-
-</script>
 
 
     {{-- services features --}}
@@ -756,23 +674,7 @@ document.querySelectorAll('.tab-btn').forEach(button => {
             </div>
         </div>
     
-        <!-- Swiper JS -->
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script>
-            const swiper = new Swiper('.swiper-container', {
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-              
-            });
-        </script>
-
+ 
     
 
 
@@ -885,6 +787,22 @@ document.querySelectorAll('.tab-btn').forEach(button => {
 
     <!-- JavaScript to handle the tab switching -->
 
+       <!-- Swiper JS -->
+       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+       <script>
+           const swiper = new Swiper('.swiper-container', {
+               loop: true,
+               autoplay: {
+                   delay: 3000,
+                   disableOnInteraction: false,
+               },
+               pagination: {
+                   el: '.swiper-pagination',
+                   clickable: true,
+               },
+             
+           });
+       </script>
 
     <script>
         // Select tab buttons and content
@@ -904,4 +822,88 @@ document.querySelectorAll('.tab-btn').forEach(button => {
             });
         });
     </script>
+    <script>
+
+        const visibleSlides = 4;
+        const sliderWidth = document.querySelector('.slider-wrapper').clientWidth / visibleSlides;
+        
+        function updateSlider(slider, index) {
+            const offset = -index * sliderWidth;
+            slider.style.transform = `translateX(${offset}px)`;
+        }
+    
+        let currentSlideIndex1 = 0;
+        let currentSlideIndex2 = 0;
+    
+        document.getElementById('next1').addEventListener('click', () => {
+            const slider = document.querySelector('#slider1 .slider');
+            const totalSlides = slider.children.length;
+            currentSlideIndex1 = (currentSlideIndex1 + 1) % (totalSlides - visibleSlides + 1);
+            updateSlider(slider, currentSlideIndex1);
+        });
+    
+        document.getElementById('prev1').addEventListener('click', () => {
+            const slider = document.querySelector('#slider1 .slider');
+            currentSlideIndex1 = (currentSlideIndex1 - 1 + (slider.children.length - visibleSlides + 1)) % (slider.children.length - visibleSlides + 1);
+            updateSlider(slider, currentSlideIndex1);
+        });
+    
+        document.getElementById('next2').addEventListener('click', () => {
+            const slider = document.querySelector('#slider2 .slider');
+            const totalSlides = slider.children.length;
+            currentSlideIndex2 = (currentSlideIndex2 + 1) % (totalSlides - visibleSlides + 1);
+            updateSlider(slider, currentSlideIndex2);
+        });
+    
+        document.getElementById('prev2').addEventListener('click', () => {
+            const slider = document.querySelector('#slider2 .slider');
+            currentSlideIndex2 = (currentSlideIndex2 - 1 + (slider.children.length - visibleSlides + 1)) % (slider.children.length - visibleSlides + 1);
+            updateSlider(slider, currentSlideIndex2);
+        });
+    
+    
+        // JavaScript to handle button toggle effect
+    document.querySelectorAll('.tab-btn').forEach(button => {
+        button.addEventListener('click', function () {
+            // Remove 'active' state from all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-purple-500', 'text-black', 'hover:bg-purple-600');
+                btn.classList.add('bg-white', 'text-gray-700', 'hover:bg-gray-100', 'hover:text-purple-700');
+            });
+    
+            // Add 'active' state to clicked button
+            this.classList.remove('bg-white', 'text-gray-700', 'hover:bg-gray-100', 'hover:text-purple-700');
+            this.classList.add('bg-purple-500', 'text-black', 'hover:bg-purple-600');
+        });
+    });
+    
+    </script>
+    
+<script>
+    const slides = document.querySelectorAll('.slider-slide');
+    const paginationDots = document.querySelectorAll('.pagination-dot');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        const sliderWrapper = document.getElementById('sliderWrapper');
+        sliderWrapper.style.transform = `translateX(-${index * 100}%)`;
+        paginationDots.forEach((dot, i) => {
+            dot.classList.toggle('bg-gray-400', i !== index);
+            dot.classList.toggle('bg-white', i === index);
+        });
+    }
+
+    paginationDots.forEach(dot => {
+        dot.addEventListener('click', (e) => {
+            currentIndex = parseInt(e.target.dataset.index);
+            showSlide(currentIndex);
+        });
+    });
+
+    // Auto slide functionality (optional)
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    }, 5000); // Change slide every 5 seconds
+</script>
 @endsection

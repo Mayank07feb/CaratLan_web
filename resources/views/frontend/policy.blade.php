@@ -180,6 +180,6 @@ child.classList.toggle("hidden");
 indicators[0].classList.toggle("rotate-180");
 });
 }
-    </script>
+</script>
 
 @endsection

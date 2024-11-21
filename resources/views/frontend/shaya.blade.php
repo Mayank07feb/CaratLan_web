@@ -537,59 +537,6 @@
     </div>
 </div>
 
-<script>
-   document.addEventListener('DOMContentLoaded', function() {
-    const slider = document.getElementById('slider');
-    const nextButton = document.getElementById('next');
-    const prevButton = document.getElementById('prev');
-    let slideIndex = 0;
-    const slides = slider.children;
-    let slidesToShow = 3; // Default number of slides to show
-    
-    // Function to update the slide position
-    function updateSliderPosition() {
-        const slideWidth = slides[0].clientWidth;
-        slider.style.transform = `translateX(${-slideIndex * slideWidth}px)`;
-    }
-
-    // Function to calculate slidesToShow based on window size
-    function calculateSlidesToShow() {
-        const windowWidth = window.innerWidth;
-        if (windowWidth >= 1024) {
-            slidesToShow = 4;  // Large screens: show 4 slides
-        } else if (windowWidth >= 768) {
-            slidesToShow = 3;  // Medium screens: show 3 slides
-        } else {
-            slidesToShow = 2;  // Small screens: show 2 slides
-        }
-        updateSliderPosition();  // Update slider position when the number of slides changes
-    }
-
-    // Event listeners for navigation buttons
-    nextButton.addEventListener('click', () => {
-        if (slideIndex < slides.length - slidesToShow) {
-            slideIndex++;
-            updateSliderPosition();
-        }
-    });
-
-    prevButton.addEventListener('click', () => {
-        if (slideIndex > 0) {
-            slideIndex--;
-            updateSliderPosition();
-        }
-    });
-
-    // Listen for window resize and adjust slidesToShow accordingly
-    window.addEventListener('resize', () => {
-        calculateSlidesToShow();
-    });
-
-    // Initial calculation on page load
-    calculateSlidesToShow();
-});
-
-</script>
 
 
 <!-- Features Section -->
@@ -630,6 +577,59 @@
         </div>
     </div>
 </div>
-
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+     const slider = document.getElementById('slider');
+     const nextButton = document.getElementById('next');
+     const prevButton = document.getElementById('prev');
+     let slideIndex = 0;
+     const slides = slider.children;
+     let slidesToShow = 3; // Default number of slides to show
+     
+     // Function to update the slide position
+     function updateSliderPosition() {
+         const slideWidth = slides[0].clientWidth;
+         slider.style.transform = `translateX(${-slideIndex * slideWidth}px)`;
+     }
+ 
+     // Function to calculate slidesToShow based on window size
+     function calculateSlidesToShow() {
+         const windowWidth = window.innerWidth;
+         if (windowWidth >= 1024) {
+             slidesToShow = 4;  // Large screens: show 4 slides
+         } else if (windowWidth >= 768) {
+             slidesToShow = 3;  // Medium screens: show 3 slides
+         } else {
+             slidesToShow = 2;  // Small screens: show 2 slides
+         }
+         updateSliderPosition();  // Update slider position when the number of slides changes
+     }
+ 
+     // Event listeners for navigation buttons
+     nextButton.addEventListener('click', () => {
+         if (slideIndex < slides.length - slidesToShow) {
+             slideIndex++;
+             updateSliderPosition();
+         }
+     });
+ 
+     prevButton.addEventListener('click', () => {
+         if (slideIndex > 0) {
+             slideIndex--;
+             updateSliderPosition();
+         }
+     });
+ 
+     // Listen for window resize and adjust slidesToShow accordingly
+     window.addEventListener('resize', () => {
+         calculateSlidesToShow();
+     });
+ 
+     // Initial calculation on page load
+     calculateSlidesToShow();
+ });
+ 
+ </script>
+ 
 
 @include('components.shayafooter')

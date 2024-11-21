@@ -138,46 +138,6 @@
     </div>
 </div>
 
-<!-- Optional: Touch Scroll Support -->
-<script>
-    const slider = document.querySelector('.product-slider');
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    // Mouse Scroll
-    slider.addEventListener('mousedown', (e) => {
-        isDown = true;
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-    });
-
-    slider.addEventListener('mouseleave', () => {
-        isDown = false;
-    });
-
-    slider.addEventListener('mouseup', () => {
-        isDown = false;
-    });
-
-    slider.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 2;
-        slider.scrollLeft = scrollLeft - walk;
-    });
-
-    // Scroll on button click
-    function scrollSlider(direction) {
-        const scrollAmount = 288 * direction; // Adjust scroll distance here
-        slider.scrollBy({
-            left: scrollAmount,
-            behavior: 'smooth'
-        });
-    }
-</script>
-
 {{-- images section --}}
 <div class="bg-gray-100 py-12 px-6">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
@@ -619,29 +579,7 @@
 
    
 
-    <script>
-        // Simple accordion functionality
-        document.querySelectorAll('[data-accordion-target]').forEach(button => {
-            button.addEventListener('click', () => {
-                const target = document.querySelector(button.dataset.accordionTarget);
-                const isExpanded = button.getAttribute('aria-expanded') === 'true';
-                
-                // Toggle the content
-                target.classList.toggle('hidden');
-                
-                // Update the aria-expanded attribute
-                button.setAttribute('aria-expanded', !isExpanded);
-                
-                // Toggle the plus/minus icon (you can enhance this part)
-                const icon = button.querySelector('svg');
-                if (isExpanded) {
-                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>';
-                } else {
-                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
-                }
-            });
-        });
-    </script>
+  
 {{-- text --}}
 <div class="text-center mt-6">
     <p class="text-gray-600">
@@ -737,5 +675,69 @@
         ‘Achievement gifts for me’ are personal tokens of recognition and celebration—a perfect self-reward idea. These designs symbolize milestones reached, goals accomplished, or challenges overcome—a token of motivation for oneself. Each piece serves as a reminder of your journey, a reflection of resilience, and a celebration of personal growth and success.
     </p>
 </div>
+
+<!-- Optional: Touch Scroll Support -->
+<script>
+    const slider = document.querySelector('.product-slider');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    // Mouse Scroll
+    slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+
+    slider.addEventListener('mouseleave', () => {
+        isDown = false;
+    });
+
+    slider.addEventListener('mouseup', () => {
+        isDown = false;
+    });
+
+    slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2;
+        slider.scrollLeft = scrollLeft - walk;
+    });
+
+    // Scroll on button click
+    function scrollSlider(direction) {
+        const scrollAmount = 288 * direction; // Adjust scroll distance here
+        slider.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    }
+</script>
+
+<script>
+    // Simple accordion functionality
+    document.querySelectorAll('[data-accordion-target]').forEach(button => {
+        button.addEventListener('click', () => {
+            const target = document.querySelector(button.dataset.accordionTarget);
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            
+            // Toggle the content
+            target.classList.toggle('hidden');
+            
+            // Update the aria-expanded attribute
+            button.setAttribute('aria-expanded', !isExpanded);
+            
+            // Toggle the plus/minus icon (you can enhance this part)
+            const icon = button.querySelector('svg');
+            if (isExpanded) {
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>';
+            } else {
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
+            }
+        });
+    });
+</script>
 
 @endsection

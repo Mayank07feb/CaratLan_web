@@ -79,33 +79,7 @@
               </div>
           </div>
 </div>
-<script>
-        $(document).ready(function(){
-            $('.slick-slider').slick({
-                infinite: true,            // Infinite loop
-                slidesToShow: 1,           // Show one slide at a time
-                slidesToScroll: 1,         // Scroll one slide at a time
-                arrows: true,              // Enable previous/next arrows
-                dots: true,                // Show dots navigation
-                responsive: [
-                    {
-                        breakpoint: 768,  // For smaller screens
-                        settings: {
-                            slidesToShow: 1,   // Show 1 item
-                            slidesToScroll: 1
-                        }
-                    },
-                    {
-                        breakpoint: 1024, // For medium screens
-                        settings: {
-                            slidesToShow: 2,  // Show 2 items
-                            slidesToScroll: 2
-                        }
-                    }
-                ]
-            });
-        });
-</script>
+
 <div class="bg-white p-6 rounded-lg shadow-lg px-4">
           <!-- Title Section -->
           <h1 class="lg:text-3xl md:text-xl text-sm font-semibold text-purple-900 mb-4">How do you calculate gold rate?</h1>
@@ -561,4 +535,31 @@
 </div>
 </div>
 
+<script>
+    $(document).ready(function(){
+        $('.slick-slider').slick({
+            infinite: true,            // Infinite loop
+            slidesToShow: 1,           // Show one slide at a time
+            slidesToScroll: 1,         // Scroll one slide at a time
+            arrows: true,              // Enable previous/next arrows
+            dots: true,                // Show dots navigation
+            responsive: [
+                {
+                    breakpoint: 768,  // For smaller screens
+                    settings: {
+                        slidesToShow: 1,   // Show 1 item
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 1024, // For medium screens
+                    settings: {
+                        slidesToShow: 2,  // Show 2 items
+                        slidesToScroll: 2
+                    }
+                }
+            ]
+        });
+    });
+</script>
 @endsection
