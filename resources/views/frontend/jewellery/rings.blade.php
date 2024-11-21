@@ -111,6 +111,7 @@
         <div>
 
             <div class="flex bg-white flex-col md:flex-row">
+
                 <!-- Sidebar -->
                 <aside
                     class="hidden md:block w-full md:w-1/5 p-4 bg-white h-screen sticky top-0 overflow-y-auto scrollbar-hidden">
@@ -372,7 +373,6 @@
 
                 </aside>
 
-
                 <!-- Product Grid -->
                 <div class="w-full md:w-3/4 p-4">
                     <!-- Top Bar -->
@@ -458,12 +458,12 @@
                                 <div
                                     class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <button
-                                        class="text-[12px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
+                                        class="text-[10px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
                                         onclick="openModal()">
                                         Try at Home
                                     </button>
                                     <button
-                                        class="border border-green-500 text-green-500 text-[12px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
+                                        class="border border-green-500 text-green-500 text-[10px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
                                         onclick="openModal()">
                                         <i class="material-icons">camera_alt</i>
                                     </button>
@@ -536,12 +536,12 @@
                                 <div
                                     class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <button
-                                        class="text-[12px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
+                                        class="text-[10px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
                                         onclick="openModal()">
                                         Try at Home
                                     </button>
                                     <button
-                                        class="border border-green-500 text-green-500 text-[12px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
+                                        class="border border-green-500 text-green-500 text-[10px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
                                         onclick="openModal()">
                                         <i class="material-icons">camera_alt</i>
                                     </button>
@@ -614,12 +614,12 @@
                                 <div
                                     class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <button
-                                        class="text-[12px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
+                                        class="text-[10px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
                                         onclick="openModal()">
                                         Try at Home
                                     </button>
                                     <button
-                                        class="border border-green-500 text-green-500 text-[12px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
+                                        class="border border-green-500 text-green-500 text-[10px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
                                         onclick="openModal()">
                                         <i class="material-icons">camera_alt</i>
                                     </button>
@@ -692,12 +692,12 @@
                                 <div
                                     class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <button
-                                        class="text-[12px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
+                                        class="text-[10px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
                                         onclick="openModal()">
                                         Try at Home
                                     </button>
                                     <button
-                                        class="border border-green-500 text-green-500 text-[12px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
+                                        class="border border-green-500 text-green-500 text-[10px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
                                         onclick="openModal()">
                                         <i class="material-icons">camera_alt</i>
                                     </button>
@@ -774,12 +774,12 @@
                                     <div
                                         class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                         <button
-                                            class="text-[12px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
+                                            class="text-[10px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
                                             onclick="openModal()">
                                             Try at Home
                                         </button>
                                         <button
-                                            class="border border-green-500 text-green-500 text-[12px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
+                                            class="border border-green-500 text-green-500 text-[10px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
                                             onclick="openModal()">
                                             <i class="material-icons">camera_alt</i>
                                         </button>
@@ -853,12 +853,12 @@
                                     <div
                                         class="absolute bottom-4 left-0 right-0 flex justify-between px-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                         <button
-                                            class="text-[12px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
+                                            class="text-[10px] md:text-[16px] font-bold px-4 sm:px-6 py-1 sm:py-1 text-primary rounded-[12px] border border-purple-950"
                                             onclick="openModal()">
                                             Try at Home
                                         </button>
                                         <button
-                                            class="border border-green-500 text-green-500 text-[12px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
+                                            class="border border-green-500 text-green-500 text-[10px] md:text-[16px] font-bold p-1 sm:p-2 rounded-[12px]"
                                             onclick="openModal()">
                                             <i class="material-icons">camera_alt</i>
                                         </button>
@@ -903,6 +903,7 @@
                     </div>
                     <!-- Product List 2 End-->
                 </div>
+
             </div>
 
             <!--Discover the World of CaratLane -->
@@ -1011,35 +1012,35 @@
             </div>
 
 
-
-            <!-- SORT Button Navigation (your existing code) -->
-            <nav class="fixed bottom-0 left-0 right-0 bg-[#4F3267] text-white p-4 z-20 md:hidden">
-                <ul class="flex justify-between items-center">
+            <!-- Bottom Navbar Mobile View -->
+            <nav class="fixed bottom-0 left-0 right-0 bg-[#4F3267] text-white py-1 px-2 z-20 md:hidden shadow-md">
+                <ul class="flex justify-around items-center">
                     <!-- CATEGORY -->
                     <li class="flex-1 text-center">
-                        <a href="#" class="flex flex-row items-center justify-center space-x-2">
-                            <span class="material-icons">category</span>
-                            <span class="text-xs">CATEGORY</span>
+                        <a href="#" class="flex flex-col items-center hover:text-gray-300 transition duration-200"
+                            aria-label="Category">
+                            <span class="material-icons text-base">category</span>
+                            <span class="text-[10px] font-medium">CATEGORY</span>
                         </a>
                     </li>
                     <!-- SORT -->
                     <li class="flex-1 text-center">
-                        <a href="#" class="flex flex-row items-center justify-center space-x-2" id="sortButton">
-                            <span class="material-icons">sort</span>
-                            <span class="text-xs">SORT</span>
+                        <a href="#" class="flex flex-col items-center hover:text-gray-300 transition duration-200"
+                            id="sortButton" aria-label="Sort">
+                            <span class="material-icons text-base">sort</span>
+                            <span class="text-[10px] font-medium">SORT</span>
                         </a>
                     </li>
                     <!-- FILTER -->
                     <li class="flex-1 text-center">
-                        <a href="#" class="flex flex-row items-center justify-center space-x-2" id="filterButton">
-                            <span class="material-icons">filter_list</span>
-                            <span class="text-xs">FILTER</span>
+                        <a href="#" class="flex flex-col items-center hover:text-gray-300 transition duration-200"
+                            id="filterButton" aria-label="Filter">
+                            <span class="material-icons text-base">filter_list</span>
+                            <span class="text-[10px] font-medium">FILTER</span>
                         </a>
                     </li>
                 </ul>
             </nav>
-
-
 
             <!-- Sorting Modal (Hidden by default) -->
             <div>
@@ -1071,10 +1072,6 @@
                 <!-- Sort Button (to open modal) -->
                 <button id="sortButton">Sort</button>
             </div>
-
-
-
-
 
 
             <!-- Filter Modal (Hidden by default) -->

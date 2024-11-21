@@ -9,6 +9,10 @@
                 bottom: 0;
                 width: 100%;
                 height: auto;
+                max-height: 90%;
+                /* Reduce sidebar height to 50% of the viewport */
+                overflow-y: auto;
+                /* Add scrolling for content that exceeds max-height */
                 transform: translateY(100%);
             }
 
@@ -21,6 +25,7 @@
                 transform: translateY(0);
             }
         }
+
 
         /* Custom scrollbar styles */
         .overflow-y-auto::-webkit-scrollbar {
@@ -38,7 +43,9 @@
     </style>
 
 
-    <main class="mt-12">
+    <main class="mt-40 sm:mt-40 md:mt-28">
+
+        <!-- Shopping Cart & Trial Cart / Navigation Buttons -->
         <div class="flex justify-center text-center py-6">
             <!-- Center Cart Tabs -->
             <div class="flex gap-2 border border-purple-300 rounded-[12px] bg-purple-50 p-1">
@@ -53,6 +60,7 @@
             </div>
         </div>
 
+        <!-- Trial Cart Content Section -->
         <div id="trialCartContent" class="hidden flex flex-col items-center justify-center">
             <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
                 <!-- Left Section -->
@@ -112,10 +120,7 @@
             </div>
         </div>
 
-
-
-
-        <!-- Main Content Section -->
+        <!-- Shopping Cart Content Section -->
         <div id="shoppingCartContent" class="bg-white min-h-screen py-10">
             <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-8 relative">
 
@@ -137,7 +142,8 @@
                             <img src="{{ asset('asset/img/testing.png') }}" alt="Product"
                                 class="w-40 h-40 rounded-md border border-gray-200">
                             <div>
-                                <h2 class="text-sm font-base text-gray-800">Radiant Rivulet Diamond Stud Earrings</h2>
+                                <h2 class="text-[10px] md:text-[14px] font-base text-gray-800">Radiant Rivulet Diamond Stud
+                                    Earrings</h2>
 
                                 <!-- Price -->
                                 <div class="mt-1">
@@ -221,7 +227,8 @@
                                     <div id="sidebar-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40">
                                     </div>
                                     <div>
-                                        <a href="#" class="text-[#DE57E5] text-xs underline hover:underline">Check
+                                        <a href="#"
+                                            class="text-[#DE57E5] text-[10px] md:text-[12px] underline hover:underline">Check
                                             Delivery
                                             Date</a>
                                     </div>
@@ -304,6 +311,7 @@
 
             </div>
         </div>
+
     </main>
 
     {{-- <footer class="bg-[#f6eff6] py-4 px-6 flex items-center justify-between">

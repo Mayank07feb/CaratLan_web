@@ -88,7 +88,7 @@
     <!-- Include JS files -->
     <script src="{{ asset('js/app.js') }}"></script>
 
-    <div class="fixed bottom-20 right-5 flex flex-col items-center z-50">
+    <div class="fixed bottom-14 md:bottom-10 right-5 flex flex-col items-center z-50">
         <!-- Hamburger button -->
         <button id="menu-toggle"
             class="bg-[#4F3267] text-white w-12 h-12 rounded-full shadow-lg hover:bg-[#4F3267] transition-all flex items-center justify-center relative"

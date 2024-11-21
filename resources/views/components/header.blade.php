@@ -1,4 +1,3 @@
-
 <style>
     .mega-menu {
         display: none;
@@ -16,19 +15,6 @@
         display: block;
     }
 
-    .menu-item {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        border-bottom: 1px solid #e0e0e0;
-    }
-
-    .menu-item img {
-        width: 100px;
-        height: 100px;
-        margin-right: 10px;
-    }
-
     /* Custom class to hide the scrollbar but keep scrolling functional */
     .scrollbar-hide::-webkit-scrollbar {
         display: none;
@@ -43,161 +29,230 @@
 </style>
 
 <div class="font-sans bg-gray-50">
-    <!-- Mobile menu overlay -->
+
+    <!-- Mobile menu overlay Scrollbar -->
     <div id="mobile-menu"
-        class="mt-24 fixed inset-0 z-40 bg-gray-50 transform -translate-x-full transition-transform duration-700 ease-custom">
+        class="mt-28 fixed inset-0 z-40 bg-gray-50 transform -translate-x-full transition-transform duration-700 ease-custom">
         <!-- Scrollable Content Area -->
-        <div class="p-4 pb-20 h-screen overflow-y-auto scrollbar-hide mt-5">
-            <!-- Slider with Hidden Scrollbar but Working -->
-            <div class="flex space-x-2 mb-4 overflow-x-auto py-6 scrollbar-hide">
-                <button class="bg-purple-100 text-purple-800 px-3 py-2 rounded whitespace-nowrap flex items-center">
+        <div class="p-4 pb-24 h-screen overflow-y-auto scrollbar-hide mt-5">
+
+            <!-- Slider with Hidden Scrollbar -->
+            <div class="flex space-x-2 overflow-x-auto py-6 scrollbar-hide">
+                <button
+                    class="bg-purple-100 text-purple-800 px-3 py-2 rounded-lg whitespace-nowrap flex items-center text-[12px] hover:bg-purple-200 transition-all">
                     <span class="material-icons mr-1">home</span> Try at Home
                 </button>
-                <button class="bg-green-100 text-green-800 px-3 py-2 rounded whitespace-nowrap flex items-center">
+                <button
+                    class="bg-green-100 text-green-800 px-3 py-2 rounded-lg whitespace-nowrap flex items-center text-[12px] hover:bg-green-200 transition-all">
                     <span class="material-icons mr-1">video_call</span> Video Call
                 </button>
-                <button class="bg-pink-100 text-pink-800 px-3 py-2 rounded whitespace-nowrap flex items-center">
+                <button
+                    class="bg-pink-100 text-pink-800 px-3 py-2 rounded-lg whitespace-nowrap flex items-center text-[12px] hover:bg-pink-200 transition-all">
                     <span class="material-icons mr-1">store</span> Find Store
                 </button>
-                <button class="bg-yellow-100 text-yellow-800 px-3 py-2 rounded whitespace-nowrap flex items-center">
+                <button
+                    class="bg-yellow-100 text-yellow-800 px-3 py-2 rounded-lg whitespace-nowrap flex items-center text-[12px] hover:bg-yellow-200 transition-all">
                     <span class="material-icons mr-1">emoji_events</span> POP!
                 </button>
-                <button class="bg-purple-100 text-purple-800 px-3 py-2 rounded whitespace-nowrap flex items-center">
+                <button
+                    class="bg-purple-100 text-purple-800 px-3 py-2 rounded-lg whitespace-nowrap flex items-center text-[12px] hover:bg-purple-200 transition-all">
                     <span class="material-icons mr-1">home</span> Try at Home
                 </button>
-                <button class="bg-green-100 text-green-800 px-3 py-2 rounded whitespace-nowrap flex items-center">
+                <button
+                    class="bg-green-100 text-green-800 px-3 py-2 rounded-lg whitespace-nowrap flex items-center text-[12px] hover:bg-green-200 transition-all">
                     <span class="material-icons mr-1">video_call</span> Video Call
                 </button>
-                <button class="bg-pink-100 text-pink-800 px-3 py-2 rounded whitespace-nowrap flex items-center">
+                <button
+                    class="bg-pink-100 text-pink-800 px-3 py-2 rounded-lg whitespace-nowrap flex items-center text-[12px] hover:bg-pink-200 transition-all">
                     <span class="material-icons mr-1">store</span> Find Store
                 </button>
-                <button class="bg-yellow-100 text-yellow-800 px-3 py-2 rounded whitespace-nowrap flex items-center">
+                <button
+                    class="bg-yellow-100 text-yellow-800 px-3 py-2 rounded-lg whitespace-nowrap flex items-center text-[12px] hover:bg-yellow-200 transition-all">
                     <span class="material-icons mr-1">emoji_events</span> POP!
                 </button>
             </div>
 
             <!-- Menu Items Section -->
-            <div class="space-y-2">
-                <div class="menu-item flex items-center space-x-4">
-                    <img src="{{ asset('asset/img/best2.webp') }}"
-                        class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
+            <div class="space-y-3">
+                <!-- Recently Viewed -->
+                <div class="menu-item flex items-center gap-4">
+                    <div class="w-20 h-20 flex-shrink-0 overflow-hidden rounded-full border border-gray-300">
+                        <img src="{{ asset('asset/img/best2.webp') }}" alt="Recently Viewed"
+                            class="w-full h-full object-cover" />
+                    </div>
                     <div
-                        class="bg-white leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">
-                        <span class="text-sm sm:text-xs xs:text-[12px] block">Your Recently Viewed</span>
-                        <p class="text-sm sm:text-xs xs:text-[10px]">Have a look at your Recently viewed section</p>
+                        class="flex-1 bg-white text-[#4f3267] text-sm leading-snug border border-gray-300 rounded-lg p-4 shadow-md">
+                        <span class="block font-medium">Your Recently Viewed</span>
+                        <p class="mt-1 text-gray-600 text-xs">Have a look at your Recently viewed section</p>
                     </div>
                 </div>
-                <a href="{{ route('jewellery.earrings') }}">
-                    <div class="menu-item flex items-center space-x-4">
+
+                <!-- Earrings -->
+                <a href="{{ route('jewellery.earrings') }}" class="menu-item flex items-center gap-4">
+                    <div class="w-20 h-20 flex-shrink-0 overflow-hidden rounded-full border border-gray-300">
                         <img src="{{ asset('asset/img/best2.webp') }}" alt="Earrings"
-                            class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
-                        <span
-                            class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Earrings</span>
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <div
+                        class="flex-1 bg-white text-[#4f3267] text-sm leading-snug border border-gray-300 rounded-lg p-4 shadow-md">
+                        Earrings
                     </div>
                 </a>
-                <a href="{{ route('jewellery.rings') }}">
-                    <div class="menu-item flex items-center space-x-4">
+
+                <!-- Rings -->
+                <a href="{{ route('jewellery.rings') }}" class="menu-item flex items-center gap-4">
+                    <div class="w-20 h-20 flex-shrink-0 overflow-hidden rounded-full border border-gray-300">
                         <img src="{{ asset('asset/img/best2.webp') }}" alt="Rings"
-                            class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
-                        <span
-                            class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Rings</span>
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <div
+                        class="flex-1 bg-white text-[#4f3267] text-sm leading-snug border border-gray-300 rounded-lg p-4 shadow-md">
+                        Rings
                     </div>
                 </a>
-                <a href="{{ route('jewellery.bracelets-bangles') }}">
-                    <div class="menu-item flex items-center space-x-4">
+
+                <!-- Bracelets & Bangles -->
+                <a href="{{ route('jewellery.bracelets-bangles') }}" class="menu-item flex items-center gap-4">
+                    <div class="w-20 h-20 flex-shrink-0 overflow-hidden rounded-full border border-gray-300">
                         <img src="{{ asset('asset/img/best2.webp') }}" alt="Bracelets & Bangles"
-                            class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
-                        <span
-                            class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Bracelets
-                            & Bangles</span>
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <div
+                        class="flex-1 bg-white text-[#4f3267] text-sm leading-snug border border-gray-300 rounded-lg p-4 shadow-md">
+                        Bracelets & Bangles
                     </div>
                 </a>
-                <a href="{{ route('jewellery.solitaires') }}">
-                    <div class="menu-item flex items-center space-x-4">
+
+                <!-- Solitaires -->
+                <a href="{{ route('jewellery.solitaires') }}" class="menu-item flex items-center gap-4">
+                    <div class="w-20 h-20 flex-shrink-0 overflow-hidden rounded-full border border-gray-300">
                         <img src="{{ asset('asset/img/best2.webp') }}" alt="Solitaires"
-                            class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
-                        <span
-                            class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Solitaires</span>
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <div
+                        class="flex-1 bg-white text-[#4f3267] text-sm leading-snug border border-gray-300 rounded-lg p-4 shadow-md">
+                        Solitaires
                     </div>
                 </a>
 
-                <a href="{{ route('jewellery.mangalsutras') }}">
-                    <div class="menu-item flex items-center space-x-4">
+                <!-- Mangalsutras -->
+                <a href="{{ route('jewellery.mangalsutras') }}" class="menu-item flex items-center gap-4">
+                    <div class="w-20 h-20 flex-shrink-0 overflow-hidden rounded-full border border-gray-300">
                         <img src="{{ asset('asset/img/best2.webp') }}" alt="Mangalsutras"
-                            class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
-                        <span
-                            class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Mangalsutras</span>
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <div
+                        class="flex-1 bg-white text-[#4f3267] text-sm leading-snug border border-gray-300 rounded-lg p-4 shadow-md">
+                        Mangalsutras
                     </div>
                 </a>
 
-                <a href="{{ route('jewellery.necklaces') }}">
-                    <div class="menu-item flex items-center space-x-4">
+                <!-- Necklaces -->
+                <a href="{{ route('jewellery.necklaces') }}" class="menu-item flex items-center gap-4">
+                    <div class="w-20 h-20 flex-shrink-0 overflow-hidden rounded-full border border-gray-300">
                         <img src="{{ asset('asset/img/best2.webp') }}" alt="Necklaces"
-                            class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
-                        <span
-                            class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Necklaces</span>
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <div
+                        class="flex-1 bg-white text-[#4f3267] text-sm leading-snug border border-gray-300 rounded-lg p-4 shadow-md">
+                        Necklaces
                     </div>
                 </a>
 
-                <div class="menu-item flex items-center space-x-4">
-                    <img src="{{ asset('asset/img/best2.webp') }}" alt="Men's Jewellery"
-                        class="rounded-[30px] object-cover w-16 h-16 xs:w-12 xs:h-12" />
-                    <span
-                        class="bg-white text-[1.3rem] leading-[18px] pl-4 border-b-0 text-[#4f3267] text-left border border-gray-300 rounded-[12px] px-4 py-4 w-full shadow-lg block">Men's
-                        Jewellery</span>
+                <!-- Men's Jewellery -->
+                <div class="menu-item flex items-center gap-4">
+                    <div class="w-20 h-20 flex-shrink-0 overflow-hidden rounded-full border border-gray-300">
+                        <img src="{{ asset('asset/img/best2.webp') }}" alt="Men's Jewellery"
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <div
+                        class="flex-1 bg-white text-[#4f3267] text-sm leading-snug border border-gray-300 rounded-lg p-4 shadow-md">
+                        Men's Jewellery
+                    </div>
                 </div>
             </div>
-
-
 
             <!-- Image Cards Section -->
-            <div class="grid grid-cols-2 gap-4 mb-6 mt-4">
-                <div class="relative rounded-[14px] overflow-hidden">
-                    <img src="{{ asset('asset/img/best10.webp') }}" alt="Fast Delivery" class="w-full h-auto" />
-                    <div class="absolute inset-0 flex items-end justify-start bg-black bg-opacity-50 text-white p-4">
-                        <p class="text-2xl font-semibold">Fast Delivery</p>
+            <div class="grid grid-cols-2 gap-3 mb-6 mt-0">
+                <!-- Card 1 -->
+                <div
+                    class="relative rounded-xl overflow-hidden shadow-md hover:scale-[1.02] transition-transform duration-200 ease-in-out h-40">
+                    <img src="{{ asset('asset/img/best10.webp') }}" alt="Fast Delivery"
+                        class="absolute inset-0 w-full h-full object-cover" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent">
+                        <div class="absolute bottom-3 left-3 text-white">
+                            <p class="text-lg font-bold leading-tight">Fast Delivery</p>
+                        </div>
                     </div>
                 </div>
-                <div class="relative rounded-[14px] overflow-hidden">
-                    <img src="{{ asset('asset/img/best1.webp') }}" alt="New In" class="w-full h-auto" />
-                    <div class="absolute inset-0 flex items-end justify-start bg-black bg-opacity-50 text-white p-4">
-                        <p class="text-2xl font-semibold">New In</p>
+
+                <!-- Card 2 -->
+                <div
+                    class="relative rounded-xl overflow-hidden shadow-md hover:scale-[1.02] transition-transform duration-200 ease-in-out h-40">
+                    <img src="{{ asset('asset/img/best1.webp') }}" alt="New In"
+                        class="absolute inset-0 w-full h-full object-cover" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent">
+                        <div class="absolute bottom-3 left-3 text-white">
+                            <p class="text-lg font-bold leading-tight">New In</p>
+                        </div>
                     </div>
                 </div>
-                <div class="relative rounded-[14px] overflow-hidden">
-                    <img src="{{ asset('asset/img/best3.webp') }}" alt="Necklaces" class="w-full h-auto" />
-                    <div class="absolute inset-0 flex items-end justify-start bg-black bg-opacity-50 text-white p-4">
-                        <p class="text-2xl font-semibold">Necklaces</p>
+
+                <!-- Card 3 -->
+                <div
+                    class="relative rounded-xl overflow-hidden shadow-md hover:scale-[1.02] transition-transform duration-200 ease-in-out h-40">
+                    <img src="{{ asset('asset/img/best3.webp') }}" alt="Necklaces"
+                        class="absolute inset-0 w-full h-full object-cover" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent">
+                        <div class="absolute bottom-3 left-3 text-white">
+                            <p class="text-lg font-bold leading-tight">Necklaces</p>
+                        </div>
                     </div>
                 </div>
-                <div class="relative rounded-[14px] overflow-hidden">
-                    <img src="{{ asset('asset/img/best2.webp') }}" alt="For Kids" class="w-full h-auto" />
-                    <div class="absolute inset-0 flex items-end justify-start bg-black bg-opacity-50 text-white p-4">
-                        <p class="text-2xl font-semibold">For Kids</p>
+
+                <!-- Card 4 -->
+                <div
+                    class="relative rounded-xl overflow-hidden shadow-md hover:scale-[1.02] transition-transform duration-200 ease-in-out h-40">
+                    <img src="{{ asset('asset/img/best2.webp') }}" alt="For Kids"
+                        class="absolute inset-0 w-full h-full object-cover" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent">
+                        <div class="absolute bottom-3 left-3 text-white">
+                            <p class="text-lg font-bold leading-tight">For Kids</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="flex space-x-4 p-4">
+            <!-- Pep & Gold Section -->
+            <div class="flex space-x-4">
                 <!-- First Box -->
-                <div class="border border-purple-300 rounded-lg p-4 w-1/2 hover:shadow-lg transition-shadow">
-                    <div class="text-pink-500 font-semibold">PEP!</div>
-                    <div class="mt-2 font-bold">
+                <div
+                    class="flex-1 border border-purple-300 rounded-lg p-4 shadow-sm bg-white hover:shadow-md transition-shadow duration-200 ease-in-out">
+                    <div class="text-pink-500 font-semibold text-[14px]">PEP!</div>
+                    <div class="mt-2 text-gray-800 text-[10px] font-bold leading-snug">
                         Pay 9 instalments, and the 10th is on us!
                     </div>
-                    <a href="#" class="mt-2 text-pink-500 underline">Know more</a>
+                    <a href="#"
+                        class="mt-3 inline-block text-pink-500 text-[12px] underline hover:text-pink-600">
+                        Know more
+                    </a>
                 </div>
 
                 <!-- Second Box -->
-                <div class="border border-purple-300 rounded-lg p-4 w-1/2 hover:shadow-lg transition-shadow">
-                    <div class="text-pink-500 font-semibold">Gold</div>
-                    <div class="mt-2 font-bold">
-                        Buy Digital Gold An easier way of investing in pure 24Kt gold
+                <div
+                    class="flex-1 border border-purple-300 rounded-lg p-4 shadow-sm bg-white hover:shadow-md transition-shadow duration-200 ease-in-out">
+                    <div class="text-pink-500 font-semibold text-[14px]">Gold</div>
+                    <div class="mt-2 text-gray-800 text-[10px] font-bold leading-snug">
+                        Buy Digital Gold — an easier way of investing in pure 24Kt gold.
                     </div>
-                    <a href="#" class="mt-2 text-pink-500 underline">Learn more</a>
+                    <a href="#"
+                        class="mt-3 inline-block text-pink-500 text-[12px] underline hover:text-pink-600">
+                        Learn more
+                    </a>
                 </div>
             </div>
 
+            <!-- OUR STORY Section -->
             <div class="bg-[#f8f2f7] py-10 px-6">
                 <!-- Links Section -->
                 <div class="flex flex-col items-start space-y-2 text-xs text-gray-700 mb-6">
@@ -231,14 +286,11 @@
 
             </div>
 
-
         </div>
     </div>
 
-
-
     <!-- Top Banner -->
-    <div class="bg-primary text-white fixed top-0 z-50 text-sm py-4 w-full">
+    <div class="bg-primary text-white fixed top-0 z-50 text-xs md:text-sm py-4 w-full">
         <div id="first-text" class="mt-1 absolute inset-0 text-center transition-opacity duration-500">
             CaratLane - A Tanishq Partnership
         </div>
@@ -247,18 +299,13 @@
         </div>
     </div>
 
-
-
-
-
     <!-- Main Header -->
     <header class="bg-white shadow-md fixed w-full top-7 z-50">
 
         <div class="container mx-auto flex items-center justify-between py-4">
 
-
-
-            <div class="flex flex-col w-full px-4 md:hidden"> <!-- Hide on medium and larger screens -->
+            <!-- Mobile View Header -->
+            <div class="flex flex-col w-full px-4 md:hidden">
                 <div class="flex items-center justify-between w-full">
                     <div class="flex items-center">
                         <!-- Mobile Toggle Button -->
@@ -271,10 +318,11 @@
                             <span class="material-icons">close</span>
                         </button>
 
-
                         <!-- Company Logo -->
-                        <img src="{{ asset('asset/img/logo.png') }}" alt="Company Logo"
-                            class="h-8 ml-3 block lg:hidden" />
+                        <a href="{{ route('home') }}">
+                            <img src="{{ asset('asset/img/logo.png') }}" alt="Company Logo"
+                                class="h-8 ml-3 block lg:hidden" />
+                        </a>
 
                         <!-- Delivery & PinCode Section -->
                         <div class="flex flex-col ml-4">
@@ -282,6 +330,7 @@
                                 Stores</a>
                             <a href="#" class="text-pink-600 hover:text-purple-600 text-xs">Enter PinCode</a>
                         </div>
+
                     </div>
 
                     <!-- Right Icons -->
@@ -307,7 +356,6 @@
                         <span class="material-icons">search</span>
                     </button>
                 </div>
-
 
                 {{-- <div class="scroll-selection w-full max-w-3xl mx-auto mt-4">
                     <div class="flex overflow-x-auto pb-2 space-x-4">
@@ -341,11 +389,10 @@
                         </div>
                     </div>
                 </div> --}}
-
             </div>
 
 
-
+            <!-- Web View Header Start -->
 
             <!-- Logo -->
             <a href="{{ route('home') }}">
@@ -355,7 +402,10 @@
             </a>
             <!-- Navigation -->
             <nav class="hidden lg:flex space-x-6">
+
+                <!-- Ring Section -->
                 <div class="hoverable relative">
+
                     <a href="{{ route('jewellery.rings') }}"
                         class="relative text-gray-600 hover:text-purple-600 text-sm font-semibold py-2 inline-flex items-center group">
                         <span>Ring</span>
@@ -467,42 +517,55 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Earring Section -->
                 <a href="{{ route('jewellery.earrings') }}"
                     class="relative text-gray-600 hover:text-purple-600 text-sm font-semibold py-2 px-2 inline-flex items-center group">
                     <span>Earrings</span>
                     <span
                         class="absolute bottom-[-20px] left-0 w-full h-[4px] bg-gradient-to-r from-pink-600 to-purple-600 transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
                 </a>
+
+                <!-- Bracelets Section -->
                 <a href="{{ route('jewellery.bracelets-bangles') }}"
                     class="relative text-gray-600 hover:text-purple-600 text-sm font-semibold py-2 inline-flex items-center group">
                     <span>Bracelets & Bangles</span>
                     <span
                         class="absolute bottom-[-20px] left-0 w-full h-[4px] bg-gradient-to-r from-pink-600 to-purple-600 transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
                 </a>
+
+                <!-- Solitaires Section -->
                 <a href="{{ route('jewellery.solitaires') }}"
                     class="relative text-gray-600 hover:text-purple-600 text-sm font-semibold py-2 inline-flex items-center group">
                     <span>Solitaires</span>
                     <span
                         class="absolute bottom-[-20px] left-0 w-full h-[4px] bg-gradient-to-r from-pink-600 to-purple-600 transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
                 </a>
+
+                <!-- Mangalsutras Section -->
                 <a href="{{ route('jewellery.mangalsutras') }}"
                     class="relative text-gray-600 hover:text-purple-600 text-sm font-semibold py-2 inline-flex items-center group">
                     <span>Mangalsutras</span>
                     <span
                         class="absolute bottom-[-20px] left-0 w-full h-[4px] bg-gradient-to-r from-pink-600 to-purple-600 transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
                 </a>
+
+                <!-- Necklaces Section -->
                 <a href="{{ route('jewellery.necklaces') }}"
                     class="relative text-gray-600 hover:text-purple-600 text-sm font-semibold py-2 inline-flex items-center group">
                     <span>Necklaces</span>
                     <span
                         class="absolute bottom-[-20px] left-0 w-full h-[4px] bg-gradient-to-r from-pink-600 to-purple-600 transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
                 </a>
+
+                <!-- More Jewellery Section -->
                 <a href="{{ route('morejewellery') }}"
                     class="relative text-gray-600 hover:text-purple-600 text-sm font-semibold py-2 inline-flex items-center group">
                     <span>More Jewellery</span>
                     <span
                         class="absolute bottom-[-20px] left-0 w-full h-[4px] bg-gradient-to-r from-pink-600 to-purple-600 transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
                 </a>
+
             </nav>
 
             <!-- Search Bar -->
@@ -520,7 +583,6 @@
                     <a href="#" class="text-pink-600 hover:text-purple-600 text-xs">Enter PinCode</a>
                 </div>
             </div>
-
 
             <!-- Right Icons -->
             <div class="flex items-center space-x-4 mr-4 md:mr-0 hidden md:flex">
@@ -588,7 +650,9 @@
             </div>
 
         </div>
+
     </header>
+
 </div>
 
 

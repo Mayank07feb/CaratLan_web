@@ -41,9 +41,9 @@
         .swiper-button-next,
         .swiper-button-prev {
             width: 40px;
-            /* Adjust the width as needed */
+            /* Adjust the width */
             height: 40px;
-            /* Adjust the height as needed */
+            /* Adjust the height */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -51,13 +51,29 @@
             background-color: white;
             border-radius: 50%;
             /* Makes it a circle */
-            font-size: 0.875rem;
-            /* Equivalent to text-sm */
+            font-size: 1.25rem;
+            /* Equivalent to text-lg for better icon size */
             color: #1D4ED8;
             /* Use your primary color */
-            transition: background-color 0.2s;
+            transition: background-color 0.2s, box-shadow 0.2s;
             cursor: pointer;
             /* Changes cursor on hover */
+        }
+
+        /* Arrow Icons for Next and Prev buttons */
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-family: "Material Icons";
+            /* Use Material Icons or any icon set you prefer */
+            font-weight: normal;
+            content: "chevron_right";
+            /* Use the chevron icon for 'next' */
+        }
+
+        /* Change the icon for the 'previous' button */
+        .swiper-button-prev::after {
+            content: "chevron_left";
+            /* Use the chevron icon for 'previous' */
         }
 
         /* Hover effect */
@@ -65,6 +81,34 @@
         .swiper-button-prev:hover {
             background-color: rgba(255, 255, 255, 0.9);
             /* Adjust for hover opacity */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            /* Slightly stronger shadow on hover */
+        }
+
+        /* Focus effect (optional for accessibility) */
+        .swiper-button-next:focus,
+        .swiper-button-prev:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.3);
+            /* Blue outline for focus state */
+        }
+
+        /* Default: 2 slides per view on larger screens */
+        .swiper-container {
+            width: 100%;
+        }
+
+        /* For mobile devices (screen width <= 640px), show only 1 slide */
+        @media (max-width: 640px) {
+            .swiper-wrapper {
+                display: flex !important;
+                /* Ensure the wrapper is flex to work with single slide */
+            }
+
+            .swiper-slide {
+                flex: 0 0 100% !important;
+                /* Make each slide take up 100% of the container */
+            }
         }
     </style>
 
@@ -138,7 +182,7 @@
         </div>
     </div> --}}
 
-    <main class="mt-14 md:mt-24 sm:mt-14">
+    <main class="mt-40 sm:mt-40 md:mt-28 px-4 md:px-0">
         <div class="bg-white">
             <!-- Breadcrumb Navigation -->
             <nav class="p-4 border-b">
@@ -158,6 +202,7 @@
 
             <section class="container mx-auto py-6">
                 <div class="grid md:grid-cols-10 gap-8">
+
                     <!-- Left Column: Product Images (60% width) -->
                     <div class="md:col-span-6 space-y-4">
                         <!-- Main Product Image -->
@@ -181,9 +226,9 @@
                         </div>
 
                         <!-- Similar Products -->
-                        <div class="flex p-4 rounded-lg space-x-4">
+                        <div class="flex flex-col md:flex-row p-4 rounded-lg space-y-4 md:space-y-0 md:space-x-4">
                             <!-- Left Product Image -->
-                            <div class="w-1/2">
+                            <div class="w-full md:w-1/2">
                                 <div class="product-image rounded-lg relative">
                                     <img src="{{ asset('asset/img/testing.png') }}" alt="Main Product"
                                         class="w-full object-contain" />
@@ -194,8 +239,8 @@
                             </div>
 
                             <!-- Right Product Image -->
-                            <div class="similar-products w-1/2 p-4 rounded-lg">
-                                <div class="grid grid-cols-2 gap-4">
+                            <div class="similar-products w-full md:w-1/2 p-4 rounded-lg">
+                                <div class="grid grid-cols-2 sm:grid-cols-2 gap-4">
                                     <div class="bg-white p-4 rounded-lg relative custom-shadow">
                                         <span
                                             class="absolute top-2 left-2 bg-purple-700 text-white text-xs px-2 py-1 rounded">32%
@@ -234,6 +279,7 @@
                                 </div>
                             </div>
                         </div>
+
 
 
                         <div class="flex flex-col items-center">
@@ -577,6 +623,7 @@
 
 
                     </div>
+
                 </div>
 
 
@@ -587,7 +634,7 @@
                             <!-- Slide 1 -->
                             <div class="swiper-slide">
                                 <div
-                                    class="bg-gradient-to-r from-purple-800 to-purple-500 rounded-xl p-4 text-white flex justify-between items-center">
+                                    class="bg-gradient-to-r from-purple-800 to-purple-500 rounded-xl p-4 text-white flex justify-between items-center h-[300px] sm:h-auto">
                                     <div>
                                         <h3 class="text-xs font-semibold uppercase">#KHULKEKAROEXPRESS WITH</h3>
                                         <h2 class="text-2xl font-bold mt-1">100% Off on Making Charges</h2>
@@ -601,7 +648,8 @@
 
                             <!-- Slide 2 -->
                             <div class="swiper-slide">
-                                <div class="bg-yellow-500 rounded-xl p-4 text-white flex justify-between items-center">
+                                <div
+                                    class="bg-yellow-500 rounded-xl p-4 text-white flex justify-between items-center h-[300px] sm:h-auto">
                                     <div>
                                         <h3 class="text-xs font-semibold uppercase">Gold Exchange Program</h3>
                                         <h2 class="text-2xl font-bold mt-1">0% Deduction on your gold exchange value</h2>
@@ -618,7 +666,8 @@
 
                             <!-- Additional Slides if needed -->
                             <div class="swiper-slide">
-                                <div class="bg-red-500 rounded-xl p-4 text-white flex justify-between items-center">
+                                <div
+                                    class="bg-red-500 rounded-xl p-4 text-white flex justify-between items-center h-[300px] sm:h-auto">
                                     <div>
                                         <h3 class="text-xs font-semibold uppercase">Offer 3 Title</h3>
                                         <h2 class="text-2xl font-bold mt-1">Offer 3 Description</h2>
@@ -631,7 +680,8 @@
                             </div>
 
                             <div class="swiper-slide">
-                                <div class="bg-green-500 rounded-xl p-4 text-white flex justify-between items-center">
+                                <div
+                                    class="bg-green-500 rounded-xl p-4 text-white flex justify-between items-center h-[300px] sm:h-auto">
                                     <div>
                                         <h3 class="text-xs font-semibold uppercase">Offer 4 Title</h3>
                                         <h2 class="text-2xl font-bold mt-1">Offer 4 Description</h2>
@@ -653,6 +703,7 @@
                     </div>
                 </div>
 
+
                 <!-- Carousel with images -->
                 <div class="p-4">
                     <div class="flex flex-col md:flex-row gap-6">
@@ -661,16 +712,23 @@
                             <h2 class="text-center text-purple-800 font-semibold mb-2">More 18K Rings</h2>
                             <div
                                 class="w-full max-w-xs md:w-64 p-4 rounded-lg bg-blue-50 flex items-center gap-2 overflow-hidden">
+                                <!-- Left Arrow Icon -->
+                                <div class="flex items-center justify-center w-8 h-8 rounded-full bg-white">
+                                    <span class="text-xl text-gray-500">&#8249;</span>
+                                </div>
                                 <!-- Carousel with images -->
                                 <div class="flex overflow-x-auto space-x-2">
                                     <div class="w-16 h-16 rounded-lg flex items-center justify-center bg-white">
-                                        <img src="path/to/ring1.jpg" alt="Ring 1" class="w-12 h-12" />
+                                        <img src="{{ asset('asset/img/ring1.jpg') }}" alt="Ring 1"
+                                            class="w-12 h-12" />
                                     </div>
                                     <div class="w-16 h-16 rounded-lg flex items-center justify-center bg-white">
-                                        <img src="path/to/ring2.jpg" alt="Ring 2" class="w-12 h-12" />
+                                        <img src="{{ asset('asset/img/ring1.jpg') }}" alt="Ring 2"
+                                            class="w-12 h-12" />
                                     </div>
                                     <div class="w-16 h-16 rounded-lg flex items-center justify-center bg-white">
-                                        <img src="path/to/ring3.jpg" alt="Ring 3" class="w-12 h-12" />
+                                        <img src="{{ asset('asset/img/ring1.jpg') }}" alt="Ring 3"
+                                            class="w-12 h-12" />
                                     </div>
                                 </div>
                                 <!-- Arrow icon -->
@@ -685,16 +743,23 @@
                             <h2 class="text-center text-purple-800 font-semibold mb-2">More Yellow Gold Rings</h2>
                             <div
                                 class="w-full max-w-xs md:w-64 p-4 rounded-lg bg-blue-50 flex items-center gap-2 overflow-hidden">
+                                <!-- Left Arrow Icon -->
+                                <div class="flex items-center justify-center w-8 h-8 rounded-full bg-white">
+                                    <span class="text-xl text-gray-500">&#8249;</span>
+                                </div>
                                 <!-- Carousel with images -->
                                 <div class="flex overflow-x-auto space-x-2">
                                     <div class="w-16 h-16 rounded-lg flex items-center justify-center bg-white">
-                                        <img src="path/to/ring4.jpg" alt="Ring 4" class="w-12 h-12" />
+                                        <img src="{{ asset('asset/img/ring1.jpg') }}" alt="Ring 4"
+                                            class="w-12 h-12" />
                                     </div>
                                     <div class="w-16 h-16 rounded-lg flex items-center justify-center bg-white">
-                                        <img src="path/to/ring5.jpg" alt="Ring 5" class="w-12 h-12" />
+                                        <img src="{{ asset('asset/img/ring1.jpg') }}" alt="Ring 5"
+                                            class="w-12 h-12" />
                                     </div>
                                     <div class="w-16 h-16 rounded-lg flex items-center justify-center bg-white">
-                                        <img src="path/to/ring6.jpg" alt="Ring 6" class="w-12 h-12" />
+                                        <img src="{{ asset('asset/img/ring1.jpg') }}" alt="Ring 6"
+                                            class="w-12 h-12" />
                                     </div>
                                 </div>
                                 <!-- Arrow icon -->
@@ -792,7 +857,6 @@
                     </button>
                 </div>
 
-
             </section>
 
         </div>
@@ -801,7 +865,7 @@
         <div class="container mx-auto px-4 py-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 <!-- Map Section -->
-                <div class="relative bg-gray-100 rounded-lg overflow-hidden h-[520px]">
+                <div class="relative bg-gray-100 rounded-lg overflow-hidden h-[520px] mb-8 lg:mb-0">
                     <!-- Embedded Map -->
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.88485785327!2d-74.080833!3d40.712776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c250b0899b6f2f%3A0x3d2f4ef8d8e2b089!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1667632277813!5m2!1sen!2sus"
@@ -815,7 +879,6 @@
                             <div class="w-2 h-2 bg-white rounded-full"></div>
                         </div>
                     </div>
-                    <!-- Additional markers positioned exactly like the image -->
                     <div class="absolute top-1/3 right-1/4">
                         <div class="w-5 h-5 bg-[#8C3FDB] rounded-full flex items-center justify-center">
                             <div class="w-2 h-2 bg-white rounded-full"></div>
@@ -833,21 +896,20 @@
                     </div>
                 </div>
 
-
                 <!-- Search Section -->
-                <div class="flex flex-col items-center space-y-6 px-24 mt-28 pt-4">
+                <div class="flex flex-col items-center space-y-6 px-4 mt-4 lg:mt-40">
                     <div class="text-center">
                         <h2 class="text-2xl font-medium mb-3">
                             <span class="text-primary">Find</span> in Store near you!
                         </h2>
                         <p class="text-sm text-gray-600 leading-relaxed">
                             Have to see it to believe it? Check here if the design is available in the store or not. You can
-                            also book an appointment
+                            also book an appointment.
                         </p>
                     </div>
 
                     <!-- Search Input -->
-                    <div class="w-[350px]">
+                    <div class="w-full max-w-md">
                         <div class="relative">
                             <div class="absolute inset-y-0 left-4 flex items-center">
                                 <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
@@ -865,12 +927,13 @@
 
                     <!-- View Stores Button -->
                     <button
-                        class="w-[300px] bg-secondary-gradient text-white py-3.5 px-6 rounded-[14px] hover:bg-[#7C37C3] transition duration-200 text-sm font-medium">
+                        class="w-full max-w-md bg-secondary-gradient text-white py-3.5 px-6 rounded-[14px] hover:bg-[#7C37C3] transition duration-200 text-sm font-medium">
                         VIEW STORES & DESIGNS
                     </button>
                 </div>
             </div>
         </div>
+
 
         <!-- Download the CaratLane App -->
         <div class="container mx-auto px-4 py-4">
@@ -916,7 +979,7 @@
             </div>
         </div>
 
-        <!--Enhance Your Gifting Experience!-->
+        <!-- Enhance Your Gifting Experience! -->
         <div class="bg-[#C6196B] px-6 py-12 relative overflow-hidden">
             <!-- Decorative dots -->
             <div class="absolute top-0 right-0">
@@ -930,18 +993,19 @@
 
             <!-- Header Section -->
             <div class="max-w-7xl mx-auto mb-8">
-                <div class="flex items-start justify-between">
-                    <div class="flex items-start gap-4">
-                        <img src="/api/placeholder/80/80" alt="Gift boxes" class="w-20 h-20 object-contain" />
+                <div class="flex items-start justify-between flex-wrap gap-4">
+                    <div class="flex items-start gap-4 w-full md:w-auto">
+                        <img src="{{ asset('asset/img/ring1.jpg') }}" alt="Gift boxes"
+                            class="w-20 h-20 object-contain" />
                         <div>
                             <h2 class="text-2xl font-medium text-white mb-1">Enhance Your Gifting Experience!</h2>
-                            <p class="text-pink-100">
+                            <p class="text-pink-100 text-sm md:text-base">
                                 Must-Try Features & Add-ons<br />
                                 at Checkout
                             </p>
                         </div>
                     </div>
-                    <div class="bg-black text-white px-4 py-2 rounded-full text-sm">
+                    <div class="bg-black text-white px-4 py-2 rounded-full text-sm md:text-base mt-4 md:mt-0">
                         Exclusively on iOS & Android App!
                     </div>
                 </div>
@@ -950,38 +1014,39 @@
             <!-- Features Grid -->
             <div class="max-w-7xl mx-auto">
                 <div class="bg-[#D42D7D] rounded-2xl p-8">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Grid layout for smaller screens (stack items vertically) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                         <!-- Feature 1 -->
-                        <div class="flex items-start gap-4">
+                        <div class="flex items-start gap-4 flex-col md:flex-row">
                             <div class="flex-1">
                                 <h3 class="text-white font-medium mb-2">Add a special video message</h3>
                                 <p class="text-pink-100 text-sm">Attach a video in any CaratLane Ring & make your gift
                                     extra special</p>
                             </div>
-                            <img src="/api/placeholder/120/120" alt="Video message"
-                                class="w-24 h-24 rounded-lg object-cover" />
+                            <img src="{{ asset('asset/img/ring1.jpg') }}" alt="Video message"
+                                class="w-24 h-24 rounded-lg object-cover mt-4 md:mt-0" />
                         </div>
 
                         <!-- Feature 2 -->
-                        <div class="flex items-start gap-4">
+                        <div class="flex items-start gap-4 flex-col md:flex-row">
                             <div class="flex-1">
                                 <h3 class="text-white font-medium mb-2">Choose the perfect wrapping paper</h3>
                                 <p class="text-pink-100 text-sm">Select from a variety of packaging options for their
                                     stunning diamond gift</p>
                             </div>
-                            <img src="/api/placeholder/120/120" alt="Gift wrapping"
-                                class="w-24 h-24 rounded-lg object-cover" />
+                            <img src="{{ asset('asset/img/ring1.jpg') }}" alt="Gift wrapping"
+                                class="w-24 h-24 rounded-lg object-cover mt-4 md:mt-0" />
                         </div>
 
                         <!-- Feature 3 -->
-                        <div class="flex items-start gap-4">
+                        <div class="flex items-start gap-4 flex-col md:flex-row">
                             <div class="flex-1">
                                 <h3 class="text-white font-medium mb-2">Schedule your gift for the best surprise!</h3>
                                 <p class="text-pink-100 text-sm">Choose the exact date to surprise your loved one to make
                                     it uber special</p>
                             </div>
-                            <img src="/api/placeholder/120/120" alt="Schedule delivery"
-                                class="w-24 h-24 rounded-lg object-cover bg-[#FFE4B5]" />
+                            <img src="{{ asset('asset/img/ring1.jpg') }}" alt="Schedule delivery"
+                                class="w-24 h-24 rounded-lg object-cover mt-4 md:mt-0 bg-[#FFE4B5]" />
                         </div>
                     </div>
                 </div>
@@ -1120,7 +1185,8 @@
                 <div class="flex items-center gap-4">
                     <div class="relative w-20 h-20">
                         <!-- Gift Box Icon -->
-                        <img src="/api/placeholder/80/80" alt="Gift boxes" class="w-20 h-20 object-contain" />
+                        <img src="{{ asset('asset/img/ring1.jpg') }}" alt="Gift boxes"
+                            class="w-20 h-20 object-contain" />
                         <!-- Decorative sparkle -->
                         <div class="absolute -top-2 -right-2 w-6 h-6 text-yellow-400">
                             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -1384,19 +1450,24 @@
     <script>
         const container = document.getElementById("productContainer");
         const image = document.getElementById("zoomImage");
-    
+
         // Adjust image position on mouse movement within the container
         container.addEventListener("mousemove", (e) => {
-            const { left, top, width, height } = container.getBoundingClientRect();
-            
+            const {
+                left,
+                top,
+                width,
+                height
+            } = container.getBoundingClientRect();
+
             // Calculate the relative mouse position
             const x = ((e.clientX - left) / width) * 100;
             const y = ((e.clientY - top) / height) * 100;
-    
+
             // Set the transform origin based on the mouse position
             image.style.transformOrigin = `${x}% ${y}%`;
         });
-    
+
         // Reset transform origin when the mouse leaves the container
         container.addEventListener("mouseleave", () => {
             image.style.transformOrigin = "center center"; // Reset to center
@@ -1429,7 +1500,7 @@
     <script>
         const swiper = new Swiper('.mySwiper', {
             loop: true,
-            slidesPerView: 2, // Show two slides per view
+            slidesPerView: 2, // Default to 2 slides on larger screens
             spaceBetween: 30, // Space between slides
             pagination: {
                 el: '.swiper-pagination',
@@ -1442,14 +1513,13 @@
             autoplay: {
                 delay: 5000,
                 disableOnInteraction: false,
-            },
+            }
         });
-
 
         document.getElementById('show-more-btn').addEventListener('click', function() {
             const moreImages = document.getElementById('more-images');
 
-            // Toggle visibility
+            // Toggle visibility of additional content
             if (moreImages.classList.contains('hidden')) {
                 moreImages.classList.remove('hidden');
                 this.innerHTML = '<span class="material-symbols-outlined">arrow_drop_up</span> SHOW LESS';
