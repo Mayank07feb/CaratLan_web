@@ -262,19 +262,24 @@
 
                 <!-- Sign Up and Log In Buttons -->
                 <div class="flex justify-center space-x-4 mb-8">
-                    <div class="flex-1">
-                        <button
-                            class="w-full border border-pink-500 text-pink-500 text-sm px-8 py-2 rounded-[12px] hover:bg-pink-100 transition">
-                            Sign Up
-                        </button>
-                    </div>
-                    <div class="flex-1">
-                        <button
-                            class="w-full border border-pink-500 text-pink-500 text-sm px-8 py-2 rounded-[12px] hover:bg-pink-100 transition">
-                            Log In
-                        </button>
-                    </div>
+                    <a href="{{ route('login') }}">
+                        <div class="flex-1">
+                            <button
+                                class="w-full border border-pink-500 text-pink-500 text-sm px-8 py-2 rounded-[12px] hover:bg-pink-100 transition">
+                                Sign Up
+                            </button>
+                        </div>
+                    </a>
+                    <a href="{{ route('signup') }}">
+                        <div class="flex-1">
+                            <button
+                                class="w-full border border-pink-500 text-pink-500 text-sm px-8 py-2 rounded-[12px] hover:bg-pink-100 transition">
+                                Log In
+                            </button>
+                        </div>
+                    </a>
                 </div>
+
 
                 <!-- Find a Store Button -->
                 <div class="flex justify-center">
@@ -335,7 +340,8 @@
 
                     <!-- Right Icons -->
                     <div class="flex items-center space-x-4">
-                        <a href="{{ route('findstore') }}"> <span class="material-icons text-gray-600">store</span></a>
+                        <a href="{{ route('findstore') }}"> <span
+                                class="material-icons text-gray-600">store</span></a>
                         <a href="{{ route('wishlist') }}"> <span
                                 class="material-icons text-gray-600">favorite</span></a>
                         <div class="relative">
@@ -692,7 +698,7 @@
 </nav> --}}
 
 
-
+<!-- // Top Bar JS // -->
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const firstText = document.getElementById('first-text');
@@ -707,6 +713,7 @@
     });
 </script>
 
+<!-- // Account JS // -->
 <script>
     const profileIcon = document.getElementById('profile-icon');
     const profileModal = document.getElementById('profile-modal');
@@ -731,6 +738,7 @@
     });
 </script>
 
+<!-- // Mobile Toggle JS // -->
 <script>
     const mobileMenu = document.getElementById('mobile-menu');
     const openMenuBtn = document.getElementById('open-menu');

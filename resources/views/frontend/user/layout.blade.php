@@ -1,7 +1,7 @@
 @extends('components.main')
 
 @section('content')
-    <main class="mt-24 sm:mt-0 md:mt-12">
+    <main class="mt-40 sm:mt-40 md:mt-28">
         <div class="flex min-h-screen bg-gray-50">
             <!-- Sidebar -->
             <aside class="w-96 p-6 bg-secondary border-r flex-shrink-0 hidden lg:block"> 

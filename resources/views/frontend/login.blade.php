@@ -1,7 +1,7 @@
 @extends('components.main')
 
 @section('content')
-    <main class="mt-12">
+    <main class="mt-40 sm:mt-40 md:mt-12">
         <div class="flex justify-center items-center min-h-screen bg-white p-4">
             <div class="w-full max-w-xs space-y-6"> <!-- Adjusted spacing between sections -->
                 <!-- Fingerprint Icon -->
@@ -47,7 +47,7 @@
                     <!-- New Account Link -->
                     <div class="text-center mt-4">
                         <span class="text-gray-500 text-sm">New to CaratLane?</span>
-                        <a href="#" class="text-purple-600 text-sm ">Create an Account</a>
+                        <a href="{{ route('signup') }}" class="text-purple-600 text-sm ">Create an Account</a>
                     </div>
 
                     <!-- Terms and Privacy -->
