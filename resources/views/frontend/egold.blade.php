@@ -1,7 +1,7 @@
 @extends('components.main')
 @section('content')
 
-<main class="p-4 mt-24 overflow-x-auto">
+<main class="p-4 mt-44 overflow-x-auto">
     <div class="container mx-auto flex justify-between items-center">
         <div class="text-black text-lg font-bold">Gold Exchange</div>
         <!-- Navigation links -->

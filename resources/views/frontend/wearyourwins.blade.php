@@ -206,25 +206,28 @@
 </div> --}}
 
 
-<div class="flex justify-center m-4 w-full lg:mx-0">
+<div class="flex justify-center px-4 w-full lg:mx-0">
     <video 
         src="{{ asset('asset/img/peak-video-desktop.mp4') }}" 
         controls 
         autoplay 
         muted 
         loop 
-        class="rounded-lg max-w-full h-auto" 
-        playsinline>
-        Your browser does not support the video tag.
+        class="rounded-lg w-full  h-auto"
+        playsinline
+        preload="auto">
+        <!-- Fallback content for browsers that don't support the video tag -->
+        <p class="text-center text-gray-500">Your browser does not support the video tag. Please update your browser to view the content.</p>
     </video>
 </div>
+
 
 
 <!-- Slider Section -->
 <section class="bg-gray-50 py-12">
     <!-- Heading -->
     <div class="text-center mb-8 px-4">
-        <h1 class="text-4xl font-bold text-purple-500 mb-4">Discover Designs</h1>
+        <h1 class="lg:text-4xl text-2xl font-bold text-purple-500 mb-4">Discover Designs</h1>
         <p class="text-lg text-gray-700 italic">That stand for who you are</p>
     </div>
 

@@ -171,108 +171,105 @@
         <p class="text-lg text-white mb-6">from across the country!</p>
     </div>
 
-    <!-- Testimonials Slider -->
-    <div class="py-16">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="relative">
-                <!-- Horizontal Scrolling Container -->
-                <div class="flex space-x-6 overflow-x-auto py-4 scrollbar-hidden">
-                    <!-- Testimonial Cards -->
-                    <div class="relative w-72 h-96 rounded-lg overflow-hidden shadow-lg">
-                        <video src="{{asset('asset/img/Diksha.jpg')}}" alt="Testimonial 1" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <div class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center">
-                                    <i class="fas fa-play text-white text-2xl"></i>
-                                </div>
-                            </div>
-                        </video>
-                        <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center bg-gradient-to-t from-black to-transparent">
-                            <p>Diksha's postcards to daughter</p>
-                        </div>
-                    </div>
-    
-                    <div class="relative w-72 h-96 rounded-lg overflow-hidden shadow-lg">
-                        <img src="{{asset('asset/img/v2.mp4')}}" alt="Testimonial 2" class="w-full h-full object-cover">
+<!-- Testimonials Slider Section -->
+<div class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="relative">
+            <!-- Horizontal Scrolling Container -->
+            <div class="flex space-x-6 overflow-x-auto py-4 scrollbar-hidden">
+                <!-- Testimonial Cards -->
+                <div class="relative w-72 h-96 rounded-lg overflow-hidden shadow-lg">
+                    <video src="{{asset('asset/img/Diksha.mp4')}}" alt="Testimonial 1" class="w-full h-full object-cover" controls>
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center">
                                 <i class="fas fa-play text-white text-2xl"></i>
                             </div>
                         </div>
-                        <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center bg-gradient-to-t from-black to-transparent">
-                            <p>Neha's postcards to Sister</p>
-                        </div>
+                    </video>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center bg-gradient-to-t from-black to-transparent">
+                        <p>Diksha's postcards to daughter</p>
                     </div>
-    
-                    <div class="relative w-72 h-96 rounded-lg overflow-hidden shadow-lg">
-                        <img src="{{asset('asset/img/v3.mp4')}}" alt="Testimonial 3" class="w-full h-full object-cover">
+                </div>
+
+                <div class="relative w-72 h-96 rounded-lg overflow-hidden shadow-lg">
+                    <video src="{{asset('asset/videos/v2.mp4')}}" alt="Testimonial 2" class="w-full h-full object-cover" controls>
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center">
                                 <i class="fas fa-play text-white text-2xl"></i>
                             </div>
                         </div>
-                        <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center bg-gradient-to-t from-black to-transparent">
-                            <p>Agam's postcards to Sister</p>
+                    </video>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center bg-gradient-to-t from-black to-transparent">
+                        <p>Neha's postcards to Sister</p>
+                    </div>
+                </div>
+
+                <div class="relative w-72 h-96 rounded-lg overflow-hidden shadow-lg">
+                    <video src="{{asset('asset/videos/v3.mp4')}}" alt="Testimonial 3" class="w-full h-full object-cover" controls>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center">
+                                <i class="fas fa-play text-white text-2xl"></i>
+                            </div>
                         </div>
+                    </video>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center bg-gradient-to-t from-black to-transparent">
+                        <p>Agam's postcards to Sister</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+</div>
 
-    <!-- Postcards Section 2 -->
+<!-- Postcards Section 2 -->
 <div class="py-16">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="relative">
-                <div class="flex space-x-4 overflow-x-auto">
-                    <!-- Testimonial Cards 2 -->
-                    <div class="relative w-72 h-96 rounded-lg overflow-hidden">
-                        <video src="{{asset('asset/videos/cart.mp4')}}" alt="Testimonial 1" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <div class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center">
-                                    <i class="fas fa-play text-white text-2xl"></i>
-                                </div>
-                            </div>
-                        </video>
-                        <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
-                            <p>Diksha's postcards to daughter</p>
-                        </div>
-                    </div>
-
-                    <div class="relative w-72 h-96 rounded-lg overflow-hidden">
-                        <img src="{{asset('asset/img/v2.mp4')}}" alt="Testimonial 2" class="w-full h-full object-cover">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="relative">
+            <div class="flex space-x-4 overflow-x-auto">
+                <!-- Testimonial Cards 2 -->
+                <div class="relative w-72 h-96 rounded-lg overflow-hidden">
+                    <video src="{{asset('asset/videos/cart.mp4')}}" alt="Testimonial 1" class="w-full h-full object-cover" controls>
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center">
                                 <i class="fas fa-play text-white text-2xl"></i>
                             </div>
                         </div>
-                        <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
-                            <p>Neha's postcards to Sister</p>
-                        </div>
-                    </div>
-
-                    <div class="relative w-72 h-96 rounded-lg overflow-hidden">
-                        <img src="{{asset('asset/img/v3.mp4')}}" alt="Testimonial 3" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center">
-                                <i class="fas fa-play text-white text-2xl"></i>
-                            </div>
-                        </div>
-                        <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
-                            <p>Agam's postcards to Sister</p>
-                        </div>
+                    </video>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center bg-gradient-to-t from-black to-transparent">
+                        <p>Diksha's postcards to daughter</p>
                     </div>
                 </div>
 
-                <!-- Navigation Arrows -->
-                <button class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
+                <div class="relative w-72 h-96 rounded-lg overflow-hidden">
+                    <video src="{{asset('asset/videos/v2.mp4')}}" alt="Testimonial 2" class="w-full h-full object-cover" controls>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center">
+                                <i class="fas fa-play text-white text-2xl"></i>
+                            </div>
+                        </div>
+                    </video>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center bg-gradient-to-t from-black to-transparent">
+                        <p>Neha's postcards to Sister</p>
+                    </div>
+                </div>
+
+                <div class="relative w-72 h-96 rounded-lg overflow-hidden">
+                    <video src="{{asset('asset/videos/v3.mp4')}}" alt="Testimonial 3" class="w-full h-full object-cover" controls>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 rounded-full bg-white/30 flex items-center justify-center">
+                                <i class="fas fa-play text-white text-2xl"></i>
+                            </div>
+                        </div>
+                    </video>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center bg-gradient-to-t from-black to-transparent">
+                        <p>Agam's postcards to Sister</p>
+                    </div>
+                </div>
             </div>
+
+            
         </div>
+    </div>
 </div>
 
     <!-- Final Heading -->

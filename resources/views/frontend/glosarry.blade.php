@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="container mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold mb-6">Jewellery Glossary</h1>
+        <h1 class="text-3xl font-bold mb-6 mt-24">Jewellery Glossary</h1>
         
         <div class="space-y-4">
             <h2 class="text-2xl font-semibold">A</h2>

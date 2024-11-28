@@ -562,4 +562,5 @@
         });
     });
 </script>
+
 @endsection

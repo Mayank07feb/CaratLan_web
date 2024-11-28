@@ -1,7 +1,7 @@
 @extends('components.main')
 @section('content')
 
-<div class="w-full bg-purple-50 lg:py-12 pt-24">
+<div class="w-full bg-purple-50 lg:py-12 md:mt-28 pt-24">
     <h1 class="text-xl text-center font-semibold mb-4">Complete your profile</h1>
     <div class="flex justify-center lg:mb-8">
         <img src="{{ asset('asset/img/cart-order.png') }}" alt="Cart Order Icon" class="md:h-20 md:w-20 h-10 w-10">

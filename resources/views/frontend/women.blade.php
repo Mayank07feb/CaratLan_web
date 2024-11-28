@@ -109,7 +109,7 @@
 </div>
 
 <!-- Newsletter Section -->
-<div class="mt-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg p-8 text-white max-w-md mx-auto sm:p-6">
+<div class="mt-16 bg-gradient-to-r from-pink-500 to-pur ple-600 rounded-lg p-8 text-white max-w-md mx-auto sm:p-6">
     <h2 class="text-3xl font-semibold mb-4 text-center sm:text-2xl">Join our Free Newsletter and</h2>
     <p class="mb-6 text-center text-sm sm:text-base">Get insider info on new arrivals, early access, and everything fine.</p>
     <form class="flex flex-col gap-4 sm:flex-row">
@@ -168,4 +168,5 @@
         </button>
     </div>
 </footer>
+
 @endsection

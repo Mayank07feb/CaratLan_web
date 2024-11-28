@@ -2,7 +2,7 @@
 @section('content')
 
 
-  <main class="w-full mx-auto px-4 py-8 mt-20">
+  <main class="w-full mx-auto px-4 py-8 mt-32">
     <!-- Shipping Information -->
     <div class="mb-12">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
